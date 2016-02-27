@@ -10,6 +10,6 @@ class World {
 		void PrintMap();
 		
 	private :
-		Matrix map;
-		LMakhluk objects;	
+		Matrix* map;
+		LMakhluk* objects;	
 };
