@@ -1,4 +1,6 @@
 // Makhluk.h
+#ifndef MAKHLUK_H
+#define MAKHLUK_H
 #include "Point.h"
 
 class Makhluk {
@@ -11,3 +13,5 @@ class Makhluk {
 		const int maxAge;
 		Point pos;	
 };
+
+#endif

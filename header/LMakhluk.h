@@ -1,3 +1,6 @@
+// LMakhluk.h
+#ifndef LMAKHLUK_H
+#define LMAKHLUK_H
 #include "Makhluk.h"
 
 class LMakhluk {
@@ -32,3 +35,5 @@ class LMakhluk {
 		// getter setter
 		ElmtMakhluk* getFirst();
 };
+
+#endif

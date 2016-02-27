@@ -1,4 +1,7 @@
 // Hewan.h
+#ifndef HEWAN_H
+#define HEWAN_H
+
 #include "Makhluk.h"
 class Hewan : public Makhluk {
 	public :
@@ -7,3 +10,5 @@ class Hewan : public Makhluk {
 	private :
 		int hungerLvl, power, deltaT;
 };
+
+#endif

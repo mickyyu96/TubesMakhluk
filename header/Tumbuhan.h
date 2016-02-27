@@ -1,4 +1,7 @@
 // Tumbuhan.h
+#ifndef TUMBUHAN_H
+#define TUMBUHAN_H
+
 #include "Makhluk.h"
 
 class Tumbuhan : public Makhluk {
@@ -7,3 +10,5 @@ class Tumbuhan : public Makhluk {
 	private:
 			
 };
+
+#endif

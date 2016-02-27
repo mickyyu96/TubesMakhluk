@@ -1,3 +1,7 @@
+// PolarBear.h
+#ifndef POLARBEAR_H
+#define POLARBEAR_H
+
 #include "Carnivore.h"
 
 class PolarBear : public Carnivore {
@@ -12,3 +16,5 @@ class PolarBear : public Carnivore {
 	private :
 		
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef HERBIVORE_H
+#define HERBIVORE_H
+
 #include "Hewan.h"
 
 class Herbivore : public Hewan {
@@ -5,3 +8,5 @@ class Herbivore : public Hewan {
 		
 	private :	
 };
+
+#endif

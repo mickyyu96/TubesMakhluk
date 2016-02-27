@@ -1,1 +1,1 @@
-#include "LMakhluk.h"
+#include "../header/LMakhluk.h"

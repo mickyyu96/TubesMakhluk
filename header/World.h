@@ -1,5 +1,9 @@
 // World.h
+#ifndef WORLD_H
+#define WORLD_H
+
 #include "LMakhluk.h"
+#include "Matrix.h"
 
 class World {
 	public :
@@ -10,6 +14,7 @@ class World {
 		void PrintMap();
 		
 	private :
-		Matrix* map;
 		LMakhluk* objects;	
 };
+
+#endif

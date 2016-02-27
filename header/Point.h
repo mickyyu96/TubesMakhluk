@@ -1,4 +1,6 @@
 // Point.h
+#ifndef POINT_H
+#define POINT_H
 
 class Point {
 	public :
@@ -15,3 +17,5 @@ class Point {
 	private :
 		int x, y;	
 };
+
+#endif
