@@ -6,8 +6,8 @@ class Matrix {
 	public :
 		// ctor, cctor, dtor (op= tidak dipakai karena NBrs dan NKol const, sehingga tidak mungkin diubah2 lagi)
 		Matrix();
-		//Matrix(int, int);
-		//Matrix(const Matrix&);
+		Matrix(int, int);
+		Matrix(const Matrix&);
 		~Matrix();
 		
 		// getter setter

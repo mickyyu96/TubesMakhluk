@@ -23,7 +23,7 @@ Matrix::Matrix() : NBrs(DEFAULT_NBRS), NKol(DEFAULT_NKOL)
 	for(int i=0; i<NKol; i++)
 		M[0][i] = M[NBrs-1][i] = '#';
 }
-/*
+
 Matrix::Matrix(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
 {
 	M = new char* [NBrs];
@@ -57,7 +57,7 @@ Matrix::Matrix(const Matrix& Mat) : NBrs(Mat.getNBrs()), NKol(Mat.getNKol())
 	for(int i=0; i<NKol; i++)
 		M[0][i] = M[NBrs-1][i] = '#';
 }
-*/
+
 Matrix::~Matrix()
 {
 	for(int i=0; i<NBrs; i++)
