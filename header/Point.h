@@ -6,6 +6,7 @@ class Point {
 	public :
 		// ctor, cctor (dtor dan op= menggunakan default)
 		Point();
+		Point(int, int);
 		Point(const Point&);
 		
 		// getter setter
