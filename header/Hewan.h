@@ -17,9 +17,9 @@ class Hewan : public Makhluk {
 	
 	protected :
 		// ctor
-		Hewan(char, int, int, int, const Point&);
+		Hewan(char, int);
 
-	private :
+	protected :
 		int hungerLvl, power, deltaT;
 };
 

@@ -11,8 +11,6 @@ void Makhluk::MakeAlive(Makhluk* M)
 }
 
 // IMPLEMENTASI CTOR (Protected)
-Makhluk::Makhluk(char _ID, int _maxAge, const Point& P) : ID(_ID), maxAge(_maxAge)
+Makhluk::Makhluk(char _ID, int _maxAge) : ID(_ID), maxAge(_maxAge)
 {
-	pos = P;
-	status = 1;
 }

@@ -24,14 +24,13 @@ class Makhluk {
 
 	protected :
 		// ctor
-		Makhluk(char, int, const Point&);
-	
+		Makhluk(char, int);
+
 	protected :
 		const char ID;
-		int age;
 		const int maxAge;
+		int age, status;
 		Point pos;
-		int status;
 };
 
 #endif
