@@ -2,19 +2,33 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include "LMakhluk.h"
-#include "Matrix.h"
+class LMakhluk; // forward class declaration
+class Makhluk; // forward class declaration
 
 class World {
 	public :
-		// ctor
-		World();
-		
+		// getter
+		LMakhluk* getObjects() { return objects; }
+		Makhluk* getFirstMakhluk() { return firstMakhluk; }
+		static World* getWorldInstance() { return worldInstance; }
+		int getNBrs() { return NBrs; }
+		int getNKol() { return NKol; }
+
 		// function member
 		void PrintMap();
+
+	private :
+		// ctor
+		World();
+		World(int, int);
 		
 	private :
-		LMakhluk* objects;	
+		LMakhluk* objects;
+		Makhluk* firstMakhluk;
+
+		static World* worldInstance;
+
+		const int NBrs, NKol;
 };
 
 #endif

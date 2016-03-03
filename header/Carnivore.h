@@ -5,7 +5,7 @@
 
 class Carnivore : public Hewan {
 	public :
-		
+	
 	private :	
 };
 

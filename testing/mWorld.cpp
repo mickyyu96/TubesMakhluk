@@ -1,11 +1,13 @@
 // mWorld.cpp
 #include "../header/World.h"
-
+#include "../header/Makhluk.h"
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-	World W1;
-	W1.PrintMap();
+	//World::getWorldInstance()->PrintMap();
+	Makhluk::MakeAlive(World::getWorldInstance()->getFirstMakhluk());
+	system("PAUSE");
 	return 0;
 }
