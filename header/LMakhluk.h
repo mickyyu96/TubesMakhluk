@@ -1,39 +1,45 @@
 // LMakhluk.h
+
 #ifndef LMAKHLUK_H
 #define LMAKHLUK_H
+
 #include "Makhluk.h"
 
-class LMakhluk {
+class LMakhluk
+{
 	public :
-		// ctor, dtor (cctor dan op= tidak diperlukan)
 		LMakhluk();
 		~LMakhluk();
-		
-		// operasi dasar list
-		void Add();
-		void Delete();
-		
+
+		void Add(Makhluk*);
+		void Delete(Makhluk*);
+
 	private :
-		class ElmtMakhluk {
+		class ElmtMakhluk
+		{
 			public :
-				// ctor, dtor (cctor dan op= tidak diperlukan)
 				ElmtMakhluk();
+				ElmtMakhluk(Makhluk*, ElmtMakhluk*);
 				~ElmtMakhluk();
-				
-				// getter setter
+
 				Makhluk* getInfo();
+				void setInfo(Makhluk*);
 				ElmtMakhluk* getNext();
-				
+				void setNext(ElmtMakhluk*);
+
 			private:
 				Makhluk* info;
 				ElmtMakhluk* next;
 		};
-		
+
 		ElmtMakhluk* first;
-	
+
 	public :
-		// getter setter
 		ElmtMakhluk* getFirst();
+		void setFirst(ElmtMakhluk*);
+		ElmtMakhluk* getLast();
+		ElmtMakhluk* findPrecMakhluk(Makhluk*);
+		ElmtMakhluk* findMakhluk(Makhluk*);
 };
 
-#endif
+#endif // LMakhluk_H
