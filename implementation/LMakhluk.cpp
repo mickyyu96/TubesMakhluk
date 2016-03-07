@@ -41,7 +41,7 @@ void LMakhluk::Del(Makhluk* M)
     }
     else
     {
-        _EM->getNext() = EM->getNext();
+        _EM->setNext(EM->getNext());
         delete EM;
     }
 }
@@ -83,7 +83,7 @@ void LMakhluk::ElmtMakhluk::setNext(ElmtMakhluk* EM)
     next = EM;
 }
 
-ElmtMakhluk* LMakhluk::getFirst()
+LMakhluk::ElmtMakhluk* LMakhluk::getFirst()
 {
     return first;
 }
@@ -93,7 +93,7 @@ void LMakhluk::setFirst(ElmtMakhluk* EM)
     first = EM;
 }
 
-ElmtMakhluk* LMakhluk::getLast()
+LMakhluk::ElmtMakhluk* LMakhluk::getLast()
 {
     ElmtMakhluk* EM;
     EM = getFirst();
@@ -104,11 +104,11 @@ ElmtMakhluk* LMakhluk::getLast()
     return EM;
 }
 
-ElmtMakhluk* LMakhluk::findPrecMakhluk(Makhluk* M)
+LMakhluk::ElmtMakhluk* LMakhluk::findPrecMakhluk(Makhluk* M)
 {
     ElmtMakhluk* EM;
     EM = getFirst();
-    if (EM->getInfo() == getFirst())
+    if (EM->getInfo() == getFirst()->getInfo())
     {
         return NULL;
     }
@@ -122,7 +122,7 @@ ElmtMakhluk* LMakhluk::findPrecMakhluk(Makhluk* M)
     }
 }
 
-ElmtMakhluk* LMakhluk::findMakhluk(Makhluk* M)
+LMakhluk::ElmtMakhluk* LMakhluk::findMakhluk(Makhluk* M)
 {
     ElmtMakhluk* EM;
     EM = getFirst();
