@@ -12,7 +12,7 @@ class LMakhluk
 		~LMakhluk();
 
 		void Add(Makhluk*);
-		void Delete(Makhluk*);
+		void Del(Makhluk*);
 
 	private :
 		class ElmtMakhluk
