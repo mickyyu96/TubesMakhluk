@@ -15,13 +15,14 @@ World* World::worldInstance = new World(DEFAULT_NBRS, DEFAULT_NKOL);
 World::World() : NBrs(DEFAULT_NBRS), NKol(DEFAULT_NKOL)
 {
 	// ctor LMakhluk
-
+	objects = new LMakhluk;
 	// contoh : firstMakhluk
 	firstMakhluk = new PolarBear(Point(10,10));
 }
 
 World::World(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
 {
+	objects = new LMakhluk;
 	firstMakhluk = new PolarBear(Point(10, 10));
 }
 
@@ -32,15 +33,21 @@ void World::PrintMap()
 	
 	// For Each X : Objects -> getPosition -> set di map
 	// contoh : firstMakhluk
-	if (firstMakhluk->isAlive())
-	{
-		char ID1 = firstMakhluk->getID();
-		Point pos1 = firstMakhluk->getPosition();
-		map->setInfo(ID1, pos1.getX(), pos1.getY());
-	}
-	
-
-
-
+	LMakhluk * _LMakhluk = new LMakhluk;
+    	_LMakhluk->setFirst(objects->getFirst());
+    	if (_LMakhluk->getFirst()!= NULL) {
+        	while (_LMakhluk->getFirst() != objects->getLast()) {
+            	if (_LMakhluk->getFirst()->getInfo()->isAlive())
+            	{
+                	char ID1 = _LMakhluk->getFirst()->getInfo()->getID();
+                	Point pos1 = _LMakhluk->getFirst()->getInfo()->getPosition();
+                	map->setInfo(ID1, pos1.getX(), pos1.getY());
+            	}
+            		_LMakhluk->setFirst(_LMakhluk->getFirst()->getNext());
+        	}
+        char ID1 = _LMakhluk->getFirst()->getInfo()->getID();
+        Point pos1 = _LMakhluk->getFirst()->getInfo()->getPosition();
+        map->setInfo(ID1, pos1.getX(), pos1.getY());
+    	}
 	map->PrintMatrix();
 }
