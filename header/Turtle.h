@@ -19,8 +19,6 @@ class Turtle : public Hewan {
     
     // actions
     void Race();
-    void Wandering();
-    void Sleep(int);
     void GetToFood();
     
     // main action

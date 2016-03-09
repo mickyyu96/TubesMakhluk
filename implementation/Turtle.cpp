@@ -27,45 +27,28 @@ void Turtle::Race(){
     }
 }
 
-Makhluk* Turtle::FindFood(){
-    return Hewan::FindMakhluk('V');
-}
-
 void Turtle::GetToFood(){
-    Makhluk* Food;
-    if (Hewan::isMakhlukinList('V')) {
-        Food = FindFood();
+    if (Hewan::isMakhlukinList('G')) {
+        Hewan::getToPoint(Hewan::FindFood()->getPosition());
+        Hewan::FindFood()->Kill();
     }
-    Hewan::getToPoint(Food->getPosition());
-}
-
-void Turtle::Wandering(){
-    //int dx = RandomGenerator::getInstance()->getNextDeltaMove();
-    if (Hewan::shouldRebounced(dx, 0)) {
-        dx *= -1;
-    }
-    
-    //int dy = RandomGenerator::getInstance()->getNextDeltaMove();
-    if (Hewan::shouldRebounced(0, dy)) {
-        dy *= -1;
-    }
-    
-    if (!Hewan::shouldRebounced(dx, dy)) {
-         Hewan::Move(dx, dy);
-    }
-}
-
-void Turtle::Sleep(int duration){
-    std::chrono::milliseconds timespan(duration);
-    std::this_thread::sleep_for(timespan);
 }
 
 // main action
 void Turtle::Live(){
+    int nRandom;
     while(isAlive())
     {
+        nRandom = RandomGenerator::getInstance()->getNextInt(2);
+        switch (nRandom) {
+            case 0:
+                Hewan::Wandering();
+                break;
+            case 1:
+                GetToFood();
+                break;
+        }
         
-        //Wandering();
-        Sleep(getDeltaT());
+        Hewan::Sleep();
     }
 }

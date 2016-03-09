@@ -14,7 +14,7 @@ void Hewan::Move(int dx, int dy)
 
 Makhluk* Hewan::FindFood(){
     if (isVegetarian()) {
-        return FindMakhluk('T');
+        return FindMakhluk('G');
     }
     else{
         return FindMakhluk('*');
@@ -87,6 +87,58 @@ void Hewan::getToPoint(Point P){
     }
 }
 
+void Hewan::Wandering(){
+    int dx = 1;
+    int dy = 1;
+    int nRandom = RandomGenerator::getInstance()->getNextInt(2);
+    if (nRandom == 1) {
+        for (int i = 0; i<20; i++) {
+            if (Hewan::shouldRebounced(dx, 0)) {
+                dx *= -1;
+            }
+            if (Hewan::shouldRebounced(0, dy)) {
+                dy *= -1;
+            }
+            
+            Hewan::Move(dx, dy);
+            Sleep();
+        }
+    }
+    else{
+        for (int i = 0; i<20; i++) {
+            if (shouldRebounced(dx, 0) && shouldRebounced(0, dy)) {
+                dx = 0;
+                dy = 1;
+                if (shouldRebounced(0, dy)) {
+                    dy *= -1;
+                }
+            }
+            if (shouldRebounced(0, dy)) {
+                dy = 0;
+                dx = 1;
+                if (shouldRebounced(dx, 0)) {
+                    dx *= -1;
+                }
+            }
+            else if (shouldRebounced(dx, 0)){
+                dx = 0;
+                dy = 1;
+                if (shouldRebounced(0, dy)) {
+                    dy *= -1;
+                }
+            }
+            Move(dx, dy);
+            Sleep();
+        }
+    }
+    
+}
+
+void Hewan::Sleep()
+{
+    std::chrono::milliseconds timespan(deltaT);
+    std::this_thread::sleep_for(timespan);
+}
 
 int Hewan::shouldRebounced(int dx, int dy){
     if (dx+pos.getX()<=0 || dx+pos.getX()>=World::getWorldInstance()->getNBrs()-1) {
