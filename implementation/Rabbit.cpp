@@ -19,13 +19,9 @@ Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE) {
 }
 
 // actions
-Makhluk* Rabbit::FindFood(){
-    return Hewan::FindMakhluk('T');
-}
-
 void Rabbit::GetToFood(){
     if (Hewan::isMakhlukinList('T')) {
-        Hewan::getToPoint(FindMakhluk('T')->getPosition());
+        Hewan::getToPoint(Hewan::FindFood()->getPosition());
         FindMakhluk('T')->Kill();
     }
 }
