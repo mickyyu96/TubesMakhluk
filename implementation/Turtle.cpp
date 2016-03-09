@@ -27,21 +27,11 @@ void Turtle::Race(){
     }
 }
 
-Makhluk* Turtle::FindFood(){
-    return Hewan::FindMakhluk('V');
-}
-
 void Turtle::GetToFood(){
-    Makhluk* Food;
-    if (Hewan::isMakhlukinList('V')) {
-        Food = FindFood();
+    if (Hewan::isMakhlukinList('G')) {
+        Hewan::getToPoint(Hewan::FindFood()->getPosition());
+        Hewan::FindFood()->Kill();
     }
-    Hewan::getToPoint(Food->getPosition());
-}
-
-void Turtle::Sleep(int duration){
-    std::chrono::milliseconds timespan(duration);
-    std::this_thread::sleep_for(timespan);
 }
 
 // main action
@@ -59,6 +49,6 @@ void Turtle::Live(){
                 break;
         }
         
-        Sleep(getDeltaT());
+        Hewan::Sleep();
     }
 }
