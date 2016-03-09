@@ -101,7 +101,8 @@ void Hewan::Wandering(){
             }
             
             Hewan::Move(dx, dy);
-            Sleep(getDeltaT());
+            std::chrono::milliseconds timespan(deltaT);
+            std::this_thread::sleep_for(timespan);
         }
     }
     else{
