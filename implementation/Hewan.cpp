@@ -14,7 +14,7 @@ void Hewan::Move(int dx, int dy)
 
 Makhluk* Hewan::FindFood(){
     if (isVegetarian()) {
-        return FindMakhluk('T');
+        return FindMakhluk('G');
     }
     else{
         return FindMakhluk('*');
