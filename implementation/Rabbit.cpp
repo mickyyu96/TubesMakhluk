@@ -41,7 +41,7 @@ void Rabbit::WanderingHop(){
             }
             
             Hewan::Move(dx, dy);
-            Sleep(getDeltaT());
+            Hewan::Sleep();
         }
     }
     else{
@@ -68,17 +68,11 @@ void Rabbit::WanderingHop(){
                 }
             }
             Hewan::Move(dx, dy);
-            Sleep(getDeltaT());
+            Hewan::Sleep();
         }
     }
 }
 
-void Rabbit::Sleep(int duration)
-{
-    std::chrono::milliseconds timespan(duration);
-    std::this_thread::sleep_for(timespan);
-}
-    
 // main action
 void Rabbit::Live(){
     int nRandom;
@@ -97,6 +91,6 @@ void Rabbit::Live(){
                 break;
         }
         
-        Sleep(getDeltaT());
+        Hewan::Sleep();
     }
 }
