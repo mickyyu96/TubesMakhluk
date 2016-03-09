@@ -16,7 +16,6 @@ class Rabbit : public Hewan {
     
     // actions
     //bool FindTurtle();
-    Makhluk* FindFood();
     void Sleep(int);
     void GetToFood();
     void WanderingHop();
