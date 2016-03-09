@@ -7,7 +7,7 @@ using namespace std;
 // ctor
 PolarBear::PolarBear() : Hewan(POLARBEAR_ID, POLARBEAR_MAXAGE)
 {
-	status = 1;
+	status = 1; age = 0;
 	power = POLARBEAR_BASEPOWER;
 	deltaT = POLARBEAR_DELTAT;
 	pos = Point();
@@ -15,7 +15,7 @@ PolarBear::PolarBear() : Hewan(POLARBEAR_ID, POLARBEAR_MAXAGE)
 
 PolarBear::PolarBear(const Point& P) : Hewan(POLARBEAR_ID, POLARBEAR_MAXAGE)
 {
-	status = 1;
+	status = 1; age = 0;
 	power = POLARBEAR_BASEPOWER;
 	deltaT = POLARBEAR_DELTAT;
 	pos = P;

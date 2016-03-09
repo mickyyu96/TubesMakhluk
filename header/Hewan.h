@@ -9,8 +9,8 @@ class Hewan : public Makhluk {
 		// virtual method
 		virtual void Move(int, int);
 		virtual int isVegetarian() = 0;
-        	virtual void Wandering() = 0;
-        	virtual void GetToFood() = 0;
+        virtual void Wandering() = 0;
+        virtual void GetToFood() = 0;
 		
 		// getter
 		int getHungerLvl() { return hungerLvl; }
@@ -18,13 +18,13 @@ class Hewan : public Makhluk {
 		int getDeltaT() { return deltaT;  }
 	
 		// setter
-        	void setHungerLvl(int x) { hungerLvl+=x; }
+        void setHungerLvl(int x) { hungerLvl+=x; }
     
-	    	Makhluk* FindFood();
-        	Makhluk* FindMakhluk(char _ID);
-        	int shouldRebounced(int dx, int dy);
-        	bool isMakhlukinList(char _ID);
-        	void getToPoint(Point P);
+	    Makhluk* FindFood();
+        Makhluk* FindMakhluk(char _ID);
+        int shouldRebounced(int dx, int dy);
+        bool isMakhlukinList(char _ID);
+        void getToPoint(Point P);
         
 	protected :
 		// ctor
