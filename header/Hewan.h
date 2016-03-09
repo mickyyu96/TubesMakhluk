@@ -20,6 +20,7 @@ class Hewan : public Makhluk {
         	void setHungerLvl(int x) { hungerLvl+=x; }
     
     		void Wandering();
+    		void Sleep();
 	    	Makhluk* FindFood();
         	Makhluk* FindMakhluk(char _ID);
         	int shouldRebounced(int dx, int dy);
