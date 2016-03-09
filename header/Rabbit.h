@@ -19,7 +19,7 @@ class Rabbit : public Hewan {
     Makhluk* FindFood();
     void Sleep(int);
     void GetToFood();
-    void Hop();
+    void WanderingHop();
     void Wandering();
     
     // main action
