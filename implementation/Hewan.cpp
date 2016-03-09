@@ -101,8 +101,7 @@ void Hewan::Wandering(){
             }
             
             Hewan::Move(dx, dy);
-            std::chrono::milliseconds timespan(deltaT);
-            std::this_thread::sleep_for(timespan);
+            Sleep();
         }
     }
     else{
@@ -129,11 +128,16 @@ void Hewan::Wandering(){
                 }
             }
             Move(dx, dy);
-            std::chrono::milliseconds timespan(deltaT);
-            std::this_thread::sleep_for(timespan);
+            Sleep();
         }
     }
     
+}
+
+void Hewan::Sleep()
+{
+    std::chrono::milliseconds timespan(deltaT);
+    std::this_thread::sleep_for(timespan);
 }
 
 int Hewan::shouldRebounced(int dx, int dy){
