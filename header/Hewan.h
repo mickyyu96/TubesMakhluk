@@ -9,7 +9,6 @@ class Hewan : public Makhluk {
 		// virtual method
 		virtual void Move(int, int);
 		virtual int isVegetarian() = 0;
-        	virtual void Wandering() = 0;
         	virtual void GetToFood() = 0;
 		
 		// getter
@@ -20,6 +19,7 @@ class Hewan : public Makhluk {
 		// setter
         	void setHungerLvl(int x) { hungerLvl+=x; }
     
+    		void Wandering();
 	    	Makhluk* FindFood();
         	Makhluk* FindMakhluk(char _ID);
         	int shouldRebounced(int dx, int dy);
