@@ -19,7 +19,6 @@ class Rabbit : public Hewan {
     void Sleep(int);
     void GetToFood();
     void WanderingHop();
-    void Wandering();
     
     // main action
     void Live();
