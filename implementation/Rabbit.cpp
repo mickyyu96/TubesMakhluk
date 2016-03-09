@@ -22,7 +22,7 @@ Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE) {
 void Rabbit::GetToFood(){
     if (Hewan::isMakhlukinList('G')) {
         Hewan::getToPoint(Hewan::FindFood()->getPosition());
-        FindFood()->Kill();
+        Hewan::FindFood()->Kill();
     }
 }
 
