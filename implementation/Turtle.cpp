@@ -1,7 +1,5 @@
-#include "Turtle.h"
+#include "../header/Turtle.h"
 #include <iostream>
-#include <cmath>
-#include <math.h>
 #include <thread>
 #include <chrono>
 using namespace std;
