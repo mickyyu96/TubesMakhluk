@@ -19,6 +19,8 @@ World::World() : NBrs(DEFAULT_NBRS), NKol(DEFAULT_NKOL)
 
 	objects = new LMakhluk;
 	objects->Add(new PolarBear(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+	objects->Add(new Rabbit(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+    	objects->Add(new Turtle(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
 }
 
 World::World(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
@@ -47,9 +49,11 @@ void World::PrintMap()
             	}
             		_LMakhluk->setFirst(_LMakhluk->getFirst()->getNext());
         	}
-        char ID1 = _LMakhluk->getFirst()->getInfo()->getID();
-        Point pos1 = _LMakhluk->getFirst()->getInfo()->getPosition();
-        map->setInfo(ID1, pos1.getX(), pos1.getY());
+        if (_LMakhluk->getFirst()->getInfo()->isAlive())
+        {
+        	char ID1 = _LMakhluk->getFirst()->getInfo()->getID();
+        	Point pos1 = _LMakhluk->getFirst()->getInfo()->getPosition();
+        	map->setInfo(ID1, pos1.getX(), pos1.getY());
     	}
 	map->PrintMatrix();
 }
