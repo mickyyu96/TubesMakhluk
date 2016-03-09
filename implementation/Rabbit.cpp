@@ -84,7 +84,7 @@ void Rabbit::Live(){
     int nRandom;
     while(isAlive())
     {
-        nRandom = RandomGenerator::getInstance()->getNextInt(2);
+        nRandom = RandomGenerator::getInstance()->getNextInt(3);
         switch (nRandom) {
             case 0:
                 Hewan::Wandering();
