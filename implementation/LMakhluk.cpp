@@ -25,7 +25,7 @@ void LMakhluk::Add(Makhluk* M)
     else
     {
         ElmtMakhluk* P = getLast();
-        P->setNext(EM)
+		P->setNext(EM);
     }
 }
 
@@ -61,36 +61,6 @@ LMakhluk::ElmtMakhluk::ElmtMakhluk(Makhluk* _info, ElmtMakhluk* _next)
 LMakhluk::ElmtMakhluk::~ElmtMakhluk()
 {
     delete getInfo();
-}
-
-Makhluk* LMakhluk::ElmtMakhluk::getInfo()
-{
-    return info;
-}
-
-void LMakhluk::ElmtMakhluk::setInfo(Makhluk* M)
-{
-    info = M;
-}
-
-ElmtMakhluk* LMakhluk::ElmtMakhluk::getNext()
-{
-    return next;
-}
-
-void LMakhluk::ElmtMakhluk::setNext(ElmtMakhluk* EM)
-{
-    next = EM;
-}
-
-LMakhluk::ElmtMakhluk* LMakhluk::getFirst()
-{
-    return first;
-}
-
-void LMakhluk::setFirst(ElmtMakhluk* EM)
-{
-    first = EM;
 }
 
 LMakhluk::ElmtMakhluk* LMakhluk::getLast()

@@ -37,11 +37,11 @@ void PolarBear::Sleep(int duration)
 void PolarBear::Live()
 {
 	int counter = 5;
-	while(isAlive())
+	while (isAlive() && !World::getWorldInstance()->isEnded())
 	{
 		Hewan::Move(1,1);
 		
-		World::getWorldInstance()->PrintMap();
+		// World::getWorldInstance()->PrintMap();
 
 		std::chrono::milliseconds timespan(getDeltaT());
 		std::this_thread::sleep_for(timespan);
@@ -49,5 +49,5 @@ void PolarBear::Live()
 		if (counter) counter--;
 		else Kill();
 	}
-	World::getWorldInstance()->PrintMap();
+	// World::getWorldInstance()->PrintMap();
 }

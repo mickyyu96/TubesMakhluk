@@ -5,6 +5,7 @@
 
 #include <stdlib.h>
 #include <time.h>
+#include "Point.h"
 
 class RandomGenerator
 {
@@ -15,6 +16,7 @@ class RandomGenerator
         static RandomGenerator* getInstance() { return _instance; }
         int getNextInt(int);
         int getNextIntBetween(int, int);
+        Point getNextPoint(int, int); 
 
     private:
         static RandomGenerator* _instance;

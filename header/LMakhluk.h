@@ -2,7 +2,7 @@
 
 #ifndef LMAKHLUK_H
 #define LMAKHLUK_H
-
+#include <cstdlib>
 #include "Makhluk.h"
 
 class LMakhluk
@@ -22,10 +22,10 @@ class LMakhluk
 				ElmtMakhluk(Makhluk*, ElmtMakhluk*);
 				~ElmtMakhluk();
 
-				Makhluk* getInfo();
-				void setInfo(Makhluk*);
-				ElmtMakhluk* getNext();
-				void setNext(ElmtMakhluk*);
+				Makhluk* getInfo() { return info; }
+				void setInfo(Makhluk* _info) { info = _info; }
+				ElmtMakhluk* getNext() { return next; }
+				void setNext(ElmtMakhluk* _next) { next = _next; }
 
 			private:
 				Makhluk* info;
@@ -35,8 +35,9 @@ class LMakhluk
 		ElmtMakhluk* first;
 
 	public :
-		ElmtMakhluk* getFirst();
-		void setFirst(ElmtMakhluk*);
+		ElmtMakhluk* getFirst() { return first; }
+		void setFirst(ElmtMakhluk* _first) { first = _first; }
+
 		ElmtMakhluk* getLast();
 		ElmtMakhluk* findPrecMakhluk(Makhluk*);
 		ElmtMakhluk* findMakhluk(Makhluk*);

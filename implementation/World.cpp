@@ -3,6 +3,7 @@
 #include "../header/PolarBear.h"
 #include "../header/Matrix.h"
 #include "../header/Makhluk.h"
+#include "../header/LMakhluk.h"
 #define DEFAULT_NBRS 20
 #define DEFAULT_NKOL 20
 #include <iostream>
@@ -14,16 +15,17 @@ World* World::worldInstance = new World(DEFAULT_NBRS, DEFAULT_NKOL);
 // Implementasi ctor
 World::World() : NBrs(DEFAULT_NBRS), NKol(DEFAULT_NKOL)
 {
-	// ctor LMakhluk
+	_isPaused = 0; _isEnded = 0;
+
 	objects = new LMakhluk;
-	// contoh : firstMakhluk
-	firstMakhluk = new PolarBear(Point(10,10));
+	objects->Add(new PolarBear(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
 }
 
 World::World(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
 {
+	_isPaused = 0; _isEnded = 0;
 	objects = new LMakhluk;
-	firstMakhluk = new PolarBear(Point(10, 10));
+	objects->Add(new PolarBear(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
 }
 
 // Implementasi PrintMap
@@ -50,4 +52,16 @@ void World::PrintMap()
         map->setInfo(ID1, pos1.getX(), pos1.getY());
     	}
 	map->PrintMatrix();
+}
+
+void World::Show(int deltaT)
+{
+	while (!getWorldInstance()->isEnded())
+	{
+		getWorldInstance()->PrintMap();
+
+		std::chrono::milliseconds timespan(deltaT);
+		std::this_thread::sleep_for(timespan);
+	}
+	delete getWorldInstance()->getObjects();
 }

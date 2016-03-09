@@ -6,7 +6,6 @@ using namespace std;
 
 void Makhluk::MakeAlive(Makhluk* M)
 {
-	cout << "POLYMORPHISM STARTS HERE" << endl;
 	M->Live(); // polymorphism applies here. :)
 }
 

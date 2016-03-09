@@ -12,6 +12,9 @@ class PolarBear : public Hewan {
 		
 		// getter
 		int getDeltaT() { return Hewan::getDeltaT(); }
+
+		// base class member overloading
+		int isVegetarian() { return 0; }
 		
 		// actions
 		void FindFood();
