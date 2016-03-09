@@ -73,53 +73,6 @@ void Rabbit::WanderingHop(){
     }
 }
 
-void Rabbit::Wandering(){
-    int dx = 1;
-    int dy = 1;
-    int nRandom = RandomGenerator::getInstance()->getNextInt(2);
-    if (nRandom == 1) {
-        for (int i = 0; i<20; i++) {
-            if (Hewan::shouldRebounced(dx, 0)) {
-                dx *= -1;
-            }
-            if (Hewan::shouldRebounced(0, dy)) {
-                dy *= -1;
-            }
-            
-            Hewan::Move(dx, dy);
-            Sleep(getDeltaT());
-        }
-    }
-    else{
-        for (int i = 0; i<20; i++) {
-            if (Hewan::shouldRebounced(dx, 0) && Hewan::shouldRebounced(0, dy)) {
-                dx = 0;
-                dy = 1;
-                if (Hewan::shouldRebounced(0, dy)) {
-                    dy *= -1;
-                }
-            }
-            if (Hewan::shouldRebounced(0, dy)) {
-                dy = 0;
-                dx = 1;
-                if (Hewan::shouldRebounced(dx, 0)) {
-                    dx *= -1;
-                }
-            }
-            else if (Hewan::shouldRebounced(dx, 0)){
-                dx = 0;
-                dy = 1;
-                if (Hewan::shouldRebounced(0, dy)) {
-                    dy *= -1;
-                }
-            }
-            Hewan::Move(dx, dy);
-            Sleep(getDeltaT());
-        }
-    }
-    
-}
-
 void Rabbit::Sleep(int duration)
 {
     std::chrono::milliseconds timespan(duration);
@@ -134,7 +87,7 @@ void Rabbit::Live(){
         nRandom = RandomGenerator::getInstance()->getNextInt(2);
         switch (nRandom) {
             case 0:
-                Wandering();
+                Hewan::Wandering();
                 break;
             case 1:
                 GetToFood();
