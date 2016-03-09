@@ -20,7 +20,6 @@ class Turtle : public Hewan {
     // actions
     void Race();
     void Wandering();
-    Makhluk* FindFood();
     void Sleep(int);
     void GetToFood();
     
