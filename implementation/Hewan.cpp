@@ -87,6 +87,52 @@ void Hewan::getToPoint(Point P){
     }
 }
 
+void Hewan::Wandering(){
+    int dx = 1;
+    int dy = 1;
+    int nRandom = RandomGenerator::getInstance()->getNextInt(2);
+    if (nRandom == 1) {
+        for (int i = 0; i<20; i++) {
+            if (Hewan::shouldRebounced(dx, 0)) {
+                dx *= -1;
+            }
+            if (Hewan::shouldRebounced(0, dy)) {
+                dy *= -1;
+            }
+            
+            Hewan::Move(dx, dy);
+            Sleep(getDeltaT());
+        }
+    }
+    else{
+        for (int i = 0; i<20; i++) {
+            if (Hewan::shouldRebounced(dx, 0) && Hewan::shouldRebounced(0, dy)) {
+                dx = 0;
+                dy = 1;
+                if (Hewan::shouldRebounced(0, dy)) {
+                    dy *= -1;
+                }
+            }
+            if (Hewan::shouldRebounced(0, dy)) {
+                dy = 0;
+                dx = 1;
+                if (Hewan::shouldRebounced(dx, 0)) {
+                    dx *= -1;
+                }
+            }
+            else if (Hewan::shouldRebounced(dx, 0)){
+                dx = 0;
+                dy = 1;
+                if (Hewan::shouldRebounced(0, dy)) {
+                    dy *= -1;
+                }
+            }
+            Hewan::Move(dx, dy);
+            Sleep(getDeltaT());
+        }
+    }
+    
+}
 
 int Hewan::shouldRebounced(int dx, int dy){
     if (dx+pos.getX()<=0 || dx+pos.getX()>=World::getWorldInstance()->getNBrs()-1) {
