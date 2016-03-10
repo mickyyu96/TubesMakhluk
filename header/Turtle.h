@@ -10,11 +10,13 @@ class Turtle : public Hewan {
     int isVegetarian() { return 1; }
     
     // getter
+    int getisChallange() { return isChallange; }
     int getDeltaT() { return Hewan::getDeltaT(); }
     
     // actions
     void Race();
     void GetToFood();
+    static int isAnyTurtleRacing();
     
     // main action
     void Live();
@@ -23,7 +25,8 @@ class Turtle : public Hewan {
     static const char TURTLE_ID = 'T';
     static const int TURTLE_MAXAGE = 15;
     static const int TURTLE_BASEPOWER = 2;
-    static const int TURTLE_DELTAT = 600;
+    static const int TURTLE_DELTAT = 600
+    int isChallange;
 };
 
 #endif /* Turtle_hpp */
