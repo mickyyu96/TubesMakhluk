@@ -2,6 +2,8 @@
 #ifndef POINT_H
 #define POINT_H
 
+#include <cmath>
+
 /** \class Point
  *  \brief Representasi titik dalam koordinat kartesian
  *  \details Kelas Point berisi dua buah bilangan bulat untuk merepresentasikan suatu koordinat kartesian
@@ -56,14 +58,22 @@ class Point {
 	 */
 		void setY(int _y) { y = _y; }
 
-	/** \brief Prosedur untuk melakukan translasi point
+	/** \brief Melakukan translasi point
 	 *  \details Menambahkan nilai absis dan ordinat sebesar dx dan dy
 	 *  \param dx int Perubahan nilai absis
 	 *  \param dy int Perubahan nilai ordinat
 	 *  \return void
 	 */
 		void increment(int, int);
-		
+
+	/** \brief Menghitung jarak euclidean dari 2 buah point
+	*  \details Menghitung jarak euclidean dari 2 buah point yang di-passing melalui parameter
+	*  \param P1 Point Titik pertama
+	*  \param P2 Point Titik kedua
+	*  \return Bilangan real yang merupakan jarak euclidean antara titik pertama dan titik kedua
+	*/
+		static double getDistance(Point&, Point&);
+
 	private :
 		int x; /**< absis*/
 		int y; /**< ordinat*/	
