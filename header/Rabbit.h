@@ -13,11 +13,10 @@
 
 class Rabbit : public Hewan {
     public :
-    // ctor
     /** \brief Constructor dari objek bertipe Rabbit
      *  \details Constructor Rabbit yang akan membentuk objek bertipe Rabbit
      *   dengan masukan variable reference Point sebagai posisi awal objek
-     *	\return Objek bertipa Rabbit
+     *	\return Objek bertipe Rabbit
      */
     Rabbit(const Point&);
     
@@ -28,15 +27,13 @@ class Rabbit : public Hewan {
      */
     int isVegetarian() { return 1; }
     
-    // getter
     /** \brief Getter DeltaT Rabbit
      *  \details Fungsi getter yang akan mengambilkan nilai deltaT dari Rabbit
      *  yang merupakan member dari kelas hewan yang diinisialisasi saat ctor
      *	\return Integer DeltaT Rabbit
      */
     int getDeltaT() { return Hewan::getDeltaT(); }
-    
-    // actions
+
     /** \brief Procedure aksi untuk Rabbit melakukan Race dengan objek Turtle
      *  \details Procedure aksi Race ini akan memberikan ajakan race untuk objek Turtle, 
      *  pergi ke point start, dan melakukan race bersama Turtle ke finish point
@@ -58,7 +55,6 @@ class Rabbit : public Hewan {
      */
     void WanderingHop();
     
-    // main action
     /** \brief Procedure aksi utama yang mengatur hidup Rabbit sampai mati
      *  \details Procedure aksi utama akan memilih aktivitas kehidupan yang akan dilakukan
      *  oleh Rabbit selama hidupnya
