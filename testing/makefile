@@ -5,7 +5,7 @@ run_matrix:
 	mMatrix
 
 compile_world:
-	g++ -std=c++11 -o mWorld mWorld.cpp ../implementation/Point.cpp ../implementation/LMakhluk.cpp ../implementation/World.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/PolarBear.cpp ../implementation/Hewan.cpp ../implementation/KeypressHandler.cpp ../implementation/Rabbit.cpp ../implementation/Turtle.cpp
+	g++ -std=c++11 -o mWorld mWorld.cpp ../implementation/Point.cpp ../implementation/LMakhluk.cpp ../implementation/World.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/PolarBear.cpp ../implementation/Hewan.cpp ../implementation/KeypressHandler.cpp ../implementation/Rabbit.cpp ../implementation/Turtle.cpp ../implementation/RandomGenerator.cpp
 
 run_world:
 	mWorld
@@ -15,3 +15,6 @@ compile_point:
 	
 run_point:
 	mPoint
+
+compile_test:
+	g++ -std=c++11 -o atika atika_main.cpp ../implementation/Point.cpp ../implementation/LMakhluk.cpp ../implementation/World.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/PolarBear.cpp ../implementation/Hewan.cpp ../implementation/KeypressHandler.cpp ../implementation/Rabbit.cpp ../implementation/Turtle.cpp ../implementation/RandomGenerator.cpp
