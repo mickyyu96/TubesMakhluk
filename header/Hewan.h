@@ -4,12 +4,15 @@
 
 #include "Makhluk.h"
 #include "Point.h"
+#include <mutex>
+using namespace std;
+
 class Hewan : public Makhluk {
 	public :
 		// virtual method
 		virtual void Move(int, int);
 		virtual int isVegetarian() = 0;
-        virtual void GetToFood() = 0;
+        	virtual void GetToFood() = 0;
 		
 		// getter
 		int getHungerLvl() { return hungerLvl; }
@@ -17,15 +20,17 @@ class Hewan : public Makhluk {
 		int getDeltaT() { return deltaT;  }
 	
 		// setter
-        void setHungerLvl(int x) { hungerLvl+=x; }
+        	void setHungerLvl(int x) { hungerLvl+=x; }
+        	static void lockHewan() { hewanLock.lock(); }
+        	static void unlockHewan() { hewanLock.unlock(); }
     
 		void Wandering();
 		void Sleep();
-    	Makhluk* FindFood();
-    	Makhluk* FindMakhluk(char _ID);
-    	int shouldRebounced(int dx, int dy);
-    	bool isMakhlukinList(char _ID);
-    	void getToPoint(Point P);
+    		Makhluk* FindFood();
+    		Makhluk* FindMakhluk(char _ID);
+    		int shouldRebounced(int dx, int dy);
+    		bool isMakhlukinList(char _ID);
+    		void getToPoint(Point P);
         
 	protected :
 		// ctor
@@ -33,6 +38,7 @@ class Hewan : public Makhluk {
 
 	protected :
 		int hungerLvl, power, deltaT;
+		static mutex hewanLock;
 };
 
 #endif
