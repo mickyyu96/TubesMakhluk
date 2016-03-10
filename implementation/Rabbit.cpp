@@ -1,5 +1,6 @@
 // Rabbit.cpp
 #include "../header/Rabbit.h"
+#include "../header/Turtle.h"
 #include <thread>
 #include <chrono>
 using namespace std;
@@ -66,6 +67,28 @@ void Rabbit::WanderingHop(){
     }
 }
 
+void Rabbit::Race(){
+    if (!Turtle::isAnyTurtleRacing()) {
+        bool TurtleCome = false;
+        Point PTurtle;
+        
+        static_cast<Turtle*>(FindMakhluk('T'))->setIsChallange(1);
+        PTurtle = Hewan::FindMakhluk('T')->getPosition();
+        if (PTurtle.getX() == 5 && PTurtle.getY()== 1) {
+            TurtleCome = true;
+        }
+    
+        Hewan::getToPoint(Point(5, 1));
+        while (!TurtleCome){
+            PTurtle = Hewan::FindMakhluk('T')->getPosition();
+            if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(FindMakhluk('T'))->getisChallange()) {
+                TurtleCome = true;
+            }
+        }
+        Hewan::getToPoint(Point(6, World::getWorldInstance()->getNKol()-2));
+    }
+}
+
 // main action
 void Rabbit::Live(){
     int nRandom;
@@ -80,10 +103,9 @@ void Rabbit::Live(){
                 GetToFood();
                 break;
             case 2:
-                WanderingHop();
+                Race();
                 break;
         }
-        
         Hewan::Sleep();
     }
 }
