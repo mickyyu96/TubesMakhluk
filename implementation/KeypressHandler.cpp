@@ -29,9 +29,11 @@ void KeypressHandler::doAction()
 	char c = getHandlerInstance()->getLastKeypress();
 	switch (c)
 	{
-		case 'q': World::getWorldInstance()->endWorld();
+		case 'q': 
+			World::getWorldInstance()->endWorld();
+			break;
+		case 'w' :
+			World::getWorldInstance()->changePauseState();
+			break;
 	}
-
-	// untuk test :
-	cout << c << endl;
 }

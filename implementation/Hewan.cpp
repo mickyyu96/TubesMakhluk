@@ -2,6 +2,7 @@
 #include "../header/Hewan.h"
 #include "../header/LMakhluk.h"
 #include "../header/Rabbit.h"
+#include "../header/World.h"
 using namespace std;
 
 // Implementasi Ctor
@@ -11,7 +12,9 @@ Hewan::Hewan(char _ID, int _maxAge) : Makhluk(_ID, _maxAge)
 
 void Hewan::Move(int dx, int dy)
 {
+	World::getWorldInstance()->lockWorld();
 	pos.increment(dx, dy);
+	World::getWorldInstance()->unlockWorld();
 }
 
 Makhluk* Hewan::FindFood(){
@@ -45,7 +48,7 @@ Makhluk* Hewan::FindMakhluk(char _ID){
     // ID = '*' cari berdasarkan power
     bool found = false;
     int distance = 999;
-    Makhluk * _Makhluk = new Rabbit;
+	Makhluk * _Makhluk = NULL;
     LMakhluk* _LMakhluk = new LMakhluk;
     _LMakhluk->setFirst(World::getWorldInstance()->getObjects()->getFirst());
     while (_LMakhluk->getFirst()!=World::getWorldInstance()->getObjects()->getLast()) {

@@ -9,6 +9,7 @@
 #define DEFAULT_NBRS 20
 #define DEFAULT_NKOL 20
 #include <iostream>
+#include <mutex>
 using namespace std;
 
 // Implementasi Static Data Member Initialization
@@ -56,10 +57,37 @@ void World::Show(int deltaT)
 {
 	while (!getWorldInstance()->isEnded())
 	{
+		getWorldInstance()->lockWorld();
 		getWorldInstance()->PrintMap();
+		getWorldInstance()->unlockWorld();
 
 		std::chrono::milliseconds timespan(deltaT);
 		std::this_thread::sleep_for(timespan);
 	}
 	delete getWorldInstance()->getObjects();
 }
+
+void World::changePauseState()
+{
+	if (isPaused())
+	{
+		_isPaused = 0;
+		unlockWorld();
+	}
+	else
+	{
+		_isPaused = 1;
+		lockWorld();
+	}
+}
+
+void World::lockWorld()
+{
+	worldLock.lock();
+}
+
+void World::unlockWorld()
+{
+	worldLock.unlock();
+}
+

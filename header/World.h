@@ -5,6 +5,8 @@
 #include "RandomGenerator.h"
 #include <chrono>
 #include <thread>
+#include <mutex>
+using namespace std;
 
 class LMakhluk; // forward class declaration
 
@@ -86,13 +88,13 @@ class World {
 		*	\details Mengubah status isPaused menjadi TRUE, dan memberhentikan semua aktivitas dunia
 		*	\return void
 		*/
-		void pauseWorld();
+		void lockWorld();
 
 		/** \brief Melanjutkan aktivitas dunia
 		*	\details Mengubah status isPaused menjadi FALSE, dan menjalankan kembali semua aktivitas dunia
 		*	\return void
 		*/
-		void resumeWorld();
+		void unlockWorld();
 
 	private :
 		/** \brief Constructor
@@ -107,6 +109,7 @@ class World {
 
 		int _isEnded; /**< status berakhirnya aktivitas dunia*/
 		int _isPaused; /**< status berhentinya aktivitas dunia*/
+		mutex worldLock; /**< mutex untuk kunci lock aktivitas saat dunia diberhentikan */
 
 		static World* worldInstance; /**< pointer yang menunjuk ke instance dari kelas singleton*/
 
