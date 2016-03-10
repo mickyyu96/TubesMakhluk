@@ -54,6 +54,8 @@ class LMakhluk
 
 				/** \brief      Constructor
                  *  \details    Menciptakan sebuah makhluk dengan info yang di pass dari parameter
+                 *  \param      _info Makhluk* Info dari makhluk
+                 *  \param      _next Makhluk* Next dari makhluk
                  */
 				ElmtMakhluk(Makhluk*, ElmtMakhluk*);
 
