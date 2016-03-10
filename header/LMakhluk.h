@@ -36,6 +36,7 @@ class LMakhluk
 
 	public :
 		ElmtMakhluk* getFirst() { return first; }
+		int isEmpty() { return getFirst() == NULL; }
 		void setFirst(ElmtMakhluk* _first) { first = _first; }
 
 		ElmtMakhluk* getLast();
