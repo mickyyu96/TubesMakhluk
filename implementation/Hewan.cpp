@@ -1,5 +1,7 @@
 // Hewan.cpp
 #include "../header/Hewan.h"
+#include "../header/LMakhluk.h"
+#include "../header/Rabbit.h"
 using namespace std;
 
 // Implementasi Ctor
