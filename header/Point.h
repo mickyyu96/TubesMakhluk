@@ -72,7 +72,7 @@ class Point {
 	*  \param P2 Point Titik kedua
 	*  \return Bilangan real yang merupakan jarak euclidean antara titik pertama dan titik kedua
 	*/
-		static double getDistance(Point&, Point&);
+		static int getDistance(Point&, Point&);
 
 	private :
 		int x; /**< absis*/

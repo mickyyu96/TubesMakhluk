@@ -8,6 +8,14 @@
 
 class LMakhluk; // forward class declaration
 
+/** \class World
+*	\brief Representasi dari alam semesta
+*	\details Kelas World merepresentasikan alam semesta yang terdiri dari 
+*			 sebuah "ruang" (space) fiktif yang memiliki dimensi panjang dan lebar
+*            dan sekumpulan makhluk-makhluk (objects) yang bisa bergerak secara independen.
+*	\author Robert Sebastian Herlim
+*	\date Maret 2016
+*/
 class World {
 	public :
 		// getter
@@ -31,8 +39,6 @@ class World {
 		void resumeWorld();
 
 	private :
-		// ctor
-		World();
 		World(int, int);
 		
 	private :

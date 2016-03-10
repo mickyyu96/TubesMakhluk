@@ -29,9 +29,9 @@ void Point::increment(int dx, int dy)
 	x += dx; y += dy;
 }
 
-double Point::getDistance(Point& P1, Point& P2)
+int Point::getDistance(Point& P1, Point& P2)
 {
 	int dx = P1.getX() - P2.getX();
 	int dy = P1.getY() - P2.getY();
-	return sqrt((double)dx*dx + dy*dy);
+	return (int)sqrt((double)dx*dx + dy*dy);
 }
