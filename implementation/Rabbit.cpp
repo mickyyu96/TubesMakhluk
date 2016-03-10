@@ -37,7 +37,8 @@ void Rabbit::WanderingHop(){
             }
             
             Hewan::Move(dx, dy);
-            Hewan::Sleep();
+            std::chrono::milliseconds timespan(Hewan::getDeltaT());
+            std::this_thread::sleep_for(timespan);
         }
     }
     else{
@@ -64,7 +65,8 @@ void Rabbit::WanderingHop(){
                 }
             }
             Hewan::Move(dx, dy);
-            Hewan::Sleep();
+            std::chrono::milliseconds timespan(Hewan::getDeltaT());
+            std::this_thread::sleep_for(timespan);
         }
     }
 }
@@ -97,7 +99,7 @@ void Rabbit::Live(){
     while(isAlive())
     {
         Hewan::lockHewan();
-        nRandom = RandomGenerator::getInstance()->getNextInt(3);
+        nRandom = RandomGenerator::getInstance()->getNextInt(4);
         Hewan::unlockHewan();
         switch (nRandom) {
             case 0:
@@ -109,7 +111,11 @@ void Rabbit::Live(){
             case 2:
                 Race();
                 break;
+            case 3:
+                WanderingHop();
+                break;
         }
-        Hewan::Sleep();
+        std::chrono::milliseconds timespan(Hewan::getDeltaT());
+        std::this_thread::sleep_for(timespan);
     }
 }
