@@ -9,7 +9,7 @@ LMakhluk::LMakhluk()
 
 LMakhluk::~LMakhluk()
 {
-    while (first != NULL)
+    while (!isEmpty())
     {
         Del(getLast()->getInfo());
     }
@@ -18,7 +18,7 @@ LMakhluk::~LMakhluk()
 void LMakhluk::Add(Makhluk* M)
 {
     ElmtMakhluk* EM = new ElmtMakhluk(M, NULL);
-    if (getFirst() == NULL)
+	if (isEmpty())
     {
         first = EM;
     }
@@ -35,7 +35,7 @@ void LMakhluk::Del(Makhluk* M)
     ElmtMakhluk* _EM;
     EM = findMakhluk(M);
     _EM = findPrecMakhluk(M);
-    if (EM = getFirst())
+    if (EM == getFirst())
     {
         setFirst(NULL);
     }
