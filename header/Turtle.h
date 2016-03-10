@@ -12,10 +12,6 @@ class Turtle : public Hewan {
     
     // getter
     int getDeltaT() { return Hewan::getDeltaT(); }
-    int getIsChallange() { return isChallange; }
-    
-    //setter
-    void setIsChallange(int x) { isChallange = x; }
     
     // actions
     void Race();
@@ -29,7 +25,6 @@ class Turtle : public Hewan {
     static const int TURTLE_MAXAGE = 15;
     static const int TURTLE_BASEPOWER = 2;
     static const int TURTLE_DELTAT = 600;
-    int isChallange;
 };
 
 #endif /* Turtle_hpp */

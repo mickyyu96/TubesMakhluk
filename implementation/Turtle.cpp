@@ -10,7 +10,6 @@ Turtle::Turtle(): Hewan(TURTLE_ID, TURTLE_MAXAGE) {
     power = TURTLE_BASEPOWER;
     deltaT = TURTLE_DELTAT;
     pos = Point();
-    isChallange = 0;
 }
 
 Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
@@ -18,13 +17,9 @@ Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
     power = TURTLE_BASEPOWER;
     deltaT = TURTLE_DELTAT;
     pos = P;
-    isChallange = 0;
 }
 
 void Turtle::Race(){
-    if (getIsChallange()) {
-        //
-    }
 }
 
 void Turtle::GetToFood(){
