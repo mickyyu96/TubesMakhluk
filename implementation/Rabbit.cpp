@@ -4,13 +4,6 @@
 #include <chrono>
 using namespace std;
 
-Rabbit::Rabbit() : Hewan(RABBIT_ID, RABBIT_MAXAGE)
-{
-    status = 1;
-    power = RABBIT_BASEPOWER;
-    deltaT = RABBIT_DELTAT;
-    pos = Point();
-}
 Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE) {
     status = 1;
     power = RABBIT_BASEPOWER;

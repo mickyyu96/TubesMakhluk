@@ -11,13 +11,6 @@
  
 class Matrix {
 	public :
-
-	/** \brief Default Constructor
-	 *  \details Menciptakan sebuah matriks dengan ukuran default.
-	 *			 Matriks yang tercipta akan terisi karakter '#' di bagian tepi matriks sebagai border, 
-	 *			 dan '.' pada bagian dalamnya.
-	 */
-		Matrix();
 		
 	/** \brief Constructor
 	 *  \details Menciptakan sebuah matriks dengan ukuran yang di-pass melalui parameter.

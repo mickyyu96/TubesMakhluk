@@ -5,12 +5,6 @@
 using namespace std;
 int dx =1;
 int dy =1;
-Turtle::Turtle(): Hewan(TURTLE_ID, TURTLE_MAXAGE) {
-    status = 1;
-    power = TURTLE_BASEPOWER;
-    deltaT = TURTLE_DELTAT;
-    pos = Point();
-}
 
 Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
     status = 1;

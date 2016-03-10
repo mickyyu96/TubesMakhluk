@@ -6,7 +6,6 @@
 class Rabbit : public Hewan {
     public :
     // ctor
-    Rabbit();
     Rabbit(const Point&);
     
     int isVegetarian() { return 1; }

@@ -7,7 +7,6 @@
 class PolarBear : public Hewan {
 	public :
 		// ctor
-		PolarBear();
 		PolarBear(const Point&);
 		
 		// getter

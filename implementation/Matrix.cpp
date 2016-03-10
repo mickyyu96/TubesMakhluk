@@ -7,22 +7,6 @@
 using namespace std;
 
 // Implementasi ctor, cctor, dtor, operator=
-Matrix::Matrix() : NBrs(DEFAULT_NBRS), NKol(DEFAULT_NKOL)
-{
-	M = new char* [NBrs];
-	for(int i=0; i<NBrs; i++)
-		M[i] = new char [NKol];
-	
-	for(int i=0; i<NBrs; i++)
-		for(int j=0; j<NKol; j++)
-			M[i][j] = '.';
-	
-	for(int i=0; i<NBrs; i++)
-		M[i][0] = M[i][NKol-1] = '#';
-	
-	for(int i=0; i<NKol; i++)
-		M[0][i] = M[NBrs-1][i] = '#';
-}
 
 Matrix::Matrix(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
 {
