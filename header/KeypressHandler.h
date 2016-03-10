@@ -16,13 +16,13 @@
 class KeypressHandler
 {
 	public :
-		/** \brief getHandlerInstance - Get Singleton Instance
-		 *  \details Mengembalikan pointer dari objek kelas singleton
-		 *	\return pointer yang menunjuk ke singleton instance
+		/** \brief Get Singleton Instance dari kelas KeypressHandler
+		 *  \details Mengembalikan pointer dari objek kelas singleton pada kelas KeypressHandler
+		 *	\return pointer yang menunjuk ke singleton instance pada kelas KeypressHandler
 		 */
 		static KeypressHandler* getHandlerInstance() { return handlerInstance; }
 		
-		/** \brief getLastKeypress - Get Last Keypress
+		/** \brief Get Last Keypress
 		 *  \details Mengembalikan karakter yang terakhir ditekan oleh pengguna yang disimpan dalam instance KeypressHandler
 		 *	\return karakter yang terakhir ditekan pengguna
 		 */
