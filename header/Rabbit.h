@@ -14,7 +14,7 @@ class Rabbit : public Hewan {
     int getDeltaT() { return Hewan::getDeltaT(); }
     
     // actions
-    //bool FindTurtle();
+    void Race();
     void GetToFood();
     void WanderingHop();
     
