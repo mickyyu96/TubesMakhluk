@@ -24,7 +24,9 @@ void Rabbit::GetToFood(){
 void Rabbit::WanderingHop(){
     int dx = 2;
     int dy = 2;
+    Hewan::lockHewan();
     int nRandom = RandomGenerator::getInstance()->getNextInt(2);
+    Hewan::unlockHewan();
     if (nRandom == 1) {
         for (int i = 0; i<20; i++) {
             if (Hewan::shouldRebounced(dx, 0)) {
@@ -94,7 +96,9 @@ void Rabbit::Live(){
     int nRandom;
     while(isAlive())
     {
+        Hewan::lockHewan();
         nRandom = RandomGenerator::getInstance()->getNextInt(3);
+        Hewan::unlockHewan();
         switch (nRandom) {
             case 0:
                 Hewan::Wandering();
