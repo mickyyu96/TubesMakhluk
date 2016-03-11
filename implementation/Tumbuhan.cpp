@@ -21,6 +21,8 @@ void Tumbuhan::Live() {
     while (isAlive()) {
 
         AgeIncrement();
+        std::chrono::miliseconds timespan(500);
+        std::this_thread::sleep_for(timespan);
         if (getAge()>=getMaxAge()) {Kill();}
     }
 }
