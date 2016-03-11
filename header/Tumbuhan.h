@@ -16,6 +16,7 @@ class Tumbuhan : public Makhluk {
 		/** \brief Constructor dari objek bertipe Tumbuhan
 	     	*  \details Constructor Tumbuhan yang akan membentuk objek bertipe Tumbuhan
 	     	*   dengan masukan variable reference Point sebagai posisi awal objek
+	     	* 	\param P Point posisi objek akan terbentuk
 	     	*	\return Objek bertipe Tumbuhan
 	     	*/
 		Tumbuhan(const Point& P);
