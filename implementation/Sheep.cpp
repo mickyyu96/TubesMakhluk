@@ -27,7 +27,7 @@ void Sheep::GetToFood()
 void Sheep::Live()
 {
     int nRandom;
-    while(isAlive())
+    while(isAlive() && !World::getWorldInstance()->isEnded())
     {
         nRandom = RandomGenerator::getInstance()->getNextInt(2);
         switch (nRandom)

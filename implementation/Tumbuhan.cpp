@@ -12,7 +12,7 @@ Tumbuhan::Tumbuhan(const Point& P) : Makhluk(TUMBUHAN_ID, TUMBUHAN_MAXAGE)
 }
 
 void Tumbuhan::Live() {
-    while (isAlive()) {
+    while (isAlive() && !World::getWorldInstance()->isEnded()) {
 
         AgeIncrement();
 
