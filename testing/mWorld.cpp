@@ -19,6 +19,8 @@ int main()
 
 	thread t1(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getInfo());
 	thread t4(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getNext()->getInfo());
+	thread t5(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getNext()->getInfo());
+	thread t6(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getNext()->getInfo());
 	thread t2(Screen::ShowWorld, 500);
 	thread t3(KeypressHandler::HandleKeypress);
 	t1.join();

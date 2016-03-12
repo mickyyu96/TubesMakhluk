@@ -24,6 +24,7 @@ void PolarBear::GetToFood()
     }
 }
 
+/*
 int PolarBear::shouldRebounced(int dx, int dy)
 {
     if (dx+pos.getX()<=0 || dx+pos.getX()>=World::getWorldInstance()->getNBrs()-1) {
@@ -32,8 +33,9 @@ int PolarBear::shouldRebounced(int dx, int dy)
         return 1;
     }
     return 0;
-}
+} */
 
+/*
 void PolarBear::Wandering()
 {
     int dx = 2;
@@ -81,7 +83,7 @@ void PolarBear::Wandering()
             std::this_thread::sleep_for(timespan);
         }
     }
-}
+} */
 
 void PolarBear::Live()
 {
@@ -92,7 +94,7 @@ void PolarBear::Live()
         switch (nRandom)
         {
             case 0:
-                Wandering();
+                Hewan::Wandering();
                 break;
             case 1:
                 GetToFood();
