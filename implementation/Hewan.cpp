@@ -1,9 +1,11 @@
 // Hewan.cpp
 #include "../header/Hewan.h"
 #include "../header/LMakhluk.h"
-#include "../header/Rabbit.h"
-#include "../header/World.h"
+#include <thread>
+#include <chrono>
+
 using namespace std;
+
 
 // Implementasi Ctor
 Hewan::Hewan(char _ID, int _maxAge) : Makhluk(_ID, _maxAge)
@@ -45,13 +47,24 @@ bool Hewan::isMakhlukinList(char _ID){
 Makhluk* Hewan::FindMakhluk(char _ID){
     // Sudah dipastikan Makhluk ada di List
     // Cari berdasarkan ID di ListMakhluk
-    // ID = '*' cari berdasarkan power
+    // Jika ID = '*' cari berdasarkan power
     bool found = false;
     int distance = 999;
-	Makhluk * _Makhluk = NULL;
+    Makhluk * _Makhluk = NULL;
     LMakhluk* _LMakhluk = new LMakhluk;
     _LMakhluk->setFirst(World::getWorldInstance()->getObjects()->getFirst());
-    while (_LMakhluk->getFirst()!=World::getWorldInstance()->getObjects()->getLast()) {
+    if (_ID==G) {
+        while (_LMakhluk->getFirst()!=World::getWorldInstance()->getObjects()->getLast()) {
+            if (_LMakhluk->getFirst()->getInfo()->getID() == _ID && _LMakhluk->getFirst()->getInfo()->isAlive()) {
+                Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
+                Point PThisMakhluk = this->getPosition();
+                if (Point::getDistance(PSearchedMakhluk, PThisMakhluk)<distance) {
+                    distance = Point::getDistance(PSearchedMakhluk, PThisMakhluk);
+                    _Makhluk = _LMakhluk->getFirst()->getInfo();
+                }
+            }
+            _LMakhluk->setFirst(_LMakhluk->getFirst()->getNext());
+        }
         if (_LMakhluk->getFirst()->getInfo()->getID() == _ID && _LMakhluk->getFirst()->getInfo()->isAlive()) {
             Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
             Point PThisMakhluk = this->getPosition();
@@ -60,17 +73,41 @@ Makhluk* Hewan::FindMakhluk(char _ID){
                 _Makhluk = _LMakhluk->getFirst()->getInfo();
             }
         }
-        _LMakhluk->setFirst(_LMakhluk->getFirst()->getNext());
     }
-    if (_LMakhluk->getFirst()->getInfo()->getID() == _ID && _LMakhluk->getFirst()->getInfo()->isAlive()) {
-        Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
-        Point PThisMakhluk = this->getPosition();
-        if (Point::getDistance(PSearchedMakhluk, PThisMakhluk)<distance) {
-            distance = Point::getDistance(PSearchedMakhluk, PThisMakhluk);
-            _Makhluk = _LMakhluk->getFirst()->getInfo();
+    else {
+        while (_LMakhluk->getFirst()!=World::getWorldInstance()->getObjects()->getLast()) {
+            if (_LMakhluk->getFirst()->getInfo()->getID() != 'G' && _LMakhluk->getFirst()->getInfo()->isAlive()) {
+                Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
+                Point PThisMakhluk = this->getPosition();
+                int PowThisMakhluk = this->getPower();
+                int PowSearchedMakhluk = static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getPower();
+                int dltaTThisMakhluk = this->getDeltaT();
+                int dltaTSearchedMakhluh = static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getDeltaT();
+                if (Point::getDistance(PSearchedMakhluk, PThisMakhluk)<distance && PowSearchedMakhluk<=PowThisMakhluk &&
+                    dltaTSearchedMakhluh<=dltaTThisMakhluk)
+                {
+                    distance = Point::getDistance(PSearchedMakhluk, PThisMakhluk);
+                    _Makhluk = _LMakhluk->getFirst()->getInfo();
+                }
+            }
+            _LMakhluk->setFirst(_LMakhluk->getFirst()->getNext());
+        }
+        if (_LMakhluk->getFirst()->getInfo()->getID() != 'G' && _LMakhluk->getFirst()->getInfo()->isAlive()) {
+            Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
+            Point PThisMakhluk = this->getPosition();
+            int PowThisMakhluk = this->getPower();
+            int PowSearchedMakhluk = static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getPower();
+            int dltaTThisMakhluk = this->getDeltaT();
+            int dltaTSearchedMakhluh = static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getDeltaT();
+            if (Point::getDistance(PSearchedMakhluk, PThisMakhluk)<distance && PowSearchedMakhluk<=PowThisMakhluk &&
+                dltaTSearchedMakhluh<=dltaTThisMakhluk)
+            {
+                distance = Point::getDistance(PSearchedMakhluk, PThisMakhluk);
+                _Makhluk = _LMakhluk->getFirst()->getInfo();
+            }
         }
     }
-    
+
     return _Makhluk;
 }
 
@@ -83,7 +120,7 @@ void Hewan::getToPoint(Point P){
     while (i>0 || j>0) {
         if (dx<0) { _dx = -1; } else if (dx==0) { _dx = 0; }
         if (dy<0) { _dy = -1; } else if (dy==0) { _dy = 0; }
-        
+
         if (i <= 0) { _dx = 0; } else if (j <= 0){ _dy = 0; }
         Move(_dx, _dy);
         std::chrono::milliseconds timespan(deltaT);
@@ -104,7 +141,7 @@ void Hewan::Wandering(){
             if (Hewan::shouldRebounced(0, dy)) {
                 dy *= -1;
             }
-            
+
             Hewan::Move(dx, dy);
             Sleep();
         }
@@ -136,7 +173,7 @@ void Hewan::Wandering(){
             Sleep();
         }
     }
-    
+
 }
 
 void Hewan::Sleep()
