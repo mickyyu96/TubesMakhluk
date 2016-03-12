@@ -10,22 +10,29 @@
 #include <thread>
 using namespace std;
 
+
 int main()
 {
 	string input;
 	cin >> input;
 	WorldBuilder::getBuilderInstance()->setStrMakhluk(input);
 	WorldBuilder::getBuilderInstance()->buildWorldObjects();
-
-	thread t1(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getInfo());
-	thread t4(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getNext()->getInfo());
-	thread t5(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getNext()->getInfo());
-	thread t6(Makhluk::MakeAlive, World::getWorldInstance()->getObjects()->getFirst()->getNext()->getInfo());
-	thread t2(Screen::ShowWorld, 500);
-	thread t3(KeypressHandler::HandleKeypress);
-	t1.join();
-	t4.join();
-	t3.join();
+	
+	thread t[55];
+	int thread_count = 0;
+	LMakhluk::ElmtMakhluk *P = World::getWorldInstance()->getObjects()->getFirst();
+	while(P != NULL)
+	{
+		t[thread_count++] = thread(Makhluk::MakeAlive, P->getInfo());
+		P = P->getNext();
+	}
+	t[thread_count++] = thread(Screen::ShowWorld, 500);
+	t[thread_count++] = thread(KeypressHandler::HandleKeypress);
+	
+	for(int i=0; i<thread_count; i++)
+	{
+		t[i].join();
+	}
 
 	system("PAUSE");
 	delete World::getWorldInstance();

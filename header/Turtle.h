@@ -75,7 +75,7 @@ class Turtle : public Hewan {
     static const char TURTLE_ID = 'T'; /**< ID Turtle*/
     static const int TURTLE_MAXAGE = 15; /**< Umur maksimal Turtle*/
     static const int TURTLE_BASEPOWER = 2; /**< Power Turtle*/
-	static const int TURTLE_DELTAT = 1200; /**< DeltaT Turtle*/
+	static const int TURTLE_DELTAT = 600; /**< DeltaT Turtle*/
     int isChallange; /**< Variable ajakan racing oleh Rabbit*/
 };
 

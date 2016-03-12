@@ -38,7 +38,7 @@ class LMakhluk
 		 */
 		void Del(Makhluk*);
 
-	private :
+	public :
 
 	    /** \class      ElmtMakhluk
          *  \brief      Element Makhluk
@@ -94,7 +94,8 @@ class LMakhluk
 				Makhluk* info;      /**< info dari makhluk */
 				ElmtMakhluk* next;  /**< next dari makhluk */
 		};
-
+		
+	private :
 		ElmtMakhluk* first; /**< element pertama dari list of makhluk */
 
 	public :
