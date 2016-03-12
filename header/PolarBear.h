@@ -28,7 +28,6 @@ class PolarBear : public Hewan
 		 */
         int isVegetarian() { return 0; }
 
-
         /** \brief      Getter DeltaT PolarBear
 		 *  \details    Fungsi untuk memperoleh DeltaT makhluk PolarBear
 		 *	\return     Bilangan bulat berupa DeltaT PolarBear
@@ -40,6 +39,14 @@ class PolarBear : public Hewan
 		 *	\return     void
 		 */
         void GetToFood();
+
+        /** \brief      Fungsi untuk memberi batasan gerak PolarBear
+		 *  \details    Fungsi untuk menentukan apakah PolarBear perlu rebounced atau tidak
+		 *  \param      dx Jumlah move PolarBear pada baris
+		 *  \param      dy Jumlah move PolarBear pada kolom
+		 *	\return     Bilangan bulat 0 atau 1
+		 */
+        int shouldRebounced(int, int)
 
 		/** \brief      Prosedur hidup PolarBear
 		 *  \details    Prosedur untuk menentukan apa yang akan dilakukan oleh PolarBear

@@ -24,7 +24,7 @@ int main()
 	t1.join();
 	t4.join();
 	t3.join();
-	
+
 	system("PAUSE");
 	delete World::getWorldInstance();
 	return 0;

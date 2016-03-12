@@ -7,7 +7,6 @@
 #include "../header/Wolf.h"
 #include "../header/Sheep.h"
 #include "../header/PolarBear.h"
-#include "../header/Snake.h"
 #include "../header/Tumbuhan.h"
 #include <string>
 
@@ -46,7 +45,7 @@ void WorldBuilder::buildWorldObjects()
 				World::getWorldInstance()->getObjects()->Add(new Sheep(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
 				break;
             case 'P':
-				World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+				World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPolarBear(NBrs, NKol)));
 				break;
 		}
 	}
