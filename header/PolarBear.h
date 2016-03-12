@@ -46,7 +46,6 @@ class PolarBear : public Hewan
 		 *  \param      dy Jumlah move PolarBear pada kolom
 		 *	\return     Bilangan bulat 0 atau 1
 		 */
-        int shouldRebounced(int, int);
 
 		/** \brief      Prosedur hidup PolarBear
 		 *  \details    Prosedur untuk menentukan apa yang akan dilakukan oleh PolarBear
@@ -54,8 +53,6 @@ class PolarBear : public Hewan
 		 *	\return     void
 		 */
         void Live();
-        
-        void Wandering();
 
 	private :
 		static const char POLARBEAR_ID = 'P';       /**< ID PolarBear */
