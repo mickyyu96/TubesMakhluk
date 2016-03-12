@@ -7,8 +7,8 @@
 
 /** \class      RandomGenerator
  *  \brief      Mengembalikan random number
- *  \details    Kelas RandomGenerator mengembalikan random number berdasarkan
-                batasan yang diberikan
+ *  \details    Kelas RandomGenerator mengembalikan sebuah random number
+ *				berdasarkan batasan yang diberikan
  *	\author     Micky Yudi Utama
  *	\date       Maret 2016
  */
@@ -29,9 +29,9 @@ class RandomGenerator
         static RandomGenerator* getInstance() { return _instance; }
 
         /** \brief      Fungsi untuk mengacak bilangan bulat berdasarkan batasan
-		 *  \details    Melakukan pengacakan bilangan bulat dengan batasan (0...a)
+		 *  \details    Melakukan pengacakan bilangan bulat dengan batasan (0...a-1)
 		 *  \param      a int Batas atas hasil acak
-		 *	\return     Bilangan bulat acak dari (0...a)
+		 *	\return     Bilangan bulat acak dari (0...a-1)
 		 */
         int getNextInt(int);
 

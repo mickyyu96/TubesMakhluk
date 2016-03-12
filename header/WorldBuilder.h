@@ -4,21 +4,57 @@
 #include "World.h"
 #include <string>
 
+/** \class WorldBuilder
+*	\brief Builder kelas World
+*	\details Kelas WorldBuilder merupakan BUILDER dari kelas World, dan bertanggung jawab
+*			 untuk melakukan inisialisasi objek-objek dunia
+*	\author Robert Sebastian Herlim
+*	\date Maret 2016
+*/
+
 class WorldBuilder
 {
 	public:
+		/** \brief Get Singleton Instance dari kelas WorldBuilder
+		*  \details Mengembalikan pointer dari objek singleton pada kelas WorldBuilder
+		*	\return pointer yang menunjuk ke singleton instance pada kelas WorldBuilder
+		*/
 		static WorldBuilder* getBuilderInstance() { return builderInstance; }
+
+		/** \brief Get string makhluk
+		*  \details Mengembalikan sebuah string yang tersimpan dalam instance WorldBuilder
+		*			yang merupakan karakter-karakter makhluk yang akan diciptakan
+		*	\return string yang berisi karakter-karakter makhluk yang akan diciptakan
+		*/
 		string getStrMakhluk() { return strMakhluk; }
+
+		/** \brief Setter string makhluk
+		*  \details Melakukan assignment string yang tersimpan dalam instance WorldBuilder
+		*			dengan string baru yang di-passing melalui parameter
+		*	\param _str const string& String baru yang akan di-assign
+		*	\return void
+		*/
 		void setStrMakhluk(const string& _str) { strMakhluk = _str; }
+
+		/** \brief Build World Objects
+		*  \details Melakukan inisialisasi list of makhluk pada objek singleton kelas World
+		*			berdasarkan string yang tersimpan dalam instance WorldBuilder
+		*	\return void
+		*/
 		void buildWorldObjects();
 
 	private:
+		/** \brief Constructor
+		*  \details Menciptakan sebuah instance WorldBuilder
+		*	\param _NBrs int Jumlah baris dunia yang tercipta
+		*	\param _NKol int Jumlah kolom dunia yang tercipta
+		*/
 		WorldBuilder(int, int);
 
 	private:
-		static WorldBuilder* builderInstance;
-		string strMakhluk;
-		const int NBrs, NKol;
+		static WorldBuilder* builderInstance; /**< pointer yang menunjuk ke instance dari kelas singleton*/
+		string strMakhluk; /**< input dari pengguna yang berisi karakter-karakter makhluk yang akan diciptakan*/
+		const int NBrs, NKol; /**< ukuran world yang tercipta */
 };
 
 #endif

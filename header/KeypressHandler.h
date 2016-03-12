@@ -29,26 +29,29 @@ class KeypressHandler
 		char getLastKeypress() { return lastKeypress; }
 
 		/** \brief Prosedur untuk menangani keypress
-		 *  \details Menangani keypress dengan menunggu pengguna menekan tombol, dan melakukan aksi untuk karakter tersebut
+		 *  \details Menangani keypress dengan menunggu pengguna menekan tombol, 
+		 *			 dan melakukan aksi untuk karakter tersebut
 		 *	\return void
 		 */
 		static void HandleKeypress();
 		
 		/** \brief Prosedur untuk menerima keypress
-		 *  \details Menunggu pengguna menekan tombol, serta mengubah karakter lastKeypress yang tersimpan dalam instance KeypressHandler
+		 *  \details Menunggu pengguna menekan tombol, 
+		 *			 serta mengubah karakter lastKeypress yang tersimpan dalam instance KeypressHandler
 		 *	\return void
 		 */
 		void getKeypress();
 		
 		/** \brief  Prosedur untuk menjalankan aksi dari keypress
-		 *  \details Melakukan aksi-aksi yang sesuai dengan karakter lastKeypress yang tersimpan dalam instance KeypressHandler
+		 *  \details Melakukan aksi-aksi yang sesuai dengan karakter lastKeypress 
+		 *			 yang tersimpan dalam instance KeypressHandler
 		 *	\return void
 		 */
 		void doAction();
 
 	private:
 		/** \brief Default Constructor
-		 *  \details Menciptakan sebuah KeypressHandler
+		 *  \details Menciptakan sebuah instance dari kelas KeypressHandler
 		 */
 		KeypressHandler();
 
