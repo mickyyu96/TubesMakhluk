@@ -5,7 +5,7 @@
 #include "Hewan.h"
 
 /** \class      PolarBear
- *  \brief      Kelas turunan dari makhluk berupa PolarBear
+ *  \brief      Kelas turunan dari Makhluk berupa PolarBear
  *  \details    Kelas PolarBear merupakan kelas yang berfungsi untuk mengatur behaviour dan
                 kehidupan dari objek PolarBear
  *	\author     Micky Yudi Utama

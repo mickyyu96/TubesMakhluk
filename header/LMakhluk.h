@@ -5,8 +5,9 @@
 #include "Makhluk.h"
 
 /** \class      LMakhluk
- *  \brief      List of makhluk
- *  \details    Menciptakan list of makhluk
+ *  \brief      Representasi ADT List of Makhluk
+ *  \details    Kelas LMakhluk merupakan kelas yang menampung objek-objek (makhluk)
+*				yang terdapat dalam dunia
  *	\author     Micky Yudi Utama
  *	\date       Maret 2016
  */

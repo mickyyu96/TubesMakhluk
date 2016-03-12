@@ -7,7 +7,7 @@
 #include "Hewan.h"
 
 /** \class      Sheep
- *  \brief      Kelas turunan dari makhluk berupa Sheep
+ *  \brief      Kelas turunan dari Makhluk berupa Sheep
  *  \details    Kelas Sheep merupakan kelas yang berfungsi untuk mengatur behaviour dan
                 kehidupan dari objek Sheep
  *	\author     Micky Yudi Utama

@@ -8,7 +8,7 @@
 using namespace std;
 
 /** \class		IOManager
-*	\brief		Kelas dasar Input/Output
+*	\brief		Abstract Base Class yang merupakan kelas dasar Input/Output
 *	\details	Kelas IOManager bertanggung jawab untuk melakukan operasi-operasi Input/Output.
 *	\author		Robert Sebastian Herlim
 *	\date		Maret 2016

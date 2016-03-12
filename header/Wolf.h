@@ -5,7 +5,7 @@
 #include "Hewan.h"
 
 /** \class      Wolf
- *  \brief      Kelas turunan dari makhluk berupa Wolf
+ *  \brief      Kelas turunan dari Makhluk berupa Wolf
  *  \details    Kelas Wolf merupakan kelas yang berfungsi untuk mengatur behaviour dan
                 kehidupan dari objek Wolf
  *	\author     Micky Yudi Utama
