@@ -18,8 +18,6 @@ int \hyperlink{class_world_ab77dab54a1e3e7b5657b39f05cb0d2a5}{get\+N\+Brs} ()
 \begin{DoxyCompactList}\small\item\em Get jumlah baris. \end{DoxyCompactList}\item 
 int \hyperlink{class_world_a2d8ed3b33860324182e773fde59832b2}{get\+N\+Kol} ()
 \begin{DoxyCompactList}\small\item\em Get jumlah kolom. \end{DoxyCompactList}\item 
-void \hyperlink{class_world_ab166a5835416154c7276dcfa8c523e2e}{Print\+Map} ()
-\begin{DoxyCompactList}\small\item\em Print dunia beserta isinya. \end{DoxyCompactList}\item 
 int \hyperlink{class_world_acd627d79b89688184df6e9601ffe1532}{is\+Ended} ()
 \begin{DoxyCompactList}\small\item\em Get status is\+Ended. \end{DoxyCompactList}\item 
 int \hyperlink{class_world_ad06b05aabbcbe0c93106793bdb5fcc2c}{is\+Paused} ()
@@ -36,9 +34,7 @@ void \hyperlink{class_world_a08481fdff65e290c44386676ce993dce}{unlock\+World} ()
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_world}{World} $\ast$ \hyperlink{class_world_a7a8d0b3f76f0ecde36ffe28f9b08f30f}{get\+World\+Instance} ()
-\begin{DoxyCompactList}\small\item\em Get Singleton Instance dari kelas \hyperlink{class_world}{World}. \end{DoxyCompactList}\item 
-static void \hyperlink{class_world_a5013e1294abc50b60ffa747bcd4499f4}{Show} (int)
-\begin{DoxyCompactList}\small\item\em Print dunia beserta isinya secara berkala. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get Singleton Instance dari kelas \hyperlink{class_world}{World}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -135,7 +131,7 @@ List yang berisi pointer ke makhluk-\/makhluk yang ada dalam dunia
 Get Singleton Instance dari kelas \hyperlink{class_world}{World}. 
 
 Mengembalikan pointer dari objek singleton pada kelas \hyperlink{class_world}{World} \begin{DoxyReturn}{Returns}
-pointer yang menunjuk ke singleton instance pada kelas \hyperlink{class_world}{World} 
+Pointer yang menunjuk ke singleton instance pada kelas \hyperlink{class_world}{World} 
 \end{DoxyReturn}
 \index{World@{World}!is\+Ended@{is\+Ended}}
 \index{is\+Ended@{is\+Ended}!World@{World}}
@@ -179,39 +175,6 @@ Memberhentikan aktivitas dunia.
 Mengubah status is\+Paused menjadi T\+R\+UE, dan memberhentikan semua aktivitas dunia \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\index{World@{World}!Print\+Map@{Print\+Map}}
-\index{Print\+Map@{Print\+Map}!World@{World}}
-\subsubsection[{\texorpdfstring{Print\+Map()}{PrintMap()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::\+Print\+Map (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_world_ab166a5835416154c7276dcfa8c523e2e}{}\label{class_world_ab166a5835416154c7276dcfa8c523e2e}
-
-
-Print dunia beserta isinya. 
-
-Mencetak state dunia beserta dengan makhluk-\/makhluk yang ada di dalamnya ke layar \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\index{World@{World}!Show@{Show}}
-\index{Show@{Show}!World@{World}}
-\subsubsection[{\texorpdfstring{Show(int)}{Show(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::\+Show (
-\begin{DoxyParamCaption}
-\item[{int}]{deltaT}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_world_a5013e1294abc50b60ffa747bcd4499f4}{}\label{class_world_a5013e1294abc50b60ffa747bcd4499f4}
-
-
-Print dunia beserta isinya secara berkala. 
-
-Mencetak state dunia beserta dengan isi-\/isinya ke layar secara berkala dengan interval waktu tertentu 
-\begin{DoxyParams}{Parameters}
-{\em deltaT} & int interval waktu (dalam ms) antar pencetakan state dunia ke layar \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
 \index{World@{World}!unlock\+World@{unlock\+World}}
 \index{unlock\+World@{unlock\+World}!World@{World}}
 \subsubsection[{\texorpdfstring{unlock\+World()}{unlockWorld()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::unlock\+World (
@@ -231,4 +194,5 @@ void
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/header/World.\+h\item 
-C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/implementation/World.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/implementation/World.\+cpp\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/implementation/World\+Builder.\+cpp\end{DoxyCompactItemize}

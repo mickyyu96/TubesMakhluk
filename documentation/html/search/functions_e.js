@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['unlockhewan',['unlockHewan',['../class_hewan.html#a1cee77699cbcafb93ddb6902a0a0fed2',1,'Hewan']]],
-  ['unlockworld',['unlockWorld',['../class_world.html#a08481fdff65e290c44386676ce993dce',1,'World']]]
+  ['tumbuhan',['Tumbuhan',['../class_tumbuhan.html#a3095d94b67888eff7573c5e22620e550',1,'Tumbuhan']]],
+  ['turtle',['Turtle',['../class_turtle.html#a1347c5bcaee6ede82a488394cad3cf00',1,'Turtle']]]
 ];

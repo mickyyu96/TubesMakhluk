@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c6407b76023eed6f10e58996c0fdcae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_generator.html#a4c6407b76023eed6f10e58996c0fdcae">getNextPoint</a> (int, int)</td></tr>
 <tr class="memdesc:a4c6407b76023eed6f10e58996c0fdcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fungsi untuk mengacak point berdasarkan batasan.  <a href="#a4c6407b76023eed6f10e58996c0fdcae">More...</a><br /></td></tr>
 <tr class="separator:a4c6407b76023eed6f10e58996c0fdcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeafbf3bcd982430565118fdfba34ddec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_generator.html#aeafbf3bcd982430565118fdfba34ddec">getNextPointPolarBear</a> (int, int)</td></tr>
+<tr class="memdesc:aeafbf3bcd982430565118fdfba34ddec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fungsi untuk mengacak point berdasarkan batasan.  <a href="#aeafbf3bcd982430565118fdfba34ddec">More...</a><br /></td></tr>
+<tr class="separator:aeafbf3bcd982430565118fdfba34ddec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -117,7 +120,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Mengembalikan random number. </p>
-<p>Kelas <a class="el" href="class_random_generator.html" title="Mengembalikan random number. ">RandomGenerator</a> mengembalikan random number berdasarkan batasan yang diberikan </p><dl class="section author"><dt>Author</dt><dd>Micky Yudi Utama </dd></dl>
+<p>Kelas <a class="el" href="class_random_generator.html" title="Mengembalikan random number. ">RandomGenerator</a> mengembalikan sebuah random number berdasarkan batasan yang diberikan </p><dl class="section author"><dt>Author</dt><dd>Micky Yudi Utama </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>Maret 2016 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="abc2ce3ecccf8a36af2ab362effd7e5a1"></a>
@@ -161,13 +164,13 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fungsi untuk mengacak bilangan bulat berdasarkan batasan. </p>
-<p>Melakukan pengacakan bilangan bulat dengan batasan (0...a) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Melakukan pengacakan bilangan bulat dengan batasan (0...a-1) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>int Batas atas hasil acak </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Bilangan bulat acak dari (0...a) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Bilangan bulat acak dari (0...a-1) </dd></dl>
 
 </div>
 </div>
@@ -213,6 +216,42 @@ Static Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_point.html">Point</a> RandomGenerator::getNextPoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>NBrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>NKol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fungsi untuk mengacak point berdasarkan batasan. </p>
+<p>Melakukan pengacakan point dengan batasan (1...Nbrs-2), (1...NKol-2) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NBrs</td><td>int Jumlah baris </td></tr>
+    <tr><td class="paramname">NKol</td><td>int Jumlah kolom </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_point.html" title="Representasi titik dalam koordinat kartesian. ">Point</a> acak dari (1...Nbrs-2), (1...NKol-2) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeafbf3bcd982430565118fdfba34ddec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_point.html">Point</a> RandomGenerator::getNextPointPolarBear </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>NBrs</em>, </td>

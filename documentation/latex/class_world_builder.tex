@@ -1,0 +1,106 @@
+\hypertarget{class_world_builder}{}\section{World\+Builder Class Reference}
+\label{class_world_builder}\index{World\+Builder@{World\+Builder}}
+
+
+Builder kelas \hyperlink{class_world}{World}.  
+
+
+
+
+{\ttfamily \#include $<$World\+Builder.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_world_builder_a9fca5be466395c4367aa5d6eb7e2020f}{get\+Str\+Makhluk} ()
+\begin{DoxyCompactList}\small\item\em Get string makhluk. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_builder_abcb1fda856eebc76d5f5d3a9cf5127f5}{set\+Str\+Makhluk} (const string \&\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Setter string makhluk. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_builder_ac063d96facdcd9c1c34e69e418d6f733}{build\+World\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Build \hyperlink{class_world}{World} Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_world_builder}{World\+Builder} $\ast$ \hyperlink{class_world_builder_ad6b3457a2a185135f33fde9e5939145a}{get\+Builder\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Get Singleton Instance dari kelas \hyperlink{class_world_builder}{World\+Builder}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Builder kelas \hyperlink{class_world}{World}. 
+
+Kelas \hyperlink{class_world_builder}{World\+Builder} merupakan B\+U\+I\+L\+D\+ER dari kelas \hyperlink{class_world}{World}, dan bertanggung jawab untuk melakukan inisialisasi objek-\/objek dunia \begin{DoxyAuthor}{Author}
+Robert Sebastian Herlim 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Maret 2016 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\index{World\+Builder@{World\+Builder}!build\+World\+Objects@{build\+World\+Objects}}
+\index{build\+World\+Objects@{build\+World\+Objects}!World\+Builder@{World\+Builder}}
+\subsubsection[{\texorpdfstring{build\+World\+Objects()}{buildWorldObjects()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Builder\+::build\+World\+Objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_world_builder_ac063d96facdcd9c1c34e69e418d6f733}{}\label{class_world_builder_ac063d96facdcd9c1c34e69e418d6f733}
+
+
+Build \hyperlink{class_world}{World} Objects. 
+
+Melakukan inisialisasi list of makhluk pada objek singleton kelas \hyperlink{class_world}{World} berdasarkan string yang tersimpan dalam instance \hyperlink{class_world_builder}{World\+Builder} \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{World\+Builder@{World\+Builder}!get\+Builder\+Instance@{get\+Builder\+Instance}}
+\index{get\+Builder\+Instance@{get\+Builder\+Instance}!World\+Builder@{World\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Builder\+Instance()}{getBuilderInstance()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf World\+Builder}$\ast$ World\+Builder\+::get\+Builder\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_world_builder_ad6b3457a2a185135f33fde9e5939145a}{}\label{class_world_builder_ad6b3457a2a185135f33fde9e5939145a}
+
+
+Get Singleton Instance dari kelas \hyperlink{class_world_builder}{World\+Builder}. 
+
+Mengembalikan pointer dari objek singleton pada kelas \hyperlink{class_world_builder}{World\+Builder} \begin{DoxyReturn}{Returns}
+pointer yang menunjuk ke singleton instance pada kelas \hyperlink{class_world_builder}{World\+Builder} 
+\end{DoxyReturn}
+\index{World\+Builder@{World\+Builder}!get\+Str\+Makhluk@{get\+Str\+Makhluk}}
+\index{get\+Str\+Makhluk@{get\+Str\+Makhluk}!World\+Builder@{World\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Str\+Makhluk()}{getStrMakhluk()}}]{\setlength{\rightskip}{0pt plus 5cm}string World\+Builder\+::get\+Str\+Makhluk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_builder_a9fca5be466395c4367aa5d6eb7e2020f}{}\label{class_world_builder_a9fca5be466395c4367aa5d6eb7e2020f}
+
+
+Get string makhluk. 
+
+Mengembalikan sebuah string yang tersimpan dalam instance \hyperlink{class_world_builder}{World\+Builder} yang merupakan karakter-\/karakter makhluk yang akan diciptakan \begin{DoxyReturn}{Returns}
+string yang berisi karakter-\/karakter makhluk yang akan diciptakan 
+\end{DoxyReturn}
+\index{World\+Builder@{World\+Builder}!set\+Str\+Makhluk@{set\+Str\+Makhluk}}
+\index{set\+Str\+Makhluk@{set\+Str\+Makhluk}!World\+Builder@{World\+Builder}}
+\subsubsection[{\texorpdfstring{set\+Str\+Makhluk(const string \&\+\_\+str)}{setStrMakhluk(const string &_str)}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Builder\+::set\+Str\+Makhluk (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{\+\_\+str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_builder_abcb1fda856eebc76d5f5d3a9cf5127f5}{}\label{class_world_builder_abcb1fda856eebc76d5f5d3a9cf5127f5}
+
+
+Setter string makhluk. 
+
+Melakukan assignment string yang tersimpan dalam instance \hyperlink{class_world_builder}{World\+Builder} dengan string baru yang di-\/passing melalui parameter 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+str} & const string\& String baru yang akan di-\/assign \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/header/World\+Builder.\+h\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/implementation/World\+Builder.\+cpp\end{DoxyCompactItemize}

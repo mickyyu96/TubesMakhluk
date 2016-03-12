@@ -85,10 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="class_hewan-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Hewan Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -105,10 +103,13 @@ Inheritance diagram for Hewan:</div>
  <div class="center">
   <img src="class_hewan.png" usemap="#Hewan_map" alt=""/>
   <map id="Hewan_map" name="Hewan_map">
-<area href="class_makhluk.html" alt="Makhluk" shape="rect" coords="79,0,148,24"/>
-<area href="class_polar_bear.html" alt="PolarBear" shape="rect" coords="0,112,69,136"/>
+<area href="class_makhluk.html" alt="Makhluk" shape="rect" coords="197,0,266,24"/>
+<area href="class_polar_bear.html" title="Kelas turunan dari makhluk berupa PolarBear. " alt="PolarBear" shape="rect" coords="0,112,69,136"/>
 <area href="class_rabbit.html" title="Kelas Turunan dari Makhluk berupa Rabbit. " alt="Rabbit" shape="rect" coords="79,112,148,136"/>
-<area href="class_turtle.html" title="Kelas Turunan dari Makhluk berupa Rabbit. " alt="Turtle" shape="rect" coords="158,112,227,136"/>
+<area href="class_sheep.html" title="Kelas turunan dari makhluk berupa Sheep. " alt="Sheep" shape="rect" coords="158,112,227,136"/>
+<area href="class_snake.html" alt="Snake" shape="rect" coords="237,112,306,136"/>
+<area href="class_turtle.html" title="Kelas Turunan dari Makhluk berupa Rabbit. " alt="Turtle" shape="rect" coords="316,112,385,136"/>
+<area href="class_wolf.html" title="Kelas turunan dari makhluk berupa Wolf. " alt="Wolf" shape="rect" coords="395,112,464,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -136,7 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a07b8d783d4712158dbcad234a1178e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure setter untuk level kelaparan.  <a href="#a07b8d783d4712158dbcad234a1178e81">More...</a><br /></td></tr>
 <tr class="separator:a07b8d783d4712158dbcad234a1178e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8268bfb533b9becb62e2bd8eee2e7960"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a8268bfb533b9becb62e2bd8eee2e7960">Wandering</a> ()</td></tr>
-<tr class="memdesc:a8268bfb533b9becb62e2bd8eee2e7960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure berjalan random sebuah objek.  <a href="#a8268bfb533b9becb62e2bd8eee2e7960">More...</a><br /></td></tr>
+<tr class="memdesc:a8268bfb533b9becb62e2bd8eee2e7960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure mutex untuk mengunci objek.  <a href="#a8268bfb533b9becb62e2bd8eee2e7960">More...</a><br /></td></tr>
 <tr class="separator:a8268bfb533b9becb62e2bd8eee2e7960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ba348d0912e3e392e41ae0c197c69b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#ad1ba348d0912e3e392e41ae0c197c69b">Sleep</a> ()</td></tr>
 <tr class="memdesc:ad1ba348d0912e3e392e41ae0c197c69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure tidur sebuah objek.  <a href="#ad1ba348d0912e3e392e41ae0c197c69b">More...</a><br /></td></tr>
@@ -182,19 +183,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>isAlive</b> ()</td></t
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Kill</b> ()</td></tr>
 <tr class="separator:a8031caebf761dbc200430c24726ca339 inherit pub_methods_class_makhluk"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a53f67234a3880648f1975eab96ed80e7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a53f67234a3880648f1975eab96ed80e7">lockHewan</a> ()</td></tr>
-<tr class="memdesc:a53f67234a3880648f1975eab96ed80e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure mutex untuk mengunci objek.  <a href="#a53f67234a3880648f1975eab96ed80e7">More...</a><br /></td></tr>
-<tr class="separator:a53f67234a3880648f1975eab96ed80e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cee77699cbcafb93ddb6902a0a0fed2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a1cee77699cbcafb93ddb6902a0a0fed2">unlockHewan</a> ()</td></tr>
-<tr class="memdesc:a1cee77699cbcafb93ddb6902a0a0fed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure mutex untuk melanjutkan aktivitas objek.  <a href="#a1cee77699cbcafb93ddb6902a0a0fed2">More...</a><br /></td></tr>
-<tr class="separator:a1cee77699cbcafb93ddb6902a0a0fed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_makhluk"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_makhluk')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_makhluk.html">Makhluk</a></td></tr>
-<tr class="memitem:a46b686a6f1533958650a60e3d7268b99 inherit pub_static_methods_class_makhluk"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46b686a6f1533958650a60e3d7268b99"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>MakeAlive</b> (<a class="el" href="class_makhluk.html">Makhluk</a> *)</td></tr>
-<tr class="separator:a46b686a6f1533958650a60e3d7268b99 inherit pub_static_methods_class_makhluk"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5ea6a7a559331a71c86c59eaeb3809db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a5ea6a7a559331a71c86c59eaeb3809db">Hewan</a> (char, int)</td></tr>
@@ -232,10 +220,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>status</b></td></tr>
 <a class="el" href="class_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
 <tr class="separator:a920e46e39a404909a292802669bed0c2 inherit pro_attribs_class_makhluk"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a7d37b55ea77b6058fb574f9f8b5acb24"><td class="memItemLeft" align="right" valign="top">static mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a7d37b55ea77b6058fb574f9f8b5acb24">hewanLock</a></td></tr>
-<tr class="separator:a7d37b55ea77b6058fb574f9f8b5acb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_makhluk"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_makhluk')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_makhluk.html">Makhluk</a></td></tr>
+<tr class="memitem:a46b686a6f1533958650a60e3d7268b99 inherit pub_static_methods_class_makhluk"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46b686a6f1533958650a60e3d7268b99"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>MakeAlive</b> (<a class="el" href="class_makhluk.html">Makhluk</a> *)</td></tr>
+<tr class="separator:a46b686a6f1533958650a60e3d7268b99 inherit pub_static_methods_class_makhluk"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract Base Class yang merupakan Kelas Turunan dari <a class="el" href="class_makhluk.html">Makhluk</a>. </p>
@@ -419,7 +409,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Procedure virtual pure untuk objek mendapatkan makanannya. </p>
 <p>Fungsi pure virtual GetToFood dideklarasikan pada setiap turunan kelas <a class="el" href="class_hewan.html" title="Abstract Base Class yang merupakan Kelas Turunan dari Makhluk. ">Hewan</a> untuk mendapatkan makanannya yang berbeda-beda </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Implemented in <a class="el" href="class_turtle.html#a1f2ab308068556b2621d5acd8eda5413">Turtle</a>, and <a class="el" href="class_rabbit.html#a98d779a15b5b5b03fb15e62c06d01693">Rabbit</a>.</p>
+<p>Implemented in <a class="el" href="class_turtle.html#a1f2ab308068556b2621d5acd8eda5413">Turtle</a>, <a class="el" href="class_rabbit.html#a98d779a15b5b5b03fb15e62c06d01693">Rabbit</a>, <a class="el" href="class_polar_bear.html#a4b2f0d6aab60ceba83a1ced4c305ed3f">PolarBear</a>, <a class="el" href="class_sheep.html#a134766a3fc3060b5a1dd39aa11df262d">Sheep</a>, <a class="el" href="class_wolf.html#a832902ad559bbf8a73bbe16d3378ba86">Wolf</a>, and <a class="el" href="class_snake.html#a605e8e7245842e44f2882395e28b02fe">Snake</a>.</p>
 
 </div>
 </div>
@@ -485,33 +475,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Fungsi pure virtual untuk validasi apakah sebuah objek adalah Vegetarian. </p>
 <p>Fungsi pure virtual isVegetarian dideklarasikan pada setiap turunan kelas <a class="el" href="class_hewan.html" title="Abstract Base Class yang merupakan Kelas Turunan dari Makhluk. ">Hewan</a> </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p>Implemented in <a class="el" href="class_rabbit.html#a58a0710c593b7bb19b7634d0ec1ad2ab">Rabbit</a>, <a class="el" href="class_turtle.html#aaa6ea76ca2e8b21b18ac65ef4b4663d9">Turtle</a>, and <a class="el" href="class_polar_bear.html#a528b34c3db1dee2cd5c06f6b6d221a14">PolarBear</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a53f67234a3880648f1975eab96ed80e7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Hewan::lockHewan </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Procedure mutex untuk mengunci objek. </p>
-<p>Memberhentikan objek turunan kelas <a class="el" href="class_hewan.html" title="Abstract Base Class yang merupakan Kelas Turunan dari Makhluk. ">Hewan</a> </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>Implemented in <a class="el" href="class_sheep.html#a5210b51ab73a9f562111405d6e0ecb46">Sheep</a>, <a class="el" href="class_polar_bear.html#a528b34c3db1dee2cd5c06f6b6d221a14">PolarBear</a>, <a class="el" href="class_wolf.html#a59589099b9226c3b85fa9c5fb8e51836">Wolf</a>, <a class="el" href="class_rabbit.html#a58a0710c593b7bb19b7634d0ec1ad2ab">Rabbit</a>, <a class="el" href="class_turtle.html#aaa6ea76ca2e8b21b18ac65ef4b4663d9">Turtle</a>, and <a class="el" href="class_snake.html#a511252859c8eb005b8e4cff200973465">Snake</a>.</p>
 
 </div>
 </div>
@@ -626,32 +590,6 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1cee77699cbcafb93ddb6902a0a0fed2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Hewan::unlockHewan </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Procedure mutex untuk melanjutkan aktivitas objek. </p>
-<p>Melanjutkan aktivitas objek turunan kelas <a class="el" href="class_hewan.html" title="Abstract Base Class yang merupakan Kelas Turunan dari Makhluk. ">Hewan</a> </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a8268bfb533b9becb62e2bd8eee2e7960"></a>
 <div class="memitem">
 <div class="memproto">
@@ -665,7 +603,9 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Procedure berjalan random sebuah objek. </p>
+<p>Procedure mutex untuk mengunci objek. </p>
+<p>Memberhentikan objek turunan kelas <a class="el" href="class_hewan.html" title="Abstract Base Class yang merupakan Kelas Turunan dari Makhluk. ">Hewan</a> </p><dl class="section return"><dt>Returns</dt><dd>voidProcedure mutex untuk melanjutkan aktivitas objek</dd></dl>
+<p>Melanjutkan aktivitas objek turunan kelas <a class="el" href="class_hewan.html" title="Abstract Base Class yang merupakan Kelas Turunan dari Makhluk. ">Hewan</a> </p><dl class="section return"><dt>Returns</dt><dd>voidProcedure berjalan random sebuah objek</dd></dl>
 <p>Behaviour semua objek turunan kelas hewan. Objek akan berjalan secara random di <a class="el" href="class_world.html" title="Representasi dari alam semesta. ">World</a> </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -689,27 +629,6 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>status level kelaparan, power, dan deltaT sebuah objek </p>
-
-</div>
-</div>
-<a class="anchor" id="a7d37b55ea77b6058fb574f9f8b5acb24"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">mutex Hewan::hewanLock</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>static mutex </p>
 
 </div>
 </div>

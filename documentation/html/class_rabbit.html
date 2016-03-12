@@ -146,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a07b8d783d4712158dbcad234a1178e81 inherit pub_methods_class_hewan"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure setter untuk level kelaparan.  <a href="#a07b8d783d4712158dbcad234a1178e81">More...</a><br /></td></tr>
 <tr class="separator:a07b8d783d4712158dbcad234a1178e81 inherit pub_methods_class_hewan"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8268bfb533b9becb62e2bd8eee2e7960 inherit pub_methods_class_hewan"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a8268bfb533b9becb62e2bd8eee2e7960">Wandering</a> ()</td></tr>
-<tr class="memdesc:a8268bfb533b9becb62e2bd8eee2e7960 inherit pub_methods_class_hewan"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure berjalan random sebuah objek.  <a href="#a8268bfb533b9becb62e2bd8eee2e7960">More...</a><br /></td></tr>
+<tr class="memdesc:a8268bfb533b9becb62e2bd8eee2e7960 inherit pub_methods_class_hewan"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure mutex untuk mengunci objek.  <a href="#a8268bfb533b9becb62e2bd8eee2e7960">More...</a><br /></td></tr>
 <tr class="separator:a8268bfb533b9becb62e2bd8eee2e7960 inherit pub_methods_class_hewan"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ba348d0912e3e392e41ae0c197c69b inherit pub_methods_class_hewan"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#ad1ba348d0912e3e392e41ae0c197c69b">Sleep</a> ()</td></tr>
 <tr class="memdesc:ad1ba348d0912e3e392e41ae0c197c69b inherit pub_methods_class_hewan"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure tidur sebuah objek.  <a href="#ad1ba348d0912e3e392e41ae0c197c69b">More...</a><br /></td></tr>
@@ -191,13 +191,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Kill</b> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_class_hewan"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_hewan')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_hewan.html">Hewan</a></td></tr>
-<tr class="memitem:a53f67234a3880648f1975eab96ed80e7 inherit pub_static_methods_class_hewan"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a53f67234a3880648f1975eab96ed80e7">lockHewan</a> ()</td></tr>
-<tr class="memdesc:a53f67234a3880648f1975eab96ed80e7 inherit pub_static_methods_class_hewan"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure mutex untuk mengunci objek.  <a href="#a53f67234a3880648f1975eab96ed80e7">More...</a><br /></td></tr>
-<tr class="separator:a53f67234a3880648f1975eab96ed80e7 inherit pub_static_methods_class_hewan"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cee77699cbcafb93ddb6902a0a0fed2 inherit pub_static_methods_class_hewan"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a1cee77699cbcafb93ddb6902a0a0fed2">unlockHewan</a> ()</td></tr>
-<tr class="memdesc:a1cee77699cbcafb93ddb6902a0a0fed2 inherit pub_static_methods_class_hewan"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure mutex untuk melanjutkan aktivitas objek.  <a href="#a1cee77699cbcafb93ddb6902a0a0fed2">More...</a><br /></td></tr>
-<tr class="separator:a1cee77699cbcafb93ddb6902a0a0fed2 inherit pub_static_methods_class_hewan"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_makhluk"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_makhluk')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_makhluk.html">Makhluk</a></td></tr>
 <tr class="memitem:a46b686a6f1533958650a60e3d7268b99 inherit pub_static_methods_class_makhluk"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46b686a6f1533958650a60e3d7268b99"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>MakeAlive</b> (<a class="el" href="class_makhluk.html">Makhluk</a> *)</td></tr>
@@ -235,9 +228,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>status</b></td></tr>
 <tr class="memitem:a920e46e39a404909a292802669bed0c2 inherit pro_attribs_class_makhluk"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a920e46e39a404909a292802669bed0c2"></a>
 <a class="el" href="class_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
 <tr class="separator:a920e46e39a404909a292802669bed0c2 inherit pro_attribs_class_makhluk"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_class_hewan"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_hewan')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_hewan.html">Hewan</a></td></tr>
-<tr class="memitem:a7d37b55ea77b6058fb574f9f8b5acb24 inherit pro_static_attribs_class_hewan"><td class="memItemLeft" align="right" valign="top">static mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hewan.html#a7d37b55ea77b6058fb574f9f8b5acb24">hewanLock</a></td></tr>
-<tr class="separator:a7d37b55ea77b6058fb574f9f8b5acb24 inherit pro_static_attribs_class_hewan"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kelas Turunan dari <a class="el" href="class_makhluk.html">Makhluk</a> berupa <a class="el" href="class_rabbit.html" title="Kelas Turunan dari Makhluk berupa Rabbit. ">Rabbit</a>. </p>

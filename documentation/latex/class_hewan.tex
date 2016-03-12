@@ -33,7 +33,7 @@ int \hyperlink{class_hewan_a9b3d754b6faf3706aabe8dcaec6f1540}{get\+DeltaT} ()
 void \hyperlink{class_hewan_a07b8d783d4712158dbcad234a1178e81}{set\+Hunger\+Lvl} (int x)
 \begin{DoxyCompactList}\small\item\em Procedure setter untuk level kelaparan. \end{DoxyCompactList}\item 
 void \hyperlink{class_hewan_a8268bfb533b9becb62e2bd8eee2e7960}{Wandering} ()
-\begin{DoxyCompactList}\small\item\em Procedure berjalan random sebuah objek. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Procedure mutex untuk mengunci objek. \end{DoxyCompactList}\item 
 void \hyperlink{class_hewan_ad1ba348d0912e3e392e41ae0c197c69b}{Sleep} ()
 \begin{DoxyCompactList}\small\item\em Procedure tidur sebuah objek. \end{DoxyCompactList}\item 
 \hyperlink{class_makhluk}{Makhluk} $\ast$ \hyperlink{class_hewan_ab604462c6b9c235f9d53d42235acd41b}{Find\+Food} ()
@@ -46,13 +46,6 @@ bool \hyperlink{class_hewan_a3798162fd7aa8cfef947abce00c283ef}{is\+Makhlukin\+Li
 \begin{DoxyCompactList}\small\item\em Fungsi validasi apakah sebuah \hyperlink{class_makhluk}{Makhluk} ada di list\+Makhluk. \end{DoxyCompactList}\item 
 void \hyperlink{class_hewan_a5420deb2ff65c6cedd5c80f1f3d42d00}{get\+To\+Point} (\hyperlink{class_point}{Point} P)
 \begin{DoxyCompactList}\small\item\em Procedure agar objek berpindah ke suatu point. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static void \hyperlink{class_hewan_a53f67234a3880648f1975eab96ed80e7}{lock\+Hewan} ()
-\begin{DoxyCompactList}\small\item\em Procedure mutex untuk mengunci objek. \end{DoxyCompactList}\item 
-static void \hyperlink{class_hewan_a1cee77699cbcafb93ddb6902a0a0fed2}{unlock\+Hewan} ()
-\begin{DoxyCompactList}\small\item\em Procedure mutex untuk melanjutkan aktivitas objek. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,11 +62,7 @@ int {\bfseries power}\hypertarget{class_hewan_a3fbf8081066fe2fb2b7b8cce149910a1}
 \item 
 int \hyperlink{class_hewan_a7d22294907eb5b03983fdb179b248c18}{deltaT}
 \end{DoxyCompactItemize}
-\subsection*{Static Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-static mutex \hyperlink{class_hewan_a7d37b55ea77b6058fb574f9f8b5acb24}{hewan\+Lock}
-\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
@@ -192,7 +181,7 @@ void
 \end{DoxyReturn}
 
 
-Implemented in \hyperlink{class_turtle_a1f2ab308068556b2621d5acd8eda5413}{Turtle}, and \hyperlink{class_rabbit_a98d779a15b5b5b03fb15e62c06d01693}{Rabbit}.
+Implemented in \hyperlink{class_turtle_a1f2ab308068556b2621d5acd8eda5413}{Turtle}, \hyperlink{class_rabbit_a98d779a15b5b5b03fb15e62c06d01693}{Rabbit}, \hyperlink{class_polar_bear_a4b2f0d6aab60ceba83a1ced4c305ed3f}{Polar\+Bear}, \hyperlink{class_sheep_a134766a3fc3060b5a1dd39aa11df262d}{Sheep}, \hyperlink{class_wolf_a832902ad559bbf8a73bbe16d3378ba86}{Wolf}, and \hyperlink{class_snake_a605e8e7245842e44f2882395e28b02fe}{Snake}.
 
 \index{Hewan@{Hewan}!get\+To\+Point@{get\+To\+Point}}
 \index{get\+To\+Point@{get\+To\+Point}!Hewan@{Hewan}}
@@ -238,22 +227,8 @@ int
 \end{DoxyReturn}
 
 
-Implemented in \hyperlink{class_rabbit_a58a0710c593b7bb19b7634d0ec1ad2ab}{Rabbit}, \hyperlink{class_turtle_aaa6ea76ca2e8b21b18ac65ef4b4663d9}{Turtle}, and \hyperlink{class_polar_bear_a528b34c3db1dee2cd5c06f6b6d221a14}{Polar\+Bear}.
+Implemented in \hyperlink{class_sheep_a5210b51ab73a9f562111405d6e0ecb46}{Sheep}, \hyperlink{class_polar_bear_a528b34c3db1dee2cd5c06f6b6d221a14}{Polar\+Bear}, \hyperlink{class_wolf_a59589099b9226c3b85fa9c5fb8e51836}{Wolf}, \hyperlink{class_rabbit_a58a0710c593b7bb19b7634d0ec1ad2ab}{Rabbit}, \hyperlink{class_turtle_aaa6ea76ca2e8b21b18ac65ef4b4663d9}{Turtle}, and \hyperlink{class_snake_a511252859c8eb005b8e4cff200973465}{Snake}.
 
-\index{Hewan@{Hewan}!lock\+Hewan@{lock\+Hewan}}
-\index{lock\+Hewan@{lock\+Hewan}!Hewan@{Hewan}}
-\subsubsection[{\texorpdfstring{lock\+Hewan()}{lockHewan()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Hewan\+::lock\+Hewan (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_hewan_a53f67234a3880648f1975eab96ed80e7}{}\label{class_hewan_a53f67234a3880648f1975eab96ed80e7}
-
-
-Procedure mutex untuk mengunci objek. 
-
-Memberhentikan objek turunan kelas \hyperlink{class_hewan}{Hewan} \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
 \index{Hewan@{Hewan}!Move@{Move}}
 \index{Move@{Move}!Hewan@{Hewan}}
 \subsubsection[{\texorpdfstring{Move(int, int)}{Move(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hewan\+::\+Move (
@@ -312,20 +287,6 @@ Procedure tidur sebuah objek.
 Behaviour semua objek turunan kelas hewan. Objek akan tertidur selama deltaT di \hyperlink{class_world}{World} \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\index{Hewan@{Hewan}!unlock\+Hewan@{unlock\+Hewan}}
-\index{unlock\+Hewan@{unlock\+Hewan}!Hewan@{Hewan}}
-\subsubsection[{\texorpdfstring{unlock\+Hewan()}{unlockHewan()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Hewan\+::unlock\+Hewan (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_hewan_a1cee77699cbcafb93ddb6902a0a0fed2}{}\label{class_hewan_a1cee77699cbcafb93ddb6902a0a0fed2}
-
-
-Procedure mutex untuk melanjutkan aktivitas objek. 
-
-Melanjutkan aktivitas objek turunan kelas \hyperlink{class_hewan}{Hewan} \begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
 \index{Hewan@{Hewan}!Wandering@{Wandering}}
 \index{Wandering@{Wandering}!Hewan@{Hewan}}
 \subsubsection[{\texorpdfstring{Wandering()}{Wandering()}}]{\setlength{\rightskip}{0pt plus 5cm}void Hewan\+::\+Wandering (
@@ -335,8 +296,14 @@ void
 )}\hypertarget{class_hewan_a8268bfb533b9becb62e2bd8eee2e7960}{}\label{class_hewan_a8268bfb533b9becb62e2bd8eee2e7960}
 
 
-Procedure berjalan random sebuah objek. 
+Procedure mutex untuk mengunci objek. 
 
+Memberhentikan objek turunan kelas \hyperlink{class_hewan}{Hewan} \begin{DoxyReturn}{Returns}
+void\+Procedure mutex untuk melanjutkan aktivitas objek
+\end{DoxyReturn}
+Melanjutkan aktivitas objek turunan kelas \hyperlink{class_hewan}{Hewan} \begin{DoxyReturn}{Returns}
+void\+Procedure berjalan random sebuah objek
+\end{DoxyReturn}
 Behaviour semua objek turunan kelas hewan. Objek akan berjalan secara random di \hyperlink{class_world}{World} \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
@@ -346,10 +313,7 @@ void
 \index{Hewan@{Hewan}!deltaT@{deltaT}}
 \index{deltaT@{deltaT}!Hewan@{Hewan}}
 \subsubsection[{\texorpdfstring{deltaT}{deltaT}}]{\setlength{\rightskip}{0pt plus 5cm}int Hewan\+::deltaT\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_hewan_a7d22294907eb5b03983fdb179b248c18}{}\label{class_hewan_a7d22294907eb5b03983fdb179b248c18}
-status level kelaparan, power, dan deltaT sebuah objek \index{Hewan@{Hewan}!hewan\+Lock@{hewan\+Lock}}
-\index{hewan\+Lock@{hewan\+Lock}!Hewan@{Hewan}}
-\subsubsection[{\texorpdfstring{hewan\+Lock}{hewanLock}}]{\setlength{\rightskip}{0pt plus 5cm}mutex Hewan\+::hewan\+Lock\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{class_hewan_a7d37b55ea77b6058fb574f9f8b5acb24}{}\label{class_hewan_a7d37b55ea77b6058fb574f9f8b5acb24}
-static mutex 
+status level kelaparan, power, dan deltaT sebuah objek 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
