@@ -44,20 +44,6 @@ class World {
 		*/
 		int getNKol() { return NKol; }
 
-		/** \brief Print dunia beserta isinya
-		*	\details Mencetak state dunia beserta dengan makhluk-makhluk yang ada di dalamnya ke layar
-		*	\return void
-		*/
-		void PrintMap();
-
-		/** \brief Print dunia beserta isinya secara berkala
-		*	\details Mencetak state dunia beserta dengan isi-isinya ke layar 
-		*			 secara berkala dengan interval waktu tertentu
-		*	\param deltaT int interval waktu (dalam ms) antar pencetakan state dunia ke layar
-		*	\return void
-		*/
-		static void Show(int);
-
 		/** \brief Get status isEnded
 		*	\details Predikat untuk menyatakan apakah aktivitas dunia sudah berakhir
 		*	\return TRUE apabila aktivitas dunia sudah berakhir

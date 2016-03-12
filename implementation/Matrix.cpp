@@ -52,16 +52,3 @@ Matrix::~Matrix()
 // Implementasi Getter & Setter
 char Matrix::getInfo(int i, int j) const { return M[i][j]; }
 void Matrix::setInfo(char c, int i, int j) { M[i][j] = c; }
-
-// Implementasi PrintMatrix()
-void Matrix::PrintMatrix() const
-{
-	for(int i=0; i<NBrs; i++)
-	{
-		for(int j=0; j<NKol; j++)
-		{
-			cout << getInfo(i,j);
-		}
-		cout << endl;
-	}
-}
