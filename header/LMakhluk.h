@@ -39,13 +39,13 @@ class LMakhluk
 		 */
 		void Del(Makhluk*);
 
-	public :
+	private :
 
 	    /** \class      ElmtMakhluk
          *  \brief      Element Makhluk
          *  \details    Menciptakan sebuah makhluk
          */
-		class ElmtMakhluk
+		static class ElmtMakhluk
 		{
 			public :
 			    /** \brief      Constructor
@@ -118,6 +118,19 @@ class LMakhluk
          *	\return     Bilangan bulat 0 atau 1
          */
 		int isEmpty() { return getFirst() == NULL; }
+
+		/** \brief      Get ukuran list of makhluk
+		*	\details    Menghitung jumlah elemen yang ada dalam list of makhluk
+		*	\return     Bilangan bulat yang menyatakan jumlah elemen yang ada di list
+		*/
+		int getSize();
+
+		/** \brief      Get info makhluk ke-idx
+		*	\details    Mengakses isi list pada elemen ke-idx, elemen pertama dihitung sebagai elemen ke-0
+		*	\param		idx int Indeks elemen yang mau diakses
+		*	\return     Pointer yang menunjuk ke makhluk yang berada pada list elemen ke-idx
+		*/
+		Makhluk* getInfo(int);
 
         /** \brief      Get last element
          *  \details    Mengambul last element dari list of makhluk

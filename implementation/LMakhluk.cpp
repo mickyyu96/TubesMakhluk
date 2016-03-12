@@ -102,3 +102,25 @@ LMakhluk::ElmtMakhluk* LMakhluk::findMakhluk(Makhluk* M)
     }
     return EM;
 }
+
+int LMakhluk::getSize()
+{
+	ElmtMakhluk* P = getFirst();
+	int size = 0;
+	while (P != NULL)
+	{
+		P = P->getNext();
+		size++;
+	}
+	return size;
+}
+
+Makhluk* LMakhluk::getInfo(int idx)
+{
+	ElmtMakhluk* P = getFirst();
+	for (int i = 0; i < idx; i++)
+	{
+		P = P->getNext();
+	}
+	return P->getInfo();
+}
