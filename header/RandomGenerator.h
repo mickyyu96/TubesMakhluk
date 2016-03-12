@@ -8,7 +8,7 @@
 /** \class      RandomGenerator
  *  \brief      Mengembalikan random number
  *  \details    Kelas RandomGenerator mengembalikan sebuah random number
- *				berdasarkan batasan yang diberikan
+                berdasarkan batasan yang diberikan
  *	\author     Micky Yudi Utama
  *	\date       Maret 2016
  */

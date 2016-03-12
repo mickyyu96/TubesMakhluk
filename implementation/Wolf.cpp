@@ -1,21 +1,21 @@
-// PolarBear.cpp
+// Wolf.cpp
 
-#include "../header/PolarBear.h"
+#include "../header/Wolf.h"
 #include <iostream>
 #include <thread>
 #include <chrono>
 
 using namespace std;
 
-PolarBear::PolarBear(const Point& P) : Hewan(POLARBEAR_ID, POLARBEAR_MAXAGE)
+Wolf::Wolf(const Point& P) : Hewan(WOLF_ID, WOLF_MAXAGE)
 {
-	status = 1;
-	power = POLARBEAR_BASEPOWER;
-	deltaT = POLARBEAR_DELTAT;
-	pos = P;
+    status = 1;
+    power = WOLF_BASEPOWER;
+    deltaT = WOLF_DELTAT;
+    pos = P;
 }
 
-void PolarBear::GetToFood()
+void Wolf::GetToFood()
 {
     if (Hewan::isMakhlukinList('*'))
     {
@@ -24,7 +24,7 @@ void PolarBear::GetToFood()
     }
 }
 
-void PolarBear::Live()
+void Wolf::Live()
 {
     int nRandom;
     while(isAlive())

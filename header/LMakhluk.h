@@ -133,7 +133,7 @@ class LMakhluk
 		/** \brief      Mencari sebuah makhluk
          *  \details    Mencari sebuah makhluk pada list of makhluk
          *  \param      M Makhluk* Makhluk yang akan dicari
-         *	\return     Makhluk
+         *	\return     Makhluk M
          */
 		ElmtMakhluk* findMakhluk(Makhluk*);
 };

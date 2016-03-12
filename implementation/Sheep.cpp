@@ -1,30 +1,30 @@
-// PolarBear.cpp
+// Sheep.cpp
 
-#include "../header/PolarBear.h"
+#include "../header/Sheep.h"
 #include <iostream>
 #include <thread>
 #include <chrono>
 
 using namespace std;
 
-PolarBear::PolarBear(const Point& P) : Hewan(POLARBEAR_ID, POLARBEAR_MAXAGE)
+Sheep::Sheep(const Point& P): Hewan(SHEEP_ID, SHEEP_MAXAGE)
 {
-	status = 1;
-	power = POLARBEAR_BASEPOWER;
-	deltaT = POLARBEAR_DELTAT;
-	pos = P;
+    status = 1;
+    power = SHEEP_BASEPOWER;
+    deltaT = SHEEP_DELTAT;
+    pos = P;
 }
 
-void PolarBear::GetToFood()
+void Sheep::GetToFood()
 {
-    if (Hewan::isMakhlukinList('*'))
+    if (Hewan::isMakhlukinList('G'))
     {
         Hewan::getToPoint(Hewan::FindFood()->getPosition());
         Hewan::FindFood()->Kill();
     }
 }
 
-void PolarBear::Live()
+void Sheep::Live()
 {
     int nRandom;
     while(isAlive())
