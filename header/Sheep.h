@@ -51,8 +51,8 @@ class Sheep : public Hewan
     private:
         static const char SHEEP_ID = 'S';       /**< ID Sheep */
         static const int SHEEP_MAXAGE = 25;     /**< Umur maksimal Sheep */
-        static const int SHEEP_BASEPOWER = 5;   /**< Power Sheep */
-        static const int SHEEP_DELTAT = 400;    /**< DeltaT Sheep */
+        static const int SHEEP_BASEPOWER = 4;   /**< Power Sheep */
+        static const int SHEEP_DELTAT = 500;    /**< DeltaT Sheep */
 };
 
 #endif // Sheep.h

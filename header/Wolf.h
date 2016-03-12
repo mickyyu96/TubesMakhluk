@@ -50,8 +50,8 @@ class Wolf : public Hewan
     private:
         static const char WOLF_ID = 'W';        /**< ID Wolf */
         static const int WOLF_MAXAGE = 20;      /**< Umur maksimal Wolf */
-        static const int WOLF_BASEPOWER = 8;    /**< Power Wolf */
-        static const int WOLF_DELTAT = 400;     /**< DeltaT Wolf */
+        static const int WOLF_BASEPOWER = 6;    /**< Power Wolf */
+        static const int WOLF_DELTAT = 300;     /**< DeltaT Wolf */
 };
 
 #endif // Wolf.h

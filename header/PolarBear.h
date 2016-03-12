@@ -50,9 +50,9 @@ class PolarBear : public Hewan
 
 	private :
 		static const char POLARBEAR_ID = 'P';       /**< ID PolarBear */
-		static const int POLARBEAR_MAXAGE = 100;    /**< Umur maksimal PolarBear */
-		static const int POLARBEAR_BASEPOWER = 15;  /**< Power PolarBear */
-		static const int POLARBEAR_DELTAT = 1000;   /**< DeltaT PolarBear */
+		static const int POLARBEAR_MAXAGE = 40;     /**< Umur maksimal PolarBear */
+		static const int POLARBEAR_BASEPOWER = 8;   /**< Power PolarBear */
+		static const int POLARBEAR_DELTAT = 600;    /**< DeltaT PolarBear */
 };
 
 #endif // Wolf.h
