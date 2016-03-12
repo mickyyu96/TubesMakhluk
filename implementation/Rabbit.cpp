@@ -94,7 +94,7 @@ void Rabbit::Race(){
 // main action
 void Rabbit::Live(){
     int nRandom;
-    while(isAlive())
+    while(isAlive() && !World::getWorldInstance()->isEnded())
     {
         nRandom = RandomGenerator::getInstance()->getNextInt(4);
         switch (nRandom) {
