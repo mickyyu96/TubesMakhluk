@@ -17,13 +17,13 @@ Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
 void Turtle::Race(){
     bool RabbitCome = false;
     Point PRabbit;
-    
+
     if (getisChallange()) {
         PRabbit = Hewan::FindMakhluk('R')->getPosition();
         if (PRabbit.getX() == 5 && PRabbit.getY()== 1) {
             RabbitCome = true;
         }
-        
+
         Hewan::getToPoint(Point(5, 1));
         while (!RabbitCome) {
             PRabbit = Hewan::FindMakhluk('R')->getPosition();
@@ -68,9 +68,9 @@ void Turtle::Live(){
     int nRandom;
     while(isAlive())
     {
-        Hewan::lockHewan();
+        //Hewan::lockHewan();
         nRandom = RandomGenerator::getInstance()->getNextInt(2);
-        Hewan::unlockHewan();
+        //Hewan::unlockHewan();
         switch (nRandom) {
             case 0:
                 Hewan::Wandering();
@@ -79,7 +79,7 @@ void Turtle::Live(){
                 GetToFood();
                 break;
         }
-        
+
         Hewan::Sleep();
     }
 }
