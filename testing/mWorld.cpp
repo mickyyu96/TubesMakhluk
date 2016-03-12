@@ -4,6 +4,7 @@
 #include "../header/KeypressHandler.h"
 #include "../header/WorldBuilder.h"
 #include "../header/Screen.h"
+#include "../header/SnapshotCapturer.h"
 #include <iostream>
 #include <string>
 #include <algorithm>

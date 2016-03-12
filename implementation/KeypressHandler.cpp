@@ -32,8 +32,11 @@ void KeypressHandler::doAction()
 		case 'q': 
 			World::getWorldInstance()->endWorld();
 			break;
-		case 'w' :
+		case 'w':
 			World::getWorldInstance()->changePauseState();
+			break;
+		case 'c':
+			SnapshotCapturer::getCapturerInstance()->captureSnapshot();
 			break;
 	}
 }

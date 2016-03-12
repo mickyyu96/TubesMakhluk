@@ -5,6 +5,7 @@
 #include <conio.h>
 #include <iostream>
 #include "World.h"
+#include "SnapshotCapturer.h"
 
 /** \class		KeypressHandler
  *  \brief		Handler untuk masukan dari user berupa keypress
