@@ -51,6 +51,14 @@ class RandomGenerator
 		 */
         Point getNextPoint(int, int);
 
+        /** \brief      Fungsi untuk mengacak point berdasarkan batasan
+		 *  \details    Melakukan pengacakan point dengan batasan (1...Nbrs-2), (1...NKol-2)
+		 *  \param      NBrs int Jumlah baris
+		 *  \param      NKol int Jumlah kolom
+		 *	\return     Point acak dari (1...Nbrs-2), (1...NKol-2)
+		 */
+        Point getNextPointPolarBear(int , int);
+
     private:
         static RandomGenerator* _instance;  /**< singleton instance*/
 };

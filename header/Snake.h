@@ -24,7 +24,7 @@ class Snake : public Hewan {
 		void Live();
 
 	private :
-		static const char SNAKE_ID = 'S';
+		static const char SNAKE_ID = 'U';
 		static const int SNAKE_MAXAGE = 20;
 		static const int SNAKE_BASEPOWER = 5;
 		static const int SNAKE_DELTAT = 400;
