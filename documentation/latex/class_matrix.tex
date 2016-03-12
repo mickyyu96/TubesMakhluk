@@ -1,0 +1,188 @@
+\hypertarget{class_matrix}{}\section{Matrix Class Reference}
+\label{class_matrix}\index{Matrix@{Matrix}}
+
+
+Representasi array dua dimensi.  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_matrix_adfbeb67cc3c43d96c53f881d79f919cb}{Matrix} (int, int)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_matrix_a0b9cfa2302a0273afb1b26e501f93abc}{Matrix} (const \hyperlink{class_matrix}{Matrix} \&)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}{$\sim$\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_matrix_a518609c744a502753d79063d75075312}{get\+N\+Brs} () const 
+\begin{DoxyCompactList}\small\item\em Get jumlah baris. \end{DoxyCompactList}\item 
+int \hyperlink{class_matrix_a9d540e5e85c41e7852308b1000a04ecd}{get\+N\+Kol} () const 
+\begin{DoxyCompactList}\small\item\em Get jumlah kolom. \end{DoxyCompactList}\item 
+char \hyperlink{class_matrix_a58e92d242a032a24ebbbfb235093edd9}{get\+Info} (int i, int j) const 
+\begin{DoxyCompactList}\small\item\em Get nilai sebuah elemen matriks. \end{DoxyCompactList}\item 
+void \hyperlink{class_matrix_adf43d84e79f4d48bdd087c3af5099a0b}{set\+Info} (char c, int i, int j)
+\begin{DoxyCompactList}\small\item\em Setter nilai sebuah elemen matriks. \end{DoxyCompactList}\item 
+void \hyperlink{class_matrix_ab5575e456f91ea08f5cd6a28463c6463}{Print\+Matrix} () const 
+\begin{DoxyCompactList}\small\item\em Prosedur untuk print sebuah matriks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representasi array dua dimensi. 
+
+Kelas Matriks berisi sejumlah elemen karakter yang akan digunakan untuk menampilkan state dunia pada layar. \begin{DoxyAuthor}{Author}
+Robert Sebastian Herlim 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Maret 2016 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(int, int)}{Matrix(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+::\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+\+N\+Brs, }
+\item[{int}]{\+\_\+\+N\+Kol}
+\end{DoxyParamCaption}
+)}\hypertarget{class_matrix_adfbeb67cc3c43d96c53f881d79f919cb}{}\label{class_matrix_adfbeb67cc3c43d96c53f881d79f919cb}
+
+
+Constructor. 
+
+Menciptakan sebuah matriks dengan ukuran yang di-\/pass melalui parameter. Matriks yang tercipta akan terisi karakter \textquotesingle{}\#\textquotesingle{} di bagian tepi matriks sebagai border, dan \textquotesingle{}.\textquotesingle{} pada bagian dalamnya. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+N\+Brs} & int jumlah baris \\
+\hline
+{\em \+\_\+\+N\+Kol} & int jumlah kolom \\
+\hline
+\end{DoxyParams}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(const Matrix \&)}{Matrix(const Matrix &)}}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+::\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{Mat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_matrix_a0b9cfa2302a0273afb1b26e501f93abc}{}\label{class_matrix_a0b9cfa2302a0273afb1b26e501f93abc}
+
+
+Copy Constructor. 
+
+Menciptakan sebuah matriks yang merupakan salinan dari matriks lain. Matriks yang tercipta akan terisi karakter \textquotesingle{}\#\textquotesingle{} di bagian tepi matriks sebagai border, dan \textquotesingle{}.\textquotesingle{} pada bagian dalamnya. 
+\begin{DoxyParams}{Parameters}
+{\em Mat} & const \hyperlink{class_matrix}{Matrix}\& Matriks yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Matrix@{Matrix}!````~Matrix@{$\sim$\+Matrix}}
+\index{````~Matrix@{$\sim$\+Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{$\sim$\+Matrix()}{~Matrix()}}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+::$\sim$\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}{}\label{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}
+
+
+Destructor. 
+
+Memusnahkan sebuah matriks 
+
+\subsection{Member Function Documentation}
+\index{Matrix@{Matrix}!get\+Info@{get\+Info}}
+\index{get\+Info@{get\+Info}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{get\+Info(int i, int j) const }{getInfo(int i, int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}char Matrix\+::get\+Info (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_matrix_a58e92d242a032a24ebbbfb235093edd9}{}\label{class_matrix_a58e92d242a032a24ebbbfb235093edd9}
+
+
+Get nilai sebuah elemen matriks. 
+
+Mengambil nilai karakter yang tersimpan pada elemen matriks di baris ke-\/i dan kolom ke-\/j 
+\begin{DoxyParams}{Parameters}
+{\em i} & int Indeks baris elemen matriks \\
+\hline
+{\em j} & int Indeks kolom elemen matriks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Karakter M\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!get\+N\+Brs@{get\+N\+Brs}}
+\index{get\+N\+Brs@{get\+N\+Brs}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{get\+N\+Brs() const }{getNBrs() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+::get\+N\+Brs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_matrix_a518609c744a502753d79063d75075312}{}\label{class_matrix_a518609c744a502753d79063d75075312}
+
+
+Get jumlah baris. 
+
+Mengambil nilai N\+Brs, yaitu jumlah baris pada matriks \begin{DoxyReturn}{Returns}
+nilai konstanta N\+Brs 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!get\+N\+Kol@{get\+N\+Kol}}
+\index{get\+N\+Kol@{get\+N\+Kol}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{get\+N\+Kol() const }{getNKol() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+::get\+N\+Kol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_matrix_a9d540e5e85c41e7852308b1000a04ecd}{}\label{class_matrix_a9d540e5e85c41e7852308b1000a04ecd}
+
+
+Get jumlah kolom. 
+
+Mengambil nilai N\+Kol, yaitu jumlah kolom pada matriks \begin{DoxyReturn}{Returns}
+nilai konstanta N\+Kol 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!Print\+Matrix@{Print\+Matrix}}
+\index{Print\+Matrix@{Print\+Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Print\+Matrix() const }{PrintMatrix() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::\+Print\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_matrix_ab5575e456f91ea08f5cd6a28463c6463}{}\label{class_matrix_ab5575e456f91ea08f5cd6a28463c6463}
+
+
+Prosedur untuk print sebuah matriks. 
+
+Mencetak matriks ke layar \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{set\+Info(char c, int i, int j)}{setInfo(char c, int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\hypertarget{class_matrix_adf43d84e79f4d48bdd087c3af5099a0b}{}\label{class_matrix_adf43d84e79f4d48bdd087c3af5099a0b}
+
+
+Setter nilai sebuah elemen matriks. 
+
+Melakukan assignment pada elemen matriks yang terletak di baris ke-\/i dan kolom ke-\/j 
+\begin{DoxyParams}{Parameters}
+{\em c} & char Nilai baru yang akan di-\/assign \\
+\hline
+{\em i} & int Indeks baris elemen matriks \\
+\hline
+{\em j} & int Indeks kolom elemen matriks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/header/Matrix.\+h\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/implementation/Matrix.\+cpp\end{DoxyCompactItemize}
