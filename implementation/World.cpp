@@ -20,9 +20,6 @@ World::World(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
 {
 	_isPaused = 0; _isEnded = 0;
 	objects = new LMakhluk;
-	//objects->Add(new PolarBear(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-	objects->Add(new Rabbit(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-	objects->Add(new Turtle(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
 }
 
 // Implementasi PrintMap
