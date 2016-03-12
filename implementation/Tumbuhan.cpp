@@ -4,12 +4,6 @@
 #include <chrono>
 using namespace std;
 
-Tumbuhan::Tumbuhan() : Makhluk(TUMBUHAN_ID, TUMBUHAN_MAXAGE) {
-    age = 0;
-    status = 1;
-    pos = Point();
-}
-
 Tumbuhan::Tumbuhan(const Point& P) : Makhluk(TUMBUHAN_ID, TUMBUHAN_MAXAGE)
 {
 	status = 1;
@@ -21,6 +15,10 @@ void Tumbuhan::Live() {
     while (isAlive()) {
 
         AgeIncrement();
+
+		std::chrono::milliseconds timespan(TUMBUHAN_DELTAT);
+		std::this_thread::sleep_for(timespan);
+
         if (getAge()>=getMaxAge()) {Kill();}
     }
 }

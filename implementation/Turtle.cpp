@@ -68,9 +68,7 @@ void Turtle::Live(){
     int nRandom;
     while(isAlive())
     {
-        //Hewan::lockHewan();
         nRandom = RandomGenerator::getInstance()->getNextInt(2);
-        //Hewan::unlockHewan();
         switch (nRandom) {
             case 0:
                 Hewan::Wandering();

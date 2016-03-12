@@ -68,13 +68,13 @@ class Hewan : public Makhluk {
      		*   \details Memberhentikan objek turunan kelas Hewan 
      		*   \return void
      		*/
-        	static void lockHewan() { hewanLock.lock(); }
+        	//static void lockHewan() { hewanLock.lock(); }
         	
         	/** \brief Procedure mutex untuk melanjutkan aktivitas objek
      		*   \details Melanjutkan aktivitas objek turunan kelas Hewan 
      		*   \return void
      		*/
-        	static void unlockHewan() { hewanLock.unlock(); }
+        	//static void unlockHewan() { hewanLock.unlock(); }
     		
     		/** \brief Procedure berjalan random sebuah objek
      		*   \details Behaviour semua objek turunan kelas hewan. Objek akan berjalan secara random di World
@@ -132,7 +132,7 @@ class Hewan : public Makhluk {
 
 	protected :
 		int hungerLvl, power, deltaT; /**< status level kelaparan, power, dan deltaT sebuah objek*/
-		static mutex hewanLock; /**< static mutex*/
+		//static mutex hewanLock; /**< static mutex*/
 };
 
 #endif

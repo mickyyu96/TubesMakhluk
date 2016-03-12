@@ -63,12 +63,6 @@ class Matrix {
 	 */
 		void setInfo(char c, int i, int j);
 		
-	/** \brief Prosedur untuk print sebuah matriks
-	 *  \details Mencetak matriks ke layar
-	 *	\return void
-	 */
-		void PrintMatrix() const;
-		
 	private :
 		char** M; /**< container matriks*/
 		const int NBrs; /**< jumlah baris*/
