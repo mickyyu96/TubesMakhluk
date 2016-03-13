@@ -1,10 +1,12 @@
 // LMakhluk.cpp
 
 #include "../header/LMakhluk.h"
+using namespace std;
 
 LMakhluk::LMakhluk()
 {
     first = NULL;
+	thread_count = 0;
 }
 
 LMakhluk::~LMakhluk()
@@ -27,6 +29,7 @@ void LMakhluk::Add(Makhluk* M)
         ElmtMakhluk* P = getLast();
 		P->setNext(EM);
     }
+	t[thread_count++] = thread(Makhluk::MakeAlive, M);
 }
 
 void LMakhluk::Del(Makhluk* M)

@@ -60,7 +60,7 @@ class World {
 		*	\details	Mengubah status isEnded menjadi TRUE yang menandakan dunia sudah berakhir
 		*	\return		void
 		*/
-		void endWorld() { _isEnded = 1; }
+		void endWorld() {_isEnded = 1; }
 
 		/** \brief		Mengubah status berjalannya aktivitas dunia
 		*	\details	Mengubah status isPaused menjadi kebalikannya, yang mengakibatkan
@@ -81,6 +81,12 @@ class World {
 		*	\return		void
 		*/
 		void unlockWorld();
+
+		/** \brief		Mengeksekusi sebuah langkah pergerakan aktivitas dunia
+		*	\details	Menampilkan tepat satu langkah perubahan state dunia akibat aktivitas dari objek-objek dunia
+		*	\return		void
+		*/
+		void singleStepExecution();
 
 	private :
 		/** \brief		Constructor

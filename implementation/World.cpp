@@ -32,3 +32,12 @@ void World::unlockWorld()
 	worldLock.unlock();
 }
 
+void World::singleStepExecution()
+{
+	unlockWorld();
+
+	std::chrono::milliseconds timespan(250); // HATI2 HARUS DIUBAH
+	std::this_thread::sleep_for(timespan);
+
+	lockWorld();
+}

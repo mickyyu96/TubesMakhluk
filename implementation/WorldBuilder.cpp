@@ -21,32 +21,37 @@ WorldBuilder::WorldBuilder(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
 {
 }
 
+void WorldBuilder::addAnObject(char _ID)
+{
+	switch (_ID)
+	{
+		case 'G':
+			World::getWorldInstance()->getObjects()->Add(new Tumbuhan(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+			break;
+		case 'R':
+			World::getWorldInstance()->getObjects()->Add(new Rabbit(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+			break;
+		case 'T':
+			World::getWorldInstance()->getObjects()->Add(new Turtle(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+			break;
+		case 'W':
+			World::getWorldInstance()->getObjects()->Add(new Wolf(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+			break;
+		case 'S':
+			World::getWorldInstance()->getObjects()->Add(new Sheep(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+			break;
+		case 'P':
+			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPolarBear(NBrs, NKol)));
+			break;
+	}
+}
+
 void WorldBuilder::buildWorldObjects()
 {
 	int numOfObjects = getStrMakhluk().size();
 	for (int i = 0; i < numOfObjects; i++)
 	{
 		char c = getStrMakhluk()[i];
-		switch (c)
-		{
-			case 'G' :
-				World::getWorldInstance()->getObjects()->Add(new Tumbuhan(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-				break;
-			case 'R':
-				World::getWorldInstance()->getObjects()->Add(new Rabbit(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-				break;
-			case 'T':
-				World::getWorldInstance()->getObjects()->Add(new Turtle(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-				break;
-            case 'W':
-				World::getWorldInstance()->getObjects()->Add(new Wolf(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-				break;
-            case 'S':
-				World::getWorldInstance()->getObjects()->Add(new Sheep(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-				break;
-            case 'P':
-				World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPolarBear(NBrs, NKol)));
-				break;
-		}
+		addAnObject(c);
 	}
 }

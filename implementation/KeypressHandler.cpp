@@ -1,5 +1,6 @@
 // KeypressHandler.cpp
 #include "../header/KeypressHandler.h"
+#include "../header/WorldBuilder.h"
 using namespace std;
 
 KeypressHandler* KeypressHandler::handlerInstance = new KeypressHandler();
@@ -38,5 +39,10 @@ void KeypressHandler::doAction()
 		case 'c':
 			SnapshotCapturer::getCapturerInstance()->captureSnapshot();
 			break;
+		case '.':
+			World::getWorldInstance()->singleStepExecution();
+			break;
+		default :
+			WorldBuilder::getBuilderInstance()->addAnObject(c);
 	}
 }

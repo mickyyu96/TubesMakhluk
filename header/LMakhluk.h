@@ -2,7 +2,10 @@
 #define LMAKHLUK_H
 
 #include <cstdlib>
+#include <thread>
 #include "Makhluk.h"
+#define MAX_THREAD 55
+using namespace std;
 
 /** \class      LMakhluk
  *  \brief      Representasi ADT List of Makhluk
@@ -45,7 +48,7 @@ class LMakhluk
          *  \brief      Element Makhluk
          *  \details    Menciptakan sebuah makhluk
          */
-		static class ElmtMakhluk
+		class ElmtMakhluk
 		{
 			public :
 			    /** \brief      Constructor
@@ -98,6 +101,8 @@ class LMakhluk
 		
 	private :
 		ElmtMakhluk* first; /**< element pertama dari list of makhluk */
+		thread t[MAX_THREAD]; /**< thread-thread dari elemen list */
+		int thread_count; /**< jumlah thread */
 
 	public :
 	    /** \brief      Get first element

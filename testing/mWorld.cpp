@@ -22,13 +22,6 @@ int main()
 	thread t[55];
 	int thread_count = 0;
 
-	int numOfObjects = World::getWorldInstance()->getObjects()->getSize();
-	for (int i = 0; i < numOfObjects; i++)
-	{
-		Makhluk* makhluk_i = World::getWorldInstance()->getObjects()->getInfo(i);
-		t[thread_count++] = thread(Makhluk::MakeAlive, makhluk_i);
-	}
-
 	t[thread_count++] = thread(Screen::ShowWorld, 500);
 	t[thread_count++] = thread(KeypressHandler::HandleKeypress);
 	
