@@ -4,4 +4,4 @@
 5. unit test
 6. v3 (karnivor makan)
 7. v3 (age naik, hewan mati, tgl 1 hewan ?)
-8. behaviour sheep
+8. v3 (behaviour sheep, micky)

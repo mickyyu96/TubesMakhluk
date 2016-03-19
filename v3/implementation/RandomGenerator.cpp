@@ -16,7 +16,6 @@ RandomGenerator::RandomGenerator()
 
 int RandomGenerator::getNextInt(int a)
 {
-    usleep(10000);
     return (rand() % a);
     cout << rand() % a << endl;
 }

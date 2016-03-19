@@ -45,3 +45,27 @@ compile_exception_object:
 
 run_exception_object:
 	mExceptionObject
+	
+compile_random_generator:
+	g++ -std=c++11 -o mRandomGenerator mRandomGenerator.cpp ../implementation/RandomGenerator.cpp ../implementation/Point.cpp
+	
+run_random_generator:
+	mRandomGenerator
+	
+compile_wolf:
+	g++ -std=c++11 -o mWolf mWolf.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+
+run_wolf:
+	mWolf
+	
+compile_sheep:
+	g++ -std=c++11 -o mSheep mSheep.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+
+run_sheep:
+	mSheep
+	
+compile_polar_bear:
+	g++ -std=c++11 -o mPolarBear mPolarBear.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+
+run_polar_bear:
+	mPolarBear

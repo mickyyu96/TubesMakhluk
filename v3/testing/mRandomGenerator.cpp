@@ -7,14 +7,23 @@ using namespace std;
 
 int main ()
 {
-    int randNum1, randNum2, i;
+    int randNum, i;
 
-    for (i=1; i<=10; i++)
+    cout << "-----getNextInt-----" << endl;
+    for (i=1; i<=3; i++)
     {
-        randNum1 = RandomGenerator::getInstance() -> getNextInt(10);
-        randNum2 = RandomGenerator::getInstance() -> getNextIntBetween(-3, 3);
-        cout << "Random Number (10) : " << randNum1  << "\tRandom Number (-3, 3) : " << randNum2 << endl;
+        randNum = RandomGenerator::getInstance() -> getNextInt(10);
+        cout << "Random Number (10) : " << randNum << endl;
     }
+    cout << endl;
+
+    cout << "-----getNextPoint-----" << endl;
+    for (i=1; i<=3; i++)
+    {
+        randNum = RandomGenerator::getInstance() -> getNextIntBetween(-3, 3);
+        cout << "Random Number (-3 ,3) : " << randNum << endl;
+    }
+    cout << endl;
 
     return 0;
 }
