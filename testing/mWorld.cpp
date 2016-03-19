@@ -85,7 +85,8 @@ int main()
 	{
 		t[i].join();
 	}
-
+	
+	cout << "The Program Ends Here.\n" << endl;
 	system("PAUSE");
 	delete World::getWorldInstance();
 	return 0;

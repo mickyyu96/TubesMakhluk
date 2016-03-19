@@ -17,7 +17,6 @@ void KeypressHandler::HandleKeypress()
 		getHandlerInstance()->getKeypress();
 		getHandlerInstance()->doAction();
 	}
-	cout << "The Program Ends Here.\n" << endl;
 }
 
 void KeypressHandler::getKeypress()
@@ -30,7 +29,8 @@ void KeypressHandler::doAction()
 	char c = getHandlerInstance()->getLastKeypress();
 	switch (c)
 	{
-		case 'q': 
+		case 'q':
+			if(World::getWorldInstance()->isPaused()) World::getWorldInstance()->changePauseState();
 			World::getWorldInstance()->endWorld();
 			break;
 		case 'w':
@@ -40,7 +40,15 @@ void KeypressHandler::doAction()
 			SnapshotCapturer::getCapturerInstance()->captureSnapshot();
 			break;
 		case '.':
-			World::getWorldInstance()->singleStepExecution();
+			try
+			{
+				if(!World::getWorldInstance()->isPaused()) throw ExceptionObject(2);
+				World::getWorldInstance()->singleStepExecution();
+			}
+			catch(ExceptionObject& E)
+			{
+				E.DisplayErrorMessage();
+			}
 			break;
 		default :
 			WorldBuilder::getBuilderInstance()->addAnObject(c);

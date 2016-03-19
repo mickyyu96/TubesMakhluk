@@ -8,5 +8,5 @@ ExceptionObject::ExceptionObject(int _ID) : id(_ID)
 
 void ExceptionObject::DisplayErrorMessage()
 {
-	cout << message[id] << endl;
+	MessageBoxA(0, message[id].c_str(), "", MB_OK);
 }

@@ -2,6 +2,7 @@
 #include "../header/WorldBuilder.h"
 #include "../header/LMakhluk.h"
 #include "../header/RandomGenerator.h"
+#include "../header/ExceptionObject.h"
 #include "../header/Rabbit.h"
 #include "../header/Turtle.h"
 #include "../header/Wolf.h"
@@ -40,6 +41,9 @@ void WorldBuilder::addAnObject(char _ID)
 		case 'P':
 			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPolarBear(NBrs, NKol)));
 			break;
+		default :
+			ExceptionObject E(3);
+			E.DisplayErrorMessage();
 	}
 }
 
