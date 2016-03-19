@@ -29,21 +29,6 @@ class IOManager
 		*	\return		void
 		*/
 		void PrintWorldMap();
-
-		/** \brief		Mengunci gembok operasi I/O
-		*	\details	Mencegah operasi I/O yang berlangsung secara simultan
-		*	\return		void
-		*/
-		static void lockIOLock() { IOLock.lock(); }
-
-		/** \brief		Membuka gembok operasi I/O
-		*	\details	Mengizinkan operasi I/O untuk berlangsung secara simultan kembali
-		*	\return		void
-		*/
-		static void unlockIOLock() { IOLock.unlock(); }
-
-	private :
-		static mutex IOLock; /**< I/O mutex untuk mencegah I/O yang simultan */
 };
 
 

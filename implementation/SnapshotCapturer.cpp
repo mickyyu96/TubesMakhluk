@@ -12,12 +12,15 @@ SnapshotCapturer::SnapshotCapturer(const string& _filename) : directory(_filenam
 
 void SnapshotCapturer::captureSnapshot()
 {
+	World::getWorldInstance()->lockWorld();
 	saveOldBuf();
 
 	ofstream output(directory);
 	cout.rdbuf(output.rdbuf());
-
+	
 	PrintWorldMap();
-
+	
 	resetCoutBuf();
+	World::getWorldInstance()->unlockWorld();
+
 }
