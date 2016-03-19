@@ -40,6 +40,12 @@ class Wolf : public Hewan
 		 */
         void GetToFood();
 
+        /** \brief      Prosedur aksi Wolf
+		 *  \details    Prosedur aksi Wolf untuk melolong
+		 *	\return     void
+		 */
+        void Howl();
+
         /** \brief      Prosedur hidup Wolf
 		 *  \details    Prosedur untuk menentukan apa yang akan dilakukan oleh Wolf
                         ketika masih hidup
@@ -51,7 +57,7 @@ class Wolf : public Hewan
         static const char WOLF_ID = 'W';        /**< ID Wolf */
         static const int WOLF_MAXAGE = 20;      /**< Umur maksimal Wolf */
         static const int WOLF_BASEPOWER = 6;    /**< Power Wolf */
-        static const int WOLF_DELTAT = 300;     /**< DeltaT Wolf */
+        static const int WOLF_DELTAT = 500;     /**< DeltaT Wolf */
 };
 
 #endif // Wolf.h

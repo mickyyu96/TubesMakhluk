@@ -33,7 +33,7 @@ class Turtle : public Hewan {
      *	\return 	TRUE bila ada Rabbit yang mengajak dan FALSE bila tidak ada
      */
     int getisChallange() { return isChallange; }
-    
+
     /** \brief 		Setter isChallange Turtle
      *  \details 	Fungsi setter yang akan mengganti nilai isChallange milik Turtle
      * 	\param		Integer 0 yang artinya FALSE dan 1 yang artinya TRUE
@@ -50,7 +50,7 @@ class Turtle : public Hewan {
 
     /** \brief 		Procedure aksi untuk Turtle melakukan Race dengan objek Rabbit
      *  \details 	Procedure aksi Race ini akan melakukan validasi apakah ada objek Rabbit yang
-     *  		mengajak race. Jika ada, maka Turtle pergi ke point start, dan melakukan race 
+     *  		mengajak race. Jika ada, maka Turtle pergi ke point start, dan melakukan race
      * 			bersama Rabbit ke finish point
      *	\return 	void
      */
@@ -81,7 +81,7 @@ class Turtle : public Hewan {
     static const char TURTLE_ID = 'T'; /**< ID Turtle*/
     static const int TURTLE_MAXAGE = 15; /**< Umur maksimal Turtle*/
     static const int TURTLE_BASEPOWER = 2; /**< Power Turtle*/
-	static const int TURTLE_DELTAT = 600; /**< DeltaT Turtle*/
+	static const int TURTLE_DELTAT = 800; /**< DeltaT Turtle*/
     int isChallange; /**< Variable ajakan racing oleh Rabbit*/
 };
 

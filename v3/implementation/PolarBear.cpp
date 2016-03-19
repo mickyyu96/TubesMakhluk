@@ -99,6 +99,13 @@ void PolarBear::WanderingPB()
     }
 }
 
+void PolarBear::Hibernate()
+{
+    Hewan::getToPoint(Point(World::getWorldInstance()->getNBrs()-2, 1));
+    std::chrono::milliseconds timespan(9000);
+    std::this_thread::sleep_for(timespan);
+}
+
 void PolarBear::Live()
 {
     int nRandom;
@@ -106,7 +113,7 @@ void PolarBear::Live()
     {
         RandomGenerator::getInstance()->lockRandom();
         usleep(10000);
-        nRandom = RandomGenerator::getInstance()->getNextInt(2);
+        nRandom = RandomGenerator::getInstance()->getNextInt(5);
         RandomGenerator::getInstance()->unlockRandom();
         switch (nRandom)
         {
@@ -114,6 +121,15 @@ void PolarBear::Live()
                 WanderingPB();
                 break;
             case 1:
+                WanderingPB();
+                break;
+            case 2:
+                Hibernate();
+                break;
+            case 3:
+                GetToFood();
+                break;
+            case 4:
                 GetToFood();
                 break;
         }

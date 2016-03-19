@@ -54,6 +54,12 @@ class PolarBear : public Hewan
 		 */
         void WanderingPB();
 
+        /** \brief      Prosedur aksi PolarBear
+		 *  \details    Prosedur aksi PolarBear untuk hibernasi
+		 *	\return     void
+		 */
+        void Hibernate();
+
 		/** \brief      Prosedur hidup PolarBear
 		 *  \details    Prosedur untuk menentukan apa yang akan dilakukan oleh PolarBear
                         ketika masih hidup
@@ -63,9 +69,9 @@ class PolarBear : public Hewan
 
 	private :
 		static const char POLARBEAR_ID = 'P';       /**< ID PolarBear */
-		static const int POLARBEAR_MAXAGE = 40;     /**< Umur maksimal PolarBear */
+		static const int POLARBEAR_MAXAGE = 100;     /**< Umur maksimal PolarBear */
 		static const int POLARBEAR_BASEPOWER = 8;   /**< Power PolarBear */
-		static const int POLARBEAR_DELTAT = 600;    /**< DeltaT PolarBear */
+		static const int POLARBEAR_DELTAT = 800;    /**< DeltaT PolarBear */
 };
 
 #endif // Wolf.h
