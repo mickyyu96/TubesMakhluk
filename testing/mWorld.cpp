@@ -5,27 +5,75 @@
 #include "../header/WorldBuilder.h"
 #include "../header/Screen.h"
 #include "../header/SnapshotCapturer.h"
+#include "../header/ExceptionObject.h"
 #include <iostream>
 #include <string>
 #include <algorithm>
 #include <thread>
 using namespace std;
 
+int isValidID(string);
+// Melakukan pengecekan string masukan pengguna, apakah ID yang dimasukkan benar (valid)
+
 int main()
 {
+	/**************************************************************
+	**
+	**				Input dimensi ukuran dunia
+	**
+	**************************************************************/
 	int _NBrs, _NKol;
-	cout << "Masukkan dimensi ukuran ruang dunia." << endl;
-	cout << "Jumlah baris (panjang) = "; cin >> _NBrs;
-	cout << "Jumlah kolom (lebar)   = "; cin >> _NKol;
+	do
+	{
+		try
+		{
+			cout << "Masukkan dimensi ukuran ruang dunia." << endl;
+			cout << "Jumlah baris (panjang) = "; cin >> _NBrs;
+			cout << "Jumlah kolom (lebar)   = "; cin >> _NKol;
+			if (_NBrs < 7 || _NKol < 7) throw ExceptionObject(0);
+		}
+		catch (ExceptionObject& E)
+		{
+			E.DisplayErrorMessage();
+		}
+		
+	} while(_NBrs < 7 || _NKol < 7);
 	World::getWorldInstance()->setNBrs(_NBrs); World::getWorldInstance()->setNKol(_NKol);
-
-	cout << "Masukkan sebuah string yang  berisi ID (UPPERCASE) makhluk-makhluk yang ingin dimunculkan pada dunia. " << endl;
-	cout << "Pilihan : P = PolarBear, G = Tumbuhan, R = Rabbit, T = Turtle, S = Sheep, W = Wolf" << endl;
-	cout << "String input = ";
+	
+	cout << "\n===========================================================================\n" << endl;
+	
+	/**************************************************************
+	**
+	**				Input makhluk-makhluk yang ada
+	**
+	**************************************************************/
 	string input;
-	cin >> input;
+	do
+	{
+		try
+		{
+			cout << "Masukkan sebuah string yang  berisi ID (UPPERCASE) makhluk-makhluk yang ingin dimunculkan pada dunia. " << endl;
+			cout << "Pilihan : P = PolarBear, G = Tumbuhan, R = Rabbit, T = Turtle, S = Sheep, W = Wolf" << endl;
+			cout << "String input = ";
+			cin >> input;
+			
+			if(!isValidID(input)) throw ExceptionObject(1);
+		}
+		catch (ExceptionObject& E)
+		{
+			E.DisplayErrorMessage();
+		}
+	} while (!isValidID(input));
 	WorldBuilder::getBuilderInstance()->setStrMakhluk(input);
 	WorldBuilder::getBuilderInstance()->buildWorldObjects();
+	
+	cout << "\n===========================================================================\n" << endl;
+	
+	/**************************************************************
+	**
+	**					Nyalakan dunia
+	**
+	**************************************************************/
 	
 	thread t[55];
 	int thread_count = 0;
@@ -41,4 +89,17 @@ int main()
 	system("PAUSE");
 	delete World::getWorldInstance();
 	return 0;
+}
+
+int isValidID(string s)
+{
+	int Found = 0;
+	for(int i=0; i<(int)s.size() && !Found; i++)
+	{
+		if(s[i] != 'P' && s[i] != 'G' && s[i] != 'R' && s[i] != 'T' && s[i] != 'S' && s[i] != 'W' ) // Ular belum,
+		{
+			Found = 1;
+		}
+	}
+	return !Found;
 }
