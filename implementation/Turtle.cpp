@@ -4,8 +4,6 @@
 #include <thread>
 #include <chrono>
 using namespace std;
-int dx =1;
-int dy =1;
 
 Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
     status = 1;
@@ -17,29 +15,28 @@ Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
 void Turtle::Race(){
     bool RabbitCome = false;
     Point PRabbit;
-
-    if (getisChallange()) {
-        PRabbit = Hewan::FindMakhluk('R')->getPosition();
-        if (PRabbit.getX() == 5 && PRabbit.getY()== 1) {
-            RabbitCome = true;
-        }
-
-        Hewan::getToPoint(Point(5, 1));
+    if (getisChallange()) {        
         while (!RabbitCome) {
             PRabbit = Hewan::FindMakhluk('R')->getPosition();
             if (PRabbit.getX() == 5 && PRabbit.getY()== 1) {
                 RabbitCome = true;
                 setIsChallange(0);
             }
+            else{
+                Wandering();
+            }
         }
+        
+        Hewan::getToPoint(Point(5, 1));
         Hewan::getToPoint(Point(5, World::getWorldInstance()->getNKol()-2));
     }
 }
 
 void Turtle::GetToFood(){
     if (Hewan::isMakhlukinList('G')) {
-        Hewan::getToPoint(Hewan::FindFood()->getPosition());
-        Hewan::FindFood()->Kill();
+        Makhluk *Food = FindFood();
+        Hewan::getToPoint(Food->getPosition());
+        Food->Kill();
     }
 }
 
@@ -68,7 +65,7 @@ void Turtle::Live(){
     int nRandom;
     while(isAlive() && !World::getWorldInstance()->isEnded())
     {
-        nRandom = RandomGenerator::getInstance()->getNextInt(2);
+        nRandom = RandomGenerator::getInstance()->getNextInt(3);
         switch (nRandom) {
             case 0:
                 Hewan::Wandering();
@@ -76,8 +73,11 @@ void Turtle::Live(){
             case 1:
                 GetToFood();
                 break;
+            case 2: 
+                Race();
+                break;
         }
-
-        Hewan::Sleep();
+        std::chrono::milliseconds timespan(getDeltaT());
+        std::this_thread::sleep_for(timespan);
     }
 }
