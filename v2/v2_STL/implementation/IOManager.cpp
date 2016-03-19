@@ -1,9 +1,8 @@
 // IOManager.cpp
-#include "IOManager.h"
-#include "RandomGenerator.h"
-#include "LMakhluk.h"
-#include "Hewan.h"
-#include "MakhlukLive.h"
+#include "../header/IOManager.h"
+#include "../header/RandomGenerator.h"
+#include "../header/LMakhluk.h"
+#include "../header/Hewan.h"
 using namespace std;
 
 void IOManager::PrintMatrix(const Matrix& M)
@@ -20,7 +19,6 @@ void IOManager::PrintMatrix(const Matrix& M)
 
 void IOManager::PrintWorldMap()
 {
-    MakhlukLive::getInstance()->MakhlukMove();
 	World* worldInstance = World::getWorldInstance();
 	Matrix *map = new Matrix(worldInstance->getNBrs(), worldInstance->getNKol());
 
@@ -35,8 +33,4 @@ void IOManager::PrintWorldMap()
         }
     }
 	PrintMatrix(*map);
-    MakhlukLive::getInstance()->MakhlukEat();
 }
-
-
-
