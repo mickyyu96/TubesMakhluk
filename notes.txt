@@ -1,0 +1,8 @@
+1. v1, v2 (kepi dilanjutin micky)
+2. dokumen pembagian tugas dan logact
+3. poster (kepi)
+4. dokumentasi (bersama, bit.ly/laporanOOP1_semangat)
+5. unit test
+6. v3 (karnivor makan)
+7. v3 (age naik, hewan mati, tgl 1 hewan ?)
+8. behaviour sheep
