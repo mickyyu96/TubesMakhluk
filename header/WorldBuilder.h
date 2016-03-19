@@ -54,15 +54,12 @@ class WorldBuilder
 	private:
 		/** \brief		Constructor
 		*	\details	Menciptakan sebuah instance WorldBuilder
-		*	\param		_NBrs int Jumlah baris dunia yang tercipta
-		*	\param		_NKol int Jumlah kolom dunia yang tercipta
 		*/
-		WorldBuilder(int, int);
+		WorldBuilder();
 
 	private:
 		static WorldBuilder* builderInstance; /**< pointer yang menunjuk ke instance dari kelas singleton*/
 		string strMakhluk; /**< input dari pengguna yang berisi karakter-karakter makhluk yang akan diciptakan*/
-		const int NBrs, NKol; /**< ukuran world yang tercipta */
 };
 
 #endif

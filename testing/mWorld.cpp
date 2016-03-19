@@ -11,9 +11,17 @@
 #include <thread>
 using namespace std;
 
-
 int main()
 {
+	int _NBrs, _NKol;
+	cout << "Masukkan dimensi ukuran ruang dunia." << endl;
+	cout << "Jumlah baris (panjang) = "; cin >> _NBrs;
+	cout << "Jumlah kolom (lebar)   = "; cin >> _NKol;
+	World::getWorldInstance()->setNBrs(_NBrs); World::getWorldInstance()->setNKol(_NKol);
+
+	cout << "Masukkan sebuah string yang  berisi ID (UPPERCASE) makhluk-makhluk yang ingin dimunculkan pada dunia. " << endl;
+	cout << "Pilihan : P = PolarBear, G = Tumbuhan, R = Rabbit, T = Turtle, S = Sheep, W = Wolf" << endl;
+	cout << "String input = ";
 	string input;
 	cin >> input;
 	WorldBuilder::getBuilderInstance()->setStrMakhluk(input);

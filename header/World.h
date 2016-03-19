@@ -43,6 +43,20 @@ class World {
 		*	\return		Bilangan bulat yang menyatakan dimensi lebar dari ukuran ruang dunia
 		*/
 		int getNKol() { return NKol; }
+		
+		/** \brief		Set jumlah baris
+		*	\details	Melakukan assignment jumlah baris yang merupakan dimensi panjang dari ukuran ruang dunia
+		*	\param		_NBrs int Jumlah baris baru yang akan di-assign
+		*	\return		void
+		*/
+		void setNBrs(int _NBrs) { NBrs = _NBrs; }
+
+		/** \brief		Set jumlah kolom
+		*	\details	Mengembalikan jumlah kolom yang merupakan dimensi lebar dari ukuran ruang dunia
+		*	\param		_NKol int Jumlah kolom baru yang akan di-assign
+		*	\return		void
+		*/
+		void setNKol(int _NKol) { NKol = _NKol; }
 
 		/** \brief		Get status isEnded
 		*	\details	Predikat untuk menyatakan apakah aktivitas dunia sudah berakhir
@@ -105,8 +119,8 @@ class World {
 
 		static World* worldInstance; /**< pointer yang menunjuk ke instance dari kelas singleton*/
 
-		const int NBrs; /**< dimensi panjang dari ukuran dunia*/
-		const int NKol; /**< dimensi lebar dari ukuran dunia*/
+		int NBrs; /**< dimensi panjang dari ukuran dunia*/
+		int NKol; /**< dimensi lebar dari ukuran dunia*/
 };
 
 #endif

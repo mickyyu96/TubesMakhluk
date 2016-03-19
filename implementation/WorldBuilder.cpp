@@ -10,19 +10,16 @@
 #include "../header/Tumbuhan.h"
 #include <string>
 
-#define DEFAULT_NBRS 20
-#define DEFAULT_NKOL 20
+WorldBuilder* WorldBuilder::builderInstance = new WorldBuilder();
 
-World* World::worldInstance = new World(DEFAULT_NBRS, DEFAULT_NKOL);
-WorldBuilder* WorldBuilder::builderInstance = new WorldBuilder(World::getWorldInstance()->getNBrs(),
-	World::getWorldInstance()->getNKol());
-
-WorldBuilder::WorldBuilder(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
+WorldBuilder::WorldBuilder()
 {
 }
 
 void WorldBuilder::addAnObject(char _ID)
 {
+	int NBrs = World::getWorldInstance()->getNBrs();
+	int NKol = World::getWorldInstance()->getNKol();
 	switch (_ID)
 	{
 		case 'G':
