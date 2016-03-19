@@ -3,7 +3,11 @@
 
 #include <stdlib.h>
 #include <time.h>
+#include <mutex>
+#include <unistd.h>
 #include "Point.h"
+
+using namespace std;
 
 /** \class      RandomGenerator
  *  \brief      Mengembalikan random number
@@ -59,8 +63,13 @@ class RandomGenerator
 		 */
         Point getNextPointPB(int , int);
 
+        void lockRandom();
+
+        void unlockRandom();
+
     private:
         static RandomGenerator* _instance;  /**< singleton instance*/
+        mutex randomLock;
 };
 
 # endif // RandomGenerator_H
