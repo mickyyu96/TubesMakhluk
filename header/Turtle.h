@@ -33,13 +33,18 @@ class Turtle : public Hewan {
      *	\return 	TRUE bila ada Rabbit yang mengajak dan FALSE bila tidak ada
      */
     int getisChallange() { return isChallange; }
-
+    
+    /** \brief 		Setter isChallange Turtle
+     *  \details 	Fungsi setter yang akan mengganti nilai isChallange milik Turtle
+     * 	\param		Integer 0 yang artinya FALSE dan 1 yang artinya TRUE
+     *	\return 	void
+     */
     void setIsChallange(int a) { isChallange = a; }
 
-    /** \brief Getter DeltaT Turtle
-     *  \details Fungsi getter yang akan mengambilkan nilai deltaT dari Turtle
-     *  yang merupakan member dari kelas hewan yang diinisialisasi saat ctor
-     *	\return Integer DeltaT Turtle
+    /** \brief 		Getter DeltaT Turtle
+     *  \details 	Fungsi getter yang akan mengambilkan nilai deltaT dari Turtle
+     *  		yang merupakan member dari kelas hewan yang diinisialisasi saat ctor
+     *	\return 	Integer DeltaT Turtle
      */
     int getDeltaT() { return Hewan::getDeltaT(); }
 
