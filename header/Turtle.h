@@ -4,8 +4,8 @@
 #include "Hewan.h"
 
 /** \class 	Turtle
- *  \brief 	Kelas Turunan dari Makhluk berupa Rabbit
- *  \details 	Kelas Rabbit merupakan kelas yang berfungsi untuk merepresentasikan objek Rabbit
+ *  \brief 	Kelas Turunan dari Makhluk berupa Turtle
+ *  \details 	Kelas Rabbit merupakan kelas yang berfungsi untuk merepresentasikan objek Turtle
  *	\author 	Atika Azzahra Akbar
  *	\date 		Maret 2016
  */
@@ -45,7 +45,7 @@ class Turtle : public Hewan {
 
     /** \brief 		Procedure aksi untuk Turtle melakukan Race dengan objek Rabbit
      *  \details 	Procedure aksi Race ini akan melakukan validasi apakah ada objek Rabbit yang
-     *  		mengajak race. Jika ada maka Turtle pergi ke point start, dan melakukan race 
+     *  		mengajak race. Jika ada, maka Turtle pergi ke point start, dan melakukan race 
      * 			bersama Rabbit ke finish point
      *	\return 	void
      */
