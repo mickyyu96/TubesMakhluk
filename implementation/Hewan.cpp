@@ -53,7 +53,7 @@ Makhluk* Hewan::FindMakhluk(char _ID){
     Makhluk * _Makhluk = NULL;
     LMakhluk* _LMakhluk = new LMakhluk;
     _LMakhluk->setFirst(World::getWorldInstance()->getObjects()->getFirst());
-    if (_ID=='G') {
+    if (_ID!='*') {
         while (_LMakhluk->getFirst()!=World::getWorldInstance()->getObjects()->getLast()) {
             if (_LMakhluk->getFirst()->getInfo()->getID() == _ID && _LMakhluk->getFirst()->getInfo()->isAlive()) {
                 Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
