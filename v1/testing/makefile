@@ -35,7 +35,7 @@ run_keypress_handler:
 	mKeypressHandler
 
 compile_world_builder:
-	g++ -std=c++11 -o mWorldBuilder mWorldBuilder.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp
+	g++ -std=c++11 -o mWorldBuilder mWorldBuilder.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
 
 run_world_builder:
 	mWorldBuilder

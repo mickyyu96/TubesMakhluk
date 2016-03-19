@@ -6,7 +6,9 @@ RandomGenerator* RandomGenerator::_instance = new RandomGenerator;
 
 RandomGenerator::RandomGenerator()
 {
-    srand ((unsigned int)time(NULL));
+    struct timespec ts;
+    clock_gettime (CLOCK_MONOTONIC, &ts);
+    srand ((time_t)ts.tv_nsec);
 }
 
 int RandomGenerator::getNextInt(int a)
