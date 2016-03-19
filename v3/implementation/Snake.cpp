@@ -1,17 +1,8 @@
 // Rabbit.cpp
-#include "../header/Snake.h"
+#include "Snake.h"
 #include <thread>
 #include <chrono>
 using namespace std;
-
-Snake::Snake() : Hewan(SNAKE_ID, SNAKE_MAXAGE)
-{
-    status = 1;
-    power = SNAKE_BASEPOWER;
-    deltaT = SNAKE_DELTAT;
-    pos = Point();
-}
-
 Snake::Snake(const Point& P): Hewan(SNAKE_ID, SNAKE_MAXAGE) {
     status = 1;
     power = SNAKE_BASEPOWER;
@@ -19,81 +10,70 @@ Snake::Snake(const Point& P): Hewan(SNAKE_ID, SNAKE_MAXAGE) {
     pos = P;
 }
 
-void GoToFood(Point P) {
-    if (P.getX() < Hewan::this->getPosition().getX()) {
-        while (Hewan::this->getPosition().getX() > P.getX()) {
+void Snake::GoToFood(Point P) {
+    std::chrono::milliseconds timespan(deltaT);
+    if (P.getX() < getPosition().getX()) {
+        while (getPosition().getX() > P.getX()) {
             if (Hewan::shouldRebounced(0,1))
                 Hewan::Move(0,-1);
             else
                 Hewan::Move(0,1);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             Hewan::Move(1,0);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             if (Hewan::shouldRebounced(0,-1))
                 Hewan::Move(0,1);
             else
                 Hewan::Move(0,-1);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
         }
     }
     else {
-        while (Hewan::this->getPosition().getX() < P.getX()) {
+        while (getPosition().getX() < P.getX()) {
             if (Hewan::shouldRebounced(0,1))
                 Hewan::Move(0,-1);
             else
                 Hewan::Move(0,1);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             Hewan::Move(-1,0);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             if (Hewan::shouldRebounced(0,-1))
                 Hewan::Move(0,1);
             else
                 Hewan::Move(0,-1);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
         }
     }
 
-    if (P.getY() < Hewan::this->getPosition().getY()) {
-        while (Hewan::this->getPosition().getY() > P.getY()) {
+    if (P.getY() < getPosition().getY()) {
+        while (getPosition().getY() > P.getY()) {
             if (Hewan::shouldRebounced(1,0))
                 Hewan::Move(-1,0);
             else
                 Hewan::Move(1,0);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             Hewan::Move(0,1);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             if (Hewan::shouldRebounced(1,0))
                 Hewan::Move(-1,0);
             else
                 Hewan::Move(1,0);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
         }
     }
     else {
-        while (Hewan::this->getPosition().getY() < P.getY()) {
+        while (getPosition().getY() < P.getY()) {
             if (Hewan::shouldRebounced(1,0))
                 Hewan::Move(-1,0);
             else
                 Hewan::Move(1,0);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             Hewan::Move(0,-1);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
             if (Hewan::shouldRebounced(1,0))
                 Hewan::Move(-1,0);
             else
                 Hewan::Move(1,0);
-            std::chrono::milliseconds timespan(deltaT);
             std::this_thread::sleep_for(timespan);
         }
 
@@ -103,11 +83,16 @@ void GoToFood(Point P) {
 
 // actions
 void Snake::GetToFood(){
-    if ((Hewan::isMakhlukinList('R') || Hewan::isMakhlukinList('T') || Hewan::isMakhlukinList('P')) {
-        while (Hewan::isMakhlukinList(Hewan::FindFood())) {
-            GoToFood(Hewan::FindFood()->getPosition());
+    //if ((Hewan::isMakhlukinList('R') || Hewan::isMakhlukinList('T') || Hewan::isMakhlukinList('P')) {
+        //while (Hewan::isMakhlukinList(Hewan::FindFood()->getID())) {
+        Makhluk * Food = FindFood();
+        Point PSnake = getPosition();
+        Point PFood = Food->getPosition();
+        while (Point::getDistance(PSnake, PFood)<10) {
+            GoToFood(Food->getPosition());
         }
-    }
+        //}
+    //}
 }
 
 void Snake::ZigZag(){
@@ -164,7 +149,7 @@ void Snake::Live(){
     int nRandom;
     while(isAlive())
     {
-        nRandom = RandomGenerator::getInstance()->getNextInt(2);
+        /*nRandom = RandomGenerator::getInstance()->getNextInt(2);
         switch (nRandom) {
             case 0: {
                 for (int i=0; i<10; ++i)
@@ -174,7 +159,9 @@ void Snake::Live(){
             case 1:
                 GetToFood();
                 break;
-        }
+        }*/
+        GetToFood();
+        ZigZag();
         Hewan::Sleep();
     }
 }
