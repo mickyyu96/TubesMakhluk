@@ -46,6 +46,13 @@ class PolarBear : public Hewan
 		 *  \param      dy Jumlah move PolarBear pada kolom
 		 *	\return     Bilangan bulat 0 atau 1
 		 */
+		 int shouldRebouncedPB(int dx, int dy);
+
+        /** \brief      Prosedur aksi PolarBear
+		 *  \details    Prosedur aksi PolarBear untuk berjalan-jalan
+		 *	\return     void
+		 */
+        void WanderingPB();
 
 		/** \brief      Prosedur hidup PolarBear
 		 *  \details    Prosedur untuk menentukan apa yang akan dilakukan oleh PolarBear

@@ -36,12 +36,12 @@ int main()
 		{
 			E.DisplayErrorMessage();
 		}
-		
+
 	} while(_NBrs < 7 || _NKol < 7);
-	World::getWorldInstance()->setNBrs(_NBrs); World::getWorldInstance()->setNKol(_NKol);
-	
+	World::getWorldInstance()->setNBrs(_NBrs+2); World::getWorldInstance()->setNKol(_NKol+2);
+
 	cout << "\n===========================================================================\n" << endl;
-	
+
 	/**************************************************************
 	**
 	**				Input makhluk-makhluk yang ada
@@ -56,7 +56,7 @@ int main()
 			cout << "Pilihan : P = PolarBear, G = Tumbuhan, R = Rabbit, T = Turtle, S = Sheep, W = Wolf" << endl;
 			cout << "String input = ";
 			cin >> input;
-			
+
 			if(!isValidID(input)) throw ExceptionObject(1);
 		}
 		catch (ExceptionObject& E)
@@ -66,26 +66,26 @@ int main()
 	} while (!isValidID(input));
 	WorldBuilder::getBuilderInstance()->setStrMakhluk(input);
 	WorldBuilder::getBuilderInstance()->buildWorldObjects();
-	
+
 	cout << "\n===========================================================================\n" << endl;
-	
+
 	/**************************************************************
 	**
 	**					Nyalakan dunia
 	**
 	**************************************************************/
-	
+
 	thread t[55];
 	int thread_count = 0;
 
 	t[thread_count++] = thread(Screen::ShowWorld, 500);
 	t[thread_count++] = thread(KeypressHandler::HandleKeypress);
-	
+
 	for(int i=0; i<thread_count; i++)
 	{
 		t[i].join();
 	}
-	
+
 	cout << "The Program Ends Here.\n" << endl;
 	system("PAUSE");
 	delete World::getWorldInstance();

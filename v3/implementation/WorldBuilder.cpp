@@ -39,7 +39,7 @@ void WorldBuilder::addAnObject(char _ID)
 			World::getWorldInstance()->getObjects()->Add(new Sheep(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
 			break;
 		case 'P':
-			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPolarBear(NBrs, NKol)));
+			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPB(NBrs, NKol)));
 			break;
 		default :
 			ExceptionObject E(3);

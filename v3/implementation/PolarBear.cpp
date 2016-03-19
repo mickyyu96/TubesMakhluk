@@ -24,6 +24,78 @@ void PolarBear::GetToFood()
     }
 }
 
+int PolarBear::shouldRebouncedPB(int dx, int dy)
+{
+    if ((dx+pos.getX()<=World::getWorldInstance()->getNBrs()-(World::getWorldInstance()->getNBrs()/5)-3) ||
+        (dx+pos.getX()>=World::getWorldInstance()->getNBrs()-1))
+    {
+        return 1;
+    }
+    if (dy+pos.getY()<=0 || dy+pos.getY()>=World::getWorldInstance()->getNKol()-1)
+    {
+        return 1;
+    }
+    return 0;
+}
+
+void PolarBear::WanderingPB()
+{
+    int dx = 1;
+    int dy = 1;
+    int nRandom = RandomGenerator::getInstance()->getNextInt(2);
+    if (nRandom == 1)
+    {
+        for (int i=0; i<20; i++)
+        {
+            if (shouldRebouncedPB(dx, 0))
+            {
+                dx *= -1;
+            }
+            if (shouldRebouncedPB(0, dy))
+            {
+                dy *= -1;
+            }
+            Hewan::Move(dx, dy);
+            Sleep();
+        }
+    }
+    else
+    {
+        for (int i=0; i<20; i++)
+        {
+            if (shouldRebouncedPB(dx, 0) && shouldRebouncedPB(0, dy))
+            {
+                dx = 0;
+                dy = 1;
+                if (shouldRebouncedPB(0, dy))
+                {
+                    dy *= -1;
+                }
+            }
+            if (shouldRebouncedPB(0, dy))
+            {
+                dy = 0;
+                dx = 1;
+                if (shouldRebouncedPB(dx, 0))
+                {
+                    dx *= -1;
+                }
+            }
+            else if (shouldRebouncedPB(dx, 0))
+            {
+                dx = 0;
+                dy = 1;
+                if (shouldRebouncedPB(0, dy))
+                {
+                    dy *= -1;
+                }
+            }
+            Move(dx, dy);
+            Sleep();
+        }
+    }
+}
+
 void PolarBear::Live()
 {
     int nRandom;
@@ -33,7 +105,7 @@ void PolarBear::Live()
         switch (nRandom)
         {
             case 0:
-                Wandering();
+                WanderingPB();
                 break;
             case 1:
                 GetToFood();
