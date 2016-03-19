@@ -17,6 +17,7 @@ class Snake : public Hewan {
 		int isVegetarian() { return 0; }
 
 		// actions
+		void FoToFood(Point P);
 		void GetToFood();
 		void ZigZag();      //to move zigzag
 
