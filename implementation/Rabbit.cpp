@@ -15,8 +15,9 @@ Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE) {
 // actions
 void Rabbit::GetToFood(){
     if (Hewan::isMakhlukinList('G')) {
-        Hewan::getToPoint(Hewan::FindFood()->getPosition());
-        Hewan::FindFood()->Kill();
+        Makhluk *Food = FindFood();
+        Hewan::getToPoint(Food->getPosition());
+        Food->Kill();
     }
 }
 
@@ -70,24 +71,27 @@ void Rabbit::WanderingHop(){
 }
 
 void Rabbit::Race(){
-    if (!Turtle::isAnyTurtleRacing()) {
-        bool TurtleCome = false;
-        Point PTurtle;
-        
-        static_cast<Turtle*>(FindMakhluk('T'))->setIsChallange(1);
-        PTurtle = Hewan::FindMakhluk('T')->getPosition();
-        if (PTurtle.getX() == 5 && PTurtle.getY()== 1) {
-            TurtleCome = true;
-        }
-    
-        Hewan::getToPoint(Point(5, 1));
-        while (!TurtleCome){
-            PTurtle = Hewan::FindMakhluk('T')->getPosition();
-            if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(FindMakhluk('T'))->getisChallange()) {
+    if (Hewan::isMakhlukinList('T')) {
+        if (!Turtle::isAnyTurtleRacing()) {
+            bool TurtleCome = false;
+            Makhluk *_Turtle = FindMakhluk('T');
+            Point PTurtle;
+            
+            static_cast<Turtle*>(_Turtle)->setIsChallange(1);
+            Hewan::getToPoint(Point(5, 1));
+            PTurtle = _Turtle->getPosition();
+            
+            if ((PTurtle.getX() == 5) && (PTurtle.getY()== 1)) {
                 TurtleCome = true;
             }
+            while (!TurtleCome){
+                PTurtle = _Turtle->getPosition();
+                if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(_Turtle)->getisChallange()) {
+                    TurtleCome = true;
+                }
+            }
+            Hewan::getToPoint(Point(6, World::getWorldInstance()->getNKol()-2));
         }
-        Hewan::getToPoint(Point(6, World::getWorldInstance()->getNKol()-2));
     }
 }
 
@@ -111,7 +115,7 @@ void Rabbit::Live(){
                 WanderingHop();
                 break;
         }
-        std::chrono::milliseconds timespan(Hewan::getDeltaT());
+        std::chrono::milliseconds timespan(getDeltaT());
         std::this_thread::sleep_for(timespan);
     }
 }
