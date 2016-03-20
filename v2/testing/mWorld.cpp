@@ -130,7 +130,7 @@ int isValidID(string s)
 	int Found = 0;
 	for(int i=0; i<(int)s.size() && !Found; i++)
 	{
-		if(s[i] != 'P' && s[i] != 'G' && s[i] != 'R' && s[i] != 'T' && s[i] != 'S' && s[i] != 'W' ) // Ular belum,
+		if(s[i] != 'P' && s[i] != 'G' && s[i] != 'R' && s[i] != 'T' && s[i] != 'S' && s[i] != 'W' && s[i] != 'U')
 		{
 			Found = 1;
 		}

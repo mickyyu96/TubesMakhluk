@@ -1,6 +1,8 @@
 // KeypressHandler.cpp
 #include "../header/KeypressHandler.h"
 #include "../header/WorldBuilder.h"
+#include "../header/MakhlukLive.h"
+#include "../header/Screen.h"
 using namespace std;
 
 KeypressHandler* KeypressHandler::handlerInstance = new KeypressHandler();
@@ -34,7 +36,20 @@ void KeypressHandler::doAction()
 			World::getWorldInstance()->endWorld();
 			break;
 		case 'w':
-			World::getWorldInstance()->changePauseState();
+			lastKeypress = '-';
+			do
+            {
+                while(_kbhit())
+                {
+                    KeypressHandler::getHandlerInstance()->getKeypress();
+                    if(lastKeypress == '.')
+                    {
+                        MakhlukLive::getInstance()->MakhlukMove();
+                        Screen::getScreenInstance()->PrintWorldMap();
+                        MakhlukLive::getInstance()->MakhlukEat();
+                    }
+                }
+            }while(lastKeypress != 'w');
 			break;
 		case 'c':
 			SnapshotCapturer::getCapturerInstance()->captureSnapshot();
