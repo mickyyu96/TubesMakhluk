@@ -84,7 +84,7 @@ void Rabbit::Race(){
             if ((PTurtle.getX() == 5) && (PTurtle.getY()== 1)) {
                 TurtleCome = true;
             }
-            while (!TurtleCome){
+            while (!TurtleCome && _Turtle->isAlive()){
                 PTurtle = _Turtle->getPosition();
                 if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(_Turtle)->getisChallange()) {
                     TurtleCome = true;
