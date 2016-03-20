@@ -1,7 +1,7 @@
 // Makhluk.cpp
-#include "Makhluk.h"
-#include "LMakhluk.h"
-#include "World.h"
+#include "../header/Makhluk.h"
+#include "../header/LMakhluk.h"
+#include "../header/World.h"
 #include <iostream>
 using namespace std;
 
@@ -14,7 +14,7 @@ int Makhluk::isMakhlukInTheSamePoint(){
     int found = 0;
     int i = 0;
     World* worldInstance = World::getWorldInstance();
-
+    
     LMakhluk * _LMakhluk = worldInstance->getObjects();
     
     while(i<_LMakhluk->getSize() && !found) {

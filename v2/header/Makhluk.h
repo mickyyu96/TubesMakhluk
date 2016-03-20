@@ -16,9 +16,8 @@ class Makhluk {
 
 		// method untuk hidup
 		static void MakeAlive(Makhluk*);
-    
-        //STL
-        int isMakhlukInTheSamePoint();
+
+		int isMakhlukInTheSamePoint();
         Makhluk* MakhlukInTheSamePoint();
 
 		// method untuk eliminate

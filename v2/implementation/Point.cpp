@@ -1,6 +1,6 @@
 // Point.cpp
 
-#include "Point.h"
+#include "../header/Point.h"
 #define DEFAULT_X 10
 #define DEFAULT_Y 10
 
@@ -11,7 +11,7 @@ Point::Point()
 	y = DEFAULT_Y;
 }
 
-Point::Point(int _x, int _y)
+Point::Point(int _x = DEFAULT_X, int _y = DEFAULT_Y)
 {
 	x = _x;
 	y = _y;

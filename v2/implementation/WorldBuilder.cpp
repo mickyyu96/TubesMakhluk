@@ -1,29 +1,26 @@
 // WorldBuilder.cpp
-#include "WorldBuilder.h"
-#include "LMakhluk.h"
-#include "RandomGenerator.h"
-#include "Rabbit.h"
-#include "Turtle.h"
-#include "Wolf.h"
-#include "Sheep.h"
-#include "PolarBear.h"
-#include "Tumbuhan.h"
-#include "Snake.h"
+#include "../header/WorldBuilder.h"
+#include "../header/LMakhluk.h"
+#include "../header/RandomGenerator.h"
+#include "../header/ExceptionObject.h"
+#include "../header/Rabbit.h"
+#include "../header/Turtle.h"
+#include "../header/Wolf.h"
+#include "../header/Sheep.h"
+#include "../header/PolarBear.h"
+#include "../header/Tumbuhan.h"
 #include <string>
 
-#define DEFAULT_NBRS 20
-#define DEFAULT_NKOL 20
+WorldBuilder* WorldBuilder::builderInstance = new WorldBuilder();
 
-World* World::worldInstance = new World(DEFAULT_NBRS, DEFAULT_NKOL);
-WorldBuilder* WorldBuilder::builderInstance = new WorldBuilder(World::getWorldInstance()->getNBrs(),
-	World::getWorldInstance()->getNKol());
-
-WorldBuilder::WorldBuilder(int _NBrs, int _NKol) : NBrs(_NBrs), NKol(_NKol)
+WorldBuilder::WorldBuilder()
 {
 }
 
 void WorldBuilder::addAnObject(char _ID)
 {
+	int NBrs = World::getWorldInstance()->getNBrs();
+	int NKol = World::getWorldInstance()->getNKol();
 	switch (_ID)
 	{
 		case 'G':
@@ -42,14 +39,11 @@ void WorldBuilder::addAnObject(char _ID)
 			World::getWorldInstance()->getObjects()->Add(new Sheep(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
 			break;
 		case 'P':
-			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPolarBear(NBrs, NKol)));
+			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPB(NBrs, NKol)));
 			break;
-        case 'U':
-        {   Point P;
-            P = RandomGenerator::getInstance()->getNextPoint(NBrs, NKol);
-            World::getWorldInstance()->getObjects()->Add(new Snake(P));
-            break;
-        }
+		default :
+			ExceptionObject E(3);
+			E.DisplayErrorMessage();
 	}
 }
 

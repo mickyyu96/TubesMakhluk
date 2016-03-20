@@ -1,5 +1,5 @@
 // SnapshotCapturer.cpp
-#include "SnapshotCapturer.h"
+#include "../header/SnapshotCapturer.h"
 #define SNAPSHOT_CAPTURE_DIRECTORY "snapshot.txt"
 using namespace std;
 

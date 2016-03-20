@@ -6,6 +6,7 @@
 #include <iostream>
 #include "World.h"
 #include "SnapshotCapturer.h"
+#include "ExceptionObject.h"
 
 /** \class		KeypressHandler
  *  \brief		Handler untuk masukan dari user berupa keypress

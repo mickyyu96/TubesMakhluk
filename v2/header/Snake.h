@@ -3,11 +3,11 @@
 #define SNAKE_H
 
 #include "Hewan.h"
-#include "Makhluk.h"
 
 class Snake : public Hewan {
 	public :
 		// ctor
+		Snake();
 		Snake(const Point&);
 
 		// getter

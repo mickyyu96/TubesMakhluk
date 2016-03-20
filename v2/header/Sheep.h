@@ -27,13 +27,14 @@ class Sheep : public Hewan
 		 *  \details    Fungsi akan selalu mengembalikan bilangan bulat 1 karena Sheep vegetarian
 		 *	\return     Bilangan bulat 1
 		 */
-        int isVegetarian() { return 1; }
+        int isVegetarian() { return 0; }
 
         /** \brief      Getter DeltaT Wolf
 		 *  \details    Fungsi untuk memperoleh DeltaT makhluk Wolf
 		 *	\return     Bilangan bulat berupa DeltaT Wolf
 		 */
         int getDeltaT() { return Hewan::getDeltaT(); }
+
     private:
         static const char SHEEP_ID = 'S';       /**< ID Sheep */
         static const int SHEEP_MAXAGE = 25;     /**< Umur maksimal Sheep */
