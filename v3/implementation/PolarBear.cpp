@@ -43,9 +43,7 @@ void PolarBear::WanderingPB()
 {
     int dx = 1;
     int dy = 1;
-    RandomGenerator::getInstance()->lockRandom();
     int nRandom = RandomGenerator::getInstance()->getNextInt(2);
-    RandomGenerator::getInstance()->unlockRandom();
     if (nRandom == 1)
     {
         for (int i=0; i<5; i++)
@@ -111,10 +109,7 @@ void PolarBear::Live()
     int nRandom;
     while(isAlive() && !World::getWorldInstance()->isEnded())
     {
-        RandomGenerator::getInstance()->lockRandom();
-        usleep(10000);
         nRandom = RandomGenerator::getInstance()->getNextInt(5);
-        RandomGenerator::getInstance()->unlockRandom();
         switch (nRandom)
         {
             case 0:

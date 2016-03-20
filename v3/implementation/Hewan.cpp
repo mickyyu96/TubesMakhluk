@@ -132,9 +132,7 @@ void Hewan::getToPoint(Point P){
 void Hewan::Wandering(){
     int dx = 1;
     int dy = 1;
-    RandomGenerator::getInstance()->lockRandom();
     int nRandom = RandomGenerator::getInstance()->getNextInt(2);
-    RandomGenerator::getInstance()->unlockRandom();
     if (nRandom == 1) {
         for (int i = 0; i<10; i++) {
             if (Hewan::shouldRebounced(dx, 0)) {

@@ -9,7 +9,6 @@ micky:
 kepi:
 	poster
 	unit test turtle, rabbit, makhluklive
-	doxygen makhluklive, doxygen makhluk
 	dokumentasi
 	
 elvina:

@@ -16,15 +16,29 @@ RandomGenerator::RandomGenerator()
 
 int RandomGenerator::getNextInt(int a)
 {
-    return (rand() % a);
-    cout << rand() % a << endl;
+    struct timespec ts;
+    clock_gettime (CLOCK_MONOTONIC, &ts);
+    srand ((time_t)ts.tv_nsec);
+    lockRandom();
+    std::chrono::milliseconds timespan(10);
+    std::this_thread::sleep_for(timespan);
+    int res = (rand() % a);
+    unlockRandom();
+    return res;
 }
 
 int RandomGenerator::getNextIntBetween(int a, int b)
 {
-    usleep(10000);
+    struct timespec ts;
+    clock_gettime (CLOCK_MONOTONIC, &ts);
+    srand ((time_t)ts.tv_nsec);
+    lockRandom();
+    std::chrono::milliseconds timespan(10);
+    std::this_thread::sleep_for(timespan);
     int intervalLength = b-a+1;
-    return ((rand() % intervalLength) + a);
+    int res = ((rand() % intervalLength) + a);
+    unlockRandom();
+    return res;
 }
 
 Point RandomGenerator::getNextPoint(int NBrs, int NKol)
