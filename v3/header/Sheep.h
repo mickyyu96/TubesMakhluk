@@ -1,5 +1,3 @@
-// Sheep.h
-
 #ifndef SHEEP_H
 #define SHEEP_H
 
@@ -40,6 +38,12 @@ class Sheep : public Hewan
 		 *	\return     void
 		 */
         void GetToFood();
+
+        /** \brief      Prosedur aksi Sheep
+		 *  \details    Prosedur aksi Sheep untuk mengelilingi dunia
+		 *	\return     void
+		 */
+        void WanderingS();
 
         /** \brief      Prosedur hidup Sheep
 		 *  \details    Prosedur untuk menentukan apa yang akan dilakukan oleh Sheep

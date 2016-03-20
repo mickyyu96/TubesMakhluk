@@ -5,6 +5,8 @@
 #include <time.h>
 #include <mutex>
 #include <unistd.h>
+#include <thread>
+#include <chrono>
 #include "Point.h"
 
 using namespace std;
@@ -63,13 +65,21 @@ class RandomGenerator
 		 */
         Point getNextPointPB(int , int);
 
+        /** \brief		Mutex
+		*	\details	Mengunci akses untuk menggunakan random
+		*	\return		void
+		*/
         void lockRandom();
 
+        /** \brief		Mutex
+		*	\details	Membuka akses untuk menggunakan random
+		*	\return		void
+		*/
         void unlockRandom();
 
     private:
         static RandomGenerator* _instance;  /**< singleton instance*/
-        mutex randomLock;
+        mutex randomLock;                   /**< variabel mutex */
 };
 
 # endif // RandomGenerator_H

@@ -76,31 +76,6 @@ int main()
 	**
 	**************************************************************/
 
-/*
-	int i =0;
-    while (i==0) {
-        MakhlukLive::getInstance()->MakhlukMove();
-        Screen::getScreenInstance()->PrintWorldMap();
-        MakhlukLive::getInstance()->MakhlukEat();
-        std::chrono::milliseconds timespan(500);
-        std::this_thread::sleep_for(timespan);
-            bool keepGoing = true;
-            char key = ' ';
-            while (keepGoing){
-                cout << "Enter a key" << endl;
-                while(_kbhit()){
-                key = _getch();
-                cout << "You entered: " << key << endl;
-                if(key == 'q') keepGoing = false; // MASUKIN KEY UNTUK TERMINATE
-                }
-            }
-    }
-
-
-	delete World::getWorldInstance();
-	return 0;
-}
-*/
     do
     {
         do

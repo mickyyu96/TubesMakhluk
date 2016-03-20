@@ -8,13 +8,20 @@
 #include <string>
 #include <algorithm>
 #include <thread>
+#include <time.h>
 
 using namespace std;
 
 int main()
 {
+    cout << "--------------------------------------Wolf---------------------------------------" << endl;
+    cout << "---------------------------------------------------------------------------------" << endl;
+    cout << "Wolf merupakan makhluk karnivora yang memiliki behavior dapat mengeluarkan suara." << endl;
+    cout << "---------------------------------------------------------------------------------" << endl;
+    std::chrono::milliseconds timespan(5000);
+    std::this_thread::sleep_for(timespan);
     World::getWorldInstance()->setNBrs(12); World::getWorldInstance()->setNKol(12);
-    string input = "WWW";
+    string input = "W";
     WorldBuilder::getBuilderInstance()->setStrMakhluk(input);
 	WorldBuilder::getBuilderInstance()->buildWorldObjects();
 	thread t[55];
