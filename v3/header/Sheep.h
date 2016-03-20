@@ -27,7 +27,7 @@ class Sheep : public Hewan
 		 *  \details    Fungsi akan selalu mengembalikan bilangan bulat 1 karena Sheep vegetarian
 		 *	\return     Bilangan bulat 1
 		 */
-        int isVegetarian() { return 0; }
+        int isVegetarian() { return 1; }
 
         /** \brief      Getter DeltaT Wolf
 		 *  \details    Fungsi untuk memperoleh DeltaT makhluk Wolf

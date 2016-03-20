@@ -27,7 +27,7 @@ void PolarBear::GetToFood()
 
 int PolarBear::shouldRebouncedPB(int dx, int dy)
 {
-    if ((dx+pos.getX()<=World::getWorldInstance()->getNBrs()-(World::getWorldInstance()->getNBrs()/5)-3) ||
+    if ((dx+pos.getX()<=World::getWorldInstance()->getNBrs()-(World::getWorldInstance()->getNBrs()/7)-3) ||
         (dx+pos.getX()>=World::getWorldInstance()->getNBrs()-1))
     {
         return 1;
@@ -48,7 +48,7 @@ void PolarBear::WanderingPB()
     RandomGenerator::getInstance()->unlockRandom();
     if (nRandom == 1)
     {
-        for (int i=0; i<20; i++)
+        for (int i=0; i<5; i++)
         {
             if (shouldRebouncedPB(dx, 0))
             {
@@ -64,7 +64,7 @@ void PolarBear::WanderingPB()
     }
     else
     {
-        for (int i=0; i<20; i++)
+        for (int i=0; i<5; i++)
         {
             if (shouldRebouncedPB(dx, 0) && shouldRebouncedPB(0, dy))
             {

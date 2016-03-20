@@ -11,7 +11,7 @@ run_point:
 	mPoint
 	
 compile_world:
-	g++ -std=c++11 -o mWorld mWorld.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+	g++ -std=c++11 -o mWorld mWorld.cpp ../implementation/MakhlukLive.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
 
 run_world:
 	mWorld
@@ -45,3 +45,9 @@ compile_exception_object:
 
 run_exception_object:
 	mExceptionObject
+	
+compile_lmakhluk:
+	g++ -std=c++11 -o mLMakhluk mWorldBuilder.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+
+run_lmakhluk:
+	mLMakhluk
