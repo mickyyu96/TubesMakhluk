@@ -1,22 +1,14 @@
-//
-//  MakhlukLive.cpp
-//  tubesoopstl
-//
-//  Created by Atika Azzahra Akbar on 3/19/16.
-//  Copyright © 2016 Atika Azzahra Akbar. All rights reserved.
-//
-
-#include "MakhlukLive.h"
-#include "World.h"
-#include "Hewan.h"
-#include "LMakhluk.h"
+#include "../header/MakhlukLive.h"
+#include "../header/World.h"
+#include "../header/Hewan.h"
+#include "../header/LMakhluk.h"
 
 int dx_sign = 1;
 int dy_sign = 1;
 
 MakhlukLive* MakhlukLive::_instance = new MakhlukLive;
 
-MakhlukLive::MakhlukLive(){    
+MakhlukLive::MakhlukLive(){
 }
 
 void MakhlukLive::MakhlukMove(){
@@ -67,7 +59,7 @@ void MakhlukLive::MakhlukEat() {
                     }
                 }
                 else{
-                //Makhluk Karnivor
+                    //Makhluk Karnivor
                     if (M2->getID()!='G') {
                         if (static_cast<Hewan*>(M2)->getPower()<static_cast<Hewan*>(M1)->getPower()) {
                             M2->Kill();

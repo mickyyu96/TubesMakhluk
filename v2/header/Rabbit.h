@@ -19,14 +19,14 @@ class Rabbit : public Hewan {
      *  \param		konstanta reference Point untuk posisi awal objek
      */
     Rabbit(const Point&);
-    
+
     /** \brief      Validasi apakah Rabbit merupakan Vegetarian
      *  \details    Validasi akan selalu mengembalikan integer bernilai 1 sebagai
-     *              validasi bahwa Rabbit merupakan binatang vegetarian 
+     *              validasi bahwa Rabbit merupakan binatang vegetarian
      *	\return     TRUE
      */
     int isVegetarian() { return 1; }
-    
+
     /** \brief      Getter DeltaT Rabbit
      *  \details    Fungsi getter yang akan mengambilkan nilai deltaT dari Rabbit
      *              yang merupakan member dari kelas hewan yang diinisialisasi saat ctor

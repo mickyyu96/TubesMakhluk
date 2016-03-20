@@ -1,5 +1,5 @@
 // Matrix.cpp
-#include "Matrix.h"
+#include "../header/Matrix.h"
 #include <cstring>
 #include <iostream>
 #define DEFAULT_NBRS 20

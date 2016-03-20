@@ -3,7 +3,11 @@
 
 #include <stdlib.h>
 #include <time.h>
+#include <mutex>
+#include <unistd.h>
 #include "Point.h"
+
+using namespace std;
 
 /** \class      RandomGenerator
  *  \brief      Mengembalikan random number
@@ -52,15 +56,20 @@ class RandomGenerator
         Point getNextPoint(int, int);
 
         /** \brief      Fungsi untuk mengacak point berdasarkan batasan
-		 *  \details    Melakukan pengacakan point dengan batasan (1...Nbrs-2), (1...NKol-2)
+		 *  \details    Melakukan pengacakan point dengan batasan (NBrs-(NBrs/5)-2...Nbrs-2), (1...NKol-2)
 		 *  \param      NBrs int Jumlah baris
 		 *  \param      NKol int Jumlah kolom
-		 *	\return     Point acak dari (1...Nbrs-2), (1...NKol-2)
+		 *	\return     Point acak dari (NBrs-(NBrs/5)-2...Nbrs-2), (1...NKol-2)
 		 */
-        Point getNextPointPolarBear(int , int);
+        Point getNextPointPB(int , int);
+
+        void lockRandom();
+
+        void unlockRandom();
 
     private:
         static RandomGenerator* _instance;  /**< singleton instance*/
+        mutex randomLock;
 };
 
 # endif // RandomGenerator_H

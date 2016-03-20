@@ -1,6 +1,6 @@
 // Wolf.cpp
 
-#include "Wolf.h"
+#include "../header/Wolf.h"
 #include <iostream>
 #include <thread>
 #include <chrono>

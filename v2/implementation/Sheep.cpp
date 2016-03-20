@@ -1,6 +1,6 @@
 // Sheep.cpp
 
-#include "Sheep.h"
+#include "../header/Sheep.h"
 #include <iostream>
 #include <thread>
 #include <chrono>

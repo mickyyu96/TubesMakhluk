@@ -1,6 +1,6 @@
 // Hewan.cpp
-#include "Hewan.h"
-#include "LMakhluk.h"
+#include "../header/Hewan.h"
+#include "../header/LMakhluk.h"
 #include <thread>
 #include <chrono>
 

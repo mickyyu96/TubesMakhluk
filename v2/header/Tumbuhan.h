@@ -20,6 +20,7 @@ class Tumbuhan : public Makhluk {
 	    *	\return Objek bertipe Tumbuhan
 	    */
 		Tumbuhan(const Point& P);
+
 		void AgeIncrement() { age++; }
 
 	private:

@@ -75,4 +75,7 @@ compile_lmakhluk:
 
 run_lmakhluk:
 	mLMakhluk
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b69ba8c97e6811a15d7dca94ddc30f060ce3b43
