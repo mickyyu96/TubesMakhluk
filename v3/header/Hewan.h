@@ -127,7 +127,9 @@ class Hewan : public Makhluk {
 		Hewan(char, int); 
 
 	protected :
-		int hungerLvl, power, deltaT; /**< status level kelaparan, power, dan deltaT sebuah objek*/
+		int hungerLvl; /**< status level kelaparan sebuah objek*/
+		int power; /**< kekuatan sebuah objek*/
+		int deltaT; /**< deltaT sebuah objek*/
 };
 
 #endif
