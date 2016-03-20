@@ -75,3 +75,21 @@ compile_lmakhluk:
 
 run_lmakhluk:
 	mLMakhluk
+
+compile_turtle_rabbit:
+	g++ -std=c++11 -o mTurtleRabbit mTurtleRabbit.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Snake.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+
+run_turtle_rabbit:
+	mTurtleRabbit
+	
+compile_snake:
+	g++ -std=c++11 -o mSnake mSnake.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Snake.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+
+run_snake:
+	mSnake
+	
+compile_tumbuhan:
+	g++ -std=c++11 -o mTumbuhan mTumbuhan.cpp ../implementation/Hewan.cpp ../implementation/KeyPressHandler.cpp ../implementation/LMakhluk.cpp ../implementation/Makhluk.cpp ../implementation/Matrix.cpp ../implementation/Point.cpp ../implementation/PolarBear.cpp ../implementation/Snake.cpp ../implementation/Rabbit.cpp ../implementation/RandomGenerator.cpp ../implementation/Screen.cpp ../implementation/Sheep.cpp ../implementation/Tumbuhan.cpp ../implementation/Turtle.cpp ../implementation/Wolf.cpp ../implementation/World.cpp ../implementation/WorldBuilder.cpp ../implementation/IOManager.cpp ../implementation/SnapshotCapturer.cpp ../implementation/ExceptionObject.cpp
+
+run_tumbuhan:
+	mTumbuhan

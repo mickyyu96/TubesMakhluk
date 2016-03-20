@@ -1,4 +1,4 @@
-// mPolarBear.cpp
+// mSnake.cpp
 
 #include "../header/World.h"
 #include "../header/LMakhluk.h"
@@ -14,16 +14,14 @@ using namespace std;
 
 int main()
 {
-    cout << "-------------------------------PolarBear---------------------------------" << endl;
-    cout << "-------------------------------------------------------------------------" << endl;
-    cout << "PolarBear merupakan makhluk karnivora yang memiliki 2 behavior:" << endl;
-    cout << "1. PolarBear hanya dapat berjalan-jalan di bagian bawah dunia" << endl;
-    cout << "1. PolarBear dapat melakukan hibernasi pada bagian pojok bawah kiri dunia" << endl;
-    cout << "-------------------------------------------------------------------------" << endl;
-    std::chrono::milliseconds timespan(8000);
+    cout << "------------------------------------Snake--------------------------------------" << endl;
+    cout << "-------------------------------------------------------------------------------" << endl;
+    cout << "Snake merupakan makhluk karnivora yang memiliki behavior dapat berjalan zigzag." << endl;
+    cout << "-------------------------------------------------------------------------------" << endl;
+    std::chrono::milliseconds timespan(5000);
     std::this_thread::sleep_for(timespan);
     World::getWorldInstance()->setNBrs(12); World::getWorldInstance()->setNKol(12);
-    string input = "PT";
+    string input = "UT";
     WorldBuilder::getBuilderInstance()->setStrMakhluk(input);
 	WorldBuilder::getBuilderInstance()->buildWorldObjects();
 	thread t[55];
@@ -41,3 +39,4 @@ int main()
 	delete World::getWorldInstance();
 	return 0;
 }
+

@@ -1,18 +1,17 @@
 NB : 	RAPIIN PROGRAM JUGA INGAT YA :D
 	INDENTASI !!!
+	ingat juga membuat unit test, tambahkan ke makefile cara 	compile nya
 
 micky:
-	behavior sheep
 	age naik, hewan mati, tgl 1 hewan
 	dokumentasi
 
 kepi:
 	poster
-	unit test turtle, rabbit, makhluklive
+	unit test makhluklive
 	dokumentasi
 	
 elvina:
 	doxygen snake
-	unit test snake, tumbuhan
 	karnivor makan
 	dokumentasi
