@@ -1,5 +1,5 @@
-// Rabbit.cpp
-#include "Snake.h"
+// Snake.cpp
+#include "../header/Snake.h"
 #include <thread>
 #include <chrono>
 using namespace std;
@@ -160,7 +160,7 @@ void Snake::Live(){
                 GetToFood();
                 break;
         }*/
-        GetToFood();
+        //GetToFood();
         ZigZag();
         Hewan::Sleep();
     }

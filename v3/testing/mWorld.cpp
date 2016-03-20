@@ -53,7 +53,7 @@ int main()
 		try
 		{
 			cout << "Masukkan sebuah string yang  berisi ID (UPPERCASE) makhluk-makhluk yang ingin dimunculkan pada dunia. " << endl;
-			cout << "Pilihan : P = PolarBear, G = Tumbuhan, R = Rabbit, T = Turtle, S = Sheep, W = Wolf" << endl;
+			cout << "Pilihan :\n\tP = PolarBear, \n\tG = Tumbuhan, \n\tR = Rabbit, \n\tT = Turtle, \n\tS = Sheep, \n\tW = Wolf, \n\tU = Snake" << endl;
 			cout << "String input = ";
 			cin >> input;
 
@@ -97,7 +97,7 @@ int isValidID(string s)
 	int Found = 0;
 	for(int i=0; i<(int)s.size() && !Found; i++)
 	{
-		if(s[i] != 'P' && s[i] != 'G' && s[i] != 'R' && s[i] != 'T' && s[i] != 'S' && s[i] != 'W' ) // Ular belum,
+		if(s[i] != 'P' && s[i] != 'G' && s[i] != 'R' && s[i] != 'T' && s[i] != 'S' && s[i] != 'W' && s[i] != 'U')
 		{
 			Found = 1;
 		}

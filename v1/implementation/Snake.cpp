@@ -1,4 +1,4 @@
-// Rabbit.cpp
+// Snake.cpp
 #include "../header/Snake.h"
 #include <thread>
 #include <chrono>

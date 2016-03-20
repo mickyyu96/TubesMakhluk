@@ -41,6 +41,9 @@ void WorldBuilder::addAnObject(char _ID)
 		case 'P':
 			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPB(NBrs, NKol)));
 			break;
+		case 'U':
+			World::getWorldInstance()->getObjects()->Add(new Snake(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+			break;
 		default :
 			ExceptionObject E(3);
 			E.DisplayErrorMessage();
