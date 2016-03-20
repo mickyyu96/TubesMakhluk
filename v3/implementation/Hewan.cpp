@@ -130,52 +130,13 @@ void Hewan::getToPoint(Point P){
 }
 
 void Hewan::Wandering(){
-    /*int dx, dy;
-    RandomGenerator::getInstance()->lockRandom();
-    int nRandom = RandomGenerator::getInstance()->getNextInt(4);
-    RandomGenerator::getInstance()->unlockRandom();
-    if (nRandom == 0)
-    {
-        dx = 0; dy = 1;
-        if (shouldRebounced(dx, dy))
-        {
-            dy *= -1;
-        }
-    }
-    else if (nRandom == 1)
-    {
-        dx = 0; dy = -1;
-        if (shouldRebounced(dx, dy))
-        {
-            dy *= -1;
-        }
-    }
-    else if (nRandom == 2)
-    {
-        dx = 1; dy = 0;
-        if (shouldRebounced(dx, dy))
-        {
-            dx *= -1;
-        }
-    }
-    else
-    {
-        dx = -1; dy = 0;
-        if (shouldRebounced(dx, dy))
-        {
-            dx *= -1;
-        }
-    }
-    Move(dx, dy);
-    Sleep();*/
-
     int dx = 1;
     int dy = 1;
     RandomGenerator::getInstance()->lockRandom();
     int nRandom = RandomGenerator::getInstance()->getNextInt(2);
     RandomGenerator::getInstance()->unlockRandom();
     if (nRandom == 1) {
-        for (int i = 0; i<20; i++) {
+        for (int i = 0; i<10; i++) {
             if (Hewan::shouldRebounced(dx, 0)) {
                 dx *= -1;
             }
@@ -188,7 +149,7 @@ void Hewan::Wandering(){
         }
     }
     else{
-        for (int i = 0; i<20; i++) {
+        for (int i = 0; i<10; i++) {
             if (shouldRebounced(dx, 0) && shouldRebounced(0, dy)) {
                 dx = 0;
                 dy = 1;

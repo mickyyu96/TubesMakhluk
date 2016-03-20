@@ -34,7 +34,7 @@ Point RandomGenerator::getNextPoint(int NBrs, int NKol)
 
 Point RandomGenerator::getNextPointPB(int NBrs, int NKol)
 {
-	return Point(getNextIntBetween(NBrs-(NBrs/5)-2, NBrs-2), getNextIntBetween(1, NKol-2));
+	return Point(getNextIntBetween(NBrs-(NBrs/7)-2, NBrs-2), getNextIntBetween(1, NKol-2));
 }
 
 void RandomGenerator::lockRandom()
