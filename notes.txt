@@ -4,7 +4,6 @@ NB : 	RAPIIN PROGRAM JUGA INGAT YA :D
 micky:
 	behavior sheep
 	age naik, hewan mati, tgl 1 hewan
-	v1, v2 keypress
 	dokumentasi
 
 kepi:
@@ -16,5 +15,5 @@ kepi:
 elvina:
 	doxygen snake
 	unit test snake, tumbuhan
-	dokumentasi
 	karnivor makan
+	dokumentasi
