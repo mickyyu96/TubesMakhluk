@@ -110,7 +110,7 @@ void Snake::Live()
         {
             case 0:
             {
-                GetToFood();
+                for(int i=0; i<10; i++) ZigZag();
                 break;
             }
             case 1:
