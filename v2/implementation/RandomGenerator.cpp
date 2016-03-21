@@ -16,14 +16,11 @@ RandomGenerator::RandomGenerator()
 
 int RandomGenerator::getNextInt(int a)
 {
-    usleep(10000);
     return (rand() % a);
-    cout << rand() % a << endl;
 }
 
 int RandomGenerator::getNextIntBetween(int a, int b)
 {
-    usleep(10000);
     int intervalLength = b-a+1;
     return ((rand() % intervalLength) + a);
 }

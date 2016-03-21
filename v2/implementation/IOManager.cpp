@@ -20,6 +20,7 @@ void IOManager::PrintMatrix(const Matrix& M)
 
 void IOManager::PrintWorldMap()
 {
+	for(int i=0; i<30; i++) cout << '\n';
 	World* worldInstance = World::getWorldInstance();
 	Matrix *map = new Matrix(worldInstance->getNBrs(), worldInstance->getNKol());
 

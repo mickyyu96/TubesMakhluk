@@ -15,13 +15,13 @@ void Screen::ShowWorld(int deltaT)
 	{
 		// Print World
 		World::getWorldInstance()->lockWorld();
-		
+
 		// Clear Screen
 		int nBrs = World::getWorldInstance()->getNBrs();
-		for(int i=0; i<nBrs; i++) cout << '\n';
-		
+		for(int i=0; i<30; i++) cout << '\n';
+
 		getScreenInstance()->PrintWorldMap();
-		
+
 		World::getWorldInstance()->unlockWorld();
 
 		std::chrono::milliseconds timespan(deltaT);

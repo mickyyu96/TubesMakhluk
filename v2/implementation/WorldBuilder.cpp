@@ -9,6 +9,7 @@
 #include "../header/Sheep.h"
 #include "../header/PolarBear.h"
 #include "../header/Tumbuhan.h"
+#include "../header/Snake.h"
 #include <string>
 
 WorldBuilder* WorldBuilder::builderInstance = new WorldBuilder();
@@ -41,6 +42,9 @@ void WorldBuilder::addAnObject(char _ID)
 		case 'P':
 			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPB(NBrs, NKol)));
 			break;
+        /*case 'U':
+			World::getWorldInstance()->getObjects()->Add(new Snake(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
+			break;*/
 		default :
 			ExceptionObject E(3);
 			E.DisplayErrorMessage();

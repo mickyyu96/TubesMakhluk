@@ -63,8 +63,16 @@ class RandomGenerator
 		 */
         Point getNextPointPB(int , int);
 
+        /** \brief		Mutex
+		*	\details	Mengunci akses untuk menggunakan random
+		*	\return		void
+		*/
         void lockRandom();
 
+        /** \brief		Mutex
+		*	\details	Membuka akses untuk menggunakan random
+		*	\return		void
+		*/
         void unlockRandom();
 
     private:

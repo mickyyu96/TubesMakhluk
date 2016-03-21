@@ -7,7 +7,6 @@
 class Snake : public Hewan {
 	public :
 		// ctor
-		Snake();
 		Snake(const Point&);
 
 		// getter

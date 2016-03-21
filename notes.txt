@@ -1,5 +1,5 @@
 v1 (ikut aja setelah v2 selesai total, biar gampang)
-v2 (unit test smua !, age naik, hewan mati, tgl 1 hewan)
+v2 (unit test ngiong, age naik, hewan mati, tgl 1 hewan)
 v3 (doxygen snake, age naik, hewan mati, tgl 1 hewan , karnivor makan)
 
 dokumentasi ? poster ?
