@@ -10,7 +10,8 @@
  *	\date		Maret 2016
  */
 
-class Point {
+class Point
+{
 	public :
         /** \brief		Default Constructor
          *  \details	Menciptakan sebuah point dengan koordinat default.

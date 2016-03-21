@@ -1,5 +1,4 @@
 // mKeypressHandler.cpp
-
 #include "../header/World.h"
 #include "../header/LMakhluk.h"
 #include "../header/KeypressHandler.h"
@@ -24,15 +23,15 @@ int main()
 	thread t[55];
 	int thread_count = 0;
 	int numOfKeypress = 5;
-
+	
 	cout << "Lakukan 5 keypress, program akan menampilkan keypress yang Anda lakukan" << endl;
 	t[thread_count++] = thread(HandleKeypress, numOfKeypress);
 	t[0].join();
-
+	
 	cout << "Testing KeypressHandler untuk program Realita, tekan q untuk exit" << endl;
 	t[thread_count++] = thread(KeypressHandler::HandleKeypress);
 	t[1].join();
-
+	
 	system("PAUSE");
 	return 0;
 }
@@ -51,7 +50,7 @@ void GetKeypress()
 	KeypressHandler::getHandlerInstance()->getKeypress();
 	// Melakukan aksi setelah keypress dilakukan
 	DoAction();
-
+	
 }
 
 void DoAction()

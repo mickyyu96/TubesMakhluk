@@ -1,5 +1,5 @@
 // LMakhluk.cpp
-#include <iostream>
+
 #include "../header/LMakhluk.h"
 #include "../header/World.h"
 using namespace std;

@@ -1,4 +1,5 @@
 // IOManager.cpp
+
 #include "../header/IOManager.h"
 #include "../header/LMakhluk.h"
 using namespace std;
@@ -23,8 +24,10 @@ void IOManager::PrintWorldMap()
 	LMakhluk * _LMakhluk = new LMakhluk();
 	_LMakhluk->setFirst(worldInstance->getObjects()->getFirst());
 
-	if (!_LMakhluk->isEmpty()) {
-		while (_LMakhluk->getFirst() != worldInstance->getObjects()->getLast()) {
+	if (!_LMakhluk->isEmpty())
+    {
+		while (_LMakhluk->getFirst() != worldInstance->getObjects()->getLast())
+		{
 			if (_LMakhluk->getFirst()->getInfo()->isAlive())
 			{
 				char ID1 = _LMakhluk->getFirst()->getInfo()->getID();

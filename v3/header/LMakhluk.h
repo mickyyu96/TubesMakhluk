@@ -157,8 +157,16 @@ class LMakhluk
          */
 		ElmtMakhluk* findMakhluk(Makhluk*);
 
+        /** \brief      Menambah age makhluk
+         *  \details    Menambah age makhluk-makhluk pada list yang masi alive
+         *	\return     void
+         */
 		void ListAgeIncrement();
 
+        /** \brief      Fungsi yang mengecek apakah semua makhluk dalam dunia mati
+		*	\details    Mengembalikan 1 jika semua makhluk dalam dunia mati, 0 jika tidak
+		*	\return     Bilangan bulat 0 atau 1
+		*/
 		int IsAllMakhlukDead();
 };
 

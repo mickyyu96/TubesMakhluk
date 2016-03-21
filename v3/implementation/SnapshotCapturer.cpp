@@ -1,4 +1,5 @@
 // SnapshotCapturer.cpp
+
 #include "../header/SnapshotCapturer.h"
 #define SNAPSHOT_CAPTURE_DIRECTORY "snapshot.txt"
 using namespace std;
@@ -7,7 +8,6 @@ SnapshotCapturer* SnapshotCapturer::capturerInstance = new SnapshotCapturer(SNAP
 
 SnapshotCapturer::SnapshotCapturer(const string& _filename) : directory(_filename)
 {
-
 }
 
 void SnapshotCapturer::captureSnapshot()
@@ -17,10 +17,9 @@ void SnapshotCapturer::captureSnapshot()
 
 	ofstream output(directory);
 	cout.rdbuf(output.rdbuf());
-	
+
 	PrintWorldMap();
-	
+
 	resetCoutBuf();
 	World::getWorldInstance()->unlockWorld();
-
 }

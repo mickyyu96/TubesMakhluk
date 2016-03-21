@@ -10,7 +10,8 @@
  *	\date 		Maret 2016
  */
 
-class Snake : public Hewan {
+class Snake : public Hewan
+{
 	public :
 		/** \brief 		Constructor
          *  \details 	Constructor Snake yang akan membentuk objek bertipe Snake
@@ -33,23 +34,25 @@ class Snake : public Hewan {
          */
 		int isVegetarian() { return 0; }
 
-
-		void GoToFood(Point P);
-
 		/** \brief 		Procedure aksi untuk Snake mendapatkan makanan
          *  \details 	Procedure aksi GetToFood membuat Snake pergi ke point dimana makanannya
          *  		    berasa dan memakannya
          *	\return 	void
          */
 		void GetToFood();
+
 		/** \brief 		Procedure aksi untuk Snake berkelana
          *  \details 	Procedure aksi ZigZag membuat Snake bergerak secara zigzag
          *	\return 	void
          */
 		void ZigZag();
 
-
-		void Live();
+        /** \brief 		Procedure aksi utama yang mengatur hidup Snake sampai mati
+         *  \details 	Procedure aksi utama akan memilih aktivitas kehidupan yang akan dilakukan
+         *  		    oleh Snake selama hidupnya
+         *	\return 	void
+         */
+        void Live();
 
 	private :
 		static const char SNAKE_ID = 'U';       /**< ID Snake*/

@@ -1,3 +1,5 @@
+// MakhlukLive.cpp
+
 #include "../header/MakhlukLive.h"
 #include "../header/World.h"
 #include "../header/Hewan.h"

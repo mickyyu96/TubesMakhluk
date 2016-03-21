@@ -1,3 +1,5 @@
+// Tumbuhan.cpp
+
 #include "../header/Tumbuhan.h"
 #include "../header/Point.h"
 #include <thread>
@@ -11,7 +13,9 @@ Tumbuhan::Tumbuhan(const Point& P) : Makhluk(TUMBUHAN_ID, TUMBUHAN_MAXAGE)
 	pos = P;
 }
 
-void Tumbuhan::Live() {
-    while (isAlive() && !World::getWorldInstance()->isEnded()) {
+void Tumbuhan::Live()
+{
+    while (isAlive() && !World::getWorldInstance()->isEnded())
+    {
     }
 }

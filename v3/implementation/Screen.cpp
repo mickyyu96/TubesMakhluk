@@ -1,4 +1,5 @@
 // Screen.cpp
+
 #include "../header/Screen.h"
 #include "../header/LMakhluk.h"
 using namespace std;
@@ -14,10 +15,8 @@ void Screen::ShowWorld(int deltaT)
 {
 	while (!World::getWorldInstance()->isEnded())
 	{
-		// Print World
 		World::getWorldInstance()->lockWorld();
 
-		// Clear Screen
 		int nBrs = World::getWorldInstance()->getNBrs();
 		for(int i=0; i<30; i++) cout << '\n';
 
@@ -29,6 +28,7 @@ void Screen::ShowWorld(int deltaT)
         if (World::getWorldInstance()->getObjects()->IsAllMakhlukDead())
         {
             World::getWorldInstance()->endWorld();
+            for(int i=0; i<30; i++) cout << '\n';
             getScreenInstance()->PrintWorldMap();
         }
 
