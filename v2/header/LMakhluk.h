@@ -8,7 +8,7 @@ using namespace std;
 /** \class      LMakhluk
  *  \brief      Representasi ADT List of Makhluk
  *  \details    Kelas LMakhluk merupakan kelas yang menampung objek-objek (makhluk)
-*				yang terdapat dalam dunia
+ *				yang terdapat dalam dunia
  *	\author     Micky Yudi Utama
  *	\date       Maret 2016
  */
@@ -51,9 +51,15 @@ class LMakhluk
 		*	\return     Pointer yang menunjuk ke makhluk yang berada pada list elemen ke-idx
 		*/
 		Makhluk* getInfo(int idx) { return makhlukVector[idx]; }
-		
+
+        /** \brief      Fungsi yang mengecek apakah semua makhluk dalam dunia mati
+		*	\details    Mengembalikan 1 jika semua makhluk dalam dunia mati, 0 jika tidak
+		*	\return     Bilangan bulat 0 atau 1
+		*/
+		int IsAllMakhlukDead();
+
 	private:
-		vector<Makhluk*> makhlukVector;
+		vector<Makhluk*> makhlukVector; /**< STL Vector */
 };
 
-#endif // LMakhluk_H
+#endif

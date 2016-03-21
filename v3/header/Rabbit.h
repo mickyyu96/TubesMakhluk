@@ -1,17 +1,18 @@
-//Rabbit.h
 #ifndef Rabbit_h
 #define Rabbit_h
+
 #include <iostream>
 #include "Hewan.h"
 
 /** \class      Rabbit
  *  \brief      Kelas Turunan dari Makhluk berupa Rabbit
  *  \details    Kelas Rabbit merupakan kelas yang merepresentasikan objek Rabbit
- *	    \author     Atika Azzahra Akbar
- *	    \date       Maret 2016
+ *	\author     Atika Azzahra Akbar
+ *	\date       Maret 2016
  */
 
-class Rabbit : public Hewan {
+class Rabbit : public Hewan
+{
     public :
     /** \brief      Constructor dari objek bertipe Rabbit
      *  \details    Constructor Rabbit yang akan membentuk objek bertipe Rabbit
@@ -63,9 +64,10 @@ class Rabbit : public Hewan {
     void Live();
 
     private :
-    static const char RABBIT_ID = 'R'; /**< ID Rabbit*/
-    static const int RABBIT_MAXAGE = 20; /**< Umur maksimal Rabbit*/
-    static const int RABBIT_BASEPOWER = 3; /**< Power Rabbit*/
-    static const int RABBIT_DELTAT = 700; /**< DeltaT Rabbit*/
+    static const char RABBIT_ID = 'R';      /**< ID Rabbit*/
+    static const int RABBIT_MAXAGE = 20;    /**< Umur maksimal Rabbit*/
+    static const int RABBIT_BASEPOWER = 3;  /**< Power Rabbit*/
+    static const int RABBIT_DELTAT = 700;   /**< DeltaT Rabbit*/
 };
-#endif /* Rabbit_h */
+
+#endif

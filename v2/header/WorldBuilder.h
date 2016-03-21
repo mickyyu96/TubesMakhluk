@@ -1,4 +1,3 @@
-// WorldBuilder.h
 #ifndef WORLDBUILDER_H
 #define WORLDBUILDER_H
 #include "World.h"

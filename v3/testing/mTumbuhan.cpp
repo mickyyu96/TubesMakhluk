@@ -21,7 +21,7 @@ int main()
     std::chrono::milliseconds timespan(3000);
     std::this_thread::sleep_for(timespan);
     World::getWorldInstance()->setNBrs(12); World::getWorldInstance()->setNKol(12);
-    string input = "T";
+    string input = "G";
     WorldBuilder::getBuilderInstance()->setStrMakhluk(input);
 	WorldBuilder::getBuilderInstance()->buildWorldObjects();
 	thread t[55];

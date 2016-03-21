@@ -1,36 +1,38 @@
-// Makhluk.h
 #ifndef MAKHLUK_H
 #define MAKHLUK_H
+
 #include "Point.h"
 #include "World.h"
 
 /** \class		Makhluk
 *	\brief		Representasi dari makhluk di alam semesta
-*	\details	Kelas Makhluk merupakan kelas abstrak yang memiliki member-member dasar 
+*	\details	Kelas Makhluk merupakan kelas abstrak yang memiliki member-member dasar
 *				yang akan diturunkan ke kelas lain.
-*	\author		Robert Sebastian Herlim
+*	\author		Elvina R. K. Situmorang
 *	\date		Maret 2016
 */
-class Makhluk {
+
+class Makhluk
+{
 	public :
 		/** \brief		Get ID
 		*	\details	Mengambil sebuah karakter ID makhluk
 		*	\return		Karakter ID makhluk
 		*/
 		char getID() const { return ID; }
-		
+
 		/** \brief		Get Age
 		*	\details	Mengambil usia makhluk sekarang
 		*	\return		Sebuah bilangan bulat yang merupakan usia makhluk sekarang
 		*/
 		int getAge() const { return age; }
-		
+
 		/** \brief		Get MaxAge
 		*	\details	Mengambil usia maksimum makhluk
 		*	\return		Sebuah bilangan bulat yang merupakan usia maksimum makhluk
 		*/
 		int getMaxAge() const { return maxAge; }
-		
+
 		/** \brief		Get Position
 		*	\details	Mengambil posisi makhluk sekarang
 		*	\return		Sebuah tipe bentukan Point yang merupakan posisi makhluk
@@ -44,12 +46,18 @@ class Makhluk {
 		*/
 		void setPosition(const Point& P) { pos = P; }
 
+        /** \brief		Prosedur untuk melakukan increment age
+		*	\details	Prosedur untuk melakukan increment age semua makhluk
+		*	\return		void
+		*/
+		void AgeIncrement(){age++;}
+
 		/** \brief		Prosedur "Hidup"
 		*	\details	Prosedur pure virtual yang akan dioverload dengan aksi-aksi "kehidupan" tiap makhluk
 		*	\return		void
 		*/
 		virtual void Live() = 0;
-		
+
 		/** \brief		Prosedur "Buat Hidup"
 		*	\details	Prosedur static yang dimiliki kelas Makhluk, untuk menghidupkan makhluk
 		*				yang memanggil prosedur Live dengan memanfaatkan gejala polymorphism
@@ -63,7 +71,7 @@ class Makhluk {
 		*	\return		True apabila makhluk masih hidup
 		*/
 		int isAlive() { return (status == 1); }
-		
+
 		/** \brief		Prosedur untuk membunuh makhluk
 		*	\details	Prosedur yang digunakan untuk membunuh makhluk dari alam semesta, yaitu apabila
 		*				dimangsa atau terlalu tua

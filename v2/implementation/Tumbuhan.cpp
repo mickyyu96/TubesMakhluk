@@ -6,7 +6,7 @@ using namespace std;
 
 Tumbuhan::Tumbuhan(const Point& P) : Makhluk(TUMBUHAN_ID, TUMBUHAN_MAXAGE)
 {
+    age = 0;
 	status = 1;
-	age = 0;
 	pos = P;
 }

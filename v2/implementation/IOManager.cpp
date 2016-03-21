@@ -1,4 +1,5 @@
 // IOManager.cpp
+
 #include "../header/IOManager.h"
 #include "../header/RandomGenerator.h"
 #include "../header/LMakhluk.h"
@@ -36,6 +37,3 @@ void IOManager::PrintWorldMap()
     }
 	PrintMatrix(*map);
 }
-
-
-

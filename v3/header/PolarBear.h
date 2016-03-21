@@ -74,4 +74,4 @@ class PolarBear : public Hewan
 		static const int POLARBEAR_DELTAT = 800;    /**< DeltaT PolarBear */
 };
 
-#endif // Wolf.h
+#endif

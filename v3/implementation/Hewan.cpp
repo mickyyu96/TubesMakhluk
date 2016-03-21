@@ -76,7 +76,7 @@ Makhluk* Hewan::FindMakhluk(char _ID){
     }
     else {
         while (_LMakhluk->getFirst()!=World::getWorldInstance()->getObjects()->getLast()) {
-            if (_LMakhluk->getFirst()->getInfo()->getID() != 'G' && _LMakhluk->getFirst()->getInfo()->isAlive()) {
+            if (_LMakhluk->getFirst()->getInfo()->getID() != 'G' && _LMakhluk->getFirst()->getInfo()->isAlive()&& static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getID() != getID() ) {
                 Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
                 Point PThisMakhluk = this->getPosition();
                 int PowThisMakhluk = this->getPower();
@@ -84,7 +84,7 @@ Makhluk* Hewan::FindMakhluk(char _ID){
                 int dltaTThisMakhluk = this->getDeltaT();
                 int dltaTSearchedMakhluh = static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getDeltaT();
                 if (Point::getDistance(PSearchedMakhluk, PThisMakhluk)<distance && PowSearchedMakhluk<=PowThisMakhluk &&
-                    dltaTSearchedMakhluh<=dltaTThisMakhluk)
+                    dltaTSearchedMakhluh>=dltaTThisMakhluk)
                 {
                     distance = Point::getDistance(PSearchedMakhluk, PThisMakhluk);
                     _Makhluk = _LMakhluk->getFirst()->getInfo();
@@ -92,15 +92,15 @@ Makhluk* Hewan::FindMakhluk(char _ID){
             }
             _LMakhluk->setFirst(_LMakhluk->getFirst()->getNext());
         }
-        if (_LMakhluk->getFirst()->getInfo()->getID() != 'G' && _LMakhluk->getFirst()->getInfo()->isAlive()) {
+        if (_LMakhluk->getFirst()->getInfo()->getID() != 'G' && _LMakhluk->getFirst()->getInfo()->isAlive()&&  static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getID() != getID()) {
             Point PSearchedMakhluk = _LMakhluk->getFirst()->getInfo()->getPosition();
             Point PThisMakhluk = this->getPosition();
             int PowThisMakhluk = this->getPower();
             int PowSearchedMakhluk = static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getPower();
             int dltaTThisMakhluk = this->getDeltaT();
             int dltaTSearchedMakhluh = static_cast<Hewan*>(_LMakhluk->getFirst()->getInfo())->getDeltaT();
-            if (Point::getDistance(PSearchedMakhluk, PThisMakhluk)<distance && PowSearchedMakhluk<=PowThisMakhluk &&
-                dltaTSearchedMakhluh<=dltaTThisMakhluk)
+            if (Point::getDistance(PSearchedMakhluk, PThisMakhluk)<distance &&PowSearchedMakhluk<=PowThisMakhluk &&
+                dltaTSearchedMakhluh>=dltaTThisMakhluk)
             {
                 distance = Point::getDistance(PSearchedMakhluk, PThisMakhluk);
                 _Makhluk = _LMakhluk->getFirst()->getInfo();

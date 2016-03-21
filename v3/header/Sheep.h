@@ -59,4 +59,4 @@ class Sheep : public Hewan
         static const int SHEEP_DELTAT = 800;    /**< DeltaT Sheep */
 };
 
-#endif // Sheep.h
+#endif

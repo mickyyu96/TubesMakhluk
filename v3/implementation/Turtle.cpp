@@ -6,6 +6,7 @@
 using namespace std;
 
 Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
+    age = 0;
     status = 1; isChallange = 0;
     power = TURTLE_BASEPOWER;
     deltaT = TURTLE_DELTAT;
@@ -15,7 +16,7 @@ Turtle::Turtle(const Point& P): Hewan(TURTLE_ID, TURTLE_MAXAGE){
 void Turtle::Race(){
     bool RabbitCome = false;
     Point PRabbit;
-    if (getisChallange()) {        
+    if (getisChallange()) {
         while (!RabbitCome) {
             PRabbit = Hewan::FindMakhluk('R')->getPosition();
             if (PRabbit.getX() == 5 && PRabbit.getY()== 1) {
@@ -26,7 +27,7 @@ void Turtle::Race(){
                 Wandering();
             }
         }
-        
+
         Hewan::getToPoint(Point(5, 1));
         Hewan::getToPoint(Point(5, World::getWorldInstance()->getNKol()-2));
     }
@@ -73,7 +74,7 @@ void Turtle::Live(){
             case 1:
                 GetToFood();
                 break;
-            case 2: 
+            case 2:
                 Race();
                 break;
         }

@@ -4,7 +4,6 @@
 #define DEFAULT_X 10
 #define DEFAULT_Y 10
 
-// ctor
 Point::Point()
 {
 	x = DEFAULT_X;
@@ -23,7 +22,6 @@ Point::Point(const Point& P)
 	y = P.y;
 }
 
-// IMPLEMENTASI FUNCTION MEMBER
 void Point::increment(int dx, int dy)
 {
 	x += dx; y += dy;

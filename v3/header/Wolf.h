@@ -60,4 +60,4 @@ class Wolf : public Hewan
         static const int WOLF_DELTAT = 500;     /**< DeltaT Wolf */
 };
 
-#endif // Wolf.h
+#endif

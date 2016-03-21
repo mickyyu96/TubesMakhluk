@@ -1,6 +1,6 @@
-// IOManager.h
 #ifndef IOMANAGER_H
 #define IOMANAGER_H
+
 #include "World.h"
 #include "Matrix.h"
 #include <iostream>
@@ -30,6 +30,5 @@ class IOManager
 		*/
 		void PrintWorldMap();
 };
-
 
 #endif

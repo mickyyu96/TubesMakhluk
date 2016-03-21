@@ -1,4 +1,3 @@
-// World.h
 #ifndef WORLD_H
 #define WORLD_H
 
@@ -8,17 +7,19 @@
 #include <mutex>
 using namespace std;
 
-class LMakhluk; // forward class declaration
+class LMakhluk;
 
 /** \class		World
 *	\brief		Representasi dari alam semesta
-*	\details	Kelas World merepresentasikan alam semesta yang terdiri dari 
+*	\details	Kelas World merepresentasikan alam semesta yang terdiri dari
 *				sebuah "ruang" (space) fiktif yang memiliki dimensi panjang dan lebar
 *				dan sekumpulan makhluk-makhluk (objects) yang bisa bergerak secara independen.
 *	\author		Robert Sebastian Herlim
 *	\date		Maret 2016
 */
-class World {
+
+class World
+{
 	public :
 		/** \brief		Get List of Makhluk
 		*	\details	Mengambil list of makhluk-makhluk yang hidup di dalam dunia tersebut
@@ -43,7 +44,7 @@ class World {
 		*	\return		Bilangan bulat yang menyatakan dimensi lebar dari ukuran ruang dunia
 		*/
 		int getNKol() { return NKol; }
-		
+
 		/** \brief		Set jumlah baris
 		*	\details	Melakukan assignment jumlah baris yang merupakan dimensi panjang dari ukuran ruang dunia
 		*	\param		_NBrs int Jumlah baris baru yang akan di-assign
@@ -78,8 +79,8 @@ class World {
 
 		/** \brief		Mengubah status berjalannya aktivitas dunia
 		*	\details	Mengubah status isPaused menjadi kebalikannya, yang mengakibatkan
-		*				apabila dunia sedang bergerak akan berhenti dan 
-		*				apabila dunia sedang berhenti akan bergerak kembali 
+		*				apabila dunia sedang bergerak akan berhenti dan
+		*				apabila dunia sedang berhenti akan bergerak kembali
 		*	\return		void
 		*/
 		void changePauseState();
@@ -109,18 +110,18 @@ class World {
 		*	\param		_NKol int Jumlah kolom dunia yang akan diciptakan
 		*/
 		World(int, int);
-		
-	private :
-		LMakhluk* objects; /**< objek-objek yang berada di dalam dunia*/
 
-		int _isEnded; /**< status berakhirnya aktivitas dunia*/
-		int _isPaused; /**< status berhentinya aktivitas dunia*/
-		mutex worldLock; /**< mutex untuk kunci lock aktivitas saat dunia diberhentikan */
+	private :
+		LMakhluk* objects;  /**< objek-objek yang berada di dalam dunia*/
+
+		int _isEnded;       /**< status berakhirnya aktivitas dunia*/
+		int _isPaused;      /**< status berhentinya aktivitas dunia*/
+		mutex worldLock;    /**< mutex untuk kunci lock aktivitas saat dunia diberhentikan */
 
 		static World* worldInstance; /**< pointer yang menunjuk ke instance dari kelas singleton*/
 
-		int NBrs; /**< dimensi panjang dari ukuran dunia*/
-		int NKol; /**< dimensi lebar dari ukuran dunia*/
+		int NBrs;           /**< dimensi panjang dari ukuran dunia*/
+		int NKol;           /**< dimensi lebar dari ukuran dunia*/
 };
 
 #endif

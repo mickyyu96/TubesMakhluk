@@ -1,5 +1,3 @@
-// Sheep.h
-
 #ifndef SHEEP_H
 #define SHEEP_H
 
@@ -23,23 +21,10 @@ class Sheep : public Hewan
 		 */
         Sheep(const Point&);
 
-        /** \brief      Fungsi untuk menentukan apakah Sheep vegetarian
-		 *  \details    Fungsi akan selalu mengembalikan bilangan bulat 1 karena Sheep vegetarian
-		 *	\return     Bilangan bulat 1
-		 */
-        int isVegetarian() { return 0; }
-
-        /** \brief      Getter DeltaT Wolf
-		 *  \details    Fungsi untuk memperoleh DeltaT makhluk Wolf
-		 *	\return     Bilangan bulat berupa DeltaT Wolf
-		 */
-        int getDeltaT() { return Hewan::getDeltaT(); }
-
     private:
         static const char SHEEP_ID = 'S';       /**< ID Sheep */
-        static const int SHEEP_MAXAGE = 25;     /**< Umur maksimal Sheep */
+        static const int SHEEP_MAXAGE = 80;     /**< Umur maksimal Sheep */
         static const int SHEEP_BASEPOWER = 4;   /**< Power Sheep */
-        static const int SHEEP_DELTAT = 500;    /**< DeltaT Sheep */
 };
 
-#endif // Sheep.h
+#endif

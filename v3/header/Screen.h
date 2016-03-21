@@ -1,13 +1,13 @@
-// Screen.h
 #ifndef SCREEN_H
 #define SCREEN_H
+
 #include "IOManager.h"
 #include <fstream>
 using namespace std;
 
 /** \class		Screen
 *	\brief		Representasi dari layar pengguna
-*	\details	Kelas Screen merepresentasikan layar pengguna 
+*	\details	Kelas Screen merepresentasikan layar pengguna
 *				dan bertanggung jawab untuk melakukan operasi-operasi Input/Output ke layar.
 *	\author		Robert Sebastian Herlim
 *	\date		Maret 2016
@@ -16,7 +16,6 @@ using namespace std;
 class Screen : public IOManager
 {
 	public:
-		
 		/** \brief		Get Singleton Instance dari kelas Screen
 		*	\details	Mengembalikan pointer dari objek singleton pada kelas Screen
 		*	\return		pointer yang menunjuk ke singleton instance pada kelas Screen

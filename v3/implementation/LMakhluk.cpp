@@ -1,6 +1,7 @@
 // LMakhluk.cpp
-
+#include <iostream>
 #include "../header/LMakhluk.h"
+#include "../header/World.h"
 using namespace std;
 
 LMakhluk::LMakhluk()
@@ -126,4 +127,41 @@ Makhluk* LMakhluk::getInfo(int idx)
 		P = P->getNext();
 	}
 	return P->getInfo();
+}
+
+void LMakhluk::ListAgeIncrement(){
+    LMakhluk * _LMakhluk = new LMakhluk;
+    _LMakhluk->setFirst(World::getWorldInstance()->getObjects()->getFirst());
+    while (_LMakhluk->getFirst()!=_LMakhluk->getLast()) {
+        if (_LMakhluk->getFirst()->getInfo()->isAlive()) {
+            _LMakhluk->getFirst()->getInfo()->AgeIncrement();
+            if(_LMakhluk->getFirst()->getInfo()->getAge()==_LMakhluk->getFirst()->getInfo()->getMaxAge()){_LMakhluk->getFirst()->getInfo()->Kill();}
+        }
+        _LMakhluk->setFirst(_LMakhluk->getFirst()->getNext());
+    }
+    if (_LMakhluk->getFirst()->getInfo()->isAlive()) {
+            _LMakhluk->getFirst()->getInfo()->AgeIncrement();
+            if(_LMakhluk->getFirst()->getInfo()->getAge()==_LMakhluk->getFirst()->getInfo()->getMaxAge()){_LMakhluk->getFirst()->getInfo()->Kill();}
+        }
+}
+
+int LMakhluk::IsAllMakhlukDead()
+{
+    ElmtMakhluk *EM;
+    EM = getFirst();
+    while (EM != getLast())
+    {
+        if (EM->getInfo()->isAlive())
+        {
+            return 0;
+        }
+        else {
+            EM = EM->getNext();
+        }
+    }
+    if (EM->getInfo()->isAlive())
+    {
+        return 0;
+    }
+    return 1;
 }

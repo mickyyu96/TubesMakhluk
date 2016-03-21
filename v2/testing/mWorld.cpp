@@ -1,4 +1,5 @@
 // mWorld.cpp
+
 #include "../header/World.h"
 #include "../header/MakhlukLive.h"
 #include "../header/LMakhluk.h"
@@ -14,7 +15,6 @@
 using namespace std;
 
 int isValidID(string);
-// Melakukan pengecekan string masukan pengguna, apakah ID yang dimasukkan benar (valid)
 
 int main()
 {
@@ -84,17 +84,21 @@ int main()
             Screen::getScreenInstance()->PrintWorldMap();
             MakhlukLive::getInstance()->MakhlukEat();
 
+            /*if (World::getWorldInstance()->getObjects()->IsAllMakhlukDead())
+            {
+                World::getWorldInstance()->endWorld();
+            }*/
+
             std::chrono::milliseconds timespan(500);
             std::this_thread::sleep_for(timespan);
 
-        } while(!_kbhit());
+        } while ((!_kbhit())); //|| (!World::getWorldInstance()->isEnded()));
         if(_kbhit())
         {
             KeypressHandler::getHandlerInstance()->getKeypress();
             KeypressHandler::getHandlerInstance()->doAction();
         }
     } while(!World::getWorldInstance()->isEnded());
-
 
 	delete World::getWorldInstance();
 	return 0;

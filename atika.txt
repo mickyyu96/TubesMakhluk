@@ -1,0 +1,4 @@
+v3 semua makhluk mati ngiong 5 detik
+v3 karnivor makan
+v3 hunger lvl
+v2 semua makhluk mati ngiong 5 detik

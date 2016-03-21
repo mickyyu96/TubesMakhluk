@@ -98,11 +98,11 @@ class LMakhluk
 				Makhluk* info;      /**< info dari makhluk */
 				ElmtMakhluk* next;  /**< next dari makhluk */
 		};
-		
+
 	private :
-		ElmtMakhluk* first; /**< element pertama dari list of makhluk */
-		thread t[MAX_THREAD]; /**< thread-thread dari elemen list */
-		int thread_count; /**< jumlah thread */
+		ElmtMakhluk* first;     /**< element pertama dari list of makhluk */
+		thread t[MAX_THREAD];   /**< thread-thread dari elemen list */
+		int thread_count;       /**< jumlah thread */
 
 	public :
 	    /** \brief      Get first element
@@ -156,6 +156,10 @@ class LMakhluk
          *	\return     Makhluk M
          */
 		ElmtMakhluk* findMakhluk(Makhluk*);
+
+		void ListAgeIncrement();
+
+		int IsAllMakhlukDead();
 };
 
-#endif // LMakhluk_H
+#endif

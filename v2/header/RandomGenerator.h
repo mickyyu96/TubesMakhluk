@@ -6,7 +6,6 @@
 #include <mutex>
 #include <unistd.h>
 #include "Point.h"
-
 using namespace std;
 
 /** \class      RandomGenerator
@@ -77,7 +76,7 @@ class RandomGenerator
 
     private:
         static RandomGenerator* _instance;  /**< singleton instance*/
-        mutex randomLock;
+        mutex randomLock;                   /**< mutex Random */
 };
 
-# endif // RandomGenerator_H
+#endif

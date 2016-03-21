@@ -21,24 +21,10 @@ class PolarBear : public Hewan
 		 */
 		PolarBear(const Point&);
 
-        /** \brief      Fungsi untuk menentukan apakah PolarBear vegetarian
-		 *  \details    Fungsi akan selalu mengembalikan bilangan bulat 0 karena PolarBear
-                        bukan vegetarian
-		 *	\return     Bilangan bulat 0
-		 */
-        int isVegetarian() { return 0; }
-
-        /** \brief      Getter DeltaT PolarBear
-		 *  \details    Fungsi untuk memperoleh DeltaT makhluk PolarBear
-		 *	\return     Bilangan bulat berupa DeltaT PolarBear
-		 */
-		 int getDeltaT() { return Hewan::getDeltaT(); }
-
 	private :
 		static const char POLARBEAR_ID = 'P';       /**< ID PolarBear */
-		static const int POLARBEAR_MAXAGE = 40;     /**< Umur maksimal PolarBear */
+		static const int POLARBEAR_MAXAGE = 80;     /**< Umur maksimal PolarBear */
 		static const int POLARBEAR_BASEPOWER = 8;   /**< Power PolarBear */
-		static const int POLARBEAR_DELTAT = 600;    /**< DeltaT PolarBear */
 };
 
-#endif // Wolf.h
+#endif

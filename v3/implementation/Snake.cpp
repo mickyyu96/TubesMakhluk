@@ -3,14 +3,17 @@
 #include <thread>
 #include <chrono>
 using namespace std;
-Snake::Snake(const Point& P): Hewan(SNAKE_ID, SNAKE_MAXAGE) {
+Snake::Snake(const Point& P): Hewan(SNAKE_ID, SNAKE_MAXAGE)
+{
+    age = 0;
     status = 1;
     power = SNAKE_BASEPOWER;
     deltaT = SNAKE_DELTAT;
     pos = P;
 }
 
-void Snake::GoToFood(Point P) {
+/*void Snake::GoToFood(Point P)
+{
     std::chrono::milliseconds timespan(deltaT);
     if (P.getX() < getPosition().getX()) {
         while (getPosition().getX() > P.getX()) {
@@ -79,23 +82,27 @@ void Snake::GoToFood(Point P) {
 
     }
     Hewan::Move(P.getX(), P.getY());
-}
+}*/
 
-// actions
-void Snake::GetToFood(){
-    //if ((Hewan::isMakhlukinList('R') || Hewan::isMakhlukinList('T') || Hewan::isMakhlukinList('P')) {
-        //while (Hewan::isMakhlukinList(Hewan::FindFood()->getID())) {
+void Snake::GetToFood()
+{
+    if (Hewan::isMakhlukinList('S')|| Hewan::isMakhlukinList('W') || Hewan::isMakhlukinList('P')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T'))
+    {
         Makhluk * Food = FindFood();
         Point PSnake = getPosition();
         Point PFood = Food->getPosition();
-        while (Point::getDistance(PSnake, PFood)<10) {
-            GoToFood(Food->getPosition());
+        while (Point::getDistance(PSnake, PFood)<10 && Food->isAlive()) {
+            Hewan::getToPoint(PFood);
+            PSnake = getPosition();
+            if (PFood.getX()==PSnake.getX() && PFood.getY()== PSnake.getY()) {Food->Kill(); break;}
+            else{PFood=Food->getPosition();}
         }
-        //}
-    //}
+    }
+
 }
 
-void Snake::ZigZag(){
+void Snake::ZigZag()
+{
     int dx, dy;
 
     int nRandom = RandomGenerator::getInstance()->getNextInt(2);
@@ -144,12 +151,12 @@ void Snake::ZigZag(){
     std::this_thread::sleep_for(timespan);
 }
 
-// main action
-void Snake::Live(){
+void Snake::Live()
+{
     int nRandom;
     while(isAlive())
     {
-        /*nRandom = RandomGenerator::getInstance()->getNextInt(2);
+        nRandom = RandomGenerator::getInstance()->getNextInt(2);
         switch (nRandom) {
             case 0: {
                 for (int i=0; i<10; ++i)
@@ -159,10 +166,7 @@ void Snake::Live(){
             case 1:
                 GetToFood();
                 break;
-        }*/
-        //GetToFood();
-        ZigZag();
+        }
         Hewan::Sleep();
     }
 }
-

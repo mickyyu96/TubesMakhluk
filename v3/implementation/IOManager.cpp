@@ -40,7 +40,7 @@ void IOManager::PrintWorldMap()
 			map->setInfo(ID1, pos1.getX(), pos1.getY());
 		}
 	}
-
+    _LMakhluk->ListAgeIncrement();
 	PrintMatrix(*map);
 }
 

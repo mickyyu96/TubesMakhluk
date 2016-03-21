@@ -4,8 +4,8 @@
 #include <thread>
 #include <chrono>
 using namespace std;
-
 Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE) {
+    age = 0;
     status = 1;
     power = RABBIT_BASEPOWER;
     deltaT = RABBIT_DELTAT;
@@ -34,7 +34,7 @@ void Rabbit::WanderingHop(){
             if (Hewan::shouldRebounced(0, dy)) {
                 dy *= -1;
             }
-            
+
             Hewan::Move(dx, dy);
             std::chrono::milliseconds timespan(Hewan::getDeltaT());
             std::this_thread::sleep_for(timespan);
@@ -76,11 +76,11 @@ void Rabbit::Race(){
             bool TurtleCome = false;
             Makhluk *_Turtle = FindMakhluk('T');
             Point PTurtle;
-            
+
             static_cast<Turtle*>(_Turtle)->setIsChallange(1);
             Hewan::getToPoint(Point(5, 1));
             PTurtle = _Turtle->getPosition();
-            
+
             if ((PTurtle.getX() == 5) && (PTurtle.getY()== 1)) {
                 TurtleCome = true;
             }

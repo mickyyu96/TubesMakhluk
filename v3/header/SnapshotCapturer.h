@@ -1,6 +1,6 @@
-// SnapshotCapturer.h
 #ifndef SNAPSHOTCAPTURER_H
 #define SNAPSHOTCAPTURER_H
+
 #include "IOManager.h"
 #include <fstream>
 #include <string>

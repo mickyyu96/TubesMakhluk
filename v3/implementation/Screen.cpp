@@ -1,5 +1,6 @@
 // Screen.cpp
 #include "../header/Screen.h"
+#include "../header/LMakhluk.h"
 using namespace std;
 
 Screen* Screen::screenInstance = new Screen();
@@ -23,6 +24,13 @@ void Screen::ShowWorld(int deltaT)
 		getScreenInstance()->PrintWorldMap();
 
 		World::getWorldInstance()->unlockWorld();
+
+
+        if (World::getWorldInstance()->getObjects()->IsAllMakhlukDead())
+        {
+            World::getWorldInstance()->endWorld();
+            getScreenInstance()->PrintWorldMap();
+        }
 
 		std::chrono::milliseconds timespan(deltaT);
 		std::this_thread::sleep_for(timespan);

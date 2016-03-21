@@ -1,4 +1,5 @@
 // KeypressHandler.cpp
+
 #include "../header/KeypressHandler.h"
 #include "../header/WorldBuilder.h"
 #include "../header/MakhlukLive.h"
@@ -9,7 +10,6 @@ KeypressHandler* KeypressHandler::handlerInstance = new KeypressHandler();
 
 KeypressHandler::KeypressHandler()
 {
-
 }
 
 void KeypressHandler::HandleKeypress()

@@ -1,4 +1,5 @@
 // WorldBuilder.cpp
+
 #include "../header/WorldBuilder.h"
 #include "../header/LMakhluk.h"
 #include "../header/RandomGenerator.h"
@@ -42,9 +43,9 @@ void WorldBuilder::addAnObject(char _ID)
 		case 'P':
 			World::getWorldInstance()->getObjects()->Add(new PolarBear(RandomGenerator::getInstance()->getNextPointPB(NBrs, NKol)));
 			break;
-        /*case 'U':
+        case 'U':
 			World::getWorldInstance()->getObjects()->Add(new Snake(RandomGenerator::getInstance()->getNextPoint(NBrs, NKol)));
-			break;*/
+			break;
 		default :
 			ExceptionObject E(3);
 			E.DisplayErrorMessage();

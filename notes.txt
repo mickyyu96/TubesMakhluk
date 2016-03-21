@@ -1,9 +1,0 @@
-v1 (ikut aja setelah v2 selesai total, biar gampang)
-v2 (unit test ngiong, age naik, hewan mati, tgl 1 hewan)
-v3 (doxygen snake, age naik, hewan mati, tgl 1 hewan , karnivor makan)
-
-dokumentasi ? poster ?
-
-NB : 	RAPIIN PROGRAM JUGA INGAT YA :D
-	INDENTASI !!!
-	ingat juga membuat unit test, tambahkan ke makefile cara 		compile nya

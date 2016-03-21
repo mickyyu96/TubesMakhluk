@@ -8,7 +8,6 @@
 #include <thread>
 #include <chrono>
 #include "Point.h"
-
 using namespace std;
 
 /** \class      RandomGenerator
