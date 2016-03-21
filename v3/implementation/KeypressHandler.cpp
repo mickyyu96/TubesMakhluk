@@ -12,7 +12,7 @@ KeypressHandler::KeypressHandler()
 
 void KeypressHandler::HandleKeypress()
 {
-	while (getHandlerInstance()->getLastKeypress() != 'q')
+	while (getHandlerInstance()->getLastKeypress() != 'q' && !World::getWorldInstance()->isEnded())
 	{
 		getHandlerInstance()->getKeypress();
 		getHandlerInstance()->doAction();

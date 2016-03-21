@@ -93,6 +93,7 @@ int main()
             std::this_thread::sleep_for(timespan);
 
         } while ((!_kbhit())); //|| (!World::getWorldInstance()->isEnded()));
+
         if(_kbhit())
         {
             KeypressHandler::getHandlerInstance()->getKeypress();
