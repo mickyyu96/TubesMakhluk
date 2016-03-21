@@ -23,18 +23,9 @@ void LMakhluk::Add(Makhluk* M)
 
 int LMakhluk::IsAllMakhlukDead()
 {
-    int i=0;
-    while (i<getSize())
-    {
-        if (getInfo(i)->isAlive())
-        {
-            return 0;
-        }
-        else { i++; }
-    }
-    if (getInfo(i)->isAlive())
-    {
-        return 0;
-    }
-    return 1;
+	for(int i=0; i<getSize(); i++)
+	{
+		if(getInfo(i)->isAlive()) return 0;
+	}
+	return 1;
 }
