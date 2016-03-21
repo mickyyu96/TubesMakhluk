@@ -93,14 +93,14 @@ int main()
             std::chrono::milliseconds timespan(500);
             std::this_thread::sleep_for(timespan);
 
-        } while (!_kbhit() && !World::getWorldInstance()->isEnded());
+        } while (!_kbhit()); //&& !World::getWorldInstance()->isEnded());
 
         if(_kbhit())
         {
             KeypressHandler::getHandlerInstance()->getKeypress();
             KeypressHandler::getHandlerInstance()->doAction();
         }
-    } while(!World::getWorldInstance()->isEnded());
+    } while(1);//!World::getWorldInstance()->isEnded());
 
 	delete World::getWorldInstance();
 	return 0;
