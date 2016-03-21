@@ -1,6 +1,7 @@
 // KeypressHandler.cpp
 #include "../header/KeypressHandler.h"
 #include "../header/WorldBuilder.h"
+#include <windows.h>
 using namespace std;
 
 KeypressHandler* KeypressHandler::handlerInstance = new KeypressHandler();
@@ -15,7 +16,7 @@ void KeypressHandler::HandleKeypress()
 	while (getHandlerInstance()->getLastKeypress() != 'q' && !World::getWorldInstance()->isEnded())
 	{
 		getHandlerInstance()->getKeypress();
-		getHandlerInstance()->doAction();
+		if (!World::getWorldInstance()->isEnded()) getHandlerInstance()->doAction();
 	}
 }
 

@@ -80,14 +80,12 @@ int main()
 
 	t[thread_count++] = thread(Screen::ShowWorld, 500);
 	t[thread_count++] = thread(KeypressHandler::HandleKeypress);
-
-	for(int i=0; i<thread_count; i++)
-	{
-		t[i].join();
-	}
-
+	
+	t[0].join();
+	t[1].detach();
+	
 	cout << "The Program Ends Here.\n" << endl;
-	system("PAUSE");
+	//system("PAUSE");
 	delete World::getWorldInstance();
 	return 0;
 }
