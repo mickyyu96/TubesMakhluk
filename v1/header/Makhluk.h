@@ -8,7 +8,7 @@
 *	\brief		Representasi dari makhluk di alam semesta
 *	\details	Kelas Makhluk merupakan kelas abstrak yang memiliki member-member dasar
 *				yang akan diturunkan ke kelas lain.
-*	\author		Atika Azzahra Akbar
+*	\author		Elvina R. K. Situmorang
 *	\date		Maret 2016
 */
 
