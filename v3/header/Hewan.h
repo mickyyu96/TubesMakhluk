@@ -116,6 +116,13 @@ class Hewan : public Makhluk
         *   \return 	void
         */
         void getToPoint(Point P);
+        
+        /** \brief 	    Procedure agar objek melangkah satu langkah mendekat ke suatu Point
+        *   \details 	Objek akan melangkah 1 langkah ke suatu point yang telah diinput melalui jalan paling dekat
+        *   \param 	    Point P yang ingin dicapai oleh Hewan
+        *   \return 	void
+        */
+        void moveTowardPoint(Point P);
 
 	protected :
 		/** \brief 	    Constructor

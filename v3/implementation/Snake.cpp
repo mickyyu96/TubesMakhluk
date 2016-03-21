@@ -3,6 +3,7 @@
 #include "../header/Snake.h"
 #include <thread>
 #include <chrono>
+#include <iostream>
 using namespace std;
 
 Snake::Snake(const Point& P): Hewan(SNAKE_ID, SNAKE_MAXAGE)
@@ -23,10 +24,10 @@ void Snake::GetToFood()
         Point PFood = Food->getPosition();
         while (Point::getDistance(PSnake, PFood)<10 && Food->isAlive())
         {
-            Hewan::getToPoint(PFood);
+            Hewan::moveTowardPoint(Food->getPosition());
             PSnake = getPosition();
-            if (PFood.getX()==PSnake.getX() && PFood.getY()== PSnake.getY()) {Food->Kill(); break;}
-            else{PFood=Food->getPosition();}
+            if (Food->getPosition().getX()==getPosition().getX() && Food->getPosition().getY()== getPosition().getY()) {Food->Kill(); break;}
+            else{PFood = Food->getPosition();}
         }
     }
 }
@@ -108,8 +109,7 @@ void Snake::Live()
         {
             case 0:
             {
-                for (int i=0; i<10; ++i)
-                    ZigZag();
+                for(int i=0; i<10; i++) ZigZag();
                 break;
             }
             case 1:
