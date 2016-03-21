@@ -81,4 +81,4 @@ class RandomGenerator
         mutex randomLock;                   /**< variabel mutex */
 };
 
-# endif // RandomGenerator_H
+# endif

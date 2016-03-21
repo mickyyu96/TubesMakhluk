@@ -2,7 +2,6 @@
 
 #include "../header/RandomGenerator.h"
 #include <iostream>
-
 using namespace std;
 
 RandomGenerator* RandomGenerator::_instance = new RandomGenerator;

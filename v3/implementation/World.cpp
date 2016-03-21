@@ -1,4 +1,5 @@
 // World.cpp
+
 #include "../header/World.h"
 #include "../header/LMakhluk.h"
 #define DEFAULT_NBRS 30
@@ -39,7 +40,7 @@ void World::singleStepExecution()
 {
 	unlockWorld();
 
-	std::chrono::milliseconds timespan(250); // HATI2 HARUS DIUBAH
+	std::chrono::milliseconds timespan(500);
 	std::this_thread::sleep_for(timespan);
 
 	lockWorld();

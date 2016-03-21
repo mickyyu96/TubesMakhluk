@@ -1,10 +1,13 @@
 // Rabbit.cpp
+
 #include "../header/Rabbit.h"
 #include "../header/Turtle.h"
 #include <thread>
 #include <chrono>
 using namespace std;
-Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE) {
+
+Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE)
+{
     age = 0;
     status = 1;
     power = RABBIT_BASEPOWER;
@@ -12,26 +15,30 @@ Rabbit::Rabbit(const Point& P): Hewan(RABBIT_ID, RABBIT_MAXAGE) {
     pos = P;
 }
 
-// actions
-void Rabbit::GetToFood(){
-    if (Hewan::isMakhlukinList('G')) {
+void Rabbit::GetToFood()
+{
+    if (Hewan::isMakhlukinList('G'))
+    {
         Makhluk *Food = FindFood();
         Hewan::getToPoint(Food->getPosition());
         Food->Kill();
     }
 }
 
-
-void Rabbit::WanderingHop(){
+void Rabbit::WanderingHop()
+{
     int dx = 2;
     int dy = 2;
     int nRandom = RandomGenerator::getInstance()->getNextInt(2);
     if (nRandom == 1) {
-        for (int i = 0; i<20; i++) {
-            if (Hewan::shouldRebounced(dx, 0)) {
+        for (int i = 0; i<20; i++)
+        {
+            if (Hewan::shouldRebounced(dx, 0))
+            {
                 dx *= -1;
             }
-            if (Hewan::shouldRebounced(0, dy)) {
+            if (Hewan::shouldRebounced(0, dy))
+            {
                 dy *= -1;
             }
 
@@ -40,26 +47,34 @@ void Rabbit::WanderingHop(){
             std::this_thread::sleep_for(timespan);
         }
     }
-    else{
-        for (int i = 0; i<20; i++) {
-            if (Hewan::shouldRebounced(dx, 0) && Hewan::shouldRebounced(0, dy)) {
+    else
+    {
+        for (int i = 0; i<20; i++)
+        {
+            if (Hewan::shouldRebounced(dx, 0) && Hewan::shouldRebounced(0, dy))
+            {
                 dx = 0;
                 dy = 2;
-                if (Hewan::shouldRebounced(0, dy)) {
+                if (Hewan::shouldRebounced(0, dy))
+                {
                     dy *= -1;
                 }
             }
-            if (Hewan::shouldRebounced(0, dy)) {
+            if (Hewan::shouldRebounced(0, dy))
+            {
                 dy = 0;
                 dx = 2;
-                if (Hewan::shouldRebounced(dx, 0)) {
+                if (Hewan::shouldRebounced(dx, 0))
+                {
                     dx *= -1;
                 }
             }
-            else if (Hewan::shouldRebounced(dx, 0)){
+            else if (Hewan::shouldRebounced(dx, 0))
+            {
                 dx = 0;
                 dy = 2;
-                if (Hewan::shouldRebounced(0, dy)) {
+                if (Hewan::shouldRebounced(0, dy))
+                {
                     dy *= -1;
                 }
             }
@@ -70,9 +85,12 @@ void Rabbit::WanderingHop(){
     }
 }
 
-void Rabbit::Race(){
-    if (Hewan::isMakhlukinList('T')) {
-        if (!Turtle::isAnyTurtleRacing()) {
+void Rabbit::Race()
+{
+    if (Hewan::isMakhlukinList('T'))
+    {
+        if (!Turtle::isAnyTurtleRacing())
+        {
             bool TurtleCome = false;
             Makhluk *_Turtle = FindMakhluk('T');
             Point PTurtle;
@@ -81,12 +99,15 @@ void Rabbit::Race(){
             Hewan::getToPoint(Point(5, 1));
             PTurtle = _Turtle->getPosition();
 
-            if ((PTurtle.getX() == 5) && (PTurtle.getY()== 1)) {
+            if ((PTurtle.getX() == 5) && (PTurtle.getY()== 1))
+            {
                 TurtleCome = true;
             }
-            while (!TurtleCome && _Turtle->isAlive()){
+            while (!TurtleCome && _Turtle->isAlive())
+            {
                 PTurtle = _Turtle->getPosition();
-                if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(_Turtle)->getisChallange()) {
+                if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(_Turtle)->getisChallange())
+                {
                     TurtleCome = true;
                 }
             }
@@ -95,13 +116,14 @@ void Rabbit::Race(){
     }
 }
 
-// main action
-void Rabbit::Live(){
+void Rabbit::Live()
+{
     int nRandom;
     while(isAlive() && !World::getWorldInstance()->isEnded())
     {
         nRandom = RandomGenerator::getInstance()->getNextInt(4);
-        switch (nRandom) {
+        switch (nRandom)
+        {
             case 0:
                 Hewan::Wandering();
                 break;

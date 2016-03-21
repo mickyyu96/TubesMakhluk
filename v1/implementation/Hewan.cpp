@@ -4,7 +4,6 @@
 #include "../header/LMakhluk.h"
 #include <thread>
 #include <chrono>
-
 using namespace std;
 
 Hewan::Hewan(char _ID, int _maxAge) : Makhluk(_ID, _maxAge)
