@@ -51,7 +51,7 @@ void Wolf::Live()
     int nRandom;
     while(isAlive() && !World::getWorldInstance()->isEnded())
     {
-        nRandom = RandomGenerator::getInstance()->getNextInt(4);
+        nRandom = RandomGenerator::getInstance()->getNextInt(5);
         switch (nRandom)
         {
             case 0:
@@ -65,6 +65,9 @@ void Wolf::Live()
                 break;
             case 3:
                 Howl();
+                break;
+            case 4:
+                Hewan::Wandering();
                 break;
         }
         Hewan::Sleep();

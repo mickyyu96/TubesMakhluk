@@ -130,21 +130,9 @@ Makhluk* LMakhluk::getInfo(int idx)
 
 int LMakhluk::IsAllMakhlukDead()
 {
-    ElmtMakhluk *EM;
-    EM = getFirst();
-    while (EM != getLast())
-    {
-        if (EM->getInfo()->isAlive())
-        {
-            return 0;
-        }
-        else {
-            EM = EM->getNext();
-        }
-    }
-    if (EM->getInfo()->isAlive())
-    {
-        return 0;
-    }
-    return 1;
+	for(int i=0; i<getSize(); i++)
+	{
+		if(getInfo(i)->isAlive()) return 0;
+	}
+	return 1;
 }

@@ -1,0 +1,19 @@
+pembagian tugas kelas makhluk live g ada ? <- punya kepi
+
+v3:
+	mMatrix
+	mScreen
+	mSnapshot
+	keypress setelah tekan w kalo tekan c error
+	kalo buat UUUUUUUU di awal trus buat PPPPP pada saat jalan (R JUGA)
+	makhluk sekitar 40 mingw gua macet
+	mkeypress pas disuru tekan q kalo tekan yang lain error
+	kadang banget bisa error di tengah" ( dari 10 kali terjadi 1 kali)
+
+v2:
+	mMatrix
+	tumbuhan g mati"
+
+v1:
+	mMatrix
+	tumbuhan g mati"

@@ -23,7 +23,7 @@ class Rabbit : public Hewan
 
     private :
         static const char RABBIT_ID = 'R';      /**< ID Rabbit*/
-        static const int RABBIT_MAXAGE = 60;    /**< Umur maksimal Rabbit*/
+        static const int RABBIT_MAXAGE = 180;   /**< Umur maksimal Rabbit*/
         static const int RABBIT_BASEPOWER = 3;  /**< Power Rabbit*/
 };
 

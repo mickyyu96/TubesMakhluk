@@ -46,7 +46,7 @@ void Sheep::Live()
                 Hewan::Wandering();
                 break;
             case 1:
-                Hewan::Wandering();
+                WanderingS();
                 break;
             case 2:
                 GetToFood();
