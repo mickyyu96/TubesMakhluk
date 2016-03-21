@@ -86,7 +86,8 @@ int main()
 
             if (World::getWorldInstance()->getObjects()->IsAllMakhlukDead())
             {
-                World::getWorldInstance()->endWorld();
+                cout << "askdjhgaahsjkdajshdgashjdkashgdfasghdjashgdfasghjdashgfdaghsjdkajshgfasghjdmk " << endl;
+                //World::getWorldInstance()->endWorld();
             }
 
             std::chrono::milliseconds timespan(500);

@@ -19,10 +19,18 @@ Wolf::Wolf(const Point& P) : Hewan(WOLF_ID, WOLF_MAXAGE)
 
 void Wolf::GetToFood()
 {
-    if (Hewan::isMakhlukinList('*'))
+    if (Hewan::isMakhlukinList('S')|| Hewan::isMakhlukinList('W') || Hewan::isMakhlukinList('P')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T'))
     {
-        Hewan::getToPoint(Hewan::FindFood()->getPosition());
-        Hewan::FindFood()->Kill();
+        Makhluk * Food = FindFood();
+        Point PWolf = getPosition();
+        Point PFood = Food->getPosition();
+        while (Point::getDistance(PWolf, PFood)<10 && Food->isAlive())
+        {
+            Hewan::getToPoint(PFood);
+            PWolf = getPosition();
+            if (PFood.getX()==PWolf.getX() && PFood.getY()== PWolf.getY()) {Food->Kill(); break;}
+            else{PFood=Food->getPosition();}
+        }
     }
 }
 
@@ -36,7 +44,6 @@ void Wolf::Howl()
     Beep(1397, 200);
     Beep(1397, 200);
     Beep(1175, 1000);
-    cin.get();
 }
 
 void Wolf::Live()
@@ -51,13 +58,13 @@ void Wolf::Live()
                 Hewan::Wandering();
                 break;
             case 1:
-                Hewan::Wandering();
+                GetToFood();
                 break;
             case 2:
                 GetToFood();
                 break;
             case 3:
-                Howl();
+                GetToFood();
                 break;
         }
         Hewan::Sleep();
