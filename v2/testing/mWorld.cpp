@@ -87,7 +87,7 @@ int main()
             std::chrono::milliseconds timespan(500);
             std::this_thread::sleep_for(timespan);
 
-        } while(!_kbhit());
+        } while(!_kbhit() && !World::getWorldInstance()->isEnded());
         if(_kbhit())
         {
             KeypressHandler::getHandlerInstance()->getKeypress();
