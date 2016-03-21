@@ -18,7 +18,7 @@ int main()
     cout << "-------------------------------------------------------------------------" << endl;
     cout << "PolarBear merupakan makhluk karnivora yang memiliki 2 behavior:" << endl;
     cout << "1. PolarBear hanya dapat berjalan-jalan di bagian bawah dunia" << endl;
-    cout << "1. PolarBear dapat melakukan hibernasi pada bagian pojok bawah kiri dunia" << endl;
+    cout << "2. PolarBear dapat melakukan hibernasi pada bagian pojok bawah kiri dunia" << endl;
     cout << "-------------------------------------------------------------------------" << endl;
     std::chrono::milliseconds timespan(8000);
     std::this_thread::sleep_for(timespan);

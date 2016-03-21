@@ -19,10 +19,18 @@ PolarBear::PolarBear(const Point& P) : Hewan(POLARBEAR_ID, POLARBEAR_MAXAGE)
 
 void PolarBear::GetToFood()
 {
-    if (Hewan::isMakhlukinList('*'))
+    if (Hewan::isMakhlukinList('S')|| Hewan::isMakhlukinList('W') || Hewan::isMakhlukinList('P')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T'))
     {
-        Hewan::getToPoint(Hewan::FindFood()->getPosition());
-        Hewan::FindFood()->Kill();
+        Makhluk * Food = FindFood();
+        Point PPolarBear = getPosition();
+        Point PFood = Food->getPosition();
+        while (Point::getDistance(PPolarBear, PFood)<10 && Food->isAlive())
+        {
+            Hewan::getToPoint(PFood);
+            PPolarBear = getPosition();
+            if (PFood.getX()==PPolarBear.getX() && PFood.getY()== PPolarBear.getY()) {Food->Kill(); break;}
+            else{PFood=Food->getPosition();}
+        }
     }
 }
 

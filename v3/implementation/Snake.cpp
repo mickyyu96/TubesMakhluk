@@ -30,7 +30,6 @@ void Snake::GetToFood()
             else{PFood = Food->getPosition();}
         }
     }
-
 }
 
 void Snake::ZigZag()
