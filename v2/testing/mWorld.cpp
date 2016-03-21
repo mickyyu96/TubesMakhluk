@@ -84,15 +84,15 @@ int main()
             Screen::getScreenInstance()->PrintWorldMap();
             MakhlukLive::getInstance()->MakhlukEat();
 
-            /*if (World::getWorldInstance()->getObjects()->IsAllMakhlukDead())
+            if (World::getWorldInstance()->getObjects()->IsAllMakhlukDead())
             {
                 World::getWorldInstance()->endWorld();
-            }*/
+            }
 
             std::chrono::milliseconds timespan(500);
             std::this_thread::sleep_for(timespan);
 
-        } while ((!_kbhit())); //|| (!World::getWorldInstance()->isEnded()));
+        } while (!_kbhit() && !World::getWorldInstance()->isEnded());
 
         if(_kbhit())
         {
