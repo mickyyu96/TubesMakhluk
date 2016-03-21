@@ -146,6 +146,24 @@ void Hewan::getToPoint(Point P)
     }
 }
 
+void Hewan::moveTowardPoint(Point P)
+{
+	int dx = P.getX()-getPosition().getX();
+    int dy = P.getY()-getPosition().getY();
+    int i = abs(dx);
+    int j = abs(dy);
+    int _dx = 1, _dy = 1;
+    
+    if (dx<0) { _dx = -1; } else if (dx==0) { _dx = 0; }
+    if (dy<0) { _dy = -1; } else if (dy==0) { _dy = 0; }
+
+    if (i <= 0) { _dx = 0; } else if (j <= 0){ _dy = 0; }
+    Move(_dx, _dy);
+    std::chrono::milliseconds timespan(deltaT);
+    std::this_thread::sleep_for(timespan);
+    --i; --j;
+}
+
 void Hewan::Wandering()
 {
     int dx = 1;
