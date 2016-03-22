@@ -17,9 +17,10 @@ int main()
 
 	int interval = 500;
 
+
 	t[thread_count++] = thread(Screen::ShowWorld, interval);
 
-	std::chrono::milliseconds timespan(5000);
+    std::chrono::milliseconds timespan(5000);
 	std::this_thread::sleep_for(timespan);
 	World::getWorldInstance()->getObjects()->Add(new Rabbit(Point(10,10)));
 

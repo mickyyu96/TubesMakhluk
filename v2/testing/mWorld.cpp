@@ -14,23 +14,50 @@
 #include <thread>
 using namespace std;
 
-int isValidID(string);
+int isValidID(const string&);
+// Melakukan pengecekan string masukan pengguna, apakah ID yang dimasukkan benar (valid)
+
+int isValidUkuran(const string&, const string&);
+// Melakukan pengecekan string masukan pengguna, apakah ID yang dimasukkan benar (valid)
 
 int main()
 {
+    cout << "*************************************************************************************" << endl;
+    cout << "       **       ***    **  ***  ***         ***       **       **        **  ********" << endl;
+    cout << "      ****      ****   **  ***  ****       ****      ****      **       **   **      " << endl;
+    cout << "     **  **     ** **  **  ***  ** **     ** **     **  **     **            **      " << endl;
+    cout << "    ********    **  ** **  ***  **  **   **  **    ********    **            ********" << endl;
+    cout << "   **      **   **   ****  ***  **   ** **   **   **      **   **                  **" << endl;
+    cout << "  **        **  **    ***  ***  **    ***    **  **        **  ********      ********" << endl;
+    cout << "                                                                                     " << endl;
+    cout << "       **        **  ***  **        **             **       ********  ********       " << endl;
+    cout << "        **      **   ***  **        **            ****      **        **             " << endl;
+    cout << "         **    **    ***  **        **           **  **     **        **             " << endl;
+    cout << "          **  **     ***  **        **          ********    **  ****  ********       " << endl;
+    cout << "           ****      ***  **        **         **      **   **    **  **             " << endl;
+    cout << "            **       ***  ********  ********  **        **  ********  ********       " << endl;
+    cout << "                                                                                     " << endl;
+    cout << "             WOLF     RABBIT     TURTLE     POLARBEAR     SNAKE     SHEEP            " << endl;
+    cout << "                                                                                     " << endl;
+    cout << "                         BY EPIC: NGIONG, MICKY, KEPI, ELVINA                        " << endl;
+    cout << "*************************************************************************************" << endl;
 	/**************************************************************
 	**
 	**				Input dimensi ukuran dunia
 	**
 	**************************************************************/
 	int _NBrs, _NKol;
+	string strNBrs, strNKol;
 	do
 	{
 		try
 		{
 			cout << "Masukkan dimensi ukuran ruang dunia." << endl;
-			cout << "Jumlah baris (panjang) = "; cin >> _NBrs;
-			cout << "Jumlah kolom (lebar)   = "; cin >> _NKol;
+			cout << "Jumlah baris (panjang) = "; cin >> strNBrs;
+			cout << "Jumlah kolom (lebar)   = "; cin >> strNKol;
+			if(!isValidUkuran(strNBrs, strNKol)) throw ExceptionObject(4);
+
+			_NBrs = atoi(strNBrs.c_str()); _NKol = atoi(strNKol.c_str());
 			if (_NBrs < 7 || _NKol < 7) throw ExceptionObject(0);
 		}
 		catch (ExceptionObject& E)
@@ -38,7 +65,7 @@ int main()
 			E.DisplayErrorMessage();
 		}
 
-	} while(_NBrs < 7 || _NKol < 7);
+	} while(_NBrs < 7 || _NKol < 7 || !isValidUkuran(strNBrs, strNKol));
 	World::getWorldInstance()->setNBrs(_NBrs+2); World::getWorldInstance()->setNKol(_NKol+2);
 
 	cout << "\n===========================================================================\n" << endl;
@@ -100,14 +127,15 @@ int main()
             KeypressHandler::getHandlerInstance()->getKeypress();
             KeypressHandler::getHandlerInstance()->doAction();
         }
-        
+
     } while(!World::getWorldInstance()->isEnded());
 
 	delete World::getWorldInstance();
 	return 0;
 }
 
-int isValidID(string s)
+
+int isValidID(const string& s)
 {
 	int Found = 0;
 	for(int i=0; i<(int)s.size() && !Found; i++)
@@ -118,4 +146,18 @@ int isValidID(string s)
 		}
 	}
 	return !Found;
+}
+
+int isValidUkuran(const string& strNBrs, const string& strNKol)
+{
+	int valid = 1;
+	for(int i=0; i<strNBrs.size() && valid; i++)
+	{
+		if(strNBrs[i] < '0' || strNBrs[i] >'9') valid = 0;
+	}
+	for(int i=0; i<strNKol.size() && valid; i++)
+	{
+		if(strNKol[i] < '0' || strNKol[i] >'9') valid = 0;
+	}
+	return valid;
 }

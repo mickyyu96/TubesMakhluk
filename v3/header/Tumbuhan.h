@@ -30,7 +30,7 @@ class Tumbuhan : public Makhluk
 
 	private:
 		static const char TUMBUHAN_ID = 'G';	/**< ID Tumbuhan*/
-		static const int TUMBUHAN_MAXAGE = 300;	/**< Umur maksimal Tumbuhan*/
+		static const int TUMBUHAN_MAXAGE = 200;	/**< Umur maksimal Tumbuhan*/
 		static const int TUMBUHAN_DELTAT = 500; /**< DeltaT Tumbuhan */
 };
 

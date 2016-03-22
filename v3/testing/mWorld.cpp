@@ -21,6 +21,25 @@ int isValidUkuran(const string&, const string&);
 
 int main()
 {
+    cout << "*************************************************************************************" << endl;
+    cout << "       **       ***    **  ***  ***         ***       **       **        **  ********" << endl;
+    cout << "      ****      ****   **  ***  ****       ****      ****      **       **   **      " << endl;
+    cout << "     **  **     ** **  **  ***  ** **     ** **     **  **     **            **      " << endl;
+    cout << "    ********    **  ** **  ***  **  **   **  **    ********    **            ********" << endl;
+    cout << "   **      **   **   ****  ***  **   ** **   **   **      **   **                  **" << endl;
+    cout << "  **        **  **    ***  ***  **    ***    **  **        **  ********      ********" << endl;
+    cout << "                                                                                     " << endl;
+    cout << "       **        **  ***  **        **             **       ********  ********       " << endl;
+    cout << "        **      **   ***  **        **            ****      **        **             " << endl;
+    cout << "         **    **    ***  **        **           **  **     **        **             " << endl;
+    cout << "          **  **     ***  **        **          ********    **  ****  ********       " << endl;
+    cout << "           ****      ***  **        **         **      **   **    **  **             " << endl;
+    cout << "            **       ***  ********  ********  **        **  ********  ********       " << endl;
+    cout << "                                                                                     " << endl;
+    cout << "             WOLF     RABBIT     TURTLE     POLARBEAR     SNAKE     SHEEP            " << endl;
+    cout << "                                                                                     " << endl;
+    cout << "                         BY EPIC: NGIONG, MICKY, KEPI, ELVINA                        " << endl;
+    cout << "*************************************************************************************" << endl;
 	/**************************************************************
 	**
 	**				Input dimensi ukuran dunia
@@ -36,7 +55,7 @@ int main()
 			cout << "Jumlah baris (panjang) = "; cin >> strNBrs;
 			cout << "Jumlah kolom (lebar)   = "; cin >> strNKol;
 			if(!isValidUkuran(strNBrs, strNKol)) throw ExceptionObject(4);
-			
+
 			_NBrs = atoi(strNBrs.c_str()); _NKol = atoi(strNKol.c_str());
 			if (_NBrs < 7 || _NKol < 7) throw ExceptionObject(0);
 		}
@@ -88,10 +107,10 @@ int main()
 
 	t[thread_count++] = thread(Screen::ShowWorld, 500);
 	t[thread_count++] = thread(KeypressHandler::HandleKeypress);
-	
+
 	t[0].join();
 	t[1].detach();
-	
+
 	cout << "The Program Ends Here.\n" << endl;
 	//system("PAUSE");
 	delete World::getWorldInstance();
