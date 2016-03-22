@@ -135,6 +135,7 @@ void PolarBear::Live()
                 break;
             case 4:
                 GetToFood();
+                Hibernate();
                 break;
         }
         Hewan::Sleep();

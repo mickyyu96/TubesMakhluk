@@ -12,7 +12,7 @@ SnapshotCapturer::SnapshotCapturer(const string& _filename) : directory(_filenam
 
 void SnapshotCapturer::captureSnapshot()
 {
-	World::getWorldInstance()->lockWorld();
+	//World::getWorldInstance()->lockWorld();
 	saveOldBuf();
 
 	ofstream output(directory);
@@ -21,5 +21,5 @@ void SnapshotCapturer::captureSnapshot()
 	PrintWorldMap();
 
 	resetCoutBuf();
-	World::getWorldInstance()->unlockWorld();
+	//World::getWorldInstance()->unlockWorld();
 }

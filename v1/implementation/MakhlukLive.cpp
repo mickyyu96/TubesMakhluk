@@ -79,6 +79,14 @@ void MakhlukLive::MakhlukMove()
                 _Hewan->Kill();
             }
         }
+        else
+        {
+            _LMakhluk->getFirst()->getInfo()->AgeIncrement();
+            if(_LMakhluk->getFirst()->getInfo()->getAge()==_LMakhluk->getFirst()->getInfo()->getMaxAge())
+            {
+                _LMakhluk->getFirst()->getInfo()->Kill();
+            }
+        }
     }
 }
 
