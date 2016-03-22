@@ -29,11 +29,12 @@ class ExceptionObject
 
 	private :
 		int id; /**< id_kesalahan */
-		const string message[4] = {
+		const string message[5] = {
 			">> ERROR! Dimensi ukuran dunia harus > 6!",
 			">> ERROR! Ada ID yang tidak dikenali!",
 			">> ERROR! Pause World dulu sebelum melakukan Single-step Execution!",
-			">> ERROR! Keypress tidak dikenali!"
+			">> ERROR! Keypress tidak dikenali!",
+			">> ERROR! Masukan harus berupa bilangan bulat!"
 		};      /**< pesan kesalahan */
 };
 
