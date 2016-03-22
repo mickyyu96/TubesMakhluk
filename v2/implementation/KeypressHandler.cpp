@@ -48,6 +48,10 @@ void KeypressHandler::doAction()
                         Screen::getScreenInstance()->PrintWorldMap();
                         MakhlukLive::getInstance()->MakhlukEat();
                     }
+                    else if(lastKeypress == 'c')
+                    {
+                        SnapshotCapturer::getCapturerInstance()->captureSnapshot();
+                    }
                 }
             }while(lastKeypress != 'w');
 			break;

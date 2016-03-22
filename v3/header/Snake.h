@@ -56,7 +56,7 @@ class Snake : public Hewan
 
 	private :
 		static const char SNAKE_ID = 'U';       /**< ID Snake*/
-		static const int SNAKE_MAXAGE = 150;    /**< Umur Maksimal Snake*/
+		static const int SNAKE_MAXAGE = 100;    /**< Umur Maksimal Snake*/
 		static const int SNAKE_BASEPOWER = 5;   /**< Power Snake*/
 		static const int SNAKE_DELTAT = 500;    /**< DeltaT Snake*/
 };

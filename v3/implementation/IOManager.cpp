@@ -42,8 +42,9 @@ void IOManager::PrintWorldMap()
 			Point pos1 = _LMakhluk->getFirst()->getInfo()->getPosition();
 			map->setInfo(ID1, pos1.getX(), pos1.getY());
 		}
+		_LMakhluk->ListAgeIncrement();
 	}
-    _LMakhluk->ListAgeIncrement();
+
 	PrintMatrix(*map);
 }
 
