@@ -3,7 +3,7 @@
 
 #include "Hewan.h"
 
-/** \class 	    Turtle
+/** \class 	    Snake
  *  \brief 	    Kelas Turunan dari Makhluk berupa Snake
  *  \details 	Kelas Snake merupakan kelas yang berfungsi untuk merepresentasikan objek Snake
  *	\author 	Elvina R. K. Situmorang
