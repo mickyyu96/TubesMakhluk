@@ -17,7 +17,7 @@ Snake::Snake(const Point& P): Hewan(SNAKE_ID, SNAKE_MAXAGE)
 
 void Snake::GetToFood()
 {
-    if (Hewan::isMakhlukinList('S')|| Hewan::isMakhlukinList('W') || Hewan::isMakhlukinList('P')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T'))
+    if (Hewan::isMakhlukinList('S')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T'))
     {
         Makhluk * Food = FindFood();
         Point PSnake = getPosition();

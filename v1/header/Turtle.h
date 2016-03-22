@@ -22,7 +22,7 @@ class Turtle : public Hewan
 
     private :
         static const char TURTLE_ID = 'T';      /**< ID Turtle*/
-        static const int TURTLE_MAXAGE = 80;    /**< Umur maksimal Turtle*/
+        static const int TURTLE_MAXAGE = 240;    /**< Umur maksimal Turtle*/
         static const int TURTLE_BASEPOWER = 2;  /**< Power Turtle*/
 };
 

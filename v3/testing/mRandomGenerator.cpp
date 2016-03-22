@@ -23,7 +23,6 @@ int main ()
         randNum = RandomGenerator::getInstance() -> getNextIntBetween(-3, 3);
         cout << "Random Number (-3 ,3) : " << randNum << endl;
     }
-    cout << endl;
 
     return 0;
 }

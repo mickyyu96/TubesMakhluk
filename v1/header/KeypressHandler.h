@@ -11,7 +11,7 @@
  *  \brief		Handler untuk masukan dari user berupa keypress
  *  \details	Kelas KeypressHandler merupakan kelas yang berfungsi untuk menangani keypress
 				yang dimasukkan oleh user
- *	\author		Robert Sebastian Herlim
+ *	\author		Atika Azzahra Akbar, Micky Yudi Utama
  *	\date		Maret 2016
  */
 

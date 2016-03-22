@@ -23,7 +23,7 @@ class PolarBear : public Hewan
 
 	private :
 		static const char POLARBEAR_ID = 'P';       /**< ID PolarBear */
-		static const int POLARBEAR_MAXAGE = 80;     /**< Umur maksimal PolarBear */
+		static const int POLARBEAR_MAXAGE = 250;    /**< Umur maksimal PolarBear */
 		static const int POLARBEAR_BASEPOWER = 8;   /**< Power PolarBear */
 };
 

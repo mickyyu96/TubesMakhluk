@@ -14,7 +14,7 @@ class LMakhluk;
 *	\details	Kelas World merepresentasikan alam semesta yang terdiri dari
 *				sebuah "ruang" (space) fiktif yang memiliki dimensi panjang dan lebar
 *				dan sekumpulan makhluk-makhluk (objects) yang bisa bergerak secara independen.
-*	\author		Robert Sebastian Herlim
+*	\author		Atika Azzahra Akbar, Elvina R. K. Situmorang
 *	\date		Maret 2016
 */
 

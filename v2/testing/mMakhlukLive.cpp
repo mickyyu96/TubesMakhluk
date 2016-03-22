@@ -1,4 +1,4 @@
-// mWorld.cpp
+// mMakhlukLive.cpp
 
 #include "../header/World.h"
 #include "../header/MakhlukLive.h"
@@ -16,16 +16,9 @@ using namespace std;
 
 int main()
 {
-	cout << "Masukan sebuah string yang  berisi ID (UPPERCASE) makhluk-makhluk yang ingin dimunculkan pada dunia! " << endl;
-	cout << "Pilihan : P = PolarBear, G = Tumbuhan, R = Rabbit, T = Turtle, S = Sheep, W = Wolf" << endl;
-	cout << "String input = ";
-	string input;
-	cin >> input;
+	string input = "PGRTSWU";
 	WorldBuilder::getBuilderInstance()->setStrMakhluk(input);
 	WorldBuilder::getBuilderInstance()->buildWorldObjects();
-
-	cout << "Semua makhluk sudah berhasil ditambahkan, dan akan ditampilkan makhluk2 yang sudah hidup" << endl;
-	system("PAUSE");
 
 	do
     {
@@ -57,3 +50,4 @@ int main()
 	delete World::getWorldInstance();
 	return 0;
 }
+
