@@ -39,7 +39,7 @@ void Turtle::Race()
             }
             else
             {
-                RabbitCom = true;
+                RabbitCome = true;
                 setIsChallange(0);
             }
         }
