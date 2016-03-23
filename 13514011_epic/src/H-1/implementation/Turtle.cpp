@@ -24,15 +24,23 @@ void Turtle::Race()
     {
         while (!RabbitCome)
         {
-            PRabbit = Hewan::FindMakhluk('R')->getPosition();
-            if (PRabbit.getX() == 5 && PRabbit.getY()== 1)
+            if (Hewan::isMakhlukinList('R'))
             {
-                RabbitCome = true;
-                setIsChallange(0);
+                PRabbit = Hewan::FindMakhluk('R')->getPosition();
+                if (PRabbit.getX() == 5 && PRabbit.getY()== 1)
+                {
+                    RabbitCome = true;
+                    setIsChallange(0);
+                }
+                else
+                {
+                    Wandering();
+                }
             }
             else
             {
-                Wandering();
+                RabbitCom = true;
+                setIsChallange(0);
             }
         }
         Hewan::getToPoint(Point(5, 1));
