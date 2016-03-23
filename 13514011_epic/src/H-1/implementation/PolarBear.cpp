@@ -22,14 +22,17 @@ void PolarBear::GetToFood()
     if (Hewan::isMakhlukinList('S')|| Hewan::isMakhlukinList('W')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T')||Hewan::isMakhlukinList('U'))
     {
         Makhluk * Food = FindFood();
-        Point PPolarBear = getPosition();
-        Point PFood = Food->getPosition();
-        while (Point::getDistance(PPolarBear, PFood)<10 && Food->isAlive())
+        if(Food != NULL)
         {
-            Hewan::moveTowardPoint(Food->getPosition());
-            PPolarBear = getPosition();
-            if (Food->getPosition().getX()==getPosition().getX() && Food->getPosition().getY()== getPosition().getY()) {Food->Kill(); break;}
-            else{PFood = Food->getPosition();}
+        	Point PPolarBear = getPosition();
+	        Point PFood = Food->getPosition();
+	        while (Point::getDistance(PPolarBear, PFood)<10 && Food->isAlive())
+	        {
+	            Hewan::moveTowardPoint(Food->getPosition());
+	            PPolarBear = getPosition();
+	            if (Food->getPosition().getX()==getPosition().getX() && Food->getPosition().getY()== getPosition().getY()) {Food->Kill(); break;}
+	            else{PFood = Food->getPosition();}
+	        }
         }
     }
 }

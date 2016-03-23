@@ -53,8 +53,11 @@ void Turtle::GetToFood()
     if (Hewan::isMakhlukinList('G'))
     {
         Makhluk *Food = FindFood();
-        Hewan::getToPoint(Food->getPosition());
-        Food->Kill();
+        if(Food != NULL)
+        {
+        	Hewan::getToPoint(Food->getPosition());
+        	Food->Kill();
+        }
     }
 }
 

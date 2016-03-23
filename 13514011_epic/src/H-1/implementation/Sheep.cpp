@@ -20,8 +20,12 @@ void Sheep::GetToFood()
 {
     if (Hewan::isMakhlukinList('G'))
     {
-        Hewan::getToPoint(Hewan::FindFood()->getPosition());
-        Hewan::FindFood()->Kill();
+    	Makhluk * Food = Hewan::FindFood();
+    	if(Food != NULL)
+    	{
+	        Hewan::getToPoint(Food->getPosition());
+	        Food->Kill();
+	    }
     }
 }
 

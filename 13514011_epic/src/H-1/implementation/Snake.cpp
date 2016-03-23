@@ -20,14 +20,17 @@ void Snake::GetToFood()
     if (Hewan::isMakhlukinList('S')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T'))
     {
         Makhluk * Food = FindFood();
-        Point PSnake = getPosition();
-        Point PFood = Food->getPosition();
-        while (Point::getDistance(PSnake, PFood)<10 && Food->isAlive())
+        if(Food != NULL)
         {
-            Hewan::moveTowardPoint(Food->getPosition());
-            PSnake = getPosition();
-            if (Food->getPosition().getX()==getPosition().getX() && Food->getPosition().getY()== getPosition().getY()) {Food->Kill(); break;}
-            else{PFood = Food->getPosition();}
+        	Point PSnake = getPosition();
+	        Point PFood = Food->getPosition();
+	        while (Point::getDistance(PSnake, PFood)<10 && Food->isAlive())
+	        {
+	            Hewan::moveTowardPoint(Food->getPosition());
+	            PSnake = getPosition();
+	            if (Food->getPosition().getX()==getPosition().getX() && Food->getPosition().getY()== getPosition().getY()) {Food->Kill(); break;}
+	            else{PFood = Food->getPosition();}
+	        }
         }
     }
 }

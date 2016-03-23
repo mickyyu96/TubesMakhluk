@@ -22,14 +22,17 @@ void Wolf::GetToFood()
     if (Hewan::isMakhlukinList('S')||Hewan::isMakhlukinList('R')||Hewan::isMakhlukinList('T')||Hewan::isMakhlukinList('U'))
     {
         Makhluk * Food = FindFood();
-        Point PWolf = getPosition();
-        Point PFood = Food->getPosition();
-        while (Point::getDistance(PWolf, PFood)<10 && Food->isAlive())
+        if(Food != NULL)
         {
-            Hewan::moveTowardPoint(Food->getPosition());
-            PWolf = getPosition();
-            if (Food->getPosition().getX()==getPosition().getX() && Food->getPosition().getY()== getPosition().getY()) {Food->Kill(); break;}
-            else{PFood = Food->getPosition();}
+        	Point PWolf = getPosition();
+	        Point PFood = Food->getPosition();
+	        while (Point::getDistance(PWolf, PFood)<10 && Food->isAlive())
+	        {
+	            Hewan::moveTowardPoint(Food->getPosition());
+	            PWolf = getPosition();
+	            if (Food->getPosition().getX()==getPosition().getX() && Food->getPosition().getY()== getPosition().getY()) {Food->Kill(); break;}
+	            else{PFood = Food->getPosition();}
+	        }
         }
     }
 }

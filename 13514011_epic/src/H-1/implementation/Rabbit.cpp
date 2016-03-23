@@ -20,8 +20,11 @@ void Rabbit::GetToFood()
     if (Hewan::isMakhlukinList('G'))
     {
         Makhluk *Food = FindFood();
-        Hewan::getToPoint(Food->getPosition());
-        Food->Kill();
+        if(Food != NULL)
+        {
+	        Hewan::getToPoint(Food->getPosition());
+	        Food->Kill();
+	    }
     }
 }
 
@@ -93,25 +96,28 @@ void Rabbit::Race()
         {
             bool TurtleCome = false;
             Makhluk *_Turtle = FindMakhluk('T');
-            Point PTurtle;
-
-            static_cast<Turtle*>(_Turtle)->setIsChallange(1);
-            Hewan::getToPoint(Point(5, 1));
-            PTurtle = _Turtle->getPosition();
-
-            if ((PTurtle.getX() == 5) && (PTurtle.getY()== 1))
+            if(_Turtle != NULL)
             {
-                TurtleCome = true;
+            	Point PTurtle;
+
+	            static_cast<Turtle*>(_Turtle)->setIsChallange(1);
+	            Hewan::getToPoint(Point(5, 1));
+	            PTurtle = _Turtle->getPosition();
+	
+	            if ((PTurtle.getX() == 5) && (PTurtle.getY()== 1))
+	            {
+	                TurtleCome = true;
+	            }
+	            while (!TurtleCome && _Turtle->isAlive())
+	            {
+	                PTurtle = _Turtle->getPosition();
+	                if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(_Turtle)->getisChallange())
+	                {
+	                    TurtleCome = true;
+	                }
+	            }
+	            Hewan::getToPoint(Point(6, World::getWorldInstance()->getNKol()-2));
             }
-            while (!TurtleCome && _Turtle->isAlive())
-            {
-                PTurtle = _Turtle->getPosition();
-                if (PTurtle.getX() == 5 && PTurtle.getY()== 1  && !static_cast<Turtle*>(_Turtle)->getisChallange())
-                {
-                    TurtleCome = true;
-                }
-            }
-            Hewan::getToPoint(Point(6, World::getWorldInstance()->getNKol()-2));
         }
     }
 }
