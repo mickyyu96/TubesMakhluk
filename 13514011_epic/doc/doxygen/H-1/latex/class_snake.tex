@@ -1,0 +1,154 @@
+\hypertarget{class_snake}{}\section{Snake Class Reference}
+\label{class_snake}\index{Snake@{Snake}}
+
+
+Kelas Turunan dari \hyperlink{class_makhluk}{Makhluk} berupa \hyperlink{class_snake}{Snake}.  
+
+
+
+
+{\ttfamily \#include $<$Snake.\+h$>$}
+
+Inheritance diagram for Snake\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_snake}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_snake_a1c1bfb186b5b74d5b8b2bee282e7273e}{Snake} (const \hyperlink{class_point}{Point} \&)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_snake_a16c276bca5b03aed618976aeb79d0bdb}{get\+DeltaT} ()
+\begin{DoxyCompactList}\small\item\em Getter DeltaT \hyperlink{class_snake}{Snake}. \end{DoxyCompactList}\item 
+int \hyperlink{class_snake_a511252859c8eb005b8e4cff200973465}{is\+Vegetarian} ()
+\begin{DoxyCompactList}\small\item\em Validasi apakah \hyperlink{class_snake}{Snake} merupakan Vegetarian. \end{DoxyCompactList}\item 
+void \hyperlink{class_snake_a605e8e7245842e44f2882395e28b02fe}{Get\+To\+Food} ()
+\begin{DoxyCompactList}\small\item\em Procedure aksi untuk \hyperlink{class_snake}{Snake} mendapatkan makanan. \end{DoxyCompactList}\item 
+void \hyperlink{class_snake_a3921ed0d6fc728f3e1f920d7d2a67184}{Zig\+Zag} ()
+\begin{DoxyCompactList}\small\item\em Procedure aksi untuk \hyperlink{class_snake}{Snake} berkelana. \end{DoxyCompactList}\item 
+void \hyperlink{class_snake_a2c340a6cb7f298c2ea7dd1be2c7805fc}{Live} ()
+\begin{DoxyCompactList}\small\item\em Procedure aksi utama yang mengatur hidup \hyperlink{class_snake}{Snake} sampai mati. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Kelas Turunan dari \hyperlink{class_makhluk}{Makhluk} berupa \hyperlink{class_snake}{Snake}. 
+
+Kelas \hyperlink{class_snake}{Snake} merupakan kelas yang berfungsi untuk merepresentasikan objek \hyperlink{class_snake}{Snake} \begin{DoxyAuthor}{Author}
+Elvina R. K. Situmorang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Maret 2016 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Snake@{Snake}!Snake@{Snake}}
+\index{Snake@{Snake}!Snake@{Snake}}
+\subsubsection[{\texorpdfstring{Snake(const Point \&)}{Snake(const Point &)}}]{\setlength{\rightskip}{0pt plus 5cm}Snake\+::\+Snake (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{class_snake_a1c1bfb186b5b74d5b8b2bee282e7273e}{}\label{class_snake_a1c1bfb186b5b74d5b8b2bee282e7273e}
+
+
+Constructor. 
+
+Constructor \hyperlink{class_snake}{Snake} yang akan membentuk objek bertipe \hyperlink{class_snake}{Snake} dengan masukan variable reference \hyperlink{class_point}{Point} sebagai posisi awal objek 
+\begin{DoxyParams}{Parameters}
+{\em konstanta} & reference \hyperlink{class_point}{Point} untuk posisi awal objek \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Snake@{Snake}!get\+DeltaT@{get\+DeltaT}}
+\index{get\+DeltaT@{get\+DeltaT}!Snake@{Snake}}
+\subsubsection[{\texorpdfstring{get\+Delta\+T()}{getDeltaT()}}]{\setlength{\rightskip}{0pt plus 5cm}int Snake\+::get\+DeltaT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_snake_a16c276bca5b03aed618976aeb79d0bdb}{}\label{class_snake_a16c276bca5b03aed618976aeb79d0bdb}
+
+
+Getter DeltaT \hyperlink{class_snake}{Snake}. 
+
+Fungsi getter yang akan mengambilkan nilai deltaT dari \hyperlink{class_snake}{Snake} yang merupakan member dari kelas hewan yang diinisialisasi saat ctor \begin{DoxyReturn}{Returns}
+Integer DeltaT \hyperlink{class_snake}{Snake} 
+\end{DoxyReturn}
+\index{Snake@{Snake}!Get\+To\+Food@{Get\+To\+Food}}
+\index{Get\+To\+Food@{Get\+To\+Food}!Snake@{Snake}}
+\subsubsection[{\texorpdfstring{Get\+To\+Food()}{GetToFood()}}]{\setlength{\rightskip}{0pt plus 5cm}void Snake\+::\+Get\+To\+Food (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_snake_a605e8e7245842e44f2882395e28b02fe}{}\label{class_snake_a605e8e7245842e44f2882395e28b02fe}
+
+
+Procedure aksi untuk \hyperlink{class_snake}{Snake} mendapatkan makanan. 
+
+Procedure aksi Get\+To\+Food membuat \hyperlink{class_snake}{Snake} pergi ke point dimana makanannya berasa dan memakannya \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_hewan_ab0478d48070dc3c51cda481f678ae40a}{Hewan}.
+
+\index{Snake@{Snake}!is\+Vegetarian@{is\+Vegetarian}}
+\index{is\+Vegetarian@{is\+Vegetarian}!Snake@{Snake}}
+\subsubsection[{\texorpdfstring{is\+Vegetarian()}{isVegetarian()}}]{\setlength{\rightskip}{0pt plus 5cm}int Snake\+::is\+Vegetarian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_snake_a511252859c8eb005b8e4cff200973465}{}\label{class_snake_a511252859c8eb005b8e4cff200973465}
+
+
+Validasi apakah \hyperlink{class_snake}{Snake} merupakan Vegetarian. 
+
+Validasi akan selalu mengembalikan integer bernilai 0 sebagai validasi bahwa \hyperlink{class_snake}{Snake} merupakan binatang karnivor \begin{DoxyReturn}{Returns}
+Bilangan bulat 0 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_hewan_a90a316426af1d53add7ebf2a23ea9af2}{Hewan}.
+
+\index{Snake@{Snake}!Live@{Live}}
+\index{Live@{Live}!Snake@{Snake}}
+\subsubsection[{\texorpdfstring{Live()}{Live()}}]{\setlength{\rightskip}{0pt plus 5cm}void Snake\+::\+Live (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_snake_a2c340a6cb7f298c2ea7dd1be2c7805fc}{}\label{class_snake_a2c340a6cb7f298c2ea7dd1be2c7805fc}
+
+
+Procedure aksi utama yang mengatur hidup \hyperlink{class_snake}{Snake} sampai mati. 
+
+Procedure aksi utama akan memilih aktivitas kehidupan yang akan dilakukan oleh \hyperlink{class_snake}{Snake} selama hidupnya \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_makhluk_af0cc274cef5058743f6b048a78843bd1}{Makhluk}.
+
+\index{Snake@{Snake}!Zig\+Zag@{Zig\+Zag}}
+\index{Zig\+Zag@{Zig\+Zag}!Snake@{Snake}}
+\subsubsection[{\texorpdfstring{Zig\+Zag()}{ZigZag()}}]{\setlength{\rightskip}{0pt plus 5cm}void Snake\+::\+Zig\+Zag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_snake_a3921ed0d6fc728f3e1f920d7d2a67184}{}\label{class_snake_a3921ed0d6fc728f3e1f920d7d2a67184}
+
+
+Procedure aksi untuk \hyperlink{class_snake}{Snake} berkelana. 
+
+Procedure aksi Zig\+Zag membuat \hyperlink{class_snake}{Snake} bergerak secara zigzag \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/header/Snake.\+h\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/implementation/Snake.\+cpp\end{DoxyCompactItemize}

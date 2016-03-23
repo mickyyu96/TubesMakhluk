@@ -1,0 +1,268 @@
+\hypertarget{class_makhluk}{}\section{Makhluk Class Reference}
+\label{class_makhluk}\index{Makhluk@{Makhluk}}
+
+
+Representasi dari makhluk di alam semesta.  
+
+
+
+
+{\ttfamily \#include $<$Makhluk.\+h$>$}
+
+Inheritance diagram for Makhluk\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_makhluk}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{class_makhluk_ac1c4f42107c702ba928188fa2530c5f3}{get\+ID} () const 
+\begin{DoxyCompactList}\small\item\em Get ID. \end{DoxyCompactList}\item 
+int \hyperlink{class_makhluk_aba388ab8fe2eafcda3495d16b7c9e4b7}{get\+Age} () const 
+\begin{DoxyCompactList}\small\item\em Get Age. \end{DoxyCompactList}\item 
+int \hyperlink{class_makhluk_ae002b2faad22dc950a3f42bd62ea54d9}{get\+Max\+Age} () const 
+\begin{DoxyCompactList}\small\item\em Get Max\+Age. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_makhluk_a451445ffca2c8c3e45800b7096e65239}{get\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Get Position. \end{DoxyCompactList}\item 
+void \hyperlink{class_makhluk_a7abec2f20a8c601ec6042682264a7f64}{set\+Position} (const \hyperlink{class_point}{Point} \&P)
+\begin{DoxyCompactList}\small\item\em Setter Position. \end{DoxyCompactList}\item 
+void \hyperlink{class_makhluk_acc91fe44461c88b854187c7d57f7bb21}{Age\+Increment} ()
+\begin{DoxyCompactList}\small\item\em Prosedur untuk melakukan increment age. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_makhluk_af0cc274cef5058743f6b048a78843bd1}{Live} ()=0
+\begin{DoxyCompactList}\small\item\em Prosedur \char`\"{}\+Hidup\char`\"{}. \end{DoxyCompactList}\item 
+int \hyperlink{class_makhluk_a1677bd235210d490951fcd8a5653160d}{is\+Alive} ()
+\begin{DoxyCompactList}\small\item\em Predikat masih hidup. \end{DoxyCompactList}\item 
+void \hyperlink{class_makhluk_a8031caebf761dbc200430c24726ca339}{Kill} ()
+\begin{DoxyCompactList}\small\item\em Prosedur untuk membunuh makhluk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_makhluk_a46b686a6f1533958650a60e3d7268b99}{Make\+Alive} (\hyperlink{class_makhluk}{Makhluk} $\ast$)
+\begin{DoxyCompactList}\small\item\em Prosedur \char`\"{}\+Buat Hidup\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_makhluk_afd36e7fe75e525a38d5cfc8a1e6b48be}{Makhluk} (char, int)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{class_makhluk_a287dd5d101d81990399f00f4a77a36f5}{ID}
+\item 
+const int \hyperlink{class_makhluk_a50350ef02b62af484c769b8118f8c4ae}{max\+Age}
+\item 
+int \hyperlink{class_makhluk_aacf25b9c59e644e709b730f5239996f6}{age}
+\item 
+int \hyperlink{class_makhluk_aa3eefed357a56f6b86f0080083d91d31}{status}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_makhluk_a920e46e39a404909a292802669bed0c2}{pos}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representasi dari makhluk di alam semesta. 
+
+Kelas \hyperlink{class_makhluk}{Makhluk} merupakan kelas abstrak yang memiliki member-\/member dasar yang akan diturunkan ke kelas lain. \begin{DoxyAuthor}{Author}
+Elvina R. K. Situmorang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Maret 2016 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Makhluk@{Makhluk}!Makhluk@{Makhluk}}
+\index{Makhluk@{Makhluk}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{Makhluk(char, int)}{Makhluk(char, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Makhluk\+::\+Makhluk (
+\begin{DoxyParamCaption}
+\item[{char}]{\+\_\+\+ID, }
+\item[{int}]{\+\_\+max\+Age}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_makhluk_afd36e7fe75e525a38d5cfc8a1e6b48be}{}\label{class_makhluk_afd36e7fe75e525a38d5cfc8a1e6b48be}
+
+
+Constructor. 
+
+Merupakan konstruktor protected yang digunakan untuk melakukan set konstanta ID dan max\+Age 
+
+\subsection{Member Function Documentation}
+\index{Makhluk@{Makhluk}!Age\+Increment@{Age\+Increment}}
+\index{Age\+Increment@{Age\+Increment}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{Age\+Increment()}{AgeIncrement()}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+::\+Age\+Increment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_acc91fe44461c88b854187c7d57f7bb21}{}\label{class_makhluk_acc91fe44461c88b854187c7d57f7bb21}
+
+
+Prosedur untuk melakukan increment age. 
+
+Prosedur untuk melakukan increment age semua makhluk \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!get\+Age@{get\+Age}}
+\index{get\+Age@{get\+Age}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{get\+Age() const }{getAge() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+::get\+Age (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_aba388ab8fe2eafcda3495d16b7c9e4b7}{}\label{class_makhluk_aba388ab8fe2eafcda3495d16b7c9e4b7}
+
+
+Get Age. 
+
+Mengambil usia makhluk sekarang \begin{DoxyReturn}{Returns}
+Sebuah bilangan bulat yang merupakan usia makhluk sekarang 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{get\+I\+D() const }{getID() const }}]{\setlength{\rightskip}{0pt plus 5cm}char Makhluk\+::get\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_ac1c4f42107c702ba928188fa2530c5f3}{}\label{class_makhluk_ac1c4f42107c702ba928188fa2530c5f3}
+
+
+Get ID. 
+
+Mengambil sebuah karakter ID makhluk \begin{DoxyReturn}{Returns}
+Karakter ID makhluk 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!get\+Max\+Age@{get\+Max\+Age}}
+\index{get\+Max\+Age@{get\+Max\+Age}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{get\+Max\+Age() const }{getMaxAge() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+::get\+Max\+Age (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_ae002b2faad22dc950a3f42bd62ea54d9}{}\label{class_makhluk_ae002b2faad22dc950a3f42bd62ea54d9}
+
+
+Get Max\+Age. 
+
+Mengambil usia maksimum makhluk \begin{DoxyReturn}{Returns}
+Sebuah bilangan bulat yang merupakan usia maksimum makhluk 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{get\+Position() const }{getPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Makhluk\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_a451445ffca2c8c3e45800b7096e65239}{}\label{class_makhluk_a451445ffca2c8c3e45800b7096e65239}
+
+
+Get Position. 
+
+Mengambil posisi makhluk sekarang \begin{DoxyReturn}{Returns}
+Sebuah tipe bentukan \hyperlink{class_point}{Point} yang merupakan posisi makhluk 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!is\+Alive@{is\+Alive}}
+\index{is\+Alive@{is\+Alive}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{is\+Alive()}{isAlive()}}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+::is\+Alive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_a1677bd235210d490951fcd8a5653160d}{}\label{class_makhluk_a1677bd235210d490951fcd8a5653160d}
+
+
+Predikat masih hidup. 
+
+Mengambil status ke\char`\"{}hidup\char`\"{}an makhluk \begin{DoxyReturn}{Returns}
+True apabila makhluk masih hidup 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!Kill@{Kill}}
+\index{Kill@{Kill}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{Kill()}{Kill()}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+::\+Kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_a8031caebf761dbc200430c24726ca339}{}\label{class_makhluk_a8031caebf761dbc200430c24726ca339}
+
+
+Prosedur untuk membunuh makhluk. 
+
+Prosedur yang digunakan untuk membunuh makhluk dari alam semesta, yaitu apabila dimangsa atau terlalu tua \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!Live@{Live}}
+\index{Live@{Live}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{Live()=0}{Live()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Makhluk\+::\+Live (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_makhluk_af0cc274cef5058743f6b048a78843bd1}{}\label{class_makhluk_af0cc274cef5058743f6b048a78843bd1}
+
+
+Prosedur \char`\"{}\+Hidup\char`\"{}. 
+
+Prosedur pure virtual yang akan dioverload dengan aksi-\/aksi \char`\"{}kehidupan\char`\"{} tiap makhluk \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_turtle_abac9610f1eb0b0894b91cd86173bc257}{Turtle}, \hyperlink{class_polar_bear_aecb4f132a925275d4e730b58fc79158b}{Polar\+Bear}, \hyperlink{class_rabbit_a6152392444f1d705cf6c0b1be36dca7a}{Rabbit}, \hyperlink{class_snake_a2c340a6cb7f298c2ea7dd1be2c7805fc}{Snake}, \hyperlink{class_wolf_a5902349f953664a4d53cc3ddea4b19f3}{Wolf}, \hyperlink{class_sheep_a3a808c6656a9d932f5ec4043c301727b}{Sheep}, and \hyperlink{class_tumbuhan_a18c42e3e111ea943eba9b4dee00ee96b}{Tumbuhan}.
+
+\index{Makhluk@{Makhluk}!Make\+Alive@{Make\+Alive}}
+\index{Make\+Alive@{Make\+Alive}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{Make\+Alive(\+Makhluk $\ast$)}{MakeAlive(Makhluk *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+::\+Make\+Alive (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk} $\ast$}]{M}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_makhluk_a46b686a6f1533958650a60e3d7268b99}{}\label{class_makhluk_a46b686a6f1533958650a60e3d7268b99}
+
+
+Prosedur \char`\"{}\+Buat Hidup\char`\"{}. 
+
+Prosedur static yang dimiliki kelas \hyperlink{class_makhluk}{Makhluk}, untuk menghidupkan makhluk yang memanggil prosedur Live dengan memanfaatkan gejala polymorphism 
+\begin{DoxyParams}{Parameters}
+{\em M} & Makhluk$\ast$ , pointer-\/to-\/\+Makhluk yang akan dihidupkan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Makhluk@{Makhluk}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{set\+Position(const Point \&\+P)}{setPosition(const Point &P)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{P}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_makhluk_a7abec2f20a8c601ec6042682264a7f64}{}\label{class_makhluk_a7abec2f20a8c601ec6042682264a7f64}
+
+
+Setter Position. 
+
+Melakukan assignment terhadap posisi makhluk dengan posisi baru 
+\begin{DoxyParams}{Parameters}
+{\em P} & const \hyperlink{class_point}{Point}\& , sebuah posisi baru makhluk \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Makhluk@{Makhluk}!age@{age}}
+\index{age@{age}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{age}{age}}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+::age\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_makhluk_aacf25b9c59e644e709b730f5239996f6}{}\label{class_makhluk_aacf25b9c59e644e709b730f5239996f6}
+usia makhluk \index{Makhluk@{Makhluk}!ID@{ID}}
+\index{ID@{ID}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{ID}{ID}}]{\setlength{\rightskip}{0pt plus 5cm}const char Makhluk\+::\+ID\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_makhluk_a287dd5d101d81990399f00f4a77a36f5}{}\label{class_makhluk_a287dd5d101d81990399f00f4a77a36f5}
+identitas makhluk yang akan ditampilkan ke layar \index{Makhluk@{Makhluk}!max\+Age@{max\+Age}}
+\index{max\+Age@{max\+Age}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{max\+Age}{maxAge}}]{\setlength{\rightskip}{0pt plus 5cm}const int Makhluk\+::max\+Age\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_makhluk_a50350ef02b62af484c769b8118f8c4ae}{}\label{class_makhluk_a50350ef02b62af484c769b8118f8c4ae}
+usia maksimum makhluk \index{Makhluk@{Makhluk}!pos@{pos}}
+\index{pos@{pos}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{pos}{pos}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Makhluk\+::pos\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_makhluk_a920e46e39a404909a292802669bed0c2}{}\label{class_makhluk_a920e46e39a404909a292802669bed0c2}
+posisi makhluk \index{Makhluk@{Makhluk}!status@{status}}
+\index{status@{status}!Makhluk@{Makhluk}}
+\subsubsection[{\texorpdfstring{status}{status}}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+::status\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_makhluk_aa3eefed357a56f6b86f0080083d91d31}{}\label{class_makhluk_aa3eefed357a56f6b86f0080083d91d31}
+status ke\char`\"{}hidup\char`\"{}an makhluk 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/header/Makhluk.\+h\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/implementation/Makhluk.\+cpp\end{DoxyCompactItemize}

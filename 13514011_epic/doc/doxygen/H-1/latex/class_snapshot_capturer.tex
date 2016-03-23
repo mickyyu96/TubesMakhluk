@@ -1,0 +1,107 @@
+\hypertarget{class_snapshot_capturer}{}\section{Snapshot\+Capturer Class Reference}
+\label{class_snapshot_capturer}\index{Snapshot\+Capturer@{Snapshot\+Capturer}}
+
+
+Kelas untuk mengambil snapshot state dunia.  
+
+
+
+
+{\ttfamily \#include $<$Snapshot\+Capturer.\+h$>$}
+
+Inheritance diagram for Snapshot\+Capturer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_snapshot_capturer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_snapshot_capturer_a905be74885968e52e8df43f138260ede}{save\+Old\+Buf} ()
+\begin{DoxyCompactList}\small\item\em Menyimpan buffer cout. \end{DoxyCompactList}\item 
+void \hyperlink{class_snapshot_capturer_aae816fa4d192adc4eae98fc0fda46db1}{reset\+Cout\+Buf} ()
+\begin{DoxyCompactList}\small\item\em Reset buffer cout ke standard output. \end{DoxyCompactList}\item 
+void \hyperlink{class_snapshot_capturer_a17c1677e94e0cb1e5a17febbb146c4bc}{capture\+Snapshot} ()
+\begin{DoxyCompactList}\small\item\em Mengambil sebuah snapshot state dunia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer} $\ast$ \hyperlink{class_snapshot_capturer_a7c0367a7b01b5fdebefaa0d83520ffbd}{get\+Capturer\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Get Singleton Instance dari kelas \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kelas untuk mengambil snapshot state dunia. 
+
+Kelas \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer} bertanggung jawab dalam pengambilan snapshot state dunia dan menyimpan hasil pengambilan snapshot ke sebuah file \begin{DoxyAuthor}{Author}
+Robert Sebastian Herlim 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Maret 2016 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\index{Snapshot\+Capturer@{Snapshot\+Capturer}!capture\+Snapshot@{capture\+Snapshot}}
+\index{capture\+Snapshot@{capture\+Snapshot}!Snapshot\+Capturer@{Snapshot\+Capturer}}
+\subsubsection[{\texorpdfstring{capture\+Snapshot()}{captureSnapshot()}}]{\setlength{\rightskip}{0pt plus 5cm}void Snapshot\+Capturer\+::capture\+Snapshot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_snapshot_capturer_a17c1677e94e0cb1e5a17febbb146c4bc}{}\label{class_snapshot_capturer_a17c1677e94e0cb1e5a17febbb146c4bc}
+
+
+Mengambil sebuah snapshot state dunia. 
+
+Mengambil snapshot state dunia pada saat tertentu dan menuliskan hasil snapshot ke directory file yang tersimpan dalam instance \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer} \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Snapshot\+Capturer@{Snapshot\+Capturer}!get\+Capturer\+Instance@{get\+Capturer\+Instance}}
+\index{get\+Capturer\+Instance@{get\+Capturer\+Instance}!Snapshot\+Capturer@{Snapshot\+Capturer}}
+\subsubsection[{\texorpdfstring{get\+Capturer\+Instance()}{getCapturerInstance()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Snapshot\+Capturer}$\ast$ Snapshot\+Capturer\+::get\+Capturer\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_snapshot_capturer_a7c0367a7b01b5fdebefaa0d83520ffbd}{}\label{class_snapshot_capturer_a7c0367a7b01b5fdebefaa0d83520ffbd}
+
+
+Get Singleton Instance dari kelas \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer}. 
+
+Mengembalikan pointer dari objek singleton pada kelas \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer} \begin{DoxyReturn}{Returns}
+pointer yang menunjuk ke singleton instance pada kelas \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer} 
+\end{DoxyReturn}
+\index{Snapshot\+Capturer@{Snapshot\+Capturer}!reset\+Cout\+Buf@{reset\+Cout\+Buf}}
+\index{reset\+Cout\+Buf@{reset\+Cout\+Buf}!Snapshot\+Capturer@{Snapshot\+Capturer}}
+\subsubsection[{\texorpdfstring{reset\+Cout\+Buf()}{resetCoutBuf()}}]{\setlength{\rightskip}{0pt plus 5cm}void Snapshot\+Capturer\+::reset\+Cout\+Buf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_snapshot_capturer_aae816fa4d192adc4eae98fc0fda46db1}{}\label{class_snapshot_capturer_aae816fa4d192adc4eae98fc0fda46db1}
+
+
+Reset buffer cout ke standard output. 
+
+Mengembalikan buffer cout ke standard output \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Snapshot\+Capturer@{Snapshot\+Capturer}!save\+Old\+Buf@{save\+Old\+Buf}}
+\index{save\+Old\+Buf@{save\+Old\+Buf}!Snapshot\+Capturer@{Snapshot\+Capturer}}
+\subsubsection[{\texorpdfstring{save\+Old\+Buf()}{saveOldBuf()}}]{\setlength{\rightskip}{0pt plus 5cm}void Snapshot\+Capturer\+::save\+Old\+Buf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_snapshot_capturer_a905be74885968e52e8df43f138260ede}{}\label{class_snapshot_capturer_a905be74885968e52e8df43f138260ede}
+
+
+Menyimpan buffer cout. 
+
+Menyimpan buffer cout sekarang ke dalam coutbuf yang tersimpan dalam instance \hyperlink{class_snapshot_capturer}{Snapshot\+Capturer} \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/header/Snapshot\+Capturer.\+h\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/implementation/Snapshot\+Capturer.\+cpp\end{DoxyCompactItemize}

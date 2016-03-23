@@ -1,0 +1,255 @@
+\hypertarget{class_world}{}\section{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+Representasi dari alam semesta.  
+
+
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_l_makhluk}{L\+Makhluk} $\ast$ \hyperlink{class_world_af9625fa1995e0c3bbdb3e6e7d48effa2}{get\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Get List of \hyperlink{class_makhluk}{Makhluk}. \end{DoxyCompactList}\item 
+int \hyperlink{class_world_ab77dab54a1e3e7b5657b39f05cb0d2a5}{get\+N\+Brs} ()
+\begin{DoxyCompactList}\small\item\em Get jumlah baris. \end{DoxyCompactList}\item 
+int \hyperlink{class_world_a2d8ed3b33860324182e773fde59832b2}{get\+N\+Kol} ()
+\begin{DoxyCompactList}\small\item\em Get jumlah kolom. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_a71dc3d61ccdf8c0a49fb4f719fe16851}{set\+N\+Brs} (int \+\_\+\+N\+Brs)
+\begin{DoxyCompactList}\small\item\em Set jumlah baris. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_ae0ee86a162756e7075675c58fd1ae363}{set\+N\+Kol} (int \+\_\+\+N\+Kol)
+\begin{DoxyCompactList}\small\item\em Set jumlah kolom. \end{DoxyCompactList}\item 
+int \hyperlink{class_world_acd627d79b89688184df6e9601ffe1532}{is\+Ended} ()
+\begin{DoxyCompactList}\small\item\em Get status is\+Ended. \end{DoxyCompactList}\item 
+int \hyperlink{class_world_ad06b05aabbcbe0c93106793bdb5fcc2c}{is\+Paused} ()
+\begin{DoxyCompactList}\small\item\em Get status is\+Paused. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_a30a87c6071aef420fc2e9df913a7452d}{end\+World} ()
+\begin{DoxyCompactList}\small\item\em Mengakhiri aktivitas dunia. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_a1df17b17270667dc2ff9ff52f6ade6c0}{change\+Pause\+State} ()
+\begin{DoxyCompactList}\small\item\em Mengubah status berjalannya aktivitas dunia. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_a63197059e4c4f18349aec3c1daa66a01}{lock\+World} ()
+\begin{DoxyCompactList}\small\item\em Memberhentikan aktivitas dunia. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_a08481fdff65e290c44386676ce993dce}{unlock\+World} ()
+\begin{DoxyCompactList}\small\item\em Melanjutkan aktivitas dunia. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_ad1de870945ddd37c62bb6bd32134d725}{single\+Step\+Execution} ()
+\begin{DoxyCompactList}\small\item\em Mengeksekusi sebuah langkah pergerakan aktivitas dunia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_world}{World} $\ast$ \hyperlink{class_world_a7a8d0b3f76f0ecde36ffe28f9b08f30f}{get\+World\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Get Singleton Instance dari kelas \hyperlink{class_world}{World}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representasi dari alam semesta. 
+
+Kelas \hyperlink{class_world}{World} merepresentasikan alam semesta yang terdiri dari sebuah \char`\"{}ruang\char`\"{} (space) fiktif yang memiliki dimensi panjang dan lebar dan sekumpulan makhluk-\/makhluk (objects) yang bisa bergerak secara independen. \begin{DoxyAuthor}{Author}
+Atika Azzahra Akbar, Elvina R. K. Situmorang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Maret 2016 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\index{World@{World}!change\+Pause\+State@{change\+Pause\+State}}
+\index{change\+Pause\+State@{change\+Pause\+State}!World@{World}}
+\subsubsection[{\texorpdfstring{change\+Pause\+State()}{changePauseState()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::change\+Pause\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_world_a1df17b17270667dc2ff9ff52f6ade6c0}{}\label{class_world_a1df17b17270667dc2ff9ff52f6ade6c0}
+
+
+Mengubah status berjalannya aktivitas dunia. 
+
+Mengubah status is\+Paused menjadi kebalikannya, yang mengakibatkan apabila dunia sedang bergerak akan berhenti dan apabila dunia sedang berhenti akan bergerak kembali \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{World@{World}!end\+World@{end\+World}}
+\index{end\+World@{end\+World}!World@{World}}
+\subsubsection[{\texorpdfstring{end\+World()}{endWorld()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::end\+World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_a30a87c6071aef420fc2e9df913a7452d}{}\label{class_world_a30a87c6071aef420fc2e9df913a7452d}
+
+
+Mengakhiri aktivitas dunia. 
+
+Mengubah status is\+Ended menjadi T\+R\+UE yang menandakan dunia sudah berakhir \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{World@{World}!get\+N\+Brs@{get\+N\+Brs}}
+\index{get\+N\+Brs@{get\+N\+Brs}!World@{World}}
+\subsubsection[{\texorpdfstring{get\+N\+Brs()}{getNBrs()}}]{\setlength{\rightskip}{0pt plus 5cm}int World\+::get\+N\+Brs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_ab77dab54a1e3e7b5657b39f05cb0d2a5}{}\label{class_world_ab77dab54a1e3e7b5657b39f05cb0d2a5}
+
+
+Get jumlah baris. 
+
+Mengembalikan jumlah baris yang merupakan dimensi panjang dari ukuran ruang dunia \begin{DoxyReturn}{Returns}
+Bilangan bulat yang menyatakan dimensi panjang dari ukuran ruang dunia 
+\end{DoxyReturn}
+\index{World@{World}!get\+N\+Kol@{get\+N\+Kol}}
+\index{get\+N\+Kol@{get\+N\+Kol}!World@{World}}
+\subsubsection[{\texorpdfstring{get\+N\+Kol()}{getNKol()}}]{\setlength{\rightskip}{0pt plus 5cm}int World\+::get\+N\+Kol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_a2d8ed3b33860324182e773fde59832b2}{}\label{class_world_a2d8ed3b33860324182e773fde59832b2}
+
+
+Get jumlah kolom. 
+
+Mengembalikan jumlah kolom yang merupakan dimensi lebar dari ukuran ruang dunia \begin{DoxyReturn}{Returns}
+Bilangan bulat yang menyatakan dimensi lebar dari ukuran ruang dunia 
+\end{DoxyReturn}
+\index{World@{World}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!World@{World}}
+\subsubsection[{\texorpdfstring{get\+Objects()}{getObjects()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+Makhluk}$\ast$ World\+::get\+Objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_af9625fa1995e0c3bbdb3e6e7d48effa2}{}\label{class_world_af9625fa1995e0c3bbdb3e6e7d48effa2}
+
+
+Get List of \hyperlink{class_makhluk}{Makhluk}. 
+
+Mengambil list of makhluk-\/makhluk yang hidup di dalam dunia tersebut \begin{DoxyReturn}{Returns}
+List yang berisi pointer ke makhluk-\/makhluk yang ada dalam dunia 
+\end{DoxyReturn}
+\index{World@{World}!get\+World\+Instance@{get\+World\+Instance}}
+\index{get\+World\+Instance@{get\+World\+Instance}!World@{World}}
+\subsubsection[{\texorpdfstring{get\+World\+Instance()}{getWorldInstance()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf World}$\ast$ World\+::get\+World\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_world_a7a8d0b3f76f0ecde36ffe28f9b08f30f}{}\label{class_world_a7a8d0b3f76f0ecde36ffe28f9b08f30f}
+
+
+Get Singleton Instance dari kelas \hyperlink{class_world}{World}. 
+
+Mengembalikan pointer dari objek singleton pada kelas \hyperlink{class_world}{World} \begin{DoxyReturn}{Returns}
+Pointer yang menunjuk ke singleton instance pada kelas \hyperlink{class_world}{World} 
+\end{DoxyReturn}
+\index{World@{World}!is\+Ended@{is\+Ended}}
+\index{is\+Ended@{is\+Ended}!World@{World}}
+\subsubsection[{\texorpdfstring{is\+Ended()}{isEnded()}}]{\setlength{\rightskip}{0pt plus 5cm}int World\+::is\+Ended (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_acd627d79b89688184df6e9601ffe1532}{}\label{class_world_acd627d79b89688184df6e9601ffe1532}
+
+
+Get status is\+Ended. 
+
+Predikat untuk menyatakan apakah aktivitas dunia sudah berakhir \begin{DoxyReturn}{Returns}
+T\+R\+UE apabila aktivitas dunia sudah berakhir 
+\end{DoxyReturn}
+\index{World@{World}!is\+Paused@{is\+Paused}}
+\index{is\+Paused@{is\+Paused}!World@{World}}
+\subsubsection[{\texorpdfstring{is\+Paused()}{isPaused()}}]{\setlength{\rightskip}{0pt plus 5cm}int World\+::is\+Paused (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_ad06b05aabbcbe0c93106793bdb5fcc2c}{}\label{class_world_ad06b05aabbcbe0c93106793bdb5fcc2c}
+
+
+Get status is\+Paused. 
+
+Predikat untuk menyatakan apakah aktivitas dunia sedang diberhentikan \begin{DoxyReturn}{Returns}
+T\+R\+UE apabila aktivitas dunia sudah berakhir 
+\end{DoxyReturn}
+\index{World@{World}!lock\+World@{lock\+World}}
+\index{lock\+World@{lock\+World}!World@{World}}
+\subsubsection[{\texorpdfstring{lock\+World()}{lockWorld()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::lock\+World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_world_a63197059e4c4f18349aec3c1daa66a01}{}\label{class_world_a63197059e4c4f18349aec3c1daa66a01}
+
+
+Memberhentikan aktivitas dunia. 
+
+Mengubah status is\+Paused menjadi T\+R\+UE, dan memberhentikan semua aktivitas dunia \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{World@{World}!set\+N\+Brs@{set\+N\+Brs}}
+\index{set\+N\+Brs@{set\+N\+Brs}!World@{World}}
+\subsubsection[{\texorpdfstring{set\+N\+Brs(int \+\_\+\+N\+Brs)}{setNBrs(int _NBrs)}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::set\+N\+Brs (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+\+N\+Brs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_a71dc3d61ccdf8c0a49fb4f719fe16851}{}\label{class_world_a71dc3d61ccdf8c0a49fb4f719fe16851}
+
+
+Set jumlah baris. 
+
+Melakukan assignment jumlah baris yang merupakan dimensi panjang dari ukuran ruang dunia 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+N\+Brs} & int Jumlah baris baru yang akan di-\/assign \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{World@{World}!set\+N\+Kol@{set\+N\+Kol}}
+\index{set\+N\+Kol@{set\+N\+Kol}!World@{World}}
+\subsubsection[{\texorpdfstring{set\+N\+Kol(int \+\_\+\+N\+Kol)}{setNKol(int _NKol)}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::set\+N\+Kol (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+\+N\+Kol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_world_ae0ee86a162756e7075675c58fd1ae363}{}\label{class_world_ae0ee86a162756e7075675c58fd1ae363}
+
+
+Set jumlah kolom. 
+
+Mengembalikan jumlah kolom yang merupakan dimensi lebar dari ukuran ruang dunia 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+N\+Kol} & int Jumlah kolom baru yang akan di-\/assign \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{World@{World}!single\+Step\+Execution@{single\+Step\+Execution}}
+\index{single\+Step\+Execution@{single\+Step\+Execution}!World@{World}}
+\subsubsection[{\texorpdfstring{single\+Step\+Execution()}{singleStepExecution()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::single\+Step\+Execution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_world_ad1de870945ddd37c62bb6bd32134d725}{}\label{class_world_ad1de870945ddd37c62bb6bd32134d725}
+
+
+Mengeksekusi sebuah langkah pergerakan aktivitas dunia. 
+
+Menampilkan tepat satu langkah perubahan state dunia akibat aktivitas dari objek-\/objek dunia \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{World@{World}!unlock\+World@{unlock\+World}}
+\index{unlock\+World@{unlock\+World}!World@{World}}
+\subsubsection[{\texorpdfstring{unlock\+World()}{unlockWorld()}}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::unlock\+World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_world_a08481fdff65e290c44386676ce993dce}{}\label{class_world_a08481fdff65e290c44386676ce993dce}
+
+
+Melanjutkan aktivitas dunia. 
+
+Mengubah status is\+Paused menjadi F\+A\+L\+SE, dan menjalankan kembali semua aktivitas dunia \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/header/World.\+h\item 
+C\+:/\+Users/\+Ngiong/\+Documents/\+Git\+Hub/\+Tubes\+Makhluk/v3/implementation/World.\+cpp\end{DoxyCompactItemize}
