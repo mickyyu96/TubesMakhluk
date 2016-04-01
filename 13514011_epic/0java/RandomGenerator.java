@@ -1,5 +1,11 @@
 import java.util.Random;
 
+/** Kelas RandomGenerator mengembalikan sebuah random number
+ *	@author     Atika Azzahra Akbar
+ *	@date       April 2016
+ *	@version	1.0
+ */
+
 public class RandomGenerator {
 	private static RandomGenerator _instance = new RandomGenerator();
 	
