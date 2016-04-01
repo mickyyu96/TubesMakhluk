@@ -1,4 +1,9 @@
-
+/** Kelas turunan dari Hewan yang merepresentasikan seekor polar bear
+ *	@author     Atika Azzahra Akbar
+ *	@date       April 2016
+ *	@version	1.0
+ */
+ 
 public class PolarBear extends Hewan {
 	private static final char POLARBEAR_ID = 'P'; 
 	private static final int POLARBEAR_MAXAGE = 250;    
