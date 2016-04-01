@@ -50,7 +50,7 @@ public class LMakhluk {
 	public int IsAllMakhlukDead() {
 		int found = 0;
 		for(int i=0; i<getSize() && found==0; i++) {
-			if(getInfo(i).isAlive()) found = 1;
+			if(getInfo(i).isAlive()==1) found = 1;
 		}
 		return found;
 	}
