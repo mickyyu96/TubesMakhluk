@@ -50,13 +50,13 @@ public class Makhluk {
 	*   @return     Bilangan bulat 0 atau 1
 	*/
 	public int isMakhlkukInTheSamePoint(){
-		int found = 0;
+	    int found = 0;
 	    int i = 0;
-	    LMakhluk _LMakhluk = worldInstance.getObjects();
+	    LMakhluk _LMakhluk = World.worldInstance.getObjects();
 
-	    while(i<_LMakhluk.getSize() && !found)
+	    while(i<_LMakhluk.getSize() && found==0)
 	    {
-	        if (_LMakhluk.getInfo(i).isAlive() && _LMakhluk.getInfo(i).getPosition().getX() == getPosition().getX() &&
+	        if (_LMakhluk.getInfo(i).isAlive()==1 && _LMakhluk.getInfo(i).getPosition().getX() == getPosition().getX() &&
 	            _LMakhluk.getInfo(i).getPosition().getY()==getPosition().getY() && _LMakhluk.getInfo(i).getID() != getID())
 	        {
 	            found = 1;
@@ -71,15 +71,14 @@ public class Makhluk {
 	*    @return     Pointer to makhluk
 	*/
 	public Makhluk MakhlukInTheSamePoint(){
-		Makhluk _Makhluk;
+	    Makhluk _Makhluk = null;
 	    int i = 0;
 	    int found = 0;
-	    LMakhluk _LMakhluk = new LMakhluk();
-	    LMakhluk _LMakhluk = worldInstance.getObjects();
+	    LMakhluk _LMakhluk = World.worldInstance.getObjects();
 
-	    while(i<_LMakhluk.getSize()&&!found)
+	    while(i<_LMakhluk.getSize()&&found==0)
 	    {
-	        if (_LMakhluk.getInfo(i).isAlive() && _LMakhluk.getInfo(i).getPosition().getX()==getPosition().getX() &&
+	        if (_LMakhluk.getInfo(i).isAlive()==1 && _LMakhluk.getInfo(i).getPosition().getX()==getPosition().getX() &&
 	            _LMakhluk.getInfo(i).getPosition().getY() == getPosition().getY()&&_LMakhluk.getInfo(i).getID()!=getID())
 	        {
 	            _Makhluk = _LMakhluk.getInfo(i);
