@@ -52,7 +52,6 @@ public class Makhluk {
 	public int isMakhlkukInTheSamePoint(){
 		int found = 0;
 	    int i = 0;
-	    LMakhluk _LMakhluk = new LMakhluk();
 	    LMakhluk _LMakhluk = worldInstance.getObjects();
 
 	    while(i<_LMakhluk.getSize() && !found)
