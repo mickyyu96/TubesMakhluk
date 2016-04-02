@@ -38,31 +38,31 @@ public class WorldBuilder {
 	*   @param	_ID char Karakter yang merupakan ID makhluk yang akan ditambahkan
 	*   @return	void
 	*/
-	public void addAnObject(char C) {
-		int NBrs = getWorldInstance().getNBrs();
-		int NKol = getWorldInstance().getNKol();
+	public void addAnObject(char_ID) {
+		int NBrs = World.getWorldInstance().getNBrs();
+		int NKol = World.getWorldInstance().getNKol();
 		switch (_ID)
 		{
 			case 'G':
-				getWorldInstance().getObjects().Add(new Tumbuhan(getInstance().getNextPoint(NBrs, NKol)));
+				World.getWorldInstance().getObjects().Add(new Tumbuhan(RandomGenerator.getInstance().getNextPoint(NBrs, NKol)));
 				break;
 			case 'R':
-				getWorldInstance().getObjects().Add(new Rabbit(getInstance().getNextPoint(NBrs, NKol)));
+				World.getWorldInstance().getObjects().Add(new Rabbit(RandomGenerator.getInstance().getNextPoint(NBrs, NKol)));
 				break;
 			case 'T':
-				getWorldInstance().getObjects().Add(new Turtle(getInstance().getNextPoint(NBrs, NKol)));
+				World.getWorldInstance().getObjects().Add(new Turtle(RandomGenerator.getInstance().getNextPoint(NBrs, NKol)));
 				break;
 			case 'W':
-				getWorldInstance().getObjects().Add(new Wolf(getInstance().getNextPoint(NBrs, NKol)));
+				World.getWorldInstance().getObjects().Add(new Wolf(RandomGenerator.getInstance().getNextPoint(NBrs, NKol)));
 				break;
 			case 'S':
-				getWorldInstance().getObjects().Add(new Sheep(getInstance().getNextPoint(NBrs, NKol)));
+				World.getWorldInstance().getObjects().Add(new Sheep(RandomGenerator.getInstance().getNextPoint(NBrs, NKol)));
 				break;
 			case 'P':
-				getWorldInstance().getObjects().Add(new PolarBear(getInstance().getNextPointPB(NBrs, NKol)));
+				World.getWorldInstance().getObjects().Add(new PolarBear(RandomGenerator.getInstance().getNextPointPB(NBrs, NKol)));
 				break;
-	        case 'U':
-				getWorldInstance().getObjects().Add(new Snake(getInstance().getNextPoint(NBrs, NKol)));
+	        	case 'U':
+				World.getWorldInstance().getObjects().Add(new Snake(RandomGenerator.getInstance().getNextPoint(NBrs, NKol)));
 				break;
 			default :
 				ExceptionObject E = new ExceptionObject(3);
