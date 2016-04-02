@@ -1,4 +1,3 @@
 # TubesMakhluk
 
-U/ yg kebagian bkin Makhluk... coba lihat mWorld, World.cpp sama World.h
-PolarBear sudah dicoba buat sih, dan sudah bisa jalan2 (doang)
+Link Laporan CPP2JAVA : http://1drv.ms/1ULfcQ6
