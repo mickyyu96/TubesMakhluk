@@ -29,7 +29,6 @@ class IOManager {
         }
         World worldInstance = getWorldInstance();
         Matrix map = new Matrix(worldInstance.getNBrs(), worldInstance.getNKol());
-        LMakhluk _LMakhluk = new LMakhluk();
         _LMakhluk = worldInstance.getObjects();
         for (int i=0; i<_LMakhluk.getSize(); i++) {
             if (_LMakhluk.getInfo(i).isAlive()) {
