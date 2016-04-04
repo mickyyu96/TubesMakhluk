@@ -10,10 +10,14 @@ public class PolarBear extends Hewan {
 	private static final int POLARBEAR_BASEPOWER = 8;
 	
 	/** Menciptakan objek PolarBear dengan posisi P
-	 *  @param      P const Point& Posisi objek PolarBear
+	 *  @param      P Point Posisi objek PolarBear
 	 */
-	public PolarBear(){
+	public PolarBear(Point P){
 		super(POLARBEAR_ID, POLARBEAR_MAXAGE);
+		age = 0;
+		status = 1;
+		power = POLARBEAR_BASEPOWER;
+		pos = P;
 		
 	}
 }

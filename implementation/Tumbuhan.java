@@ -15,7 +15,7 @@ public class Tumbuhan extends Makhluk {
 	 * @param P koordinat penciptaan tumbuhan
 	*/
 	public Tumbuhan(final Point P) {
-		super(WOLF_ID, WOLF_MAXAGE);
+		super(TUMBUHAN_ID, TUMBUHAN_MAXAGE);
 		age = 0;
 		status = 1;
 		pos = P;

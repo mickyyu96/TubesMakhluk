@@ -32,14 +32,12 @@ class Screen extends IOManager {
      *  @return void
      */
     public static void showWorld(int deltaT) {
-        while (!World.getWorldInstance().isEnded()) {
-            World.getWorldInstance().lockWorld();
+        while (World.getWorldInstance().isEnded()==0) {
             int nBrs = World.getWorldInstance().getNBrs();
             for (int i=0; i<nBrs; i++) {
                 System.out.println();
             }
             getScreenInstance().PrintWorldMap();
-            World.getWorldInstance().unlockWorld();
         }
         try {
             TimeUnit.MILLISECONDS.sleep(deltaT);

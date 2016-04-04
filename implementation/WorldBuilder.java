@@ -38,7 +38,7 @@ public class WorldBuilder {
 	*   @param	_ID char Karakter yang merupakan ID makhluk yang akan ditambahkan
 	*   @return	void
 	*/
-	public void addAnObject(char_ID) {
+	public void addAnObject(char _ID) {
 		int NBrs = World.getWorldInstance().getNBrs();
 		int NKol = World.getWorldInstance().getNKol();
 		switch (_ID)

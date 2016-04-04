@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  *  @version	1.0
  */
 
-class ExceptionObject {
+class ExceptionObject extends Exception {
     private int id;
     private final String messages[] = {
         ">> ERROR! Dimensi ukuran dunia harus > 6!",

@@ -10,11 +10,11 @@ public class Hewan extends Makhluk
 	int getPower() {return power;}
 	int shouldRebounced(int dx, int dy)
 	{
-		 if (dx+pos.getX()<=0 || dx+pos.getX()>=getWorldInstance().getNBrs()-1)
+		 if (dx+pos.getX()<=0 || dx+pos.getX()>=World.getWorldInstance().getNBrs()-1)
 	    {
 	        return 1;
 	    }
-	    if (dy+pos.getY()<=0 || dy+pos.getY()>=getWorldInstance().getNKol()-1)
+	    if (dy+pos.getY()<=0 || dy+pos.getY()>=World.getWorldInstance().getNKol()-1)
 	    {
 	        return 1;
 	    }

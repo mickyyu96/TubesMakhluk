@@ -27,11 +27,11 @@ class IOManager {
         for (int i=0; i<30; i++) {
             System.out.println();
         }
-        World worldInstance = getWorldInstance();
+        World worldInstance = World.getWorldInstance();
         Matrix map = new Matrix(worldInstance.getNBrs(), worldInstance.getNKol());
-        _LMakhluk = worldInstance.getObjects();
+        LMakhluk _LMakhluk = worldInstance.getObjects();
         for (int i=0; i<_LMakhluk.getSize(); i++) {
-            if (_LMakhluk.getInfo(i).isAlive()) {
+            if (_LMakhluk.getInfo(i).isAlive() == 1) {
                 char ID1 = _LMakhluk.getInfo(i).getID();
                 Point pos1 = _LMakhluk.getInfo(i).getPosition();
                 map.setInfo(ID1, pos1.getX(), pos1.getY());

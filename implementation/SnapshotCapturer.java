@@ -34,10 +34,8 @@ class SnapshotCapturer extends IOManager {
      *  @return void
      */
     public void captureSnapshot() throws IOException, AWTException {
-        World.getWorldInstance.lockWorld();
         Robot robot = new Robot();
         BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
         ImageIO.write(screenShot, "JPG", new File("d:\\snapshot.jpg"));
-        World.getWorldInstance.unlockWorld();
     }
 }

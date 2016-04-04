@@ -12,7 +12,7 @@ import java.awt.event.KeyListener;
 
 class KeypressHandler implements KeyListener {
     private static KeypressHandler handlerInstance = new KeypressHandler();
-    char lastKeypress;
+    private char lastKeypress;
     
     private KeypressHandler() {}
     
@@ -25,7 +25,7 @@ class KeypressHandler implements KeyListener {
     public void keyReleased(KeyEvent e) {}
     
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyChar() == 'q')
+        /*if (e.getKeyChar() == 'q')
         {
             if (getWorldInstance().isPaused()) {
                 getWorldInstance().changePauseState();
@@ -34,6 +34,6 @@ class KeypressHandler implements KeyListener {
         }
         else if (e.getKeyChar() == "c") {
             getCapturerInstance().captureSnapshot();
-        }
+        }*/
     }
 }

@@ -49,10 +49,10 @@ public class Makhluk {
 	/** Fungsi validasi untuk mengecek apakah 2 makhluk berada dalam point yang sama
 	*   @return     Bilangan bulat 0 atau 1
 	*/
-	public int isMakhlkukInTheSamePoint(){
+	public int isMakhlukInTheSamePoint(){
 	    int found = 0;
 	    int i = 0;
-	    LMakhluk _LMakhluk = World.worldInstance.getObjects();
+	    LMakhluk _LMakhluk = World.getWorldInstance().getObjects();
 
 	    while(i<_LMakhluk.getSize() && found==0)
 	    {
@@ -74,7 +74,7 @@ public class Makhluk {
 	    Makhluk _Makhluk = null;
 	    int i = 0;
 	    int found = 0;
-	    LMakhluk _LMakhluk = World.worldInstance.getObjects();
+	    LMakhluk _LMakhluk = World.getWorldInstance().getObjects();
 
 	    while(i<_LMakhluk.getSize()&&found==0)
 	    {

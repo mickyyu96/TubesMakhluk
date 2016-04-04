@@ -1,30 +1,31 @@
 public class MakhlukLive
 {
-	private static MakhlukLive _instance;
+	private static MakhlukLive _instance = new MakhlukLive();
+	private int dx_sign = 1;
+	private int dy_sign = 1;
 	
 	private MakhlukLive() {}
 	public static MakhlukLive getInstance() {return _instance;}
 	public void MakhlukMove()
 	{
 		int dx, dy;
-		LMakhluk _LMakhluk = new LMakhluk();
-		LMakhluk _LMakhluk = worldInstance.getObjects;
+		LMakhluk _LMakhluk = World.getWorldInstance().getObjects();
 
 		for (int i = 0; i<_LMakhluk.getSize(); i++)
 	    {
-	        if (_LMakhluk.getInfo(i).isAlive() && _LMakhluk.getInfo(i).getID()!='G')
+	        if (_LMakhluk.getInfo(i).isAlive()==1 && _LMakhluk.getInfo(i).getID()!='G')
 	        {
-	            Hewan _Hewan = new Hewan(_LMakhluk.getInfo(i));
+	            Hewan _Hewan = (Hewan)_LMakhluk.getInfo(i);
 
-	            dx = getInstance().getNextInt(2)*dx_sign;
-	            dy = getInstance().getNextInt(2)*dy_sign;
+	            dx = RandomGenerator.getInstance().getNextInt(2)*dx_sign;
+	            dy = RandomGenerator.getInstance().getNextInt(2)*dy_sign;
 
-	            if (_Hewan.shouldRebounced(dx, 0))
+	            if (_Hewan.shouldRebounced(dx, 0) == 1)
 	            {
 	                dx *= -1;
 	                dx_sign *= -1;
 	            }
-	            if (_Hewan.shouldRebounced(0, dy))
+	            if (_Hewan.shouldRebounced(0, dy) == 1)
 	            {
 	                dy *= -1;
 	                dy_sign *= -1;
@@ -49,19 +50,17 @@ public class MakhlukLive
 	}
 	public void MakhlukEat()
 	{
-		World worldInstance = super.getWorldInstance();
+		World worldInstance = World.getWorldInstance();
 
-		LMakhluk _LMakhluk = worldInstance.getObjects;
+		LMakhluk _LMakhluk = worldInstance.getObjects();
 
 		for (int i = 0; i<_LMakhluk.getSize(); i++) {
-	        if (_LMakhluk.getInfo(i).isAlive() && _LMakhluk.getInfo(i).getID()!='G')
+	        if (_LMakhluk.getInfo(i).isAlive() == 1 && _LMakhluk.getInfo(i).getID()!='G')
 	        {
-	            if (_LMakhluk.getInfo(i).isMakhlukInTheSamePoint())
+	            if (_LMakhluk.getInfo(i).isMakhlukInTheSamePoint() == 1)
 	            {
-	                Makhluk M1 = new Makhluk();
-	                M1 = _LMakhluk.getInfo(i);
-	                Makhluk M2 = new Makhluk();
-	                M2 = _LMakhluk.getInfo(i).MakhlukInTheSamePoint();
+	                Makhluk M1 = _LMakhluk.getInfo(i);
+	                Makhluk M2 = _LMakhluk.getInfo(i).MakhlukInTheSamePoint();
 	                if (((M1).getID()=='R')||((M1).getID()=='T')||((M1).getID()=='S'))
 	                {
 	                    if ((M2).getID()=='G')
