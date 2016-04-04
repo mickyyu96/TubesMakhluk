@@ -35,7 +35,7 @@ public class LMakhluk {
 	/** Mengembalikan jumlah elemen yang ada dalam list of makhluk
 	*	@return     Bilangan bulat yang menyatakan jumlah elemen yang ada di list
 	*/
-	public int getSize () { return makhlukVector.capacity(); }
+	public int getSize () { return makhlukVector.size(); }
 
 	/** Mengakses isi list pada elemen ke-idx, elemen pertama dihitung sebagai elemen ke-0
 	*	@param		idx Indeks elemen yang mau diakses
@@ -44,15 +44,33 @@ public class LMakhluk {
 	public Makhluk getInfo(int idx) { return makhlukVector.get(idx); }
 
 	/** Predikat yang menyatakan seluruh makhluk pada list sudah mati
-     *	@return     Bilangan bulat 0 jika semua makhluk sudah mati,
-     *				1 jika masih ada makhluk yang hidup
+     *	@return     true apabila tidak ada makhluk yang masih hidup
      */
-	public int IsAllMakhlukDead() {
-		int found = 0;
-		for(int i=0; i<getSize() && found==0; i++) {
-			if(getInfo(i).isAlive()==1) found = 1;
+	public boolean IsAllMakhlukDead() {
+		boolean found = false;
+		for(int i=0; i<getSize() && !found; i++) {
+			if(getInfo(i).isAlive()==1) found = true;
 		}
-		return found;
+		return !found;
+	}
+
+	/** Unit test untuk LMakhluk
+     *	@return     void
+     */
+	public static void main (String args[]) {
+		LMakhluk _LMakhluk = new LMakhluk();
+		System.out.println("-----Add Wolf, Sheep, PolarBear ke dalam list-----");
+	    _LMakhluk.Add(new Wolf(RandomGenerator.getInstance().getNextPoint(5, 5)));
+	    _LMakhluk.Add(new Sheep(RandomGenerator.getInstance().getNextPoint(5, 5)));
+	    _LMakhluk.Add(new PolarBear(RandomGenerator.getInstance().getNextPoint(5, 5)));
+
+	    char c;
+	    c = _LMakhluk.getInfo(0).getID();
+	    System.out.println("Ambil ID first makhluk dalam list : "+c);
+
+	    c= _LMakhluk.getInfo(2).getID();
+	    System.out.println("Ambil ID last makhluk dalam list : "+c);
+
 	}
 
 }
