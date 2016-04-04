@@ -3,6 +3,8 @@
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.*;
+import java.awt.Font;
 
 /** Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk 
  *  melakukan operasi-operasi Input/Output ke layar
@@ -11,12 +13,12 @@ import java.util.logging.Logger;
  *  @version	1.0
  */
 
-class Screen extends IOManager {
+class Screen extends IOManager implements Runnable {
     private static Screen screenInstance = new Screen();
     
     /** Mencipatkan sebuah instance dari kelas Screen
      */
-    private Screen() {}
+    public Screen() {}
     
     /** Mengembalikan pointer dari objek singleton pada kelas Screen
      *  @return pointer yang menunjuk ke singleton instance pada kelas Screen
@@ -31,18 +33,30 @@ class Screen extends IOManager {
      *  dunia ke layar
      *  @return void
      */
-    public static void showWorld(int deltaT) {
+    public void showWorld(int deltaT) {
+        JFrame worldView = new JFrame("Animal's Village");
+        JLabel worldLabel = new JLabel("", JLabel.CENTER);
+        worldLabel.setFont(new Font("Consolas", Font.PLAIN, 12));
+
+        worldView.setSize(400,400);
+        worldView.addKeyListener(new KeypressHandler());
+        worldView.add(worldLabel);
+        worldView.setVisible(true);
+
         while (World.getWorldInstance().isEnded()==0) {
-            int nBrs = World.getWorldInstance().getNBrs();
-            for (int i=0; i<nBrs; i++) {
-                System.out.println();
+            worldLabel.setText(getHTMLStrWorldMap());
+            try {
+                Thread.sleep(deltaT);
             }
-            getScreenInstance().PrintWorldMap();
+            catch(Exception e) {}
         }
-        try {
-            TimeUnit.MILLISECONDS.sleep(deltaT);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Screen.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        worldView.setVisible(false);
+        worldView.dispose();
+    }
+
+    public void run() {
+        showWorld(500);
+        System.out.println("Thread Finished");
+
     }
 }

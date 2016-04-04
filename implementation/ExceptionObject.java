@@ -15,7 +15,8 @@ class ExceptionObject extends Exception {
         ">> ERROR! Dimensi ukuran dunia harus > 6!",
         ">> ERROR! Ada ID yang tidak dikenali!",
         ">> ERROR! Pause World dulu sebelum melakukan Single-step Execution!",
-        ">> ERROR! Keypress tidak dikenali!"
+        ">> ERROR! Keypress tidak dikenali!",
+        ">> ERROR! Masukan harus berupa bilangan bulat!"
     };
     
     /** Menciptakan sebuah instance dari kelas ExceptionObject dengan id yang 

@@ -12,33 +12,36 @@ import java.awt.event.KeyListener;
  *  @version	1.0
  */
 
-class KeypressHandler extends KeyAdapter implements KeyListener {
-    //private static KeypressHandler handlerInstance = new KeypressHandler();
-    //private char lastKeypress;
+class KeypressHandler implements KeyListener {
+    private char lastKeypress;
 
-    private KeypressHandler() {}
+    public KeypressHandler() {}
 
     public char getLastKeypress() { return lastKeypress; }
 
+    public void keyPressed(KeyEvent e) { 
+        lastKeypress = e.getKeyChar(); 
+        System.out.println("##"+lastKeypress);
+        try {
+            doAction();
+        }
+        catch(Exception v) {
 
-    public static KeypressHandler getHandlerInstance() {
-        return handlerInstance;
-
+        }
     }
-    }
-
-    public void getKeypress() throws Exception {
-        //lastKeypress = (char) System.in.read(); <<masih gak bisa ternyata :( >>
-    }
+    public void keyReleased(KeyEvent e) { }
+    public void keyTyped(KeyEvent e) { }
 
     public void doAction() throws Exception {
-        char c = getHandlerInstance().getLastKeypress();
+        char c = getLastKeypress();
         switch (c)
         {
             case 'q':
                 World.getWorldInstance().endWorld();
                 break;
             case 'w':
+                // KARENA SKRG STATUSNYA DUALTHREAD, ARTINYA HARUS PAKE MUTEX LAGI UNTUK NGEPAUSE
+                /*
                 lastKeypress = '-';
                 do
                 {
@@ -57,6 +60,7 @@ class KeypressHandler extends KeyAdapter implements KeyListener {
                         }
                     }
                 }while(lastKeypress != 'w');
+                */
                 break;
             case 'c':
                 SnapshotCapturer.getCapturerInstance().captureSnapshot();
