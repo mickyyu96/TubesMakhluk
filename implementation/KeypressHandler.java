@@ -1,25 +1,30 @@
 // KeypressHandler.java
 
+import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-/** Kelas KeypressHandler merupakan kelas yang berfungsi untuk menangani 
+/** Kelas KeypressHandler merupakan kelas yang berfungsi untuk menangani
  *  keypress yang dimasukkan oleh user
  *  @author     Micky Yudi Utama
  *  @date       April 2016
  *  @version	1.0
  */
 
-class KeypressHandler implements KeyListener {
-    private static KeypressHandler handlerInstance = new KeypressHandler();
-    private char lastKeypress;
-    
+class KeypressHandler extends KeyAdapter implements KeyListener {
+    //private static KeypressHandler handlerInstance = new KeypressHandler();
+    //private char lastKeypress;
+
     private KeypressHandler() {}
 
     public char getLastKeypress() { return lastKeypress; }
-    
+
+
     public static KeypressHandler getHandlerInstance() {
         return handlerInstance;
+
+    }
     }
 
     public void getKeypress() throws Exception {
@@ -70,21 +75,5 @@ class KeypressHandler implements KeyListener {
                 WorldBuilder.getBuilderInstance().addAnObject(c);
         }
     }
-    
-    public void keyTyped(KeyEvent e) {}
-    
-    public void keyReleased(KeyEvent e) {}
-    
-    public void keyPressed(KeyEvent e) {
-        /*if (e.getKeyChar() == 'q')
-        {
-            if (getWorldInstance().isPaused()) {
-                getWorldInstance().changePauseState();
-            }
-            getWorldInstance().endWorld();
-        }
-        else if (e.getKeyChar() == "c") {
-            getCapturerInstance().captureSnapshot();
-        }*/
-    }
+
 }
