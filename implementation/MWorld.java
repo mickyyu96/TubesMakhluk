@@ -121,7 +121,7 @@ public class MWorld {
 	            Screen.getScreenInstance().PrintWorldMap();
 	            MakhlukLive.getInstance().MakhlukEat();
 
-	            if (World.getWorldInstance().getObjects().IsAllMakhlukDead()==1)
+	            if (World.getWorldInstance().getObjects().IsAllMakhlukDead())
 	            {
 	                World.getWorldInstance().endWorld();
 	                break;
