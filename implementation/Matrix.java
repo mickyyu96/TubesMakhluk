@@ -31,4 +31,16 @@ public class Matrix
 	{
 		M[i][j]=c;
 	}
+
+	public String toHTMLString() {
+		String res = "<html>";
+		for(int i=0; i<NBrs; i++) {
+			for(int j=0; j<NKol; j++) {
+				res = res.concat(Character.toString(M[i][j]));
+			}
+			res = res.concat("<br>");
+		}
+		res = res.concat("</html>");
+		return res;
+	}
 }

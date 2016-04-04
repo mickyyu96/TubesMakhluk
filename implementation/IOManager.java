@@ -39,4 +39,18 @@ class IOManager {
         }
         PrintMatrix(map);
     }
+
+    public String getHTMLStrWorldMap() {
+        World worldInstance = World.getWorldInstance();
+        Matrix map = new Matrix(worldInstance.getNBrs(), worldInstance.getNKol());
+        LMakhluk _LMakhluk = worldInstance.getObjects();
+        for (int i=0; i<_LMakhluk.getSize(); i++) {
+            if (_LMakhluk.getInfo(i).isAlive() == 1) {
+                char ID1 = _LMakhluk.getInfo(i).getID();
+                Point pos1 = _LMakhluk.getInfo(i).getPosition();
+                map.setInfo(ID1, pos1.getX(), pos1.getY());
+            }
+        }
+        return map.toHTMLString();
+    }
 }
