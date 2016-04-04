@@ -55,4 +55,26 @@ public class RandomGenerator {
 	public Point getNextPointPB(int NBrs, int NKol) {
 		return new Point(getNextIntBetween(NBrs-(NBrs/5)-2, NBrs-2), getNextIntBetween(1, NKol-2));
 	}
+    
+    /** Unit test untuk WorldBuilder
+     *	@return     void
+     */
+    public static void main (String args[]) {
+        int randNum, i;
+        
+        System.out.println("-----getNextInt-----");
+        for (i=1; i<=3; i++)
+        {
+            randNum = RandomGenerator.getInstance().getNextInt(10);
+            System.out.println("Random Number (10) : " + randNum);
+        }
+        System.out.println();
+        
+        System.out.println("-----getNextPoint-----");
+        for (i=1; i<=3; i++)
+        {
+            randNum = RandomGenerator.getInstance().getNextIntBetween(-3, 3);
+            System.out.println("Random Number (-3 ,3) : "  + randNum);
+        }
+    }
 }

@@ -138,6 +138,5 @@ public class MWorld {
 	        }
 
 	    } while(World.getWorldInstance().isEnded() == 0);
-
 	}
 }

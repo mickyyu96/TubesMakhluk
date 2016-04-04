@@ -83,4 +83,23 @@ public class WorldBuilder {
 			addAnObject(c);
 		}
 	}
+    
+    /** Unit test untuk WorldBuilder
+     *	@return     void
+     */
+    public static void main (String args[]) {
+        System.out.println("-----Add Wolf, Sheep, PolarBear ke dalam list-----");
+        String input = "WSP";
+        
+        WorldBuilder.getBuilderInstance().setStrMakhluk(input);
+        WorldBuilder.getBuilderInstance().buildWorldObject();
+        
+        System.out.println("getStrMakhluk setelah di set : "+WorldBuilder.getBuilderInstance().getStrMakhluk());
+        System.out.println();
+        System.out.println("Mengeluarkan ID makhluk yang ditambahkan pada LMakhluk pada World: ");
+        for(int i = 0; i < World.getWorldInstance().getObjects().getSize(); i++)
+        {
+            System.out.println("ID Makhluk "+i+": "+World.getWorldInstance().getObjects().getInfo(i).getID());
+        }
+    }
 }
