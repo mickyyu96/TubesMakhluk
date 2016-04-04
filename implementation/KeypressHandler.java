@@ -1,5 +1,7 @@
 // KeypressHandler.java
 
+import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -10,30 +12,38 @@ import java.awt.event.KeyListener;
  *  @version	1.0
  */
 
-class KeypressHandler implements KeyListener {
-    private static KeypressHandler handlerInstance = new KeypressHandler();
-    private char lastKeypress;
+class KeypressHandler extends KeyAdapter implements KeyListener {
+    //private static KeypressHandler handlerInstance = new KeypressHandler();
+    //private char lastKeypress;
     
-    private KeypressHandler() {}
-    
-    public static KeypressHandler getHandlerInstance() {
-        return handlerInstance;
+    public KeypressHandler() {
+        addKeyListener(this);
     }
+    
+    /* public static KeypressHandler getHandlerInstance() {
+        return handlerInstance;
+    } */
     
     public void keyTyped(KeyEvent e) {}
     
     public void keyReleased(KeyEvent e) {}
     
     public void keyPressed(KeyEvent e) {
-        /*if (e.getKeyChar() == 'q')
-        {
-            if (getWorldInstance().isPaused()) {
-                getWorldInstance().changePauseState();
-            }
-            getWorldInstance().endWorld();
+        char temp = e.getKeyChar();
+        switch (temp) {
+                case 'q' : 
+                    System.out.println("w");
+                    break;
+                case 'w' :
+                    System.out.println("q");
+                    break;
         }
-        else if (e.getKeyChar() == "c") {
-            getCapturerInstance().captureSnapshot();
-        }*/
+    }
+    
+    public static void main(String[] args) {
+        System.out.println('a');
+        KeypressHandler k = new KeypressHandler();
+        while (1 == 1) {
+        }
     }
 }
