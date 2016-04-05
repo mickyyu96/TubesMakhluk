@@ -15,7 +15,7 @@ import java.awt.Font;
  *  @version	1.0
  */
 
-class Screen extends IOManager implements Runnable {
+public class Screen extends IOManager implements Runnable {
     private static Screen screenInstance = new Screen();
 
     /** Mencipatkan sebuah instance dari kelas Screen

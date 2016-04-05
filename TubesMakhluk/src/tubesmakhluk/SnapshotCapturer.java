@@ -2,15 +2,12 @@ package tubesmakhluk;
 
 // SnapshotCapturer.java
 
-import java.io.PrintWriter;
 import java.awt.AWTException;
-import java.awt.Rectangle;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import javax.imageio.ImageIO;
+import static java.lang.System.out;
 
 /** Kelas SnapshotCapturer bertanggung jawab dalam pengambilan snapshot state
  *  dunia dan menyimpan hasil pengambilan snapshot ke sebuah file
@@ -39,7 +36,8 @@ class SnapshotCapturer extends IOManager {
     public void captureSnapshot() throws IOException, AWTException {
         String text = super.getStrWorldMap();
         System.out.println(text + "======================");
-        PrintWriter out = new PrintWriter("snapshot.txt");
-        out.println(text); 
+        BufferedWriter out = new BufferedWriter(new FileWriter("snapshot.txt"));
+        out.write(text);
+        out.close();
     }
 }
