@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 import java.util.Random;
 
 /** Kelas RandomGenerator mengembalikan sebuah random number

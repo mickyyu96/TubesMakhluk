@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // ExceptionObject.java
 
 import javax.swing.JOptionPane;

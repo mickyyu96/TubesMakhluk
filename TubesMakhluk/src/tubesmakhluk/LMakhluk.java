@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // LMakhluk.java
 
 /** Container yang menampung obyek-obyek Makhluk yang terdapat dalam dunia

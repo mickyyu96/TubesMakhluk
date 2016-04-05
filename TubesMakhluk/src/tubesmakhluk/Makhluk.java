@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 /** Kelas Makhluk merupakan kelas abstrak yang memiliki member-member dasar yang akan diturunkan ke kelas lain.
  *	@author     Atika Azzahra Akbar
  *	@date       April 2016

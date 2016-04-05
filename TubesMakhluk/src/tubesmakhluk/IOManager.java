@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // IOManager.java
 
 /** Kelas IOManager bertanggung jawab untuk melakukan operasi-operasi Input/Output
@@ -19,7 +21,7 @@ class IOManager {
             System.out.println();
         }
     }
-    
+
     /** Mencetak state dunia saat ini beserta isi dari dunia
      *  @return void
      */
@@ -52,5 +54,19 @@ class IOManager {
             }
         }
         return map.toHTMLString();
+    }
+
+    public String getStrWorldMap() {
+        World worldInstance = World.getWorldInstance();
+        Matrix map = new Matrix(worldInstance.getNBrs(), worldInstance.getNKol());
+        LMakhluk _LMakhluk = worldInstance.getObjects();
+        for (int i=0; i<_LMakhluk.getSize(); i++) {
+            if (_LMakhluk.getInfo(i).isAlive() == 1) {
+                char ID1 = _LMakhluk.getInfo(i).getID();
+                Point pos1 = _LMakhluk.getInfo(i).getPosition();
+                map.setInfo(ID1, pos1.getX(), pos1.getY());
+            }
+        }
+        return map.toString();
     }
 }

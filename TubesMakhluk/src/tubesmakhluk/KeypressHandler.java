@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // KeypressHandler.java
 
 import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
@@ -19,14 +21,16 @@ class KeypressHandler implements KeyListener {
 
     public char getLastKeypress() { return lastKeypress; }
 
-    public void keyPressed(KeyEvent e) { 
-        lastKeypress = e.getKeyChar(); 
-        System.out.println("##"+lastKeypress);
-        try {
-            doAction();
-        }
-        catch(Exception v) {
+    public void keyPressed(KeyEvent e) {
+        char c = e.getKeyChar();
+        if(c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' || c == '.') {
+            lastKeypress = c;
+            try {
+                doAction();
+            }
+            catch(Exception v) {
 
+            }
         }
     }
     public void keyReleased(KeyEvent e) { }
@@ -37,30 +41,11 @@ class KeypressHandler implements KeyListener {
         switch (c)
         {
             case 'q':
+                if(World.getWorldInstance().isPaused()==1) World.getWorldInstance().changePauseState();
                 World.getWorldInstance().endWorld();
                 break;
             case 'w':
-                // KARENA SKRG STATUSNYA DUALTHREAD, ARTINYA HARUS PAKE MUTEX LAGI UNTUK NGEPAUSE
-                /*
-                lastKeypress = '-';
-                do
-                {
-                    while(System.in.available()!=0)
-                    {
-                        KeypressHandler.getHandlerInstance().getKeypress();
-                        if(lastKeypress == '.')
-                        {
-                            MakhlukLive.getInstance().MakhlukMove();
-                            Screen.getScreenInstance().PrintWorldMap();
-                            MakhlukLive.getInstance().MakhlukEat();
-                        }
-                        else if(lastKeypress == 'c')
-                        {
-                            SnapshotCapturer.getCapturerInstance().captureSnapshot();
-                        }
-                    }
-                }while(lastKeypress != 'w');
-                */
+                World.getWorldInstance().changePauseState();
                 break;
             case 'c':
                 SnapshotCapturer.getCapturerInstance().captureSnapshot();
@@ -68,7 +53,9 @@ class KeypressHandler implements KeyListener {
             case '.':
                 try
                 {
-                    throw new ExceptionObject(2);
+                    if(World.getWorldInstance().isPaused() == 0) throw new ExceptionObject(2);
+                    MakhlukLive.getInstance().MakhlukMove();
+                    MakhlukLive.getInstance().MakhlukEat();
                 }
                 catch(ExceptionObject E)
                 {

@@ -1,4 +1,4 @@
-
+package tubesmakhluk;
 
 /** Kelas WorldBuilder merupakan BUILDER dari kelas World, dan bertanggung jawab untuk melakukan inisialisasi objek-objek dunia
  *	@author     Atika Azzahra Akbar
