@@ -1,0 +1,11 @@
+kepi:
+laporan, checkstyle
+
+elvina:
+laporan, javadocs, unit test
+
+micky:
+unit test, jdepend
+
+ngiong:
+nambahin javadocs
