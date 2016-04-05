@@ -1,8 +1,8 @@
+// Snake.java
+
 package makhluk;
 
 import point.*;
-
-// Snake.java
 
 /** Kelas turunan dari Hewan yang merepresentasikan seekor ular
  *  @author     Micky Yudi Utama

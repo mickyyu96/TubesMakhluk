@@ -1,6 +1,6 @@
-package keypresshandler;
-
 // KeypressHandler.java
+
+package keypresshandler;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

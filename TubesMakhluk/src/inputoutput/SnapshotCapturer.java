@@ -1,6 +1,6 @@
-package inputoutput;
-
 // SnapshotCapturer.java
+
+package inputoutput;
 
 import java.awt.AWTException;
 import java.io.BufferedWriter;
@@ -29,7 +29,6 @@ public class SnapshotCapturer extends IOManager {
     }
 
     /** Mengambil snapshot layar
-     *  @return void
      *  @throws IOException
      *  @throws AWTException
      */

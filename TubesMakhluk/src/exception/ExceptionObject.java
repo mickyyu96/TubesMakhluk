@@ -1,6 +1,6 @@
-package exception;
-
 // ExceptionObject.java
+
+package exception;
 
 import javax.swing.JOptionPane;
 

@@ -1,6 +1,6 @@
-package inputoutput;
-
 // Screen.java
+
+package inputoutput;
 
 import javax.swing.*;
 import java.awt.Font;

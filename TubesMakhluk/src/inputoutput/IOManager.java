@@ -1,6 +1,6 @@
-package inputoutput;
-
 // IOManager.java
+
+package inputoutput;
 
 import matrix.*;
 import point.*;
