@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 /** Kelas turunan dari Hewan yang merepresentasikan seekor polar bear
  *	@author     Atika Azzahra Akbar
  *	@date       April 2016

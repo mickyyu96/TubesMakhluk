@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // Snake.java
 
 /** Kelas turunan dari Hewan yang merepresentasikan seekor ular

@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // Sheep.java
 
 /** Kelas turunan dari Hewan yang merepresentasikan seekor domba

@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // Wolf.java
 
 /** Kelas turunan dari Hewan yang merepresentasikan seekor serigala

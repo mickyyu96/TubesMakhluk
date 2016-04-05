@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 // Tumbuhan.java
 
 /** Kelas turunan dari Makhluk yang merepresentasikan sebuah tumbuhan

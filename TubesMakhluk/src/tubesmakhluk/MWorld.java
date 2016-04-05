@@ -1,3 +1,5 @@
+package tubesmakhluk;
+
 //MWorld.java
 
 import java.util.Scanner;
