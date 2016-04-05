@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import javax.swing.*;
 import java.awt.Font;
 
-/** Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk 
+/** Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk
  *  melakukan operasi-operasi Input/Output ke layar
  *  @author     Micky Yudi Utama
  *  @date       April 2016
@@ -15,28 +15,28 @@ import java.awt.Font;
 
 class Screen extends IOManager implements Runnable {
     private static Screen screenInstance = new Screen();
-    
+
     /** Mencipatkan sebuah instance dari kelas Screen
      */
     public Screen() {}
-    
+
     /** Mengembalikan pointer dari objek singleton pada kelas Screen
      *  @return pointer yang menunjuk ke singleton instance pada kelas Screen
      */
     public static Screen getScreenInstance() {
         return screenInstance;
     }
-    
-    /** Mencetak state dunia beserta dengan isi-isinya ke layar secara berkala 
+
+    /** Mencetak state dunia beserta dengan isi-isinya ke layar secara berkala
      *  dengan interval waktu tertentu
-     *  @param deltaT int interval waktu (dalam ms) antar pencetakan state 
+     *  @param deltaT int interval waktu (dalam ms) antar pencetakan state
      *  dunia ke layar
      *  @return void
      */
     public void showWorld(int deltaT) {
         JFrame worldView = new JFrame("Animal's Village");
         JLabel worldLabel = new JLabel("", JLabel.CENTER);
-        worldLabel.setFont(new Font("Consolas", Font.PLAIN, 12));
+        worldLabel.setFont(new Font("Consolas", Font.PLAIN, 15));
 
         worldView.setSize(400,400);
         worldView.addKeyListener(new KeypressHandler());

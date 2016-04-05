@@ -7,8 +7,8 @@ public class MWorld {
 		boolean found = false;
 		for(int i=0; i<s.length() && !found; i++)
 		{
-			if(s.charAt(i) != 'P' && s.charAt(i) != 'G' && s.charAt(i) != 'R' 
-				&& s.charAt(i) != 'T' && s.charAt(i) != 'S' && s.charAt(i) != 'W' 
+			if(s.charAt(i) != 'P' && s.charAt(i) != 'G' && s.charAt(i) != 'R'
+				&& s.charAt(i) != 'T' && s.charAt(i) != 'S' && s.charAt(i) != 'W'
 				&& s.charAt(i) != 'U') {
 				found = true;
 			}
@@ -117,6 +117,10 @@ public class MWorld {
 
         do
         {
+            while(World.getWorldInstance().isPaused() == 1) {
+                Thread.sleep(100);
+            }
+
             MakhlukLive.getInstance().MakhlukMove();
             MakhlukLive.getInstance().MakhlukEat();
 

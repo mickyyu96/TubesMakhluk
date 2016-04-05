@@ -5,7 +5,6 @@ public class World
 {
 	private int _isEnded;
 	private int _isPaused;
-	//private mutex worldlock;
 
 	private static final int DEFAULT_NBRS = 30;
 	private static final int DEFAULT_NKOL = 30;
@@ -13,7 +12,7 @@ public class World
 
 	private static World worldInstance = new World(DEFAULT_NBRS, DEFAULT_NKOL);
 
-	
+
 	int NBrs;
 	int NKol;
 
@@ -34,6 +33,7 @@ public class World
 	public void setNBrs(int _NBrs) {NBrs = _NBrs;}
 	public void setNKol (int _NKol) {NKol = _NKol;}
 	public int isEnded() {return _isEnded;}
-	public int _isPaused() {return _isPaused;}
+	public int isPaused() {return _isPaused;}
 	public void endWorld() {_isEnded = 1;}
+	public void changePauseState() { _isPaused ^= 1; }
 }
