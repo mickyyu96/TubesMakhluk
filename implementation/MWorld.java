@@ -115,32 +115,20 @@ public class MWorld {
 		Thread viewThread = new Thread(new Screen());
 		viewThread.start();
 
+        
         do
         {
             MakhlukLive.getInstance().MakhlukMove();
             MakhlukLive.getInstance().MakhlukEat();
-
+            
             if (World.getWorldInstance().getObjects().IsAllMakhlukDead())
             {
                 World.getWorldInstance().endWorld();
                 break;
             }
-
+            
             Thread.sleep(500);
-
-<<<<<<< HEAD
-	        } while (System.in.available() == 0 && World.getWorldInstance().isEnded() == 0);
-
-	        if(System.in.available() != 0)
-	        {
-	            //KeypressHandler.getHandlerInstance().getKeypress();
-	            //KeypressHandler.getHandlerInstance().doAction();
-	        }
-
-	    } while(World.getWorldInstance().isEnded() == 0);
-=======
+            
         } while (World.getWorldInstance().isEnded() == 0);
-
->>>>>>> origin/master
 	}
 }
