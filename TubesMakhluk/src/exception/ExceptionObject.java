@@ -13,7 +13,7 @@ public class ExceptionObject extends Exception {
     private int id;
     /** Array of string berisi messages.
      */
-    private final String messages[] = {
+    private final String[] messages = new String[] {
         ">> ERROR! Dimensi ukuran dunia harus > 6!",
         ">> ERROR! Ada ID yang tidak dikenali!",
         ">> ERROR! Pause World dulu sebelum melakukan Single-step Execution!",

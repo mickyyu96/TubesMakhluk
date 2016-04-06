@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.11.2">
 <file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/exception/ExceptionObject.java">
-<error line="16" column="34" severity="error" message="Array brackets at illegal position." source="com.puppycrawl.tools.checkstyle.checks.ArrayTypeStyleCheck"/>
 </file>
 <file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/exception/package-info.java">
 </file>
