@@ -1,6 +1,6 @@
 package makhluk;
 
-import point.*;
+import point.Point;
 
 /** Kelas turunan dari Hewan yang merepresentasikan seekor polar bear.
  *  @author Atika Azzahra Akbar

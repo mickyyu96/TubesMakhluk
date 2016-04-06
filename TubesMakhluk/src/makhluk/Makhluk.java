@@ -1,7 +1,8 @@
 package makhluk;
 
-import point.*;
-import world.*;
+import point.Point;
+import world.LMakhluk;
+import world.World;
 
 /** Kelas Makhluk merupakan kelas abstrak yang memiliki member-member
     dasar yang akan diturunkan ke kelas lain.
@@ -11,19 +12,19 @@ import world.*;
 public class Makhluk {
     /** Atribut ID Makhluk.
      */
-    private final char id;
+    protected final char id;
     /** Atribut umur maksimal Makhluk.
      */
-    private final int maxAge;
+    protected final int maxAge;
     /** Atribut umur Makhluk.
      */
-    private int age;
+    protected int age;
     /** Atribut status Makhluk.
      */
-    private int status;
+    protected int status;
     /** Atribut Point posisi Makhluk.
      */
-    private Point pos;
+    protected Point pos;
     /** Menciptakan sebuah makhluk.
      *  @param idM Makhluk
      *  @param max maksimal Makhluk
@@ -33,76 +34,94 @@ public class Makhluk {
         maxAge = max;
     }
     /** Mengambil sebuah karakter ID makhluk.
-     *  @return	Karakter ID makhluk
+     *  @return Karakter ID makhluk
      */
-    public final char getID() { return ID; }
-    /** Mengambil usia makhluk sekarang
+    public final char getID() {
+        return id; }
+    /** Mengambil usia makhluk sekarang.
      *   @return Sebuah bilangan bulat yang merupakan usia makhluk sekarang.
      */
-    public final int getAge() { return age; }
-    /** Mengambil usia maksimum makhluk
-     *  @return	Sebuah bilangan bulat yang merupakan usia maksimum makhluk.
+    public final int getAge() {
+        return age; }
+    /** Mengambil usia maksimum makhluk.
+     *  @return Sebuah bilangan bulat yang merupakan usia maksimum makhluk.
      */
-    public final int getMaxAge() { return maxAge; }
-    /** Mengambil posisi makhluk sekarang
-     *  @return	Sebuah tipe bentukan Point yang merupakan posisi makhluk.
+    public final int getMaxAge() {
+        return maxAge; }
+    /** Mengambil posisi makhluk sekarang.
+     *  @return Sebuah tipe bentukan Point yang merupakan posisi makhluk.
      */
-    public final Point getPosition() { return pos; }
+    public final Point getPosition() {
+        return pos; }
     /** Melakukan assignment terhadap posisi makhluk dengan posisi baru.
-     *  @param P const Point& , sebuah posisi baru makhluk
-     *  @return	void
+     *  @param p sebuah posisi baru makhluk
      */
-    public void setPosition(final Point p){ pos = p; }
-    /** Fungsi validasi untuk mengecek apakah 2 makhluk berada dalam point yang sama.
-     *   @return Bilangan bulat 0 atau 1
+    public final void setPosition(final Point p) {
+        pos = p; }
+    /** Fungsi validasi untuk mengecek apakah 2 makhluk berada dalam
+        point yang sama.
+     *  @return Bilangan bulat 0 atau 1
      */
     public final int isMakhlukInTheSamePoint() {
         int found = 0;
         int i = 0;
-        LMakhluk _LMakhluk = World.getWorldInstance().getObjects();
-	    while(i<_LMakhluk.getSize() && found==0)
-	    {
-	        if (_LMakhluk.getInfo(i).isAlive()==1 && _LMakhluk.getInfo(i).getPosition().getX() == getPosition().getX() &&
-	            _LMakhluk.getInfo(i).getPosition().getY()==getPosition().getY() && _LMakhluk.getInfo(i).getID() != getID())
-	        {
-	            found = 1;
-	        }
-	        else { i++; }
-	    }
-	    return found;
+        LMakhluk lMakhluk = World.getWorldInstance().getObjects();
+        while (i < lMakhluk.getSize() && found == 0) {
+            if (lMakhluk.getInfo(i).isAlive() == 1
+                  && lMakhluk.getInfo(i).getPosition().getX()
+                  == getPosition().getX()
+                  && lMakhluk.getInfo(i).getPosition().getY()
+                  == getPosition().getY() && lMakhluk.getInfo(i).getID()
+                  != getID()) {
+                found = 1;
+            } else {
+                i++;
+            }
+        }
+        return found;
     }
     /**  Prosedur yang mengembalikan makhluk yang berada pada point yang
          sama dengan objek.
      *   Objek dipastikan bersama dengan makhluk lain pada suatu point.
      *   @return Pointer to makhluk
      */
-     public Makhluk MakhlukInTheSamePoint() {
-        Makhluk _Makhluk = null;
+     public final Makhluk makhlukInTheSamePoint() {
+        Makhluk makhluk = null;
         int i = 0;
         int found = 0;
-        LMakhluk _LMakhluk = World.getWorldInstance().getObjects();
-        while(i<_LMakhluk.getSize()&&found==0)
-        {
-            if (_LMakhluk.getInfo(i).isAlive()==1 && _LMakhluk.getInfo(i).getPosition().getX()==getPosition().getX() && _LMakhluk.getInfo(i).getPosition().getY() == getPosition().getY()&&_LMakhluk.getInfo(i).getID()!=getID())
-            {
-                _Makhluk = _LMakhluk.getInfo(i);
+        LMakhluk lMakhluk = World.getWorldInstance().getObjects();
+        while (i < lMakhluk.getSize() && found == 0) {
+            if (lMakhluk.getInfo(i).isAlive() == 1
+                  && lMakhluk.getInfo(i).getPosition().getX()
+                  == getPosition().getX()
+                  && llakhluk.getInfo(i).getPosition().getY()
+                  == getPosition().getY() && lMakhluk.getInfo(i).getID()
+                  != getID()) {
+                makhluk = lMakhluk.getInfo(i);
                 found = 1;
+            } else {
+                i++;
             }
-            else { i++; }
         }
-        return _Makhluk;
+        return makhluk;
     }
     /** Mengambil status ke"hidup"an makhluk.
-     *  @return	True apabila makhluk masih hidup
+     *  @return True apabila makhluk masih hidup
      */
-    public int isAlive() { if ( status == 1 ) return 1; else return 0; }
-    /** Prosedur yang digunakan untuk membunuh makhluk dari alam semesta, 
+    public final int isAlive() {
+        if (status == 1) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    /** Prosedur yang digunakan untuk membunuh makhluk dari alam semesta,
         yaitu apabila dimangsa atau terlalu tua.
-     *  @return	void
-	 */
-    public void Kill() { status =  0; }
-    /** Prosedur untuk menambah usia objek
-     *  @return void
+    */
+    public final void kill() {
+        status =  0; }
+    /** Prosedur untuk menambah usia objek.
      */
-    public void AgeIncrement() { age++; }
+    public final void ageIncrement() {
+        age++; }
 }

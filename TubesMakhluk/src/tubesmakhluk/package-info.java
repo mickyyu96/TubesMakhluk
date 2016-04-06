@@ -1,3 +1,0 @@
-/** Package tubesmakhluk.
- */
-package tubesmakhluk;
