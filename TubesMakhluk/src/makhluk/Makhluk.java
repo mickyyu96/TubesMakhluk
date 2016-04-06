@@ -94,7 +94,7 @@ public class Makhluk {
             if (lMakhluk.getInfo(i).isAlive() == 1
                   && lMakhluk.getInfo(i).getPosition().getX()
                   == getPosition().getX()
-                  && llakhluk.getInfo(i).getPosition().getY()
+                  && lMakhluk.getInfo(i).getPosition().getY()
                   == getPosition().getY() && lMakhluk.getInfo(i).getID()
                   != getID()) {
                 makhluk = lMakhluk.getInfo(i);
