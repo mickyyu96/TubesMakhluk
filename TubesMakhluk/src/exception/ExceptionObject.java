@@ -20,6 +20,12 @@ public class ExceptionObject extends Exception {
         ">> ERROR! Keypress tidak dikenali!",
         ">> ERROR! Masukan harus berupa bilangan bulat!"
     };
+    /** Getter message, mengeluarkan message dari sebuah exception.ExceptionObject.ExceptionObject
+     *  @return string berupa message ke-id dari object
+     */
+    public String GetMessage() {
+        return messages[this.id];
+    }
     /** Menciptakan sebuah instance dari kelas ExceptionObject dengan id yang
      *  di-passing melalui parameter.
      *  @param id1 int id yang merupakan id kesalahan yang dilakukan
