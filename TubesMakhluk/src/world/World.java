@@ -1,87 +1,104 @@
-//World.java
-
 package world;
-
-import java.util.*;
-import java.time.*;
 
 /** Kelas World merepresentasikan alam semesta yang terdiri dari
 *   sebuah "ruang" (space) fiktif yang memiliki dimensi panjang dan lebar
 *   dan sekumpulan makhluk-makhluk (objects) yang bisa bergerak secara independen.
  *	@author     Elvina R. K. Situmorang / 13514045
- *	@date       April 2016
  *	@version	1.0
  */
-
-public class World
-{
-	private int _isEnded;
-	private int _isPaused;
-
-	private static final int DEFAULT_NBRS = 30;
-	private static final int DEFAULT_NKOL = 30;
-
-	private static World worldInstance = new World(DEFAULT_NBRS, DEFAULT_NKOL);
-
-
-	int NBrs;
-	int NKol;
-
-	private LMakhluk objects;
-
-	/** Konstruktor World berparameter. Menangani pembentukan world dan 
-	 *	hal-hal yang berkaitan dengan keberjalanan world
-	 *	@param 	int _NBrs berupa ukuran baris world 
-	 *	@param	int _NKol berupa ukuran kolom world
-	 */
-	private World (int _NBrs, int _NKol)
-	{
-		NBrs = _NBrs;
-		NKol = _NKol;
-		_isPaused = 0; _isEnded = 0;
-		objects = new LMakhluk();
-
-	}
-	/** Mengembalikan makhluk (object) yang ada di world
-	 *	@return LMakhluk makhluk yang ada pada world
-	 */
-	public LMakhluk getObjects () {return objects;}
-	/** Pointer untuk mengembalikan worldInstance
-	 *  @return World
-	 */
-	public static World getWorldInstance() {return worldInstance;}
-	/** Mengembalikan jumlah baris world
-	 *	@return	int NBrs, jumlah baris World
-	 */
-	public int getNBrs() {return NBrs;}
-	/** Mengembalikan jumlah kolom world
-	 *	@return	int NKol, jumlah kolom World
-	 */
-	public int getNKol() {return NKol;}
-	/** Melakukan assignment jumlah baris world
-	 *	@param 	int _NBrs, jumlah baris yang akan di-assign
-	 *	@return	void
-	 */
-	public void setNBrs(int _NBrs) {NBrs = _NBrs;}
-	/** Melakukan assignment jumlah kolom world
-	 *	@param 	int _NKol, jumlah kolom yang akan di-assign
-	 *	@return	void
-	 */
-	public void setNKol (int _NKol) {NKol = _NKol;}
-	/** Mengembalikan apakah program sudah selesai atau  belum
-	 *	@return	int sesuai dengan attribute _isEnded
-	 */
-	public int isEnded() {return _isEnded;}
-	/** Mengembalikan apakah program sedang di-pause oleh user atau tidak
-	 *	@return	int sesuai dengan attribute _isPaused
-	 */
-	public int isPaused() {return _isPaused;}
-	/** Untuk mengubah state bahwa program harus berhenti
-	 *	@return void
-	 */
-	public void endWorld() {_isEnded = 1;}
-	/** Untuk mengubah state bahwa program sedang di-pause
-	 *	@return void
-	 */
-	public void changePauseState() { _isPaused ^= 1; }
+public class World {
+    /** Atribut isEnded.
+     */
+    private int isEnded;
+    /** Atribut isPaused.
+     */
+    private int isPaused;
+    /** Atribut default nBrs.
+     */
+    private static final int DEFAULTNBRS = 30;
+    /** Atribut default nKol.
+     */
+    private static final int DEFAULTNKOL = 30;
+    /** Menciptakan sebuah instance world.
+     */
+    private static World worldInstance = new World(DEFAULTNBRS, DEFAULTNKOL);
+    /** Atribut class world jumlah baris.
+     */
+    private int nBrs;
+    /** Atribut class world jumlah kolom.
+     */
+    private int nKol;
+    /** Atribut list makhluk.
+     */
+    private LMakhluk objects;
+    /** Konstruktor World berparameter. Menangani pembentukan world dan
+     * hal-hal yang berkaitan dengan keberjalanan world.
+     * @param  nBrs1 berupa ukuran baris world
+     * @param  nKol1 berupa ukuran kolom world
+     */
+    private World(final int nBrs1, final int nKol1) {
+        nBrs = nBrs1;
+        nKol = nKol1;
+        isPaused = 0;
+        isEnded = 0;
+        objects = new LMakhluk();
+    }
+    /** Mengembalikan makhluk (object) yang ada di world.
+     * @return LMakhluk makhluk yang ada pada world
+     */
+    public LMakhluk getObjects() {
+        return objects;
+    }
+    /** Pointer untuk mengembalikan worldInstance.
+     * @return World
+     */
+    public static World getWorldInstance() {
+        return worldInstance;
+     }
+    /** Mengembalikan jumlah baris world.
+     *  @return nBrs, jumlah baris World
+     */
+    public int getnBrs() {
+        return nBrs;
+    }
+    /** Mengembalikan jumlah kolom world.
+     * @return nKol, jumlah kolom World
+     */
+    public int getNKol() {
+        return nKol;
+     }
+    /** Melakukan assignment jumlah baris world.
+     * @param nBrs1 jumlah baris yang akan di-assign
+     */
+    public void setNBrs(final int nBrs1) {
+        nBrs = nBrs1;
+    }
+    /** Melakukan assignment jumlah kolom world.
+     * @param nKol1 jumlah kolom yang akan di-assign
+     */
+    public void setnKol(final int nKol1) {
+        nKol = nKol1;
+    }
+    /** Mengembalikan apakah program sudah selesai atau  belum.
+     *  @return int sesuai dengan attribute isEnded
+     */
+    public int isEnded() {
+        return isEnded;
+    }
+    /** Mengembalikan apakah program sedang di-pause oleh user atau tidak.
+     * @return int sesuai dengan attribute isPaused
+     */
+    public int isPaused() {
+        return isPaused;
+    }
+    /** Untuk mengubah state bahwa program harus berhenti.
+     */
+    public void endWorld() {
+        isEnded = 1;
+    }
+    /** Untuk mengubah state bahwa program sedang di-pause.
+     */
+    public void changePauseState() {
+        isPaused ^= 1;
+    }
 }

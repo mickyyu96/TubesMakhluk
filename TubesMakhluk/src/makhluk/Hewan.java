@@ -8,15 +8,9 @@ import world.*;
  *	@author     Elvina R. K. Situmorang / 13514045
  *	@version	1.0
  */
-<<<<<<< HEAD
-public class Hewan extends Makhluk {
-    /** Atribut hungerLvl, power, deltaT hewan.
-     */
-=======
 public abstract class Hewan extends Makhluk {
 	/** Atribut hungerLvl, power, deltaT hewan.
 	 */
->>>>>>> origin/master
     protected int hungerLvl, power, deltaT;
     /** Konstruktor Hewan, yang akan dilakukan passing parameter
      *  kepada kelas Makhluk.
