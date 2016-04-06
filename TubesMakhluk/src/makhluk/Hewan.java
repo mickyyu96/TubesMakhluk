@@ -7,7 +7,7 @@ import world.*;
  *	@author     Elvina R. K. Situmorang
  *	@version	1.0
  */
-public class Hewan extends Makhluk {
+public abstract class Hewan extends Makhluk {
 	/** Atribut hungerLvl, power, deltaT hewan.
 	 */
     protected int hungerLvl, power, deltaT;

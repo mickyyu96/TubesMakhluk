@@ -12,7 +12,7 @@ import world.*;
  *  @version	1.0
  */
 
-class IOManager {
+abstract class IOManager {
     /** Mencetak sebuah matriks ke layar
      *  @param M final Matrix yang merupakan objek matriks
      */
