@@ -1,7 +1,13 @@
-// KeypressHandler.java
-
 package keypresshandler;
 
+/*import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import exception.ExceptionObject;
+import inputoutput.SnapshotCapturer;
+import inputoutput.Screen;
+import makhluklive.MakhlukLive;
+import world.World;
+import world.WorldBuilder;*/
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import exception.*;
@@ -13,63 +19,61 @@ import makhluklive.*;
 import world.*;
 
 /** Kelas KeypressHandler merupakan kelas yang berfungsi untuk menangani
- *  keypress yang dimasukkan oleh user
- *  @author     Micky Yudi Utama / 13514011
- *  @date       April 2016
- *  @version	1.0
+ *  keypress yang dimasukkan oleh user.
+ *  @author  Micky Yudi Utama / 13514011
+ *  @version 1.0
  */
-
 public class KeypressHandler implements KeyListener {
+    /** Atribut karakter lastkeypress.
+     */
     private static char lastKeypress;
 
-    /** Menciptakan sebuah instance dari kelas KeypressHandler
+    /** Menciptakan sebuah instance dari kelas KeypressHandler.
      */
-    public KeypressHandler() {}
-
-    /** Mengembalikan karakter yang terakhir ditekan oleh pengguna yang disimpan 
-     *  dalam instance KeypressHandler
+    public KeypressHandler() {
+    }
+    /** Mengembalikan karakter yang terakhir ditekan oleh pengguna
+     *  yang disimpan dalam instance KeypressHandler.
      *  @return char yang terakhir ditekan pengguna
      */
-    public char getLastKeypress() { 
-        return lastKeypress; 
+    public final char getLastKeypress() {
+        return lastKeypress;
     }
-
-    /** Override fungsi keyPressed pada KeyListener sesuai kebutuhan
+    /** Override fungsi keyPressed pada KeyListener sesuai kebutuhan.
      *  @param e KeyEvent
      */
     @Override
-    public void keyPressed(KeyEvent e) {
+    public final void keyPressed(final KeyEvent e) {
         char c = e.getKeyChar();
         if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' || c == '.') {
             lastKeypress = c;
             try {
                 doAction();
+            } catch (Exception v) {
             }
-            catch(Exception v) {}
         }
     }
-    
-    /** Override fungsi keyReleased pada KeyListener sesuai kebutuhan
+    /** Override fungsi keyReleased pada KeyListener sesuai kebutuhan.
      *  @param e KeyEvent
      */
     @Override
-    public void keyReleased(KeyEvent e) {}
-    
-    /** Override fungsi keyTyped pada KeyListener sesuai kebutuhan
+    public void keyReleased(final KeyEvent e) {
+    }
+    /** Override fungsi keyTyped pada KeyListener sesuai kebutuhan.
      *  @param e KeyEvent
      */
     @Override
-    public void keyTyped(KeyEvent e) {}
-
-    /** Melakukan aksi-aksi yang sesuai dengan karakter lastKeypress
+    public void keyTyped(final KeyEvent e) {
+    }
+    /** Melakukan aksi-aksi yang sesuai dengan karakter lastKeypress.
      *  yang tersimpan dalam instance KeypressHandler
      *  @throws Exception
      */
-    public void doAction() throws Exception {
+    public final void doAction() throws Exception {
         char c = getLastKeypress();
         switch (c) {
             case 'q':
-                if (World.getWorldInstance().isPaused()==1) {
+                if (World.getWorldInstance().isPaused() == 1) {
                     World.getWorldInstance().changePauseState();
                 }
                 World.getWorldInstance().endWorld();
@@ -87,30 +91,12 @@ public class KeypressHandler implements KeyListener {
                     }
                     MakhlukLive.getInstance().makhlukMove();
                     MakhlukLive.getInstance().makhlukEat();
-                }
-                catch(ExceptionObject E) {
-                    E.DisplayErrorMessage();
+                } catch (ExceptionObject e) {
+                    e.displayErrorMessage();
                 }
                 break;
             default :
                 WorldBuilder.getBuilderInstance().addAnObject(c);
         }
     }
-    
-    /** Unit test KeypressHandler
-     *  @param args 
-     */
- /*   public static void main(String[] args) {
-        JFrame worldView = new JFrame("Animal's Village");
-        JLabel worldLabel = new JLabel("", JLabel.CENTER);
-        worldLabel.setFont(new Font("Consolas", Font.PLAIN, 15));
-        worldView.setSize(400, 400);
-        worldView.addKeyListener(new KeypressHandler());
-        worldView.add(worldLabel);
-        worldView.setVisible(false);
-        while (lastKeypress != 'q') {
-            System.out.println(lastKeypress);
-        }
-        worldView.dispose();
-    } */
 }

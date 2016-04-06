@@ -58,7 +58,7 @@ public class World {
     /** Mengembalikan jumlah baris world.
      *  @return nBrs, jumlah baris World
      */
-    public int getnBrs() {
+    public int getNBrs() {
         return nBrs;
     }
     /** Mengembalikan jumlah kolom world.
@@ -76,7 +76,7 @@ public class World {
     /** Melakukan assignment jumlah kolom world.
      * @param nKol1 jumlah kolom yang akan di-assign
      */
-    public void setnKol(final int nKol1) {
+    public void setNKol(final int nKol1) {
         nKol = nKol1;
     }
     /** Mengembalikan apakah program sudah selesai atau  belum.

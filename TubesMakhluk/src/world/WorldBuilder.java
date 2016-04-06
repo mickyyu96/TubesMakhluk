@@ -80,7 +80,7 @@ public final class WorldBuilder {
                 break;
             default :
                 ExceptionObject e = new ExceptionObject(3);
-                e.DisplayErrorMessage();
+                e.displayErrorMessage();
         }
    }
     /** Melakukan inisialisasi list of makhluk pada objek singleton kelas World.

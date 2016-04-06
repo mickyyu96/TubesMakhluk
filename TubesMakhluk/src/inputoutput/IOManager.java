@@ -15,8 +15,8 @@ class IOManager {
      *  @param m final Matrix yang merupakan objek matriks
      */
     public void printMatrix(final Matrix m) {
-        for (int i = 0; i < m.getnBrs(); i++) {
-            for (int j = 0; j < m.getnKol(); j++) {
+        for (int i = 0; i < m.getNBrs(); i++) {
+            for (int j = 0; j < m.getNKol(); j++) {
                 System.out.print(m.getInfo(i, j));
             }
             System.out.println();
