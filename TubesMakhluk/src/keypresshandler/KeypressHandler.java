@@ -85,8 +85,8 @@ public class KeypressHandler implements KeyListener {
                     if (World.getWorldInstance().isPaused() == 0) {
                         throw new ExceptionObject(2);
                     }
-                    MakhlukLive.getInstance().MakhlukMove();
-                    MakhlukLive.getInstance().MakhlukEat();
+                    MakhlukLive.getInstance().makhlukMove();
+                    MakhlukLive.getInstance().makhlukEat();
                 }
                 catch(ExceptionObject E) {
                     E.DisplayErrorMessage();
