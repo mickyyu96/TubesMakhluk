@@ -2,8 +2,9 @@ package makhluk;
 
 import point.Point;
 
-/** Kelas turunan dari Hewan yang merepresentasikan seekor domba.
- *  @author Robert Sebastian Herlim
+/** {@inheritdoc} Kelas Sheep adalah kelas turunan dari Hewan 
+ *  yang merepresentasikan seekor domba.
+ *  @author Robert Sebastian Herlim  / 13514061
  *  @version 1.0
  */
 public class Sheep extends Hewan {

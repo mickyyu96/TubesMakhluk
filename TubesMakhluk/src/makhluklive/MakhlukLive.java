@@ -8,7 +8,7 @@ import world.*;
 
 /** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari setiap makhluk
  *	Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup 
- *	@author     Elvina R. K. Situmorang
+ *	@author     Elvina R. K. Situmorang / 13514045
  *	@version    1.0
  */
 public class MakhlukLive

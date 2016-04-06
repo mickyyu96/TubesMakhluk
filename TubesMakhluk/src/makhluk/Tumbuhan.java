@@ -2,8 +2,9 @@ package makhluk;
 
 import point.Point;
 
-/** Kelas turunan dari Makhluk yang merepresentasikan sebuah tumbuhan.
- *  @author Robert Sebastian Herlim
+/** {@inheritdoc} Kelas Tumbuhan adalah kelas turunan dari Makhluk 
+ *  yang merepresentasikan sebuah tumbuhan.
+ *  @author Robert Sebastian Herlim  / 13514061
  *  @version 1.0
  */
 public class Tumbuhan extends Makhluk {
@@ -21,5 +22,5 @@ public class Tumbuhan extends Makhluk {
         age = 0;
         status = 1;
         pos = p;
-	}
+    }
 }

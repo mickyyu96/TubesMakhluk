@@ -6,6 +6,12 @@ import inputoutput.*;
 import makhluklive.*;
 import world.*;
 
+/** Kelas MWorld adalah kelas yang menampung main program
+ *	@author     Robert Sebastian Herlim / 13514061
+ *	@date       April 2016
+ *	@version	1.0
+ */
+
 public class MWorld {
 	private static boolean isValidID(String s) {
 		boolean found = false;
@@ -33,7 +39,7 @@ public class MWorld {
 		return valid;
 	}
 
-	public static void main(String args[]) throws Exception {
+	public static void main(String args[]) {
 	    System.out.println("*************************************************************************************");
 	    System.out.println("       **       ***    **  ***  ***         ***       **       **        **  ********");
 	    System.out.println("      ****      ****   **  ***  ****       ****      ****      **       **   **      ");
@@ -123,7 +129,11 @@ public class MWorld {
         do
         {
             while(World.getWorldInstance().isPaused() == 1) {
-                Thread.sleep(100);
+		try {
+		    Thread.sleep(100);
+		}
+		catch(Exception e) {
+		}
             }
 
             MakhlukLive.getInstance().MakhlukMove();
@@ -135,7 +145,11 @@ public class MWorld {
                 break;
             }
             
-            Thread.sleep(500);
+            try {
+		Thread.sleep(500);
+	    }
+	    catch(Exception e) {
+	    }
             
         } while (World.getWorldInstance().isEnded() == 0);
 	}

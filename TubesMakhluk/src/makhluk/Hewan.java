@@ -2,9 +2,10 @@ package makhluk;
 
 import world.*;
 
-/** Kelas Hewan yang merukapan turunan dari Makhluk yang merepresentasikan Hewan
+/** {@inheritdoc} Kelas Hewan adalah kelas yang merukapan turunan dari Makhluk 
+ *  yang merepresentasikan Hewan
  *	yang ada pada penciptaan World.
- *	@author     Elvina R. K. Situmorang
+ *	@author     Elvina R. K. Situmorang / 13514045
  *	@version	1.0
  */
 public abstract class Hewan extends Makhluk {

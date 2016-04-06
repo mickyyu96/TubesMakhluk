@@ -2,8 +2,9 @@ package makhluk;
 
 import point.Point;
 
-/** Kelas turunan dari Hewan yang merepresentasikan seekor ular
- *  @author     Micky Yudi Utama
+/** {@inheritdoc} Kelas Snake adalah kelas turunan dari Hewan 
+ *  yang merepresentasikan seekor ular
+ *  @author     Micky Yudi Utama  / 13514011
  *  @version	1.0
  */
 public class Snake extends Hewan {
