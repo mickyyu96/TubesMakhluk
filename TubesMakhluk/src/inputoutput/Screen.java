@@ -60,4 +60,11 @@ public class Screen extends IOManager implements Runnable {
         showWorld(500);
         System.out.println("Thread Finished");
     }
+    
+    /** Unit test Screen
+     *  @param args 
+     */
+    public static void main(String[] args) {
+        Screen.getScreenInstance().run();
+    }
 }

@@ -35,4 +35,20 @@ public class ExceptionObject extends Exception {
     public void DisplayErrorMessage() {
         JOptionPane.showMessageDialog(null, messages[id], "", JOptionPane.INFORMATION_MESSAGE);
     }
+    
+    /** Unit test ExceptionObject
+     *  @param args 
+     */
+    public static void main(String[] args) {
+        ExceptionObject E1 = new ExceptionObject(0);
+        E1.DisplayErrorMessage();
+        ExceptionObject E2 = new ExceptionObject(1);
+        E2.DisplayErrorMessage();
+        ExceptionObject E3 = new ExceptionObject(2);
+        E3.DisplayErrorMessage();
+        ExceptionObject E4 = new ExceptionObject(3);
+        E4.DisplayErrorMessage();
+        ExceptionObject E5 = new ExceptionObject(4);
+        E5.DisplayErrorMessage();
+    }
 }
