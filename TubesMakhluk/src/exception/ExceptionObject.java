@@ -2,8 +2,8 @@ package exception;
 
 import javax.swing.JOptionPane;
 
-/** Kelas untuk membantu menangani exception yang muncul dari kesalahan.
- *  masukan pengguna
+/** Kelas untuk membantu menangani exception yang muncul dari kesalahan
+ *  masukan pengguna.
  *  @author  Micky Yudi Utama
  *  @version 1.0
  */
@@ -20,10 +20,11 @@ public class ExceptionObject extends Exception {
         ">> ERROR! Keypress tidak dikenali!",
         ">> ERROR! Masukan harus berupa bilangan bulat!"
     };
-    /** Getter message, mengeluarkan message dari sebuah exception.ExceptionObject.ExceptionObject
+    /** Getter message, mengeluarkan message dari sebuah
+        exception.ExceptionObject.ExceptionObject.
      *  @return string berupa message ke-id dari object
      */
-    public String GetMessage() {
+    public final String getMessage() {
         return messages[this.id];
     }
     /** Menciptakan sebuah instance dari kelas ExceptionObject dengan id yang

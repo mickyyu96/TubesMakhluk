@@ -58,7 +58,8 @@ public final class RandomGenerator {
       *  @return     Point acak dari (nBrs-(nBrs/5)-2...nBrs-2), (1...nKol-2)
       */
      public Point getNextPointPB(final int nBrs, final int nKol) {
-         return new Point(getNextIntBetween(nBrs - (nBrs / 5) - 2, nBrs - 2),
+        final int num = 5;
+        return new Point(getNextIntBetween(nBrs - (nBrs / num) - 2, nBrs - 2),
                  getNextIntBetween(1, nKol - 2));
      }
 }

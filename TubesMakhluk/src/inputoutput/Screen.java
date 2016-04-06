@@ -31,10 +31,12 @@ public class Screen extends IOManager implements Runnable {
      *  dunia ke layar
      */
     public final void showWorld(final int deltaT) {
+        final int num = 400;
+        final int sizefont = 15;
         JFrame worldView = new JFrame("Animal's Village");
         JLabel worldLabel = new JLabel("", JLabel.CENTER);
-        worldLabel.setFont(new Font("Consolas", Font.PLAIN, 15));
-        worldView.setSize(400, 400);
+        worldLabel.setFont(new Font("Consolas", Font.PLAIN, sizefont));
+        worldView.setSize(num, num);
         worldView.addKeyListener(new KeypressHandler());
         worldView.add(worldLabel);
         worldView.setVisible(true);
@@ -51,7 +53,8 @@ public class Screen extends IOManager implements Runnable {
     /** Menjalankan dan memulai dunia.
      */
     public final void run() {
-        showWorld(500);
+        final int num = 500;
+        showWorld(num);
         System.out.println("Thread Finished");
     }
 }

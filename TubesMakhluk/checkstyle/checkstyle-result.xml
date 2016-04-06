@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/exception/ExceptionObject.java">
+<error line="16" column="34" severity="error" message="Array brackets at illegal position." source="com.puppycrawl.tools.checkstyle.checks.ArrayTypeStyleCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/exception/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/inputoutput/IOManager.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/inputoutput/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/inputoutput/Screen.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/inputoutput/SnapshotCapturer.java">
+<error line="33" column="42" severity="error" message="Expected @throws tag for &apos;IOException&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="33" column="55" severity="error" message="Expected @throws tag for &apos;AWTException&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/keypresshandler/KeypressHandler.java">
+<error line="63" column="41" severity="error" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/keypresshandler/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Hewan.java">
+<error line="12" column="19" severity="error" message="Variable &apos;hungerLvl&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="12" column="30" severity="error" message="Variable &apos;power&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="12" column="37" severity="error" message="Variable &apos;deltaT&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Makhluk.java">
+<error line="14" column="26" severity="error" message="Variable &apos;id&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="17" column="25" severity="error" message="Variable &apos;maxAge&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="20" column="19" severity="error" message="Variable &apos;age&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="23" column="19" severity="error" message="Variable &apos;status&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="26" column="21" severity="error" message="Variable &apos;pos&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/PolarBear.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Rabbit.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Sheep.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Snake.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Tumbuhan.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Turtle.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluk/Wolf.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluklive/MakhlukLive.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/makhluklive/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/matrix/Matrix.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/matrix/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/point/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/point/Point.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/randomgenerator/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/randomgenerator/RandomGenerator.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/world/LMakhluk.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/world/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/world/World.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/TubesMakhlukOOP/src/main/java/TubesMakhluk/TubesMakhlukOOP/src/world/WorldBuilder.java">
+</file>
+</checkstyle>

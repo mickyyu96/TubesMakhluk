@@ -25,7 +25,8 @@ class IOManager {
     /** Mencetak state dunia saat ini beserta isi dari dunia.
      */
     public void printWorldMap() {
-        for (int i = 0; i < 30; i++) {
+        final int num = 30;
+        for (int i = 0; i < num; i++) {
             System.out.println();
         }
         World worldInstance = World.getWorldInstance();

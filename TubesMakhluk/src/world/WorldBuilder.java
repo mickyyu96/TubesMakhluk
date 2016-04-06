@@ -79,7 +79,8 @@ public final class WorldBuilder {
                 World.getWorldInstance().getObjects().add(new Snake(p));
                 break;
             default :
-                ExceptionObject e = new ExceptionObject(3);
+                final int num = 3;
+                ExceptionObject e = new ExceptionObject(num);
                 e.displayErrorMessage();
         }
    }
