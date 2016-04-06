@@ -38,4 +38,13 @@ public class SnapshotCapturer extends IOManager {
         out.write(text);
         out.close();
     }
+    
+    /** Unit test SnapshotCapturer
+     *  @param args
+     *  @throws IOException
+     *  @throws AWTException
+     */
+    public static void main(String[] args) throws IOException, AWTException {
+        SnapshotCapturer.getCapturerInstance().captureSnapshot();
+    }
 }

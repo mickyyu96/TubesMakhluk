@@ -6,6 +6,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import exception.*;
 import inputoutput.*;
+import java.awt.Font;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import makhluklive.*;
 import world.*;
 
@@ -17,7 +20,7 @@ import world.*;
  */
 
 public class KeypressHandler implements KeyListener {
-    private char lastKeypress;
+    private static char lastKeypress;
 
     /** Menciptakan sebuah instance dari kelas KeypressHandler
      */
@@ -93,4 +96,21 @@ public class KeypressHandler implements KeyListener {
                 WorldBuilder.getBuilderInstance().addAnObject(c);
         }
     }
+    
+    /** Unit test KeypressHandler
+     *  @param args 
+     */
+ /*   public static void main(String[] args) {
+        JFrame worldView = new JFrame("Animal's Village");
+        JLabel worldLabel = new JLabel("", JLabel.CENTER);
+        worldLabel.setFont(new Font("Consolas", Font.PLAIN, 15));
+        worldView.setSize(400, 400);
+        worldView.addKeyListener(new KeypressHandler());
+        worldView.add(worldLabel);
+        worldView.setVisible(false);
+        while (lastKeypress != 'q') {
+            System.out.println(lastKeypress);
+        }
+        worldView.dispose();
+    } */
 }

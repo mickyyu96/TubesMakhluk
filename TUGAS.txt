@@ -2,10 +2,14 @@ kepi:
 laporan, checkstyle
 
 elvina:
-laporan, javadocs, unit test
+laporan, javadocs, unit test, JUnit
 
 micky:
-unit test, jdepend
+jdepend
 
 ngiong:
 nambahin javadocs
+
+link laporan: http://1drv.ms/1ULfcQ6
+
+gaje kita sebenarnya disuru buat unit test (driver) atau Junit ato apalah
