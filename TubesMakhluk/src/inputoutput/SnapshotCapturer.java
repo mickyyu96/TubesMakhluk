@@ -5,8 +5,9 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/** {@inheritdoc} Kelas SnapshotCapturer bertanggung jawab dalam pengambilan snapshot state
- *  dunia dan menyimpan hasil pengambilan snapshot ke sebuah file.
+/** {@inheritdoc} Kelas SnapshotCapturer bertanggung jawab dalam 
+ *  pengambilan snapshot state dunia dan menyimpan hasil pengambilan 
+ *  snapshot ke sebuah file.
  *  @author  Micky Yudi Utama
  *  @version 1.0
  */

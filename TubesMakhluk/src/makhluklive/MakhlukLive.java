@@ -5,11 +5,10 @@ import makhluk.Hewan;
 import randomgenerator.RandomGenerator;
 import world.World;
 import world.LMakhluk;
-
-/** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari setiap makhluk
- *	Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup 
- *	@author     Elvina R. K. Situmorang / 13514045
- *	@version    1.0
+/** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari
+ *  setiap makhluk Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup.
+ *  @author     Elvina R. K. Situmorang / 13514045
+ *  @version    1.0
  */
 public final class MakhlukLive {
     /** Atribut singleton.

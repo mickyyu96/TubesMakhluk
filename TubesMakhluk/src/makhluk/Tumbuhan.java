@@ -1,8 +1,7 @@
 package makhluk;
 
 import point.Point;
-
-/** {@inheritdoc} Kelas Tumbuhan adalah kelas turunan dari Makhluk 
+/** {@inheritdoc} Kelas Tumbuhan adalah kelas turunan dari Makhluk
  *  yang merepresentasikan sebuah tumbuhan.
  *  @author Robert Sebastian Herlim  / 13514061
  *  @version 1.0

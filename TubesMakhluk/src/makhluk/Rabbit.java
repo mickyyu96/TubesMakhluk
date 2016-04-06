@@ -1,8 +1,7 @@
 package makhluk;
 
 import point.Point;
-
-/** {@inheritdoc} Kelas Rabbit adalah kelas turunan dari Hewan 
+/** {@inheritdoc} Kelas Rabbit adalah kelas turunan dari Hewan
  *  yang merepresentasikan seekor rabbit.
  *  @author Elvina R. K. Situmorang / 13514045
  *  @version 1.0

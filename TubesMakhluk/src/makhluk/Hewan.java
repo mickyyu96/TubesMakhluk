@@ -1,16 +1,14 @@
 package makhluk;
 
-import world.*;
-
-/** {@inheritdoc} Kelas Hewan adalah kelas yang merukapan turunan dari Makhluk 
- *  yang merepresentasikan Hewan
- *	yang ada pada penciptaan World.
- *	@author     Elvina R. K. Situmorang / 13514045
- *	@version	1.0
+import world.World;
+/** {@inheritdoc} Kelas Hewan adalah kelas yang merukapan turunan dari Makhluk
+ *  yang merepresentasikan Hewan yang ada pada penciptaan World.
+ *  @author   Elvina R. K. Situmorang / 13514045
+ *  @version  1.0
  */
 public abstract class Hewan extends Makhluk {
-	/** Atribut hungerLvl, power, deltaT hewan.
-	 */
+    /** Atribut hungerLvl, power, deltaT hewan.
+     */
     protected int hungerLvl, power, deltaT;
     /** Konstruktor Hewan, yang akan dilakukan passing parameter
      *  kepada kelas Makhluk.

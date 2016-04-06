@@ -3,7 +3,6 @@ package makhluk;
 import point.Point;
 import world.LMakhluk;
 import world.World;
-
 /** Kelas Makhluk merupakan kelas abstrak yang memiliki member-member
     dasar yang akan diturunkan ke kelas lain.
  *  @author Atika Azzahra Akbar / 13514077

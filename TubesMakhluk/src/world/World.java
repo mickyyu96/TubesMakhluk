@@ -1,12 +1,13 @@
 package world;
 
 /** Kelas World merepresentasikan alam semesta yang terdiri dari
-*   sebuah "ruang" (space) fiktif yang memiliki dimensi panjang dan lebar
-*   dan sekumpulan makhluk-makhluk (objects) yang bisa bergerak secara independen.
- *	@author     Elvina R. K. Situmorang / 13514045
- *	@version	1.0
+ *  sebuah "ruang" (space) fiktif yang memiliki dimensi panjang dan lebar
+ *  dan sekumpulan makhluk-makhluk (objects) yang bisa bergerak secara
+ *  independen.
+ *  @author    Elvina R. K. Situmorang / 13514045
+ *  @version   1.0
  */
-public class World {
+public final class World {
     /** Atribut isEnded.
      */
     private int isEnded;

@@ -37,6 +37,7 @@ public class ExceptionObject extends Exception {
      *  kesalahan yang disimpan dalam data member.
      */
     public final void displayErrorMessage() {
-        JOptionPane.showMessageDialog(null, messages[id], "", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, messages[id], "",
+        JOptionPane.INFORMATION_MESSAGE);
     }
 }

@@ -5,8 +5,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import keypresshandler.KeypressHandler;
 import world.World;
-/** {@inheritdoc} Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk
- *  melakukan operasi-operasi Input/Output ke layar.
+/** {@inheritdoc} Kelas Screen merepresentasikan layar pengguna
+ *  dan bertanggung jawab untuk melakukan operasi-operasi
+ *  Input/Output ke layar.
  *  @author Micky Yudi Utama
  *  @version 1.0
  */
@@ -33,7 +34,7 @@ public class Screen extends IOManager implements Runnable {
         JFrame worldView = new JFrame("Animal's Village");
         JLabel worldLabel = new JLabel("", JLabel.CENTER);
         worldLabel.setFont(new Font("Consolas", Font.PLAIN, 15));
-        worldView.setSize(400,400);
+        worldView.setSize(400, 400);
         worldView.addKeyListener(new KeypressHandler());
         worldView.add(worldLabel);
         worldView.setVisible(true);
