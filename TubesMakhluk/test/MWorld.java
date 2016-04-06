@@ -1,7 +1,7 @@
 //MWorld.java
 
 import java.util.Scanner;
-import exception.*;
+import exception.ExceptionObject;
 import inputoutput.*;
 import makhluklive.*;
 import world.*;

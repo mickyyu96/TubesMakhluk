@@ -9,7 +9,7 @@ import world.World;
  *  @author Atika Azzahra Akbar / 13514077
  *  @version 1.0
  */
-public class Makhluk {
+public abstract class Makhluk {
     /** Atribut ID Makhluk.
      */
     protected final char id;
