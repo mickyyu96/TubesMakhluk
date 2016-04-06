@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import keypresshandler.KeypressHandler;
 import world.World;
-/** Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk
+/** {@inheritdoc} Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk
  *  melakukan operasi-operasi Input/Output ke layar.
  *  @author Micky Yudi Utama
  *  @version 1.0
