@@ -24,38 +24,37 @@ public class LMakhluk {
 
 	/** Menambah element pada bagian belakang list of makhluk
 	 *  @param      _makhluk Makhluk yang akan ditambah ke list
-	 *	@return     void
 	 */
 	public void Add(Makhluk _makhluk) {
 		makhlukVector.add(_makhluk);
 	}
 
 	/** Predikat yang menyatakan status kekosongan list of makhluk
-     *	@return     Bilangan bulat 0 jika list kosong,
-     *				1 jika list tidak kosong
-     */
+	*   @return     Bilangan bulat 0 jika list kosong,
+	*		1 jika list tidak kosong
+	*/
 	public int isEmpty() {
 	    return (makhlukVector.capacity() == 0)?1:0; 
 	}
 
 	/** Mengembalikan jumlah elemen yang ada dalam list of makhluk
-	*	@return     Bilangan bulat yang menyatakan jumlah elemen yang ada di list
+	*   @return     Bilangan bulat yang menyatakan jumlah elemen yang ada di list
 	*/
 	public int getSize () { 
 	    return makhlukVector.size(); 
 	}
 
 	/** Mengakses isi list pada elemen ke-idx, elemen pertama dihitung sebagai elemen ke-0
-	*	@param		idx Indeks elemen yang mau diakses
-	*	@return     Makhluk yang berada pada list elemen ke-idx
+	*   @param	idx Indeks elemen yang mau diakses
+	*   @return     Makhluk yang berada pada list elemen ke-idx
 	*/
 	public Makhluk getInfo(int idx) { 
 	    return makhlukVector.get(idx); 
 	}
 
 	/** Predikat yang menyatakan seluruh makhluk pada list sudah mati
-     *	@return     true apabila tidak ada makhluk yang masih hidup
-     */
+	*   @return     true apabila tidak ada makhluk yang masih hidup
+	*/
 	public boolean IsAllMakhlukDead() {
 	    boolean found = false;
 	    for(int i=0; i<getSize() && !found; i++) {
@@ -65,8 +64,7 @@ public class LMakhluk {
 	}
 
 	/** Unit test untuk LMakhluk
-     *	@return     void
-     */
+	*/
 	public static void main (String args[]) {
 	    LMakhluk _LMakhluk = new LMakhluk();
 	    System.out.println("-----Add Wolf, Sheep, PolarBear ke dalam list-----");
