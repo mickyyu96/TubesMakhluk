@@ -119,9 +119,8 @@ public class MWorld {
             }
         } while (nBrs < 7 || nKol < 7
                 || !isValidUkuran(strNBrs, strNKol));
-        World.getWorldInstance().setnBrs(nBrs+2);
-        World.getWorldInstance().setnKol(nKol+2);
-        in.close();
+        World.getWorldInstance().setNBrs(nBrs+2);
+        World.getWorldInstance().setNKol(nKol+2);
         System.out.println("\n========================================="
                 + "==================================\n");
         /**************************************************************
@@ -172,5 +171,7 @@ public class MWorld {
             }
             Thread.sleep(500);
         } while (World.getWorldInstance().isEnded() == 0);
+        
+        in.close();
     }
 }
