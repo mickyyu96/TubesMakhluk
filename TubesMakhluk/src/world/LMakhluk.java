@@ -3,7 +3,7 @@ package world;
 // LMakhluk.java
 
 /** Container yang menampung obyek-obyek Makhluk yang terdapat dalam dunia
- *	@author     Robert Sebastian Herlim
+ *	@author     Robert Sebastian Herlim / 13514061
  *	@date       April 2016
  *	@version	1.0
  */

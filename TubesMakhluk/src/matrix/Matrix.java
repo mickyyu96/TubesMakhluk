@@ -5,7 +5,7 @@ package matrix;
 /** Kelas Matrix yang menangani hal-hal yang berhubungan
  *  dengan matriks. Kelas ini digunakan dalam pembuatan World
  *	dengan hubungan asosiatif.
- *	@author     Elvina R. K. Situmorang
+ *	@author     Elvina R. K. Situmorang / 13514045
  *	@date       April 2016
  *	@version    1.0
  */

@@ -14,7 +14,7 @@ import world.*;
 
 /** Kelas KeypressHandler merupakan kelas yang berfungsi untuk menangani
  *  keypress yang dimasukkan oleh user
- *  @author     Micky Yudi Utama
+ *  @author     Micky Yudi Utama / 13514011
  *  @date       April 2016
  *  @version	1.0
  */

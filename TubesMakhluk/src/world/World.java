@@ -5,6 +5,14 @@ package world;
 import java.util.*;
 import java.time.*;
 
+/** Kelas World merepresentasikan alam semesta yang terdiri dari
+*   sebuah "ruang" (space) fiktif yang memiliki dimensi panjang dan lebar
+*   dan sekumpulan makhluk-makhluk (objects) yang bisa bergerak secara independen.
+ *	@author     Elvina R. K. Situmorang / 13514045
+ *	@date       April 2016
+ *	@version	1.0
+ */
+
 public class World
 {
 	private int _isEnded;

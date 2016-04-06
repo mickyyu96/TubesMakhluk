@@ -6,7 +6,7 @@ import world.World;
 
 /** Kelas Makhluk merupakan kelas abstrak yang memiliki member-member
     dasar yang akan diturunkan ke kelas lain.
- *  @author Atika Azzahra Akbar
+ *  @author Atika Azzahra Akbar / 13514077
  *  @version 1.0
  */
 public class Makhluk {

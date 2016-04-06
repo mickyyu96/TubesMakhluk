@@ -6,8 +6,8 @@ import matrix.*;
 import point.*;
 import world.*;
 
-/** Kelas IOManager bertanggung jawab untuk melakukan operasi-operasi Input/Output
- *  @author     Micky Yudi Utama
+/** Kelas IOManager bertanggung jawab untuk melakukan operasi-operasi Input/Output.
+ *  @author     Micky Yudi Utama / 13514011
  *  @date       April 2016
  *  @version	1.0
  */

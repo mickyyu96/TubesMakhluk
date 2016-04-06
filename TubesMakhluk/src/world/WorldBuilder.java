@@ -5,7 +5,7 @@ import makhluk.*;
 import randomgenerator.*;
 
 /** Kelas WorldBuilder merupakan BUILDER dari kelas World, dan bertanggung jawab untuk melakukan inisialisasi objek-objek dunia
- *	@author     Atika Azzahra Akbar
+ *	@author     Atika Azzahra Akbar / 13514077
  *	@date       April 2016
  *	@version	1.0
  */

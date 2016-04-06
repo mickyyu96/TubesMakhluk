@@ -7,9 +7,9 @@ import java.awt.Font;
 import keypresshandler.*;
 import world.*;
 
-/** Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk
+/** {@inheritdoc} Kelas Screen merepresentasikan layar pengguna dan bertanggung jawab untuk
  *  melakukan operasi-operasi Input/Output ke layar
- *  @author     Micky Yudi Utama
+ *  @author     Micky Yudi Utama / 13514011
  *  @date       April 2016
  *  @version	1.0
  */

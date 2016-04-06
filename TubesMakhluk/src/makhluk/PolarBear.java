@@ -2,8 +2,9 @@ package makhluk;
 
 import point.Point;
 
-/** Kelas turunan dari Hewan yang merepresentasikan seekor polar bear.
- *  @author Atika Azzahra Akbar
+/** {@inheritdoc} Kelas PolarBear adalah kelas turunan dari Hewan 
+ *  yang merepresentasikan seekor polar bear.
+ *  @author Atika Azzahra Akbar / 13514077
  *  @version 1.0
  */
 public class PolarBear extends Hewan {

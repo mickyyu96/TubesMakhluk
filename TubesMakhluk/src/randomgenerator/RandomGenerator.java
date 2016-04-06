@@ -4,7 +4,7 @@ import java.util.Random;
 import point.*;
 
 /** Kelas RandomGenerator mengembalikan sebuah random number
- *	@author     Atika Azzahra Akbar
+ *	@author     Atika Azzahra Akbar / 13514077
  *	@date       April 2016
  *	@version	1.0
  */

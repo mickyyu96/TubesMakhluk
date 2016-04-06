@@ -5,7 +5,7 @@ package point;
 /** Kelas Point menangani berbagai hal yang berhubungan dengan
  *	Point. Kelas ini juga digukan dalam pembuatan World dengan
  *	hubungan asosiatif
- *	@author     Elvina R. K. Situmorang
+ *	@author     Elvina R. K. Situmorang / 13514045
  *	@date       April 2016
  *	@version    1.0
  */
