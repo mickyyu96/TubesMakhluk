@@ -22,5 +22,5 @@ public class Tumbuhan extends Makhluk {
         age = 0;
         status = 1;
         pos = p;
-	}
+    }
 }
