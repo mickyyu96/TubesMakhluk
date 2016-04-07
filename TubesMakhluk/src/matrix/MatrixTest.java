@@ -9,8 +9,8 @@ public class MatrixTest {
     Matrix M = new Matrix(50,50);
     @Test
     public void test_consMatrix () {
-        assertTrue("Baris salah",M.getNBrs()==50);
-        assertTrue("Kolom salah",M.getNKol()==50);
+        assertTrue("Baris salah",M.getnBrs()==50);
+        assertTrue("Kolom salah",M.getnKol()==50);
     }
 
     @Test
