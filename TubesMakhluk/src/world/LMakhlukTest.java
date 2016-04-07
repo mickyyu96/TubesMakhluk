@@ -12,9 +12,9 @@ public class LMakhlukTest {
     @Test
     public void test_LMakhluk() {
         LMakhluk _LMakhluk = new LMakhluk();
-        _LMakhluk.Add(new Wolf(RandomGenerator.getInstance().getNextPoint(5, 5)));
-        _LMakhluk.Add(new Sheep(RandomGenerator.getInstance().getNextPoint(5, 5)));
-        _LMakhluk.Add(new PolarBear(RandomGenerator.getInstance().getNextPoint(5, 5)));
+        _LMakhluk.addd(new Wolf(RandomGenerator.getInstance().getNextPoint(5, 5)));
+        _LMakhluk.add(new Sheep(RandomGenerator.getInstance().getNextPoint(5, 5)));
+        _LMakhluk.add(new PolarBear(RandomGenerator.getInstance().getNextPoint(5, 5)));
 
         char c;
         c = _LMakhluk.getInfo(0).getID();
