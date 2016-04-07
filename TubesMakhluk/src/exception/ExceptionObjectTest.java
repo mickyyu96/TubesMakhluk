@@ -20,7 +20,7 @@ public class ExceptionObjectTest {
             ExceptionObject E2 = new ExceptionObject(1);
             assertEquals(">> ERROR! Ada ID yang tidak dikenali!",E2.getMessage());
             ExceptionObject E3 = new ExceptionObject(2);
-            assertEquals(">> ERROR! Pause World dulu sebelum melakukan Single-step Execution!",E3.GetMessage());
+            assertEquals(">> ERROR! Pause World dulu sebelum melakukan Single-step Execution!",E3.getMessage());
             ExceptionObject E4 = new ExceptionObject(3);
             assertEquals(">> ERROR! Keypress tidak dikenali!",E4.getMessage());
             ExceptionObject E5 = new ExceptionObject(4);
