@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 /** Kelas untuk membantu menangani exception yang muncul dari kesalahan
  *  masukan pengguna.
- *  @author  Micky Yudi Utama
+ *  @author  Micky Yudi Utama / 13514011
  *  @version 1.0
  */
 public class ExceptionObject extends Exception {

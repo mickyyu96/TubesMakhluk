@@ -8,7 +8,7 @@ import java.io.IOException;
 /** {@inheritdoc} Kelas SnapshotCapturer bertanggung jawab dalam
  *  pengambilan snapshot state dunia dan menyimpan hasil pengambilan
  *  snapshot ke sebuah file.
- *  @author  Micky Yudi Utama
+ *  @author  Micky Yudi Utama / 13514011
  *  @version 1.0
  */
 public final class SnapshotCapturer extends IOManager {

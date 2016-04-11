@@ -7,7 +7,7 @@ import world.World;
 
 /** Kelas IOManager bertanggung jawab untuk melakukan
  *  operasi-operasi Input/Output.
- *  @author  Micky Yudi Utama
+ *  @author  Micky Yudi Utama / 13514011
  *  @version 1.0
  */
 class IOManager {

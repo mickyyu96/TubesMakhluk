@@ -3,7 +3,6 @@ package inputoutput;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import exception.ExceptionObject;
-import inputoutput.SnapshotCapturer;
 import makhluklive.MakhlukLive;
 import world.World;
 import world.WorldBuilder;

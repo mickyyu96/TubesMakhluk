@@ -1,6 +1,5 @@
 package world;
 
-import point.Point;
 /** {@inheritdoc} Kelas Hewan adalah kelas yang merukapan turunan dari Makhluk
  *  yang merepresentasikan Hewan yang ada pada penciptaan World.
  *  @author   Elvina R. K. Situmorang / 13514045
