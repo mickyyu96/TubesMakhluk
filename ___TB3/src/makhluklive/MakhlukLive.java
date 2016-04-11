@@ -1,10 +1,10 @@
 package makhluklive;
 
-import makhluk.Makhluk;
-import makhluk.Hewan;
 import randomgenerator.RandomGenerator;
 import world.World;
+import world.Makhluk;
 import world.LMakhluk;
+import world.Hewan;
 /** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari
  *  setiap makhluk Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup.
  *  @author     Elvina R. K. Situmorang / 13514045

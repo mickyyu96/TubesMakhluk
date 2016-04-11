@@ -1,7 +1,6 @@
 package world;
 
 import java.util.Vector;
-import makhluk.Makhluk;
 /** Container yang menampung obyek-obyek Makhluk yang terdapat dalam dunia.
  *  @author  Robert Sebastian Herlim / 13514061
  *  @version 1.0

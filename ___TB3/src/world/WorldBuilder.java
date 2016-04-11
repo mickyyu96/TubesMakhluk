@@ -2,13 +2,6 @@ package world;
 
 import point.Point;
 import exception.ExceptionObject;
-import makhluk.Snake;
-import makhluk.Tumbuhan;
-import makhluk.Turtle;
-import makhluk.Rabbit;
-import makhluk.Sheep;
-import makhluk.PolarBear;
-import makhluk.Wolf;
 import randomgenerator.RandomGenerator;
 
 /** Kelas WorldBuilder merupakan BUILDER dari kelas World dan bertanggung

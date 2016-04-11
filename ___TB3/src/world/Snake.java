@@ -1,4 +1,4 @@
-package makhluk;
+package world;
 
 import point.Point;
 /** {@inheritdoc} Kelas Snake adalah kelas turunan dari Hewan

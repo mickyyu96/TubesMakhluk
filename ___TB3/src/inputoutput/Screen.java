@@ -3,7 +3,6 @@ package inputoutput;
 import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import keypresshandler.KeypressHandler;
 import world.World;
 /** {@inheritdoc} Kelas Screen merepresentasikan layar pengguna
  *  dan bertanggung jawab untuk melakukan operasi-operasi
