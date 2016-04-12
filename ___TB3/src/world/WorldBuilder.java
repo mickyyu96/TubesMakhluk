@@ -56,6 +56,7 @@ public final class WorldBuilder {
                 break;
             case 'R':
                 World.getWorldInstance().getObjects().add(new Rabbit(p));
+                break;
             case 'T':
                 World.getWorldInstance().getObjects().add(new Turtle(p));
                 break;

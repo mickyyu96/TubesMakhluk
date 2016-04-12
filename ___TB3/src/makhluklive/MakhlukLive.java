@@ -10,7 +10,7 @@ import world.Hewan;
  *  @author     Elvina R. K. Situmorang / 13514045
  *  @version    1.0
  */
-public final class MakhlukLive {
+public final class MakhlukLive implements Runnable{
     /** Atribut singleton.
      */
     private static MakhlukLive instance = new MakhlukLive();
@@ -22,7 +22,7 @@ public final class MakhlukLive {
     private int dysign = 1;
     /** Konstruktor menciptakan MakhlukLive.
      */
-    private MakhlukLive() {
+    public MakhlukLive() {
     }
     /** Mengembalikan pointer dari objek kelas singleton pada kelas MakhlukLive.
      *  @return Pointer yang menunjuk ke singleton instance pada
@@ -97,5 +97,30 @@ public final class MakhlukLive {
                 }
             }
         }
+    }
+    
+    /** Prosedur run yang digunakan saat penciptaan sebuah thread
+     */
+    public void run() {
+        do {
+            while (World.getWorldInstance().isPaused() == 1) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException ex) {
+                    
+                }
+            }
+            MakhlukLive.getInstance().makhlukMove();
+            MakhlukLive.getInstance().makhlukEat();
+            if (World.getWorldInstance().getObjects().isAllMakhlukDead()) {
+                World.getWorldInstance().endWorld();
+                break;
+            }
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+
+            }
+        } while (World.getWorldInstance().isEnded() == 0);
     }
 }
