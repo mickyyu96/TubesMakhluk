@@ -57,4 +57,19 @@ public class LMakhluk {
         }
         return !found;
     }
+    /** Menghitung jumlah makhluk yang ber-ID karakter yang di-passing
+     *  melalui parameter.
+     *  @param  c Karakter ID makhluk yang ingin dihitung
+     *  @return Bilangan bulat yang menyatakan jumlah makhluk ber-ID c 
+     *          yang masih hidup
+     */
+    public final int countMakhluk(char c) {
+        int res = 0;
+        for (int i = 0; i < getSize(); i++) {
+            if (getInfo(i).isAlive() == 1 && getInfo(i).getID() == c) {
+                res++;
+            }
+        }
+        return res;
+    }
 }

@@ -7,7 +7,6 @@ import makhluklive.MakhlukLive;
 import world.World;
 import world.WorldBuilder;
 
-
 /** Kelas KeypressHandler merupakan kelas yang berfungsi untuk menangani
  *  keypress yang dimasukkan oleh user.
  *  @author  Micky Yudi Utama / 13514011

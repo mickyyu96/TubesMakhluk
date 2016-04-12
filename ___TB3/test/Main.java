@@ -78,7 +78,6 @@ public class Main {
         JPanel subPanel1 = new JPanel();
         subPanel1.setBackground(Color.RED);
         
-        
         JTextField subTextField1 = new JTextField(20);
         subTextField1.setLocation(100, 100);
         
@@ -109,11 +108,9 @@ public class Main {
                 int nKol = Integer.parseInt(nKolString);
                 
                 try {
-                    
                     playWorld(nBrs, nKol, input);
                 }
-                catch (InterruptedException ex) {
-                    
+                catch (InterruptedException ex) {                
                 }
             }
             
@@ -147,22 +144,62 @@ public class Main {
      *      SNAKE EDIT DI SINI
      */
     public final void showFrame2() {
-        JFrame mainFrame = new JFrame("Frame2");
-        mainFrame.setVisible(true);
-        mainFrame.setSize(600, 400);
-        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame subFrame1 = new JFrame("Frame2");
+        subFrame1.setVisible(true);
+        subFrame1.setSize(600, 400);
+        subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        JPanel mainPanel = new JPanel();
-        mainPanel.setBackground(Color.BLUE);
+        JPanel subPanel1 = new JPanel();
+        subPanel1.setBackground(Color.BLUE);
         
-        JButton mainButton = new JButton("Test");
+        JTextField subTextField1 = new JTextField(20);
+        subTextField1.setLocation(100, 100);
         
-        JLabel mainLabel = new JLabel("Main Menu", JLabel.CENTER);
+        JTextField subTextField2 = new JTextField(20);
+        subTextField1.setLocation(100, 200);
         
-        mainPanel.add(mainButton);
-        mainPanel.add(mainLabel);
-        mainFrame.add(mainPanel, BorderLayout.CENTER);
+        JTextField subTextField3 = new JTextField(20);
+        subTextField1.setLocation(100, 300);
+        
+        JLabel subLabel1 = new JLabel("1", JLabel.CENTER);
+        JLabel subLabel2 = new JLabel("2", JLabel.CENTER);
+        JLabel subLabel3 = new JLabel("3", JLabel.CENTER);
+        
+        JButton subButton1 = new JButton("Run");
+        subButton1.setSize(150,50);
+        subButton1.setLocation(100,300);
+        subButton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String nBrsString = subTextField1.getText();
+                String nKolString = subTextField2.getText();
+                String input = subTextField3.getText();
+                
+                subLabel1.setText(nBrsString);
+                subLabel2.setText(nKolString);
+                subLabel3.setText(input);
+                
+                int nBrs = Integer.parseInt(nBrsString);
+                int nKol = Integer.parseInt(nKolString);
+                
+                try {
+                    playWorld(nBrs, nKol, input);
+                }
+                catch (InterruptedException ex) {                
+                }
+            }
+            
+        });
+        
+        subPanel1.add(subButton1);
+        subPanel1.add(subLabel1);
+        subPanel1.add(subLabel2);
+        subPanel1.add(subLabel3);
+        subPanel1.add(subTextField1);
+        subPanel1.add(subTextField2);
+        subPanel1.add(subTextField3);
+        subFrame1.add(subPanel1, BorderLayout.CENTER);
     }
+    
     
     public static void main(String[] args) {
         Main M = new Main();
