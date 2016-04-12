@@ -132,15 +132,6 @@ public class Main {
             WorldBuilder.getBuilderInstance().buildWorldObject();
         } else {
             WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-            WorldBuilder.getBuilderInstance().addAnObject('T');
         }
 
         Thread viewThread = new Thread(new Screen());
@@ -148,8 +139,8 @@ public class Main {
         Thread liveThread = new Thread(new MakhlukManager());
         liveThread.start();
         if (World.getWorldInstance().isSnakeWorld() == 1) {
-            //Thread spawnerThread = new Thread(new MakhlukSpawner());
-            //spawnerThread.start();
+            Thread spawnerThread = new Thread(new MakhlukSpawner());
+            spawnerThread.start();
         }
     }
 

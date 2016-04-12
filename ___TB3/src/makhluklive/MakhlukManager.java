@@ -6,7 +6,12 @@ import world.Makhluk;
 import world.ListMakhluk;
 import world.Hewan;
 import point.Point;
+<<<<<<< HEAD:___TB3/src/makhluklive/MakhlukManager.java
 /** Kelas MakhlukGenerator merupakan kelas yang menangani kehidupan dari
+=======
+import world.WorldBuilder;
+/** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari
+>>>>>>> 53ac26bea45136964735a4b16939b92885b5af26:___TB3/src/makhluklive/MakhlukLive.java
  *  setiap makhluk Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup.
  *  @author     Elvina R. K. Situmorang / 13514045
  *  @version    1.0
@@ -90,8 +95,14 @@ public final class MakhlukManager implements Runnable {
             }
             Point lastPos = new Point(kepalaUlar.getPosition());
             
-            kepalaUlar.move(dx, dy);
-            
+            if (kepalaUlar.shouldRebounced(dx, dy)) {
+                World.getWorldInstance().endWorld();
+                System.out.println("Game Over!");
+            }
+            else {
+                kepalaUlar.move(dx, dy);
+            }
+
             for (int i = 1; i < snakes.getSize(); i++) {
                 if (snakes.getInfo(i).isAlive() == 1) {
                     Hewan ular = (Hewan) snakes.getInfo(i);
@@ -130,6 +141,24 @@ public final class MakhlukManager implements Runnable {
                             }
                         }
                     }
+                }
+            }
+        }
+        
+        if(World.getWorldInstance().isSnakeWorld() == 1) {
+            Makhluk snakeHead = worldInstance.getSnakes().getInfo(0);
+            if (snakeHead.isSnakeBodyInTheSamePoint() == 1) {
+                World.getWorldInstance().endWorld();
+                System.out.println("Game Over!");
+            } else if (snakeHead.isMakhlukInTheSamePoint() == 1) {
+                Makhluk m1 = snakeHead;
+                Makhluk m2 = snakeHead.makhlukInTheSamePoint();
+                if (m2.getID() == 'W' || m2.getID() == 'P') {
+                    World.getWorldInstance().endWorld();
+                    System.out.println("Game Over!");
+                } else {
+                    m2.kill();
+                    WorldBuilder.getBuilderInstance().addAnObject('U');
                 }
             }
         }

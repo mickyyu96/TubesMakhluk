@@ -102,6 +102,24 @@ public abstract class Makhluk {
         }
         return makhluk;
     }
+     /** Fungsi validasi untuk mengecek apakah kepala ular dan bagian tubuhnya
+      *  berada pada posisi yang sama.
+      *  @return Bilangan bulat 0 atau 1
+      */
+    public final int isSnakeBodyInTheSamePoint() {
+        int found = 0;
+        int i = 1;
+        LMakhluk snakes = World.getWorldInstance().getSnakes();
+        while (i < snakes.getSize() && found == 0) {
+            if (snakes.getInfo(i).getPosition().getX() == getPosition().getX()
+            && snakes.getInfo(i).getPosition().getY() == getPosition().getY()) {
+                found = 1;
+            } else {
+                i++;
+            }
+        }
+        return found;
+    }
     /** Mengambil status ke"hidup"an makhluk.
      *  @return True apabila makhluk masih hidup
      */
