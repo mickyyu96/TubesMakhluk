@@ -70,7 +70,12 @@ public final class WorldBuilder {
                 World.getWorldInstance().getObjects().add(new PolarBear(p));
                 break;
             case 'U':
-                World.getWorldInstance().getObjects().add(new Snake(p));
+                if(World.getWorldInstance().isSnakeWorld() == 0) {
+                    World.getWorldInstance().getObjects().add(new Snake(p));
+                } else {
+                    World.getWorldInstance().getSnakes().add(new Snake(p));
+                }
+                
                 break;
             default :
                 final int num = 3;

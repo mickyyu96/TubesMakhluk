@@ -60,6 +60,14 @@ class IOManager {
                 map.setInfo(id1, pos1.getX(), pos1.getY());
             }
         }
+        LMakhluk snakes = worldInstance.getSnakes();
+        for (int i = 0; i < snakes.getSize(); i++) {
+            if (snakes.getInfo(i).isAlive() == 1) {
+                char id1 = snakes.getInfo(i).getID();
+                Point pos1 = snakes.getInfo(i).getPosition();
+                map.setInfo(id1, pos1.getX(), pos1.getY());
+            }
+        }
         return map.toHTMLString();
     }
     /** Mengambil string state dunia.
@@ -75,6 +83,14 @@ class IOManager {
             if (lMakhluk.getInfo(i).isAlive() == 1) {
                 char id1 = lMakhluk.getInfo(i).getID();
                 Point pos1 = lMakhluk.getInfo(i).getPosition();
+                map.setInfo(id1, pos1.getX(), pos1.getY());
+            }
+        }
+        LMakhluk snakes = worldInstance.getSnakes();
+        for (int i = 0; i < snakes.getSize(); i++) {
+            if (snakes.getInfo(i).isAlive() == 1) {
+                char id1 = snakes.getInfo(i).getID();
+                Point pos1 = snakes.getInfo(i).getPosition();
                 map.setInfo(id1, pos1.getX(), pos1.getY());
             }
         }

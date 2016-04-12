@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import makhluklive.MakhlukLive;
 import world.World;
 import world.WorldBuilder;
+import world.MakhlukSpawner;
 
 /** Kelas Main adalah kelas yang menampung main program.
  *  @author     Micky Yudi Utama / 13514061
@@ -56,6 +57,7 @@ public class Main {
         mainButton2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent a) {
                 mainFrame.setVisible(false);
+                World.getWorldInstance().setSnakeWorld(1);
                 showFrame2();
             }
         });
@@ -99,25 +101,20 @@ public class Main {
                 String nBrsString = subTextField1.getText();
                 String nKolString = subTextField2.getText();
                 String input = subTextField3.getText();
-                
+
                 subLabel1.setText(nBrsString);
                 subLabel2.setText(nKolString);
                 subLabel3.setText(input);
-                
+
                 int nBrs = Integer.parseInt(nBrsString);
                 int nKol = Integer.parseInt(nKolString);
-                
+
                 try {
                     playWorld(nBrs, nKol, input);
-                }
-                catch (InterruptedException ex) {                
+                } catch (InterruptedException ex) {
                 }
             }
-            
         });
-        
-        
-        
         subPanel1.add(subButton1);
         subPanel1.add(subLabel1);
         subPanel1.add(subLabel2);
@@ -127,44 +124,55 @@ public class Main {
         subPanel1.add(subTextField3);
         subFrame1.add(subPanel1, BorderLayout.CENTER);
     }
-    public final void playWorld(int nBrs, int nKol, String input) throws InterruptedException {
-        
-        World.getWorldInstance().setNBrs(nBrs+2);
-        World.getWorldInstance().setNKol(nKol+2);
-        WorldBuilder.getBuilderInstance().setStrMakhluk(input);
-        WorldBuilder.getBuilderInstance().buildWorldObject();
+    public final void playWorld(int nBrs, int nKol, String input) 
+                                                   throws InterruptedException {
+
+        World.getWorldInstance().setNBrs(nBrs + 2);
+        World.getWorldInstance().setNKol(nKol + 2);
+        if (World.getWorldInstance().isSnakeWorld() == 0) {
+            WorldBuilder.getBuilderInstance().setStrMakhluk(input);
+            WorldBuilder.getBuilderInstance().buildWorldObject();
+        } else {
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+            WorldBuilder.getBuilderInstance().addAnObject('T');
+        }
+
         Thread viewThread = new Thread(new Screen());
         viewThread.start();
         Thread liveThread = new Thread(new MakhlukLive());
         liveThread.start();
-        
+        if (World.getWorldInstance().isSnakeWorld() == 1) {
+            //Thread spawnerThread = new Thread(new MakhlukSpawner());
+            //spawnerThread.start();
+        }
     }
-    
-    /**
-     *      SNAKE EDIT DI SINI
-     */
+
     public final void showFrame2() {
         JFrame subFrame1 = new JFrame("Frame2");
         subFrame1.setVisible(true);
         subFrame1.setSize(600, 400);
         subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
         JPanel subPanel1 = new JPanel();
         subPanel1.setBackground(Color.BLUE);
-        
+
         JTextField subTextField1 = new JTextField(20);
         subTextField1.setLocation(100, 100);
-        
+
         JTextField subTextField2 = new JTextField(20);
         subTextField1.setLocation(100, 200);
-        
+
         JTextField subTextField3 = new JTextField(20);
         subTextField1.setLocation(100, 300);
-        
-        JLabel subLabel1 = new JLabel("1", JLabel.CENTER);
-        JLabel subLabel2 = new JLabel("2", JLabel.CENTER);
-        JLabel subLabel3 = new JLabel("3", JLabel.CENTER);
-        
+
         JButton subButton1 = new JButton("Run");
         subButton1.setSize(150,50);
         subButton1.setLocation(100,300);
@@ -173,34 +181,25 @@ public class Main {
                 String nBrsString = subTextField1.getText();
                 String nKolString = subTextField2.getText();
                 String input = subTextField3.getText();
-                
-                subLabel1.setText(nBrsString);
-                subLabel2.setText(nKolString);
-                subLabel3.setText(input);
-                
+
                 int nBrs = Integer.parseInt(nBrsString);
                 int nKol = Integer.parseInt(nKolString);
-                
+
                 try {
                     playWorld(nBrs, nKol, input);
-                }
-                catch (InterruptedException ex) {                
+                } catch (InterruptedException ex) {
                 }
             }
-            
+
         });
-        
+
         subPanel1.add(subButton1);
-        subPanel1.add(subLabel1);
-        subPanel1.add(subLabel2);
-        subPanel1.add(subLabel3);
         subPanel1.add(subTextField1);
         subPanel1.add(subTextField2);
         subPanel1.add(subTextField3);
         subFrame1.add(subPanel1, BorderLayout.CENTER);
     }
-    
-    
+
     public static void main(String[] args) {
         Main M = new Main();
     }

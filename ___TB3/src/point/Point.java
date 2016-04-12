@@ -33,6 +33,13 @@ public class Point {
         x = x1;
         y = y1;
      }
+    /** Copy Constructor Point
+     *  @param p Point yang akan dicopy
+     */
+    public Point(final Point p) {
+        x = p.getX();
+        y = p.getY();
+     }
     /** Mengembalikan nilai x.
      * @return int x pada sebuah point
      */

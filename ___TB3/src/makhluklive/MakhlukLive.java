@@ -5,12 +5,13 @@ import world.World;
 import world.Makhluk;
 import world.LMakhluk;
 import world.Hewan;
+import point.Point;
 /** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari
  *  setiap makhluk Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup.
  *  @author     Elvina R. K. Situmorang / 13514045
  *  @version    1.0
  */
-public final class MakhlukLive implements Runnable{
+public final class MakhlukLive implements Runnable {
     /** Atribut singleton.
      */
     private static MakhlukLive instance = new MakhlukLive();
@@ -67,6 +68,41 @@ public final class MakhlukLive implements Runnable{
                 }
             }
         }
+
+        if (World.getWorldInstance().isSnakeWorld() == 1) {
+            LMakhluk snakes = World.getWorldInstance().getSnakes();
+            Hewan kepalaUlar = (Hewan) snakes.getInfo(0);
+            int arahGerak = World.getWorldInstance().getArahUlar();
+            dx = 0; dy = 0;
+            switch (arahGerak) {
+                case 0: // timur
+                    dy = 1;
+                    break;
+                case 1: // utara
+                    dx = -1;
+                    break;
+                case 2: // barat
+                    dy = -1;
+                    break;
+                default:
+                    dx = 1;
+                    break;
+            }
+            Point lastPos = new Point(kepalaUlar.getPosition());
+            
+            kepalaUlar.move(dx, dy);
+            
+            for (int i = 1; i < snakes.getSize(); i++) {
+                if (snakes.getInfo(i).isAlive() == 1) {
+                    Hewan ular = (Hewan) snakes.getInfo(i);
+
+                    Point tmpPos = new Point(ular.getPosition());
+                    ular.setPosition(lastPos);
+                    lastPos = tmpPos;
+                } 
+           }
+        }
+        
     }
     /** Menangani pergerakan dari makhluk untuk mencari makan.
      */
@@ -98,28 +134,27 @@ public final class MakhlukLive implements Runnable{
             }
         }
     }
-    
-    /** Prosedur run yang digunakan saat penciptaan sebuah thread
+    /** Prosedur run yang digunakan saat penciptaan sebuah thread.
      */
+    @Override
     public void run() {
         do {
             while (World.getWorldInstance().isPaused() == 1) {
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException ex) {
-                    
                 }
             }
             MakhlukLive.getInstance().makhlukMove();
             MakhlukLive.getInstance().makhlukEat();
-            if (World.getWorldInstance().getObjects().isAllMakhlukDead()) {
+            if (World.getWorldInstance().getObjects().isAllMakhlukDead() &&
+                    World.getWorldInstance().getSnakes().isAllMakhlukDead()) {
                 World.getWorldInstance().endWorld();
                 break;
             }
             try {
                 Thread.sleep(500);
             } catch (InterruptedException ex) {
-
             }
         } while (World.getWorldInstance().isEnded() == 0);
     }

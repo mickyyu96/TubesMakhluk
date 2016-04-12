@@ -56,36 +56,55 @@ public class KeypressHandler implements KeyListener {
     }
     /** Melakukan aksi-aksi yang sesuai dengan karakter lastKeypress.
      *  yang tersimpan dalam instance KeypressHandler
-     *  @throws Exception
+     *  @throw Exception
      */
     public final void doAction() throws Exception {
         char c = getLastKeypress();
-        switch (c) {
-            case 'q':
-                if (World.getWorldInstance().isPaused() == 1) {
-                    World.getWorldInstance().changePauseState();
-                }
-                World.getWorldInstance().endWorld();
-                break;
-            case 'w':
-                World.getWorldInstance().changePauseState();
-                break;
-            case 'c':
-                SnapshotCapturer.getCapturerInstance().captureSnapshot();
-                break;
-            case '.':
-                try {
-                    if (World.getWorldInstance().isPaused() == 0) {
-                        throw new ExceptionObject(2);
+        if (World.getWorldInstance().isSnakeWorld() == 0) {
+            switch (c) {
+                case 'q':
+                    if (World.getWorldInstance().isPaused() == 1) {
+                        World.getWorldInstance().changePauseState();
                     }
-                    MakhlukLive.getInstance().makhlukMove();
-                    MakhlukLive.getInstance().makhlukEat();
-                } catch (ExceptionObject e) {
-                    e.displayErrorMessage();
-                }
-                break;
-            default :
-                WorldBuilder.getBuilderInstance().addAnObject(c);
+                    World.getWorldInstance().endWorld();
+                    break;
+                case 'w':
+                    World.getWorldInstance().changePauseState();
+                    break;
+                case 'c':
+                    SnapshotCapturer.getCapturerInstance().captureSnapshot();
+                    break;
+                case '.':
+                    try {
+                        if (World.getWorldInstance().isPaused() == 0) {
+                            throw new ExceptionObject(2);
+                        }
+                        MakhlukLive.getInstance().makhlukMove();
+                        MakhlukLive.getInstance().makhlukEat();
+                    } catch (ExceptionObject e) {
+                        e.displayErrorMessage();
+                    }
+                    break;
+                default :
+                    WorldBuilder.getBuilderInstance().addAnObject(c);
+            }
+        } else {
+            switch (c) {
+                case 'd':
+                    World.getWorldInstance().setArahUlar(0);
+                    break;
+                case 'w':
+                    World.getWorldInstance().setArahUlar(1);
+                    break;
+                case 'a':
+                    World.getWorldInstance().setArahUlar(2);
+                    break;
+                case 's':
+                    World.getWorldInstance().setArahUlar(3);
+                    break;
+                default :
+                    break;
+            }
         }
     }
 }

@@ -8,6 +8,9 @@ package world;
  *  @version   1.0
  */
 public final class World {
+    /** Atribut isSnakeWorld.
+     */
+    private int isSnakeWorld;
     /** Atribut isEnded.
      */
     private int isEnded;
@@ -32,6 +35,13 @@ public final class World {
     /** Atribut list makhluk.
      */
     private LMakhluk objects;
+    /** Atribut list makhluk yang berisi ular.
+     */
+    private LMakhluk snakes;
+    /** Atribut arah hadap ular,
+     *  0 : timur, 1 : utara, 2 : barat, 3 : selatan
+     */
+    private int arahUlar;
     /** Konstruktor World berparameter. Menangani pembentukan world dan
      * hal-hal yang berkaitan dengan keberjalanan world.
      * @param  nBrs1 berupa ukuran baris world
@@ -42,13 +52,22 @@ public final class World {
         nKol = nKol1;
         isPaused = 0;
         isEnded = 0;
+        isSnakeWorld = 0;
+        arahUlar = 0;
         objects = new LMakhluk();
+        snakes = new LMakhluk();
     }
     /** Mengembalikan makhluk (object) yang ada di world.
      * @return LMakhluk makhluk yang ada pada world
      */
     public LMakhluk getObjects() {
         return objects;
+    }
+    /** Mengembalikan list of ular yang ada di world.
+     * @return LMakhluk ular-ular yang ada pada world
+     */
+    public LMakhluk getSnakes() {
+        return snakes;
     }
     /** Pointer untuk mengembalikan worldInstance.
      * @return World
@@ -80,6 +99,12 @@ public final class World {
     public void setNKol(final int nKol1) {
         nKol = nKol1;
     }
+    /** Mengembalikan arah hadap ular.
+     *  @return int sesuai dengan attribute arahUlar
+     */
+    public int getArahUlar() {
+        return arahUlar;
+    }
     /** Mengembalikan apakah program sudah selesai atau  belum.
      *  @return int sesuai dengan attribute isEnded
      */
@@ -92,6 +117,12 @@ public final class World {
     public int isPaused() {
         return isPaused;
     }
+    /** Mengembalikan World tersebut adalah World
+     * @return int sesuai dengan attribute isSnakeWorld
+     */
+    public int isSnakeWorld() {
+        return isSnakeWorld;
+    }
     /** Untuk mengubah state bahwa program harus berhenti.
      */
     public void endWorld() {
@@ -101,5 +132,18 @@ public final class World {
      */
     public void changePauseState() {
         isPaused ^= 1;
+    }
+    /** Untuk mengubah state World permainan Snake.
+     *  @param i nilai 1 apabila World yang akan dijalankan adalah world Snake
+     *  atau 0 apabila World yang dijalankan bukan World untuk permainan Snake
+     */
+    public void setSnakeWorld(final int i) {
+        isSnakeWorld = i;
+    }
+    /** Untuk mengubah state arah hadap ular sekarang.
+     *  @param i nilai yang menyatakan arah hadap ular yang baru
+     */
+    public void setArahUlar(final int i) {
+        arahUlar = i;
     }
 }
