@@ -16,7 +16,7 @@ public class MakhlukSpawner implements Runnable {
     /** Melakukan "spawn" makanan ular dalam singleton World.
      */
     public final void spawnFood() {
-        LMakhluk worldObjects = World.getWorldInstance().getObjects();
+        ListMakhluk worldObjects = World.getWorldInstance().getObjects();
         int countRabbit = worldObjects.countMakhluk('R');
         int countSheep = worldObjects.countMakhluk('S');
         int countTurtle = worldObjects.countMakhluk('T');
@@ -45,7 +45,7 @@ public class MakhlukSpawner implements Runnable {
     /** Melakukan "spawn" enemy ular dalam singleton World.
      */
     public final void spawnEnemy() {
-	LMakhluk worldObjects = World.getWorldInstance().getObjects();
+	ListMakhluk worldObjects = World.getWorldInstance().getObjects();
         int countPolarBear = worldObjects.countMakhluk('P');
         int countWolf = worldObjects.countMakhluk('W');
         int spawnSelection = RandomGenerator.getInstance().getNextInt(2);

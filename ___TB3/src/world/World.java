@@ -34,10 +34,10 @@ public final class World {
     private int nKol;
     /** Atribut list makhluk.
      */
-    private LMakhluk objects;
+    private ListMakhluk objects;
     /** Atribut list makhluk yang berisi ular.
      */
-    private LMakhluk snakes;
+    private ListMakhluk snakes;
     /** Atribut arah hadap ular,
      *  0 : timur, 1 : utara, 2 : barat, 3 : selatan
      */
@@ -54,19 +54,19 @@ public final class World {
         isEnded = 0;
         isSnakeWorld = 0;
         arahUlar = 0;
-        objects = new LMakhluk();
-        snakes = new LMakhluk();
+        objects = new ListMakhluk();
+        snakes = new ListMakhluk();
     }
     /** Mengembalikan makhluk (object) yang ada di world.
      * @return LMakhluk makhluk yang ada pada world
      */
-    public LMakhluk getObjects() {
+    public ListMakhluk getObjects() {
         return objects;
     }
     /** Mengembalikan list of ular yang ada di world.
      * @return LMakhluk ular-ular yang ada pada world
      */
-    public LMakhluk getSnakes() {
+    public ListMakhluk getSnakes() {
         return snakes;
     }
     /** Pointer untuk mengembalikan worldInstance.

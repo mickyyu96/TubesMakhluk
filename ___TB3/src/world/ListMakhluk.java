@@ -5,13 +5,13 @@ import java.util.Vector;
  *  @author  Robert Sebastian Herlim / 13514061
  *  @version 1.0
  */
-public class LMakhluk {
+public class ListMakhluk {
     /** Atribut vector makhluk.
      */
     private Vector<Makhluk> makhlukVector;
     /** Menciptakan sebuah list of makhluk dengan container Java Vector.
      */
-    public LMakhluk() {
+    public ListMakhluk() {
         makhlukVector = new Vector<Makhluk>();
     }
     /** Menambah element pada bagian belakang list of makhluk.

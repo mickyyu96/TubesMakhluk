@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import exception.ExceptionObject;
 import inputoutput.Screen;
-import makhluklive.MakhlukLive;
+import makhluklive.MakhlukManager;
 import world.World;
 import world.WorldBuilder;
 
@@ -163,8 +163,8 @@ public class MWorld {
             while (World.getWorldInstance().isPaused() == 1) {
                 Thread.sleep(100);
             }
-            MakhlukLive.getInstance().makhlukMove();
-            MakhlukLive.getInstance().makhlukEat();
+            MakhlukManager.getInstance().makhlukMove();
+            MakhlukManager.getInstance().makhlukEat();
             if (World.getWorldInstance().getObjects().isAllMakhlukDead()) {
                 World.getWorldInstance().endWorld();
                 break;

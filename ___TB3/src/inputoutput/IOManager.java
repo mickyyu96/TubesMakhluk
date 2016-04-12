@@ -2,7 +2,7 @@ package inputoutput;
 
 import matrix.Matrix;
 import point.Point;
-import world.LMakhluk;
+import world.ListMakhluk;
 import world.World;
 
 /** Kelas IOManager bertanggung jawab untuk melakukan
@@ -33,7 +33,7 @@ class IOManager {
         int nBrs1 = worldInstance.getNBrs();
         int nKol1 = worldInstance.getNKol();
         Matrix map = new Matrix(nBrs1, nKol1);
-        LMakhluk lMakhluk = worldInstance.getObjects();
+        ListMakhluk lMakhluk = worldInstance.getObjects();
         for (int i = 0; i < lMakhluk.getSize(); i++) {
             if (lMakhluk.getInfo(i).isAlive() == 1) {
                 char id1 = lMakhluk.getInfo(i).getID();
@@ -52,7 +52,7 @@ class IOManager {
         int nBrs1 = worldInstance.getNBrs();
         int nKol1 = worldInstance.getNKol();
         Matrix map = new Matrix(nBrs1, nKol1);
-        LMakhluk lMakhluk = worldInstance.getObjects();
+        ListMakhluk lMakhluk = worldInstance.getObjects();
         for (int i = 0; i < lMakhluk.getSize(); i++) {
             if (lMakhluk.getInfo(i).isAlive() == 1) {
                 char id1 = lMakhluk.getInfo(i).getID();
@@ -60,7 +60,7 @@ class IOManager {
                 map.setInfo(id1, pos1.getX(), pos1.getY());
             }
         }
-        LMakhluk snakes = worldInstance.getSnakes();
+        ListMakhluk snakes = worldInstance.getSnakes();
         for (int i = 0; i < snakes.getSize(); i++) {
             if (snakes.getInfo(i).isAlive() == 1) {
                 char id1 = snakes.getInfo(i).getID();
@@ -78,7 +78,7 @@ class IOManager {
         int nBrs1 = worldInstance.getNBrs();
         int nKol1 = worldInstance.getNKol();
         Matrix map = new Matrix(nBrs1, nKol1);
-        LMakhluk lMakhluk = worldInstance.getObjects();
+        ListMakhluk lMakhluk = worldInstance.getObjects();
         for (int i = 0; i < lMakhluk.getSize(); i++) {
             if (lMakhluk.getInfo(i).isAlive() == 1) {
                 char id1 = lMakhluk.getInfo(i).getID();
@@ -86,7 +86,7 @@ class IOManager {
                 map.setInfo(id1, pos1.getX(), pos1.getY());
             }
         }
-        LMakhluk snakes = worldInstance.getSnakes();
+        ListMakhluk snakes = worldInstance.getSnakes();
         for (int i = 0; i < snakes.getSize(); i++) {
             if (snakes.getInfo(i).isAlive() == 1) {
                 char id1 = snakes.getInfo(i).getID();

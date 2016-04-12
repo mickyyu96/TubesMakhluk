@@ -3,40 +3,40 @@ package makhluklive;
 import randomgenerator.RandomGenerator;
 import world.World;
 import world.Makhluk;
-import world.LMakhluk;
+import world.ListMakhluk;
 import world.Hewan;
 import point.Point;
-/** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari
+/** Kelas MakhlukGenerator merupakan kelas yang menangani kehidupan dari
  *  setiap makhluk Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup.
  *  @author     Elvina R. K. Situmorang / 13514045
  *  @version    1.0
  */
-public final class MakhlukLive implements Runnable {
+public final class MakhlukManager implements Runnable {
     /** Atribut singleton.
      */
-    private static MakhlukLive instance = new MakhlukLive();
+    private static MakhlukManager instance = new MakhlukManager();
     /** Atribut dx.
      */
     private int dxsign = 1;
     /** Atribut dy.
      */
     private int dysign = 1;
-    /** Konstruktor menciptakan MakhlukLive.
+    /** Konstruktor menciptakan MakhlukGenerator.
      */
-    public MakhlukLive() {
+    public MakhlukManager() {
     }
-    /** Mengembalikan pointer dari objek kelas singleton pada kelas MakhlukLive.
+    /** Mengembalikan pointer dari objek kelas singleton pada kelas MakhlukGenerator.
      *  @return Pointer yang menunjuk ke singleton instance pada
-     *  kelas MakhlukLive
+     *  kelas MakhlukGenerator
      */
-    public static MakhlukLive getInstance() {
+    public static MakhlukManager getInstance() {
         return instance;
     }
     /** Menangani pergerakan dari makhluk.
      */
     public void makhlukMove() {
         int dx, dy;
-        LMakhluk lMakhluk = World.getWorldInstance().getObjects();
+        ListMakhluk lMakhluk = World.getWorldInstance().getObjects();
 
         for (int i = 0; i < lMakhluk.getSize(); i++) {
                 if (lMakhluk.getInfo(i).isAlive() == 1
@@ -70,7 +70,7 @@ public final class MakhlukLive implements Runnable {
         }
 
         if (World.getWorldInstance().isSnakeWorld() == 1) {
-            LMakhluk snakes = World.getWorldInstance().getSnakes();
+            ListMakhluk snakes = World.getWorldInstance().getSnakes();
             Hewan kepalaUlar = (Hewan) snakes.getInfo(0);
             int arahGerak = World.getWorldInstance().getArahUlar();
             dx = 0; dy = 0;
@@ -108,7 +108,7 @@ public final class MakhlukLive implements Runnable {
      */
     public void makhlukEat() {
         World worldInstance = World.getWorldInstance();
-        LMakhluk lMakhluk = worldInstance.getObjects();
+        ListMakhluk lMakhluk = worldInstance.getObjects();
 
         for (int i = 0; i < lMakhluk.getSize(); i++) {
             if (lMakhluk.getInfo(i).isAlive() == 1
@@ -145,8 +145,8 @@ public final class MakhlukLive implements Runnable {
                 } catch (InterruptedException ex) {
                 }
             }
-            MakhlukLive.getInstance().makhlukMove();
-            MakhlukLive.getInstance().makhlukEat();
+            MakhlukManager.getInstance().makhlukMove();
+            MakhlukManager.getInstance().makhlukEat();
             if (World.getWorldInstance().getObjects().isAllMakhlukDead() &&
                     World.getWorldInstance().getSnakes().isAllMakhlukDead()) {
                 World.getWorldInstance().endWorld();

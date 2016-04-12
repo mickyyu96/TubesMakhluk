@@ -3,7 +3,7 @@ package inputoutput;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import exception.ExceptionObject;
-import makhluklive.MakhlukLive;
+import makhluklive.MakhlukManager;
 import world.World;
 import world.WorldBuilder;
 
@@ -79,8 +79,8 @@ public class KeypressHandler implements KeyListener {
                         if (World.getWorldInstance().isPaused() == 0) {
                             throw new ExceptionObject(2);
                         }
-                        MakhlukLive.getInstance().makhlukMove();
-                        MakhlukLive.getInstance().makhlukEat();
+                        MakhlukManager.getInstance().makhlukMove();
+                        MakhlukManager.getInstance().makhlukEat();
                     } catch (ExceptionObject e) {
                         e.displayErrorMessage();
                     }

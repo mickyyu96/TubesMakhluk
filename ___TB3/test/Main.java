@@ -3,17 +3,15 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import makhluklive.MakhlukLive;
 import world.World;
 import world.WorldBuilder;
-import world.MakhlukSpawner;
+import makhluklive.MakhlukManager;
 
 /** Kelas Main adalah kelas yang menampung main program.
  *  @author     Micky Yudi Utama / 13514061
@@ -147,7 +145,7 @@ public class Main {
 
         Thread viewThread = new Thread(new Screen());
         viewThread.start();
-        Thread liveThread = new Thread(new MakhlukLive());
+        Thread liveThread = new Thread(new MakhlukManager());
         liveThread.start();
         if (World.getWorldInstance().isSnakeWorld() == 1) {
             //Thread spawnerThread = new Thread(new MakhlukSpawner());

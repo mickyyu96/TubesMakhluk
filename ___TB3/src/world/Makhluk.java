@@ -1,8 +1,6 @@
 package world;
 
 import point.Point;
-import world.LMakhluk;
-import world.World;
 /** Kelas Makhluk merupakan kelas abstrak yang memiliki member-member
     dasar yang akan diturunkan ke kelas lain.
  *  @author Atika Azzahra Akbar / 13514077
@@ -64,7 +62,7 @@ public abstract class Makhluk {
     public final int isMakhlukInTheSamePoint() {
         int found = 0;
         int i = 0;
-        LMakhluk lMakhluk = World.getWorldInstance().getObjects();
+        ListMakhluk lMakhluk = World.getWorldInstance().getObjects();
         while (i < lMakhluk.getSize() && found == 0) {
             if (lMakhluk.getInfo(i).isAlive() == 1
                   && lMakhluk.getInfo(i).getPosition().getX()
@@ -88,7 +86,7 @@ public abstract class Makhluk {
         Makhluk makhluk = null;
         int i = 0;
         int found = 0;
-        LMakhluk lMakhluk = World.getWorldInstance().getObjects();
+        ListMakhluk lMakhluk = World.getWorldInstance().getObjects();
         while (i < lMakhluk.getSize() && found == 0) {
             if (lMakhluk.getInfo(i).isAlive() == 1
                   && lMakhluk.getInfo(i).getPosition().getX()
