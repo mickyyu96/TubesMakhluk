@@ -6,6 +6,7 @@ import world.Makhluk;
 import world.LMakhluk;
 import world.Hewan;
 import point.Point;
+import world.WorldBuilder;
 /** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari
  *  setiap makhluk Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup.
  *  @author     Elvina R. K. Situmorang / 13514045
@@ -90,8 +91,14 @@ public final class MakhlukLive implements Runnable {
             }
             Point lastPos = new Point(kepalaUlar.getPosition());
             
-            kepalaUlar.move(dx, dy);
-            
+            if (kepalaUlar.shouldRebounced(dx, dy)) {
+                World.getWorldInstance().endWorld();
+                System.out.println("Game Over!");
+            }
+            else {
+                kepalaUlar.move(dx, dy);
+            }
+
             for (int i = 1; i < snakes.getSize(); i++) {
                 if (snakes.getInfo(i).isAlive() == 1) {
                     Hewan ular = (Hewan) snakes.getInfo(i);
@@ -130,6 +137,24 @@ public final class MakhlukLive implements Runnable {
                             }
                         }
                     }
+                }
+            }
+        }
+        
+        if(World.getWorldInstance().isSnakeWorld() == 1) {
+            Makhluk snakeHead = worldInstance.getSnakes().getInfo(0);
+            if (snakeHead.isSnakeBodyInTheSamePoint() == 1) {
+                World.getWorldInstance().endWorld();
+                System.out.println("Game Over!");
+            } else if (snakeHead.isMakhlukInTheSamePoint() == 1) {
+                Makhluk m1 = snakeHead;
+                Makhluk m2 = snakeHead.makhlukInTheSamePoint();
+                if (m2.getID() == 'W' || m2.getID() == 'P') {
+                    World.getWorldInstance().endWorld();
+                    System.out.println("Game Over!");
+                } else {
+                    m2.kill();
+                    WorldBuilder.getBuilderInstance().addAnObject('U');
                 }
             }
         }

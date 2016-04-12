@@ -70,10 +70,22 @@ public final class WorldBuilder {
                 World.getWorldInstance().getObjects().add(new PolarBear(p));
                 break;
             case 'U':
-                if(World.getWorldInstance().isSnakeWorld() == 0) {
+                if (World.getWorldInstance().isSnakeWorld() == 0) {
                     World.getWorldInstance().getObjects().add(new Snake(p));
                 } else {
-                    World.getWorldInstance().getSnakes().add(new Snake(p));
+                    LMakhluk snakes = World.getWorldInstance().getSnakes();
+                    if (snakes.isEmpty() == 1) {
+                        snakes.add(new Snake(p));
+
+                        Point nextToP = new Point(p);
+                        nextToP.increment(0, -1);
+                        snakes.add(new Snake(nextToP));
+
+                    } else {
+                        int snakeSize = snakes.getSize();
+                        Makhluk snakeTail = snakes.getInfo(snakeSize - 1);
+                        snakes.add(new Snake(snakeTail.getPosition()));
+                    }
                 }
                 
                 break;

@@ -25,7 +25,7 @@ public class LMakhluk {
      *          1 jika list tidak kosong
      */
     public final int isEmpty() {
-        if (makhlukVector.capacity() == 0) {
+        if (makhlukVector.size() == 0) {
             return 1;
         } else {
             return 0;

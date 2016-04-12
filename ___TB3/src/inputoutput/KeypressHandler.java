@@ -89,18 +89,27 @@ public class KeypressHandler implements KeyListener {
                     WorldBuilder.getBuilderInstance().addAnObject(c);
             }
         } else {
+            int arahUlar = World.getWorldInstance().getArahUlar();
             switch (c) {
                 case 'd':
-                    World.getWorldInstance().setArahUlar(0);
+                    if (arahUlar != 2) {
+                        World.getWorldInstance().setArahUlar(0);
+                    }
                     break;
                 case 'w':
-                    World.getWorldInstance().setArahUlar(1);
+                    if (arahUlar != 3) {
+                        World.getWorldInstance().setArahUlar(1);
+                    }
                     break;
                 case 'a':
-                    World.getWorldInstance().setArahUlar(2);
+                    if (arahUlar != 0) {
+                        World.getWorldInstance().setArahUlar(2);
+                    }
                     break;
                 case 's':
-                    World.getWorldInstance().setArahUlar(3);
+                    if (arahUlar != 1) {
+                        World.getWorldInstance().setArahUlar(3);
+                    }
                     break;
                 default :
                     break;
