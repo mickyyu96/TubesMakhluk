@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import world.World;
 import world.WorldBuilder;
+import world.MakhlukSpawner;
 import makhluklive.MakhlukManager;
 
 /** Kelas Main adalah kelas yang menampung main program.

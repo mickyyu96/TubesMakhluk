@@ -109,7 +109,7 @@ public abstract class Makhluk {
     public final int isSnakeBodyInTheSamePoint() {
         int found = 0;
         int i = 1;
-        LMakhluk snakes = World.getWorldInstance().getSnakes();
+        ListMakhluk snakes = World.getWorldInstance().getSnakes();
         while (i < snakes.getSize() && found == 0) {
             if (snakes.getInfo(i).getPosition().getX() == getPosition().getX()
             && snakes.getInfo(i).getPosition().getY() == getPosition().getY()) {

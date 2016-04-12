@@ -4,9 +4,10 @@ import randomgenerator.RandomGenerator;
 import world.World;
 import world.Makhluk;
 import world.ListMakhluk;
+import world.WorldBuilder;
 import world.Hewan;
 import point.Point;
-<<<<<<< HEAD:___TB3/src/makhluklive/MakhlukManager.java
+//<<<<<<< HEAD:___TB3/src/makhluklive/MakhlukManager.java
 /** Kelas MakhlukGenerator merupakan kelas yang menangani kehidupan dari
 =======
 import world.WorldBuilder;
