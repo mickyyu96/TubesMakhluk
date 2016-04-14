@@ -73,7 +73,7 @@ public final class WorldBuilder {
                 if (World.getWorldInstance().isSnakeWorld() == 0) {
                     World.getWorldInstance().getObjects().add(new Snake(p));
                 } else {
-                    LMakhluk snakes = World.getWorldInstance().getSnakes();
+                    ListMakhluk snakes = World.getWorldInstance().getSnakes();
                     if (snakes.isEmpty() == 1) {
                         snakes.add(new Snake(p));
 

@@ -7,12 +7,8 @@ import world.ListMakhluk;
 import world.WorldBuilder;
 import world.Hewan;
 import point.Point;
-//<<<<<<< HEAD:___TB3/src/makhluklive/MakhlukManager.java
-/** Kelas MakhlukGenerator merupakan kelas yang menangani kehidupan dari
-=======
-import world.WorldBuilder;
-/** Kelas MakhlukLive merupakan kelas yang menangani kehidupan dari
->>>>>>> 53ac26bea45136964735a4b16939b92885b5af26:___TB3/src/makhluklive/MakhlukLive.java
+
+/** Kelas MakhlukManager merupakan kelas yang menangani kehidupan dari
  *  setiap makhluk Kehidupan yaitu pergerakan, pencarian makan, dan umur hidup.
  *  @author     Elvina R. K. Situmorang / 13514045
  *  @version    1.0

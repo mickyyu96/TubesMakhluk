@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import world.World;
+
 /** {@inheritdoc} Kelas Screen merepresentasikan layar pengguna
  *  dan bertanggung jawab untuk melakukan operasi-operasi
  *  Input/Output ke layar.
@@ -32,8 +33,6 @@ public class Screen extends IOManager implements Runnable {
      *  dunia ke layar
      */
     public final void showWorld(JLabel worldLabel, final int deltaT) {
-        
-        
         while (World.getWorldInstance().isEnded() == 0) {
             String test = getHTMLStrWorldMap();
             worldLabel.setText(getHTMLStrWorldMap());
@@ -43,8 +42,6 @@ public class Screen extends IOManager implements Runnable {
             }
         } 
     }
-    
-    
     /** Menjalankan dan memulai dunia.
      */
     public final void run() {

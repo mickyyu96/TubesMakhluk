@@ -1,7 +1,5 @@
 package world;
 
-import point.Point;
-import exception.ExceptionObject;
 import randomgenerator.RandomGenerator;
 
 /** Kelas MakhlukSpawner melakukan spawning makhluk secara berkala.
