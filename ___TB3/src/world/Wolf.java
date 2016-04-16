@@ -1,6 +1,7 @@
 package world;
 
 import point.Point;
+
 /** {@inheritdoc} Kelas Wolf adalah kelas turunan dari Hewan
  *  yang merepresentasikan seekor serigala.
  *  @author Robert Sebastian Herlim / 13514061

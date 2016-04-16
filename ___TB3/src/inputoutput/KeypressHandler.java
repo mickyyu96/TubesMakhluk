@@ -16,7 +16,6 @@ public class KeypressHandler implements KeyListener {
     /** Atribut karakter lastkeypress.
      */
     private static char lastKeypress;
-
     /** Menciptakan sebuah instance dari kelas KeypressHandler.
      */
     public KeypressHandler() {
