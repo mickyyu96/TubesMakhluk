@@ -17,14 +17,12 @@ public class WorldBuilderTest {
         WorldBuilder.getBuilderInstance().setStrMakhluk(input);
         WorldBuilder.getBuilderInstance().buildWorldObject();
 
-        System.out.println("getStrMakhluk setelah di set : "+WorldBuilder.getBuilderInstance().getStrMakhluk());
-        System.out.println();
-        System.out.println("Mengeluarkan ID makhluk yang ditambahkan pada LMakhluk pada World: ");
-        for(int i = 0; i < World.getWorldInstance().getObjects().getSize(); i++) {
-            System.out.println("ID Makhluk "+i+": "+World.getWorldInstance().getObjects().getInfo(i).getID());
-        }
+        assertTrue("getStrMakhluk salah", WorldBuilder.getBuilderInstance().getStrMakhluk()=="WSP");
         assertTrue("ID Makhluk salah",World.getWorldInstance().getObjects().getInfo(0).getID()=='W');
         assertTrue("ID Makhluk salah",World.getWorldInstance().getObjects().getInfo(1).getID()=='S');
         assertTrue("ID Makhluk salah",World.getWorldInstance().getObjects().getInfo(2).getID()=='P');
+        
+        WorldBuilder.getBuilderInstance().addAnObject('U');
+        assertTrue("ID Makhluk salah",World.getWorldInstance().getObjects().getInfo(3).getID()=='U');
     }
 }

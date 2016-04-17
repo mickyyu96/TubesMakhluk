@@ -21,8 +21,9 @@ public class MakhlukTest {
         assertTrue("Posisi salah", W.getPosition().getY()==2);
         W.ageIncrement();
         assertTrue("Umur salah",W.getAge()==1);
-        Point Q = new Point(3,4);
-        W.setPosition(Q);
+        P.setX(3);
+        P.setY(4);
+        W.setPosition(P);
         assertTrue("Posisi salah", W.getPosition().getX()==3);
         assertTrue("Posisi salah", W.getPosition().getY()==4);
         W.kill();
@@ -147,6 +148,9 @@ public class MakhlukTest {
         G.ageIncrement();
         assertTrue("Umur salah",G.getAge()==1);
         Point Q = new Point(3,4);
+        G.setPosition(Q);
+        assertTrue("Posisi salah", G.getPosition().getX()==3);
+        assertTrue("Posisi salah", G.getPosition().getY()==4);
         G.kill();
         assertTrue("Masih hidup",G.isAlive()==0);
     }

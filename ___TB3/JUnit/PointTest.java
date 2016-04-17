@@ -16,6 +16,10 @@ public class PointTest {
         Point P2 = new Point(42,25);
         assertTrue("x bukan 42", P2.getX()==42);
         assertTrue("y bukan 25", P2.getY()==25);
+
+        P2.setX(5); P2.setY(4);
+        assertTrue("setter x salah", P2.getX()==5);
+        assertTrue("setter y salah", P2.getY()==4);
     }
     @Test
     public void test_inc () {
