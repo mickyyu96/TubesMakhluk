@@ -48,7 +48,7 @@ public class Screen extends IOManager implements Runnable {
         final int num = 500;
         final int sizefont = 15;
         JFrame worldView = new JFrame("Animal's Village");
-        worldView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //worldView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel worldLabel = new JLabel("", JLabel.CENTER);
         JPanel mainPanel = new JPanel();
         mainPanel.setBackground(Color.YELLOW);
