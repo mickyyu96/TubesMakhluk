@@ -1,3 +1,4 @@
+import exception.ExceptionObject;
 import inputoutput.Screen;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -31,6 +32,41 @@ public class Main {
         showMainFrame();
     }
     
+    /** fungsi validasi apakah ukuran valid.
+     * @param strNBrs string jumlah baris
+     * @param strNKol string jumlah kolom
+     * @return boolean true jika ukuran valid
+     */
+     private static boolean isValidUkuran(final String strNBrs,
+             final String strNKol) {
+        boolean valid = true;
+        for (int i = 0; i < strNBrs.length() && valid; i++) {
+            if (strNBrs.charAt(i) < '0'
+                    || strNBrs.charAt(i) > '9') {
+                valid = false;
+            }
+        }
+        for (int i = 0; i < strNKol.length() && valid; i++) {
+            if (strNKol.charAt(i) < '0'
+                    || strNKol.charAt(i) > '9') {
+                valid = false;
+            }
+        }
+        return valid;
+     }
+     
+     private static boolean isValidID(final String s) {
+        boolean found = false;
+        for (int i = 0; i < s.length() && !found; i++) {
+            if (s.charAt(i) != 'P' && s.charAt(i) != 'G' && s.charAt(i) != 'R'
+                    && s.charAt(i) != 'T' && s.charAt(i) != 'S'
+                    && s.charAt(i) != 'W' && s.charAt(i) != 'U') {
+                found = true;
+             }
+        }
+        return !found;
+    }
+     
     public final void showMainFrame() {
         mainFrame.setVisible(true);
         mainFrame.setSize(724, 600);
@@ -39,12 +75,18 @@ public class Main {
         
         JLabel testLabel = new JLabel("", JLabel.CENTER);
         
-        ImageIcon image = new ImageIcon(((new ImageIcon("BackgroundMain.png")).getImage()).getScaledInstance(724, 600, java.awt.Image.SCALE_SMOOTH));
+        ImageIcon image = new ImageIcon(((new ImageIcon("BackgroundMain.png")).
+                getImage()).getScaledInstance(724, 600, java.awt.Image.
+                SCALE_SMOOTH));
        
         testLabel.setIcon(image);
              
-        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon("buttonAVMain.png")).getImage()).getScaledInstance(273, 80, java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon("buttonAVMainClicked.png")).getImage()).getScaledInstance(273, 80, java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
+                ("buttonAVMain.png")).getImage()).getScaledInstance(273, 80, 
+                java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon
+                ("buttonAVMainClicked.png")).getImage()).getScaledInstance(273, 
+                80, java.awt.Image.SCALE_SMOOTH));
         buttons[0] = new JButton(buttonIcon1);
         buttons[0].setBorder(BorderFactory.createEmptyBorder());
         buttons[0].setContentAreaFilled(false);
@@ -65,8 +107,12 @@ public class Main {
                 showFrame1();
             }
         });
-        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon("buttonSnakeMain.png")).getImage()).getScaledInstance(273, 80, java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon("buttonSnakeMainClicked.png")).getImage()).getScaledInstance(273, 80, java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon
+                ("buttonSnakeMain.png")).getImage()).getScaledInstance(273, 80, 
+                java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon
+                ("buttonSnakeMainClicked.png")).getImage()).getScaledInstance
+                (273, 80, java.awt.Image.SCALE_SMOOTH));
         buttons[1] = new JButton(buttonIcon2);
         buttons[1].setBorder(BorderFactory.createEmptyBorder());
         buttons[1].setContentAreaFilled(false);
@@ -113,8 +159,12 @@ public class Main {
         
         txtField[2] = new JTextField(20);
         txtField[2].setLocation(100, 300);
-        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon("buttonRun.png")).getImage()).getScaledInstance(171, 50, java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon("buttonRunClicked.png")).getImage()).getScaledInstance(171, 50, java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon("buttonRun.png")).
+                getImage()).getScaledInstance(171, 50, java.awt.Image.
+                SCALE_SMOOTH));
+        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon
+                ("buttonRunClicked.png")).getImage()).getScaledInstance(171, 50,
+                java.awt.Image.SCALE_SMOOTH));
         buttons[2] = new JButton(buttonIcon2);
         buttons[2].setBorder(BorderFactory.createEmptyBorder());
         buttons[2].setContentAreaFilled(false);
@@ -130,12 +180,27 @@ public class Main {
         });
         buttons[2].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                int nBrs=0, nKol = 0;
                 String nBrsString = txtField[0].getText();
                 String nKolString = txtField[1].getText();
                 String input = txtField[2].getText();
-                int nBrs = Integer.parseInt(nBrsString);
-                int nKol = Integer.parseInt(nKolString);
+                try {
+                    if (!isValidUkuran(nBrsString, nKolString)) {
+                        throw new ExceptionObject(4);
+                    }
 
+                    nBrs = Integer.parseInt(nBrsString);
+                    nKol = Integer.parseInt(nKolString);
+
+                    if (nBrs < 7 || nKol < 7) {
+                        throw new ExceptionObject(0);
+                    }
+                } catch (ExceptionObject ep) {
+                    ep.displayErrorMessage();
+                    txtField[0].setText("");
+                    txtField[1].setText("");
+                }
+                
                 try {
                     playWorld(nBrs, nKol, input);
                 } catch (InterruptedException ex) {
@@ -144,8 +209,12 @@ public class Main {
         });
         
         
-        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon("buttonCancel.png")).getImage()).getScaledInstance(171, 50, java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon("buttonCancelClicked.png")).getImage()).getScaledInstance(171, 50, java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
+                ("buttonCancel.png")).getImage()).getScaledInstance(171, 50, 
+                java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon
+                ("buttonCancelClicked.png")).getImage()).getScaledInstance(171, 
+                50, java.awt.Image.SCALE_SMOOTH));
         buttons[3] = new JButton(buttonIcon1);
         buttons[3].setBorder(BorderFactory.createEmptyBorder());
         buttons[3].setContentAreaFilled(false);
@@ -178,8 +247,8 @@ public class Main {
         subFrame1.add(panel1);
         subFrame1.pack();
     }
-    public final void playWorld(int nBrs, int nKol, String input) 
-                                                   throws InterruptedException {
+    public final void playWorld(int nBrs, int nKol, String input) throws 
+            InterruptedException {
 
         World.getWorldInstance().setNBrs(nBrs + 2);
         World.getWorldInstance().setNKol(nKol + 2);
