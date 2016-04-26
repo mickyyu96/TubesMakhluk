@@ -1,7 +1,0 @@
-11-04-2016 : kumpul pertama
-- membahas cyclic, snake, all gui
-- snake : ngiong
-- gui : micky
-
-13-04-2016 : elvina perbaiki lmakhluk menjadi listmakhluk
-makhluklive menjadi makhlukmanager
