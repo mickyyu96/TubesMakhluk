@@ -32,22 +32,22 @@ public class MakhlukSpawner implements Runnable {
                 }
                 break;
             case 2:
-                if(countTurtle < 2) {
+                if (countTurtle < 2) {
                     WorldBuilder.getBuilderInstance().addAnObject('T');
                 }
                 break;
-	    default:
-		break;
+        default:
+        break;
         }
     }
     /** Melakukan "spawn" enemy ular dalam singleton World.
      */
     public final void spawnEnemy() {
-	ListMakhluk worldObjects = World.getWorldInstance().getObjects();
+        ListMakhluk worldObjects = World.getWorldInstance().getObjects();
         int countPolarBear = worldObjects.countMakhluk('P');
         int countWolf = worldObjects.countMakhluk('W');
         int spawnSelection = RandomGenerator.getInstance().getNextInt(2);
-        switch(spawnSelection) {
+        switch (spawnSelection) {
             case 0:
                 if (countPolarBear < 2) {
                     WorldBuilder.getBuilderInstance().addAnObject('P');
@@ -62,8 +62,10 @@ public class MakhlukSpawner implements Runnable {
                 break;
         }
     }
+    /** prosedur run overiding java.lang.Runnable.run.
+     */
     @Override
-    public void run() {
+    public final void run() {
         while (World.getWorldInstance().isEnded() == 0) {
             spawnFood(); spawnEnemy();
         }

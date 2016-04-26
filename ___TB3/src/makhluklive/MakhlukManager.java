@@ -27,7 +27,8 @@ public final class MakhlukManager implements Runnable {
      */
     public MakhlukManager() {
     }
-    /** Mengembalikan pointer dari objek kelas singleton pada kelas MakhlukGenerator.
+    /** Mengembalikan pointer dari objek kelas singleton pada
+     *  kelas MakhlukGenerator.
      *  @return Pointer yang menunjuk ke singleton instance pada
      *  kelas MakhlukGenerator
      */
@@ -90,23 +91,19 @@ public final class MakhlukManager implements Runnable {
                     break;
             }
             Point lastPos = new Point(kepalaUlar.getPosition());
-            
             if (kepalaUlar.shouldRebounced(dx, dy)) {
                 World.getWorldInstance().endWorld();
                 System.out.println("Game Over!");
-            }
-            else {
+            } else {
                 kepalaUlar.move(dx, dy);
             }
-
             for (int i = 1; i < snakes.getSize(); i++) {
                 if (snakes.getInfo(i).isAlive() == 1) {
                     Hewan ular = (Hewan) snakes.getInfo(i);
-
                     Point tmpPos = new Point(ular.getPosition());
                     ular.setPosition(lastPos);
                     lastPos = tmpPos;
-                } 
+                }
            }
         }
     }
@@ -115,7 +112,6 @@ public final class MakhlukManager implements Runnable {
     public void makhlukEat() {
         World worldInstance = World.getWorldInstance();
         ListMakhluk lMakhluk = worldInstance.getObjects();
-
         for (int i = 0; i < lMakhluk.getSize(); i++) {
             if (lMakhluk.getInfo(i).isAlive() == 1
                     && lMakhluk.getInfo(i).getID() != 'G') {
@@ -139,7 +135,7 @@ public final class MakhlukManager implements Runnable {
                 }
             }
         }
-        if(World.getWorldInstance().isSnakeWorld() == 1) {
+        if (World.getWorldInstance().isSnakeWorld() == 1) {
             Makhluk snakeHead = worldInstance.getSnakes().getInfo(0);
             if (snakeHead.isSnakeBodyInTheSamePoint() == 1) {
                 World.getWorldInstance().endWorld();
@@ -170,8 +166,8 @@ public final class MakhlukManager implements Runnable {
             }
             MakhlukManager.getInstance().makhlukMove();
             MakhlukManager.getInstance().makhlukEat();
-            if (World.getWorldInstance().getObjects().isAllMakhlukDead() &&
-                    World.getWorldInstance().getSnakes().isAllMakhlukDead()) {
+            if (World.getWorldInstance().getObjects().isAllMakhlukDead()
+                && World.getWorldInstance().getSnakes().isAllMakhlukDead()) {
                 World.getWorldInstance().endWorld();
                 break;
             }

@@ -87,7 +87,6 @@ public final class WorldBuilder {
                         snakes.add(new Snake(snakeTail.getPosition()));
                     }
                 }
-                
                 break;
             default :
                 final int num = 3;
