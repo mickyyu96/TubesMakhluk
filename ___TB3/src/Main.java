@@ -3,35 +3,35 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Component;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import world.World;
 import world.WorldBuilder;
 import world.MakhlukSpawner;
 import makhluklive.MakhlukManager;
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import java.awt.Component;
 
 /** Kelas Main adalah kelas yang menampung main program.
- *  @author     Micky Yudi Utama / 13514061
+ *  @author     Micky Yudi Utama / 13514011
  *  @version    1.0
  */
 public class Main {
     JButton[] buttons = new JButton[4];
-    int showedFrame = 0;
     JTextField[] txtField = new JTextField[3];
-    JFrame mainFrame = new JFrame("Main Menu");
     JPanel mainPanel = new JPanel();
+    int showedFrame = 0;
     public Main() {
         showMainFrame();
     }
     
     public final void showMainFrame() {
+        JFrame mainFrame = new JFrame("Main Menu");
         mainFrame.setVisible(true);
         mainFrame.setSize(724, 600);
         mainFrame.setLocation(295,50);
@@ -83,7 +83,7 @@ public class Main {
         buttons[1].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent a) {
                 World.getWorldInstance().setSnakeWorld(1);
-                showFrame1();
+                showFrame2();
             }
         });
         mainPanel.add(testLabel);
@@ -93,7 +93,27 @@ public class Main {
         mainFrame.pack();
         //mainFrame.validate();
     }
-    
+    public final void playWorld(int nBrs, int nKol, String input) 
+                                                   throws InterruptedException {
+
+        World.getWorldInstance().setNBrs(nBrs + 2);
+        World.getWorldInstance().setNKol(nKol + 2);
+        if (World.getWorldInstance().isSnakeWorld() == 0) {
+            WorldBuilder.getBuilderInstance().setStrMakhluk(input);
+            WorldBuilder.getBuilderInstance().buildWorldObject();
+        } else {
+            WorldBuilder.getBuilderInstance().addAnObject('U');
+        }
+
+        Thread viewThread = new Thread(new Screen());
+        viewThread.start();
+        Thread liveThread = new Thread(new MakhlukManager());
+        liveThread.start();
+        if (World.getWorldInstance().isSnakeWorld() == 1) {
+            Thread spawnerThread = new Thread(new MakhlukSpawner());
+            spawnerThread.start();
+        }
+    }
     public final void showFrame1(){
         
         JPanel panel1 = new JPanel();
@@ -178,27 +198,7 @@ public class Main {
         subFrame1.add(panel1);
         subFrame1.pack();
     }
-    public final void playWorld(int nBrs, int nKol, String input) 
-                                                   throws InterruptedException {
-
-        World.getWorldInstance().setNBrs(nBrs + 2);
-        World.getWorldInstance().setNKol(nKol + 2);
-        if (World.getWorldInstance().isSnakeWorld() == 0) {
-            WorldBuilder.getBuilderInstance().setStrMakhluk(input);
-            WorldBuilder.getBuilderInstance().buildWorldObject();
-        } else {
-            WorldBuilder.getBuilderInstance().addAnObject('U');
-        }
-
-        Thread viewThread = new Thread(new Screen());
-        viewThread.start();
-        Thread liveThread = new Thread(new MakhlukManager());
-        liveThread.start();
-        if (World.getWorldInstance().isSnakeWorld() == 1) {
-            Thread spawnerThread = new Thread(new MakhlukSpawner());
-            spawnerThread.start();
-        }
-    }
+   
 
     public final void showFrame2() {
         JFrame subFrame1 = new JFrame("Frame2");

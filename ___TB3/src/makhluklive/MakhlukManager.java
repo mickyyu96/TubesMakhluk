@@ -70,7 +70,6 @@ public final class MakhlukManager implements Runnable {
                 }
             }
         }
-
         if (World.getWorldInstance().isSnakeWorld() == 1) {
             ListMakhluk snakes = World.getWorldInstance().getSnakes();
             Hewan kepalaUlar = (Hewan) snakes.getInfo(0);
@@ -110,7 +109,6 @@ public final class MakhlukManager implements Runnable {
                 } 
            }
         }
-        
     }
     /** Menangani pergerakan dari makhluk untuk mencari makan.
      */
@@ -141,7 +139,6 @@ public final class MakhlukManager implements Runnable {
                 }
             }
         }
-        
         if(World.getWorldInstance().isSnakeWorld() == 1) {
             Makhluk snakeHead = worldInstance.getSnakes().getInfo(0);
             if (snakeHead.isSnakeBodyInTheSamePoint() == 1) {
