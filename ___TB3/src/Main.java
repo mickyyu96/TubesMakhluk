@@ -1,7 +1,6 @@
 import exception.ExceptionObject;
 import inputoutput.Screen;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Component;
@@ -23,49 +22,63 @@ import makhluklive.MakhlukManager;
  *  @version    1.0
  */
 public class Main {
+    /** Atribut button.
+     */
     JButton[] buttons = new JButton[7];
-    int showedFrame = 0;
+    /** Atribut textfield.
+     */
     JTextField[] txtField = new JTextField[3];
+    /** Atribut panel.
+     */
     JPanel mainPanel = new JPanel();
+    /** Atribut untuk menunjukkan apakah frame sudah ditampilkan.
+     */
+    int showedFrame = 0;
+    /** Menciptakan objek Main.
+     *  @param p Point Posisi objek Rabbit
+     */
     public Main() {
         showMainFrame();
     }
-    
     /** fungsi validasi apakah ukuran valid.
-     * @param strNBrs string jumlah baris
-     * @param strNKol string jumlah kolom
-     * @return boolean true jika ukuran valid
+     *  @param strNBrs string jumlah baris
+     *  @param strNKol string jumlah kolom
+     *  @return boolean true jika ukuran valid
      */
-     private static boolean isValidUkuran(final String strNBrs,
-             final String strNKol) {
-        boolean valid = true;
-        for (int i = 0; i < strNBrs.length() && valid; i++) {
-            if (strNBrs.charAt(i) < '0'
-                    || strNBrs.charAt(i) > '9') {
-                valid = false;
-            }
-        }
-        for (int i = 0; i < strNKol.length() && valid; i++) {
-            if (strNKol.charAt(i) < '0'
-                    || strNKol.charAt(i) > '9') {
-                valid = false;
-            }
-        }
-        return valid;
-     }
-     
-     private static boolean isValidID(final String s) {
-        boolean found = false;
-        for (int i = 0; i < s.length() && !found; i++) {
-            if (s.charAt(i) != 'P' && s.charAt(i) != 'G' && s.charAt(i) != 'R'
-                    && s.charAt(i) != 'T' && s.charAt(i) != 'S'
-                    && s.charAt(i) != 'W' && s.charAt(i) != 'U') {
-                found = true;
-             }
-        }
-        return !found;
+    private static boolean isValidUkuran(final String strNBrs,
+            final String strNKol) {
+       boolean valid = true;
+       for (int i = 0; i < strNBrs.length() && valid; i++) {
+           if (strNBrs.charAt(i) < '0'
+                   || strNBrs.charAt(i) > '9') {
+               valid = false;
+           }
+       }
+       for (int i = 0; i < strNKol.length() && valid; i++) {
+           if (strNKol.charAt(i) < '0'
+                   || strNKol.charAt(i) > '9') {
+               valid = false;
+           }
+       }
+       return valid;
     }
-     
+    /** fungsi validasi apakah id valid.
+     *  @param s string ID
+     *  @return boolean true jika ukuran valid
+     */
+    private static boolean isValidID(final String s) {
+       boolean found = false;
+       for (int i = 0; i < s.length() && !found; i++) {
+           if (s.charAt(i) != 'P' && s.charAt(i) != 'G' && s.charAt(i) != 'R'
+                   && s.charAt(i) != 'T' && s.charAt(i) != 'S'
+                   && s.charAt(i) != 'W' && s.charAt(i) != 'U') {
+               found = true;
+            }
+       }
+       return !found;
+    }
+    /** Menampilkan frame Main Menu program.
+     */
     public final void showMainFrame() {
         JFrame mainFrame = new JFrame("Main Menu");
         mainFrame.setVisible(true);
@@ -73,13 +86,13 @@ public class Main {
         mainFrame.setLocation(295,50);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        JLabel testLabel = new JLabel("", JLabel.CENTER);
+        JLabel iconLabel = new JLabel("", JLabel.CENTER);
         
         ImageIcon image = new ImageIcon(((new ImageIcon("BackgroundMain.png")).
                 getImage()).getScaledInstance(724, 600, java.awt.Image.
                 SCALE_SMOOTH));
        
-        testLabel.setIcon(image);
+        iconLabel.setIcon(image);
              
         ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
                 ("buttonAVMain.png")).getImage()).getScaledInstance(273, 80, 
@@ -100,7 +113,6 @@ public class Main {
             buttons[0].setIcon(buttonIcon1);
         }
         });
-        //buttons[0].addMouseMotionListener(this);
         buttons[0].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 showedFrame = 1;
@@ -132,13 +144,18 @@ public class Main {
                 showFrame2();
             }
         });
-        mainPanel.add(testLabel);
+        mainPanel.add(iconLabel);
         mainFrame.add(buttons[0]);
         mainFrame.add(buttons[1]);
         mainFrame.add(mainPanel);
         mainFrame.pack();
-        //mainFrame.validate();
     }
+    /** Prosedur untuk menghidupkan dunia.
+     *  @param nBrs int jumlah baris
+     *  @param nKol int jumlah kolom
+     *  @param input string masukan makhluk
+     *  @throws InterruptedException 
+     */
     public final void playWorld(int nBrs, int nKol, String input) throws 
             InterruptedException {
 
@@ -160,14 +177,17 @@ public class Main {
             spawnerThread.start();
         }
     }
+    /** Menampilkan frame Animal's Village program.
+     */
     public final void showFrame1(){
         
         JPanel panel1 = new JPanel();
-        JFrame subFrame1 = new JFrame("");
+        JFrame subFrame1 = new JFrame("Animal's Village");
         subFrame1.setVisible(true);
+        subFrame1.setSize(330,260);
         subFrame1.setLocation(520,250);
         panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
-        //subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel label1 = new JLabel("Kolom");
         JLabel label2 = new JLabel("Baris");
         JLabel label3 = new JLabel("Makhluk");
@@ -265,15 +285,16 @@ public class Main {
         panel1.add(buttons[3]);
         panel1.setAlignmentY(Component.CENTER_ALIGNMENT);
         subFrame1.add(panel1);
-        subFrame1.pack();
     }
-
+    /** Menampilkan frame Snake program.
+     */
     public final void showFrame2() {
-        JFrame subFrame1 = new JFrame("Frame2");
-        subFrame1.setVisible(true);
-        //subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        subFrame1.setLocation(410,250);
-        JPanel subPanel1 = new JPanel();
+        JFrame subFrame2 = new JFrame("Snake");
+        subFrame2.setVisible(true);
+        subFrame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        subFrame2.setSize(250,230);
+        subFrame2.setLocation(410,250);
+        JPanel subPanel2 = new JPanel();
         
         ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
                 ("easybutton.png")).getImage()).getScaledInstance(171, 50,
@@ -284,7 +305,7 @@ public class Main {
         buttons[4] = new JButton(buttonIcon1);
         buttons[4].setBorder(BorderFactory.createEmptyBorder());
         buttons[4].setContentAreaFilled(false);
-        buttons[4].setSize(171, 50);
+        buttons[4].setSize(273, 80);
         buttons[4].setLocation(300,300);
         buttons[4].addMouseListener(new java.awt.event.MouseAdapter() {
         public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -297,11 +318,11 @@ public class Main {
         buttons[4].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             try {
-                    playWorld(40, 40, "");
+                    playWorld(30, 30, "");
                 } catch (InterruptedException ex) {
                 }
-            subFrame1.setVisible(false); //you can't see me!
-            subFrame1.dispose();
+            subFrame2.setVisible(false); //you can't see me!
+            subFrame2.dispose();
             }
         });
         
@@ -314,7 +335,7 @@ public class Main {
         buttons[5] = new JButton(buttonIcon2);
         buttons[5].setBorder(BorderFactory.createEmptyBorder());
         buttons[5].setContentAreaFilled(false);
-        buttons[5].setSize(171, 50);
+        buttons[5].setSize(273, 80);
         buttons[5].setLocation(300,300);
         buttons[5].addMouseListener(new java.awt.event.MouseAdapter() {
         public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -330,8 +351,8 @@ public class Main {
                     playWorld(25, 25, "");
                 } catch (InterruptedException ex) {
                 }
-            subFrame1.setVisible(false); //you can't see me!
-            subFrame1.dispose();
+            subFrame2.setVisible(false); //you can't see me!
+            subFrame2.dispose();
             }
         });
         
@@ -344,7 +365,7 @@ public class Main {
         buttons[6] = new JButton(buttonIcon3);
         buttons[6].setBorder(BorderFactory.createEmptyBorder());
         buttons[6].setContentAreaFilled(false);
-        buttons[6].setSize(171, 50);
+        buttons[6].setSize(273, 80);
         buttons[6].setLocation(300,300);
         buttons[6].addMouseListener(new java.awt.event.MouseAdapter() {
         public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -360,17 +381,18 @@ public class Main {
                     playWorld(15, 15, "");
                 } catch (InterruptedException ex) {
                 }
-            subFrame1.setVisible(false); //you can't see me!
-            subFrame1.dispose();
+            subFrame2.setVisible(false); //you can't see me!
+            subFrame2.dispose();
             }
         });
-        subPanel1.add(buttons[4]);
-        subPanel1.add(buttons[5]);
-        subPanel1.add(buttons[6]);
-        subFrame1.add(subPanel1, BorderLayout.CENTER);
-        subFrame1.pack();
+        subPanel2.add(buttons[4]);
+        subPanel2.add(buttons[5]);
+        subPanel2.add(buttons[6]);
+        subFrame2.add(subPanel2, BorderLayout.CENTER);
     }
-
+    /** Main program animal village.
+      * @param args
+      */
     public static void main(String[] args) {
         Main M = new Main();
     }

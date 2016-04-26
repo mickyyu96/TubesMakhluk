@@ -40,7 +40,7 @@ public final class MakhlukManager implements Runnable {
     public void makhlukMove() {
         int dx, dy;
         ListMakhluk lMakhluk = World.getWorldInstance().getObjects();
-
+        
         for (int i = 0; i < lMakhluk.getSize(); i++) {
                 if (lMakhluk.getInfo(i).isAlive() == 1
                      && lMakhluk.getInfo(i).getID() != 'G') {
@@ -49,15 +49,15 @@ public final class MakhlukManager implements Runnable {
                 dx = RandomGenerator.getInstance().getNextInt(2) * dxsign;
                 dy = RandomGenerator.getInstance().getNextInt(2) * dysign;
 
-               if (hewan.shouldRebounced(dx, 0)) {
-                   dx *= -1;
-                   dxsign *= -1;
-               }
-               if (hewan.shouldRebounced(0, dy)) {
-                    dy *= -1;
-                    dysign *= -1;
-               }
-
+                if (hewan.shouldRebounced(dx, 0)) {
+                    dx *= -1;
+                    dxsign *= -1;
+                }
+                if (hewan.shouldRebounced(0, dy)) {
+                     dy *= -1;
+                     dysign *= -1;
+                }
+                
                 hewan.move(dx, dy);
                 hewan.ageIncrement();
                 if (hewan.getAge() == hewan.getMaxAge()) {

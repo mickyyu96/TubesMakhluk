@@ -50,17 +50,18 @@ public class Screen extends IOManager implements Runnable {
         JFrame worldView = new JFrame("Animal's Village");
         worldView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel worldLabel = new JLabel("", JLabel.CENTER);
-        JPanel mainPanel = new JPanel();
-        mainPanel.setBackground(Color.YELLOW);
+        JPanel worldPanel = new JPanel();
+        worldPanel.setBackground(Color.YELLOW);
         worldLabel.setFont(new Font("Consolas", Font.PLAIN, sizefont));
-        worldView.setSize(num, num);
+        worldView.setSize(600, 700);
         worldView.addKeyListener(new KeypressHandler());
         worldView.setVisible(true);
-        mainPanel.add(worldLabel);
-        worldView.add(mainPanel);
+        worldPanel.add(worldLabel);
+        worldView.add(worldPanel);
         showWorld(worldLabel, num);
         worldView.setVisible(false);
         worldView.dispose();
+        worldView.pack();
         System.out.println("Thread Finished");
     }
 }
