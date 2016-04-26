@@ -33,7 +33,7 @@ public class Point {
         x = x1;
         y = y1;
      }
-    /** Copy Constructor Point
+    /** Copy Constructor Point.
      *  @param p Point yang akan dicopy
      */
     public Point(final Point p) {

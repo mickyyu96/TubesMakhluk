@@ -1,3 +1,3 @@
 /** Package yang mengatur matriks.
  */
-package matriks;
+package matrix;

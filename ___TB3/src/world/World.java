@@ -39,7 +39,7 @@ public final class World {
      */
     private ListMakhluk snakes;
     /** Atribut arah hadap ular,
-     *  0 : timur, 1 : utara, 2 : barat, 3 : selatan
+     *  0 : timur, 1 : utara, 2 : barat, 3 : selatan.
      */
     private int arahUlar;
     /** Konstruktor World berparameter. Menangani pembentukan world dan
@@ -117,7 +117,7 @@ public final class World {
     public int isPaused() {
         return isPaused;
     }
-    /** Mengembalikan World tersebut adalah World
+    /** Mengembalikan World tersebut adalah World.
      * @return int sesuai dengan attribute isSnakeWorld
      */
     public int isSnakeWorld() {

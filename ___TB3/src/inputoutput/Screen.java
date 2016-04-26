@@ -29,10 +29,11 @@ public class Screen extends IOManager implements Runnable {
     }
     /** Mencetak state dunia beserta dengan isi-isinya ke layar secara berkala
      *  dengan interval waktu tertentu.
+     *  @param worldLabel Jlabel yang akan di add ke frame utama
      *  @param deltaT int interval waktu (dalam ms) antar pencetakan state
      *  dunia ke layar
      */
-    public final void showWorld(JLabel worldLabel, final int deltaT) {
+    public final void showWorld(final JLabel worldLabel, final int deltaT) {
         while (World.getWorldInstance().isEnded() == 0) {
             String test = getHTMLStrWorldMap();
             worldLabel.setText(getHTMLStrWorldMap());
@@ -52,15 +53,12 @@ public class Screen extends IOManager implements Runnable {
         JLabel worldLabel = new JLabel("", JLabel.CENTER);
         JPanel mainPanel = new JPanel();
         mainPanel.setBackground(Color.YELLOW);
-        
         worldLabel.setFont(new Font("Consolas", Font.PLAIN, sizefont));
         worldView.setSize(num, num);
         worldView.addKeyListener(new KeypressHandler());
         worldView.setVisible(true);
-        
         mainPanel.add(worldLabel);
         worldView.add(mainPanel);
-        
         showWorld(worldLabel, num);
         worldView.setVisible(false);
         worldView.dispose();
