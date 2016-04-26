@@ -136,7 +136,7 @@ public final class MakhlukManager implements Runnable {
                 }
             }
         }
-        if(World.getWorldInstance().isSnakeWorld() == 1) {
+        if (World.getWorldInstance().isSnakeWorld() == 1) {
             Makhluk snakeHead = worldInstance.getSnakes().getInfo(0);
             if (snakeHead.isSnakeBodyInTheSamePoint() == 1) {
                 World.getWorldInstance().endWorld();

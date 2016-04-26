@@ -41,7 +41,7 @@ public class Screen extends IOManager implements Runnable {
                 Thread.sleep(deltaT);
             } catch (Exception e) {
             }
-        } 
+        }
     }
     /** Menjalankan dan memulai dunia.
      */

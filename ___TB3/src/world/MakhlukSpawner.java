@@ -62,6 +62,8 @@ public class MakhlukSpawner implements Runnable {
                 break;
         }
     }
+    /** prosedur run overiding java.lang.Runnable.run.
+     */
     @Override
     public final void run() {
         while (World.getWorldInstance().isEnded() == 0) {
