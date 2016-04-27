@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/exception/ExceptionObject.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/exception/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/inputoutput/IOManager.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/inputoutput/KeypressHandler.java">
+<error line="60" column="41" severity="error" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="99" column="37" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="110" column="62" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/inputoutput/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/inputoutput/Screen.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/inputoutput/SnapshotCapturer.java">
+<error line="33" column="42" severity="error" message="Expected @throws tag for &apos;IOException&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="33" column="55" severity="error" message="Expected @throws tag for &apos;AWTException&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/Main.java">
+<error line="30" column="45" severity="error" message="&apos;7&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="33" column="52" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="27" severity="error" message="&apos;724&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="87" column="32" severity="error" message="&apos;600&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="88" column="31" severity="error" message="&apos;295&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="88" column="36" severity="error" message="&apos;50&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="92" column="47" severity="error" message="&apos;724&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="92" column="52" severity="error" message="&apos;600&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="104" column="28" severity="error" message="&apos;273&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="104" column="33" severity="error" message="&apos;80&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="105" column="32" severity="error" message="&apos;75&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="105" column="36" severity="error" message="&apos;270&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="129" column="28" severity="error" message="&apos;273&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="129" column="33" severity="error" message="&apos;80&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="130" column="32" severity="error" message="&apos;75&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="130" column="36" severity="error" message="&apos;370&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="158" column="34" severity="error" message="Expected @throws tag for &apos;InterruptedException&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="186" column="27" severity="error" message="&apos;330&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="186" column="32" severity="error" message="&apos;260&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="187" column="31" severity="error" message="&apos;520&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="187" column="36" severity="error" message="&apos;250&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="193" column="38" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="194" column="31" severity="error" message="&apos;70&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="194" column="35" severity="error" message="&apos;30&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="194" column="39" severity="error" message="&apos;150&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="194" column="44" severity="error" message="&apos;20&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="195" column="38" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="196" column="33" severity="error" message="&apos;100&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="196" column="38" severity="error" message="&apos;200&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="197" column="38" severity="error" message="&apos;20&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="198" column="33" severity="error" message="&apos;100&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="198" column="38" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="208" column="28" severity="error" message="&apos;171&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="208" column="33" severity="error" message="&apos;50&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="209" column="32" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="209" column="37" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="226" column="51" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="232" column="33" severity="error" message="&apos;7&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="232" column="45" severity="error" message="&apos;7&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="232" column="59" severity="error" message="&apos;20&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="232" column="72" severity="error" message="&apos;20&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="260" column="37" severity="error" message="&apos;171&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="260" column="42" severity="error" message="&apos;50&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="261" column="41" severity="error" message="&apos;600&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="261" column="46" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="296" column="27" severity="error" message="&apos;250&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="296" column="32" severity="error" message="&apos;230&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="297" column="31" severity="error" message="&apos;410&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="297" column="36" severity="error" message="&apos;250&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="308" column="37" severity="error" message="&apos;273&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="308" column="42" severity="error" message="&apos;80&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="309" column="41" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="309" column="46" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="321" column="31" severity="error" message="&apos;20&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="321" column="35" severity="error" message="&apos;20&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="337" column="37" severity="error" message="&apos;273&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="337" column="42" severity="error" message="&apos;80&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="338" column="41" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="338" column="46" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="350" column="31" severity="error" message="&apos;15&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="350" column="35" severity="error" message="&apos;15&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="366" column="37" severity="error" message="&apos;273&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="366" column="42" severity="error" message="&apos;80&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="367" column="41" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="367" column="46" severity="error" message="&apos;300&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="379" column="31" severity="error" message="&apos;10&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="379" column="35" severity="error" message="&apos;10&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="394" column="44" severity="error" message="Expected @param tag for &apos;args&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/makhluklive/MakhlukManager.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/makhluklive/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/matrix/Matrix.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/matrix/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/point/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/point/Point.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/randomgenerator/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/randomgenerator/RandomGenerator.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Hewan.java">
+<error line="11" column="19" severity="error" message="Variable &apos;hungerLvl&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="11" column="30" severity="error" message="Variable &apos;power&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="11" column="37" severity="error" message="Variable &apos;deltaT&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/ListMakhluk.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Makhluk.java">
+<error line="13" column="26" severity="error" message="Variable &apos;id&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="16" column="25" severity="error" message="Variable &apos;maxAge&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="19" column="19" severity="error" message="Variable &apos;age&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="22" column="19" severity="error" message="Variable &apos;status&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="25" column="21" severity="error" message="Variable &apos;pos&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/MakhlukSpawner.java">
+<error line="22" column="67" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/package-info.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/PolarBear.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Rabbit.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Sheep.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Snake.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Tumbuhan.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Turtle.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/Wolf.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/World.java">
+</file>
+<file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/WorldBuilder.java">
+</file>
+</checkstyle>

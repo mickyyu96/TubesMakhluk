@@ -146,7 +146,8 @@ public final class World {
     public void setArahUlar(final int i) {
         arahUlar = i;
     }
-    
+    /** Prosedur untuk membuat dunia baru.
+     */
     public static void createNewWorld() {
         worldInstance = new World(DEFAULTNBRS, DEFAULTNKOL);
     }

@@ -26,16 +26,16 @@ import makhluklive.MakhlukManager;
 public class Main {
     /** Atribut button.
      */
-    JButton[] buttons = new JButton[7];
+    private JButton[] buttons = new JButton[7];
     /** Atribut textfield.
      */
-    JTextField[] txtField = new JTextField[3];
+    private JTextField[] txtField = new JTextField[3];
     /** Atribut panel.
      */
-    JPanel mainPanel = new JPanel();
+    private JPanel mainPanel = new JPanel();
     /** Atribut untuk menunjukkan apakah frame sudah ditampilkan.
      */
-    int showedFrame = 0;
+    private int showedFrame = 0;
     /** Menciptakan objek Main.
      */
     public Main() {
@@ -84,22 +84,18 @@ public class Main {
         JFrame mainFrame = new JFrame("Main Menu");
         mainFrame.setVisible(true);
         mainFrame.setSize(724, 600);
-        mainFrame.setLocation(295,50);
+        mainFrame.setLocation(295, 50);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
         JLabel iconLabel = new JLabel("", JLabel.CENTER);
-        
         ImageIcon image = new ImageIcon(((new ImageIcon("BackgroundMain.png")).
                 getImage()).getScaledInstance(724, 600, java.awt.Image.
                 SCALE_SMOOTH));
-       
         iconLabel.setIcon(image);
-             
-        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
-                ("buttonAVMain.png")).getImage()).getScaledInstance(273, 80, 
+        final ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon(
+                "buttonAVMain.png")).getImage()).getScaledInstance(273, 80,
                 java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon
-                ("buttonAVMainClicked.png")).getImage()).getScaledInstance(273, 
+        final ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon(
+                "buttonAVMainClicked.png")).getImage()).getScaledInstance(273,
                 80, java.awt.Image.SCALE_SMOOTH));
         buttons[0] = new JButton(buttonIcon1);
         buttons[0].setBorder(BorderFactory.createEmptyBorder());
@@ -107,40 +103,40 @@ public class Main {
         buttons[0].setSize(273, 80);
         buttons[0].setLocation(75, 270);
         buttons[0].addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
+        public void mouseEntered(final java.awt.event.MouseEvent evt) {
             buttons[0].setIcon(buttonIcon1Clicked);
         }
-        public void mouseExited(java.awt.event.MouseEvent evt) {
+        public void mouseExited(final java.awt.event.MouseEvent evt) {
             buttons[0].setIcon(buttonIcon1);
         }
         });
         buttons[0].addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(final ActionEvent e) {
                 showedFrame = 1;
                 showFrame1();
             }
         });
-        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon
-                ("buttonSnakeMain.png")).getImage()).getScaledInstance(273, 80, 
+        final ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon(
+                "buttonSnakeMain.png")).getImage()).getScaledInstance(273, 80,
                 java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon
-                ("buttonSnakeMainClicked.png")).getImage()).getScaledInstance
-                (273, 80, java.awt.Image.SCALE_SMOOTH));
+        final ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon(
+                "buttonSnakeMainClicked.png")).getImage()).getScaledInstance(
+                273, 80, java.awt.Image.SCALE_SMOOTH));
         buttons[1] = new JButton(buttonIcon2);
         buttons[1].setBorder(BorderFactory.createEmptyBorder());
         buttons[1].setContentAreaFilled(false);
         buttons[1].setSize(273, 80);
         buttons[1].setLocation(75, 370);
         buttons[1].addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
+        public void mouseEntered(final java.awt.event.MouseEvent evt) {
             buttons[1].setIcon(buttonIcon2Clicked);
         }
-        public void mouseExited(java.awt.event.MouseEvent evt) {
+        public void mouseExited(final java.awt.event.MouseEvent evt) {
             buttons[1].setIcon(buttonIcon2);
         }
         });
         buttons[1].addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent a) {
+            public void actionPerformed(final ActionEvent a) {
                 World.getWorldInstance().setSnakeWorld(1);
                 showFrame2();
             }
@@ -155,10 +151,14 @@ public class Main {
      *  @param nBrs int jumlah baris
      *  @param nKol int jumlah kolom
      *  @param input string masukan makhluk
+<<<<<<< Updated upstream
      *  @throws InterruptedException jika thread gagal dibangkitkan
+=======
+     *  @throws InterruptedException
+>>>>>>> Stashed changes
      */
-    public final void playWorld(int nBrs, int nKol, String input) throws 
-            InterruptedException {
+    public final void playWorld(final int nBrs, final int nKol, final
+            String input) throws InterruptedException {
         int tmpSnakeWorld = World.getWorldInstance().isSnakeWorld();
         World.createNewWorld();
         World.getWorldInstance().setSnakeWorld(tmpSnakeWorld);
@@ -182,48 +182,45 @@ public class Main {
     }
     /** Menampilkan frame Animal's Village program.
      */
-    public final void showFrame1(){
-        
+    public final void showFrame1() {
         JPanel panel1 = new JPanel();
-        JFrame subFrame1 = new JFrame("Animal's Village");
+        final JFrame subFrame1 = new JFrame("Animal's Village");
         subFrame1.setVisible(true);
-        subFrame1.setSize(330,260);
-        subFrame1.setLocation(520,250);
+        subFrame1.setSize(330, 260);
+        subFrame1.setLocation(520, 250);
         panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
         subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel label1 = new JLabel("Kolom");
         JLabel label2 = new JLabel("Baris");
         JLabel label3 = new JLabel("Makhluk");
         txtField[0] = new JTextField(5);
-        txtField[0].setBounds(70,30,150,20);
-        
+        txtField[0].setBounds(70, 30, 150, 20);
         txtField[1] = new JTextField(5);
         txtField[1].setLocation(100, 200);
-        
         txtField[2] = new JTextField(20);
         txtField[2].setLocation(100, 300);
-        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon("buttonRun.png")).
-                getImage()).getScaledInstance(171, 50, java.awt.Image.
-                SCALE_SMOOTH));
-        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon
-                ("buttonRunClicked.png")).getImage()).getScaledInstance(171, 50,
+        final ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon(
+                "buttonRun.png")).getImage()).getScaledInstance(171,
+                        50, java.awt.Image.SCALE_SMOOTH));
+        final ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon(
+                "buttonRunClicked.png")).getImage()).getScaledInstance(171, 50,
                 java.awt.Image.SCALE_SMOOTH));
         buttons[2] = new JButton(buttonIcon2);
         buttons[2].setBorder(BorderFactory.createEmptyBorder());
         buttons[2].setContentAreaFilled(false);
         buttons[2].setSize(171, 50);
-        buttons[2].setLocation(300,300);
+        buttons[2].setLocation(300, 300);
         buttons[2].addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
+        public void mouseEntered(final java.awt.event.MouseEvent evt) {
             buttons[2].setIcon(buttonIcon2Clicked);
         }
-        public void mouseExited(java.awt.event.MouseEvent evt) {
+        public void mouseExited(final java.awt.event.MouseEvent evt) {
             buttons[2].setIcon(buttonIcon2);
         }
         });
         buttons[2].addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                int nBrs=0, nKol = 0;
+            public void actionPerformed(final ActionEvent e) {
+                int nBrs = 0, nKol = 0;
                 String nBrsString = txtField[0].getText();
                 String nKolString = txtField[1].getText();
                 String input = txtField[2].getText();
@@ -248,39 +245,37 @@ public class Main {
                     txtField[1].setText("");
                     txtField[2].setText("");
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Main.class.getName())
+                    .log(Level.SEVERE, null, ex);
                 }
-                
             }
         });
-        
-        
-        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
-                ("buttonCancel.png")).getImage()).getScaledInstance(171, 50, 
+        final ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon(
+                "buttonCancel.png")).getImage()).getScaledInstance(171, 50,
                 java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon
-                ("buttonCancelClicked.png")).getImage()).getScaledInstance(171, 
+        final ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon(
+                "buttonCancelClicked.png")).getImage()).getScaledInstance(171,
                 50, java.awt.Image.SCALE_SMOOTH));
-        buttons[3] = new JButton(buttonIcon1);
-        buttons[3].setBorder(BorderFactory.createEmptyBorder());
-        buttons[3].setContentAreaFilled(false);
-        buttons[3].setSize(171, 50);
-        buttons[3].setLocation(600,300);
-        buttons[3].addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
-            buttons[3].setIcon(buttonIcon1Clicked);
+        final int numbutton3 = 3;
+        buttons[numbutton3] = new JButton(buttonIcon1);
+        buttons[numbutton3].setBorder(BorderFactory.createEmptyBorder());
+        buttons[numbutton3].setContentAreaFilled(false);
+        buttons[numbutton3].setSize(171, 50);
+        buttons[numbutton3].setLocation(600, 300);
+        buttons[numbutton3].addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton3].setIcon(buttonIcon1Clicked);
         }
-        public void mouseExited(java.awt.event.MouseEvent evt) {
-            buttons[3].setIcon(buttonIcon1);
+        public void mouseExited(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton3].setIcon(buttonIcon1);
         }
         });
-        buttons[3].addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        buttons[numbutton3].addActionListener(new ActionListener() {
+            public void actionPerformed(final ActionEvent e) {
             subFrame1.setVisible(false); //you can't see me!
             subFrame1.dispose();
             }
         });
-        
         panel1.add(label1);
         panel1.add(txtField[0]);
         panel1.add(label2);
@@ -288,41 +283,43 @@ public class Main {
         panel1.add(label3);
         panel1.add(txtField[2]);
         panel1.add(buttons[2]);
-        panel1.add(buttons[3]);
+        panel1.add(buttons[numbutton3]);
         panel1.setAlignmentY(Component.CENTER_ALIGNMENT);
         subFrame1.add(panel1);
     }
     /** Menampilkan frame Snake program.
      */
     public final void showFrame2() {
-        JFrame subFrame2 = new JFrame("Snake");
+        final int numbutton4 = 4;
+        final int numbutton5 = 5;
+        final int numbutton6 = 6;
+        final JFrame subFrame2 = new JFrame("Snake");
         subFrame2.setVisible(true);
         subFrame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        subFrame2.setSize(250,230);
-        subFrame2.setLocation(410,250);
+        subFrame2.setSize(250, 230);
+        subFrame2.setLocation(410, 250);
         JPanel subPanel2 = new JPanel();
-        
-        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
-                ("easybutton.png")).getImage()).getScaledInstance(171, 50,
-                java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon
-                ("easybuttonclicked.png")).getImage()).getScaledInstance(171, 50,
-                java.awt.Image.SCALE_SMOOTH));
-        buttons[4] = new JButton(buttonIcon1);
-        buttons[4].setBorder(BorderFactory.createEmptyBorder());
-        buttons[4].setContentAreaFilled(false);
-        buttons[4].setSize(273, 80);
-        buttons[4].setLocation(300,300);
-        buttons[4].addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
-            buttons[4].setIcon(buttonIcon1Clicked);
+        final ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon(
+                "easybutton.png")).getImage()).getScaledInstance(171,
+                        50, java.awt.Image.SCALE_SMOOTH));
+        final ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon(
+                "easybuttonclicked.png")).getImage()).getScaledInstance(171,
+                        50, java.awt.Image.SCALE_SMOOTH));
+        buttons[numbutton4] = new JButton(buttonIcon1);
+        buttons[numbutton4].setBorder(BorderFactory.createEmptyBorder());
+        buttons[numbutton4].setContentAreaFilled(false);
+        buttons[numbutton4].setSize(273, 80);
+        buttons[numbutton4].setLocation(300, 300);
+        buttons[numbutton4].addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton4].setIcon(buttonIcon1Clicked);
         }
-        public void mouseExited(java.awt.event.MouseEvent evt) {
-            buttons[4].setIcon(buttonIcon1);
+        public void mouseExited(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton4].setIcon(buttonIcon1);
         }
         });
-        buttons[4].addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        buttons[numbutton4].addActionListener(new ActionListener() {
+            public void actionPerformed(final ActionEvent e) {
             try {
                     playWorld(20, 20, "");
                 } catch (InterruptedException ex) {
@@ -331,28 +328,27 @@ public class Main {
             subFrame2.dispose();
             }
         });
-        
-        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon
-                ("mediumbutton.png")).getImage()).getScaledInstance(171, 50,
+        final ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon(
+                "mediumbutton.png")).getImage()).getScaledInstance(171, 50,
                 java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon
-                ("mediumbuttonclicked.png")).getImage()).getScaledInstance(171, 50,
-                java.awt.Image.SCALE_SMOOTH));
-        buttons[5] = new JButton(buttonIcon2);
-        buttons[5].setBorder(BorderFactory.createEmptyBorder());
-        buttons[5].setContentAreaFilled(false);
-        buttons[5].setSize(273, 80);
-        buttons[5].setLocation(300,300);
-        buttons[5].addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
-            buttons[5].setIcon(buttonIcon2Clicked);
+        final ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon(
+                "mediumbuttonclicked.png")).getImage()).getScaledInstance(171,
+                        50, java.awt.Image.SCALE_SMOOTH));
+        buttons[numbutton5] = new JButton(buttonIcon2);
+        buttons[numbutton5].setBorder(BorderFactory.createEmptyBorder());
+        buttons[numbutton5].setContentAreaFilled(false);
+        buttons[numbutton5].setSize(273, 80);
+        buttons[numbutton5].setLocation(300, 300);
+        buttons[numbutton5].addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton5].setIcon(buttonIcon2Clicked);
         }
-        public void mouseExited(java.awt.event.MouseEvent evt) {
-            buttons[5].setIcon(buttonIcon2);
+        public void mouseExited(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton5].setIcon(buttonIcon2);
         }
         });
-        buttons[5].addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        buttons[numbutton5].addActionListener(new ActionListener() {
+            public void actionPerformed(final ActionEvent e) {
             try {
                     playWorld(15, 15, "");
                 } catch (InterruptedException ex) {
@@ -361,28 +357,27 @@ public class Main {
             subFrame2.dispose();
             }
         });
-        
-        ImageIcon buttonIcon3 = new ImageIcon(((new ImageIcon
-                ("hardbutton.png")).getImage()).getScaledInstance(171, 50,
+        final ImageIcon buttonIcon3 = new ImageIcon(((new ImageIcon(
+                "hardbutton.png")).getImage()).getScaledInstance(171, 50,
                 java.awt.Image.SCALE_SMOOTH));
-        ImageIcon buttonIcon3Clicked = new ImageIcon(((new ImageIcon
-                ("hardbuttonclicked.png")).getImage()).getScaledInstance(171, 50,
+        final ImageIcon buttonIcon3Clicked = new ImageIcon(((new ImageIcon(
+                "hardbuttonclicked.png")).getImage()).getScaledInstance(171, 50,
                 java.awt.Image.SCALE_SMOOTH));
-        buttons[6] = new JButton(buttonIcon3);
-        buttons[6].setBorder(BorderFactory.createEmptyBorder());
-        buttons[6].setContentAreaFilled(false);
-        buttons[6].setSize(273, 80);
-        buttons[6].setLocation(300,300);
-        buttons[6].addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
-            buttons[6].setIcon(buttonIcon3Clicked);
+        buttons[numbutton6] = new JButton(buttonIcon3);
+        buttons[numbutton6].setBorder(BorderFactory.createEmptyBorder());
+        buttons[numbutton6].setContentAreaFilled(false);
+        buttons[numbutton6].setSize(273, 80);
+        buttons[numbutton6].setLocation(300, 300);
+        buttons[numbutton6].addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton6].setIcon(buttonIcon3Clicked);
         }
-        public void mouseExited(java.awt.event.MouseEvent evt) {
-            buttons[6].setIcon(buttonIcon3);
+        public void mouseExited(final java.awt.event.MouseEvent evt) {
+            buttons[numbutton6].setIcon(buttonIcon3);
         }
         });
-        buttons[6].addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        buttons[numbutton6].addActionListener(new ActionListener() {
+            public void actionPerformed(final ActionEvent e) {
             try {
                     playWorld(10, 10, "");
                 } catch (InterruptedException ex) {
@@ -391,15 +386,15 @@ public class Main {
             subFrame2.dispose();
             }
         });
-        subPanel2.add(buttons[4]);
-        subPanel2.add(buttons[5]);
-        subPanel2.add(buttons[6]);
+        subPanel2.add(buttons[numbutton4]);
+        subPanel2.add(buttons[numbutton5]);
+        subPanel2.add(buttons[numbutton6]);
         subFrame2.add(subPanel2, BorderLayout.CENTER);
     }
     /** Main program animal village.
       * @param args String[] argumen yang dimasukkan
       */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         new Main();
     }
 }

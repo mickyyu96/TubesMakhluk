@@ -40,7 +40,6 @@ public final class MakhlukManager implements Runnable {
     public void makhlukMove() {
         int dx, dy;
         ListMakhluk lMakhluk = World.getWorldInstance().getObjects();
-        
         for (int i = 0; i < lMakhluk.getSize(); i++) {
                 if (lMakhluk.getInfo(i).isAlive() == 1
                      && lMakhluk.getInfo(i).getID() != 'G') {
@@ -57,7 +56,6 @@ public final class MakhlukManager implements Runnable {
                      dy *= -1;
                      dysign *= -1;
                 }
-                
                 hewan.move(dx, dy);
                 hewan.ageIncrement();
                 if (hewan.getAge() == hewan.getMaxAge()) {
@@ -114,7 +112,7 @@ public final class MakhlukManager implements Runnable {
         ListMakhluk lMakhluk = worldInstance.getObjects();
         for (int i = 0; i < lMakhluk.getSize(); i++) {
             if ((lMakhluk.getInfo(i).isAlive() == 1
-                    && lMakhluk.getInfo(i).getID() != 'G') 
+                    && lMakhluk.getInfo(i).getID() != 'G')
                     && (lMakhluk.getInfo(i).isMakhlukInTheSamePoint() == 1)) {
                     Makhluk m1 = lMakhluk.getInfo(i);
                     Makhluk m2 =
@@ -153,10 +151,12 @@ public final class MakhlukManager implements Runnable {
      */
     @Override
     public void run() {
+        final int numsleep1 = 100;
+        final int numsleep2 = 500;
         do {
             while (World.getWorldInstance().isPaused() == 1) {
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(numsleep1);
                 } catch (InterruptedException ex) {
                 }
             }
@@ -168,7 +168,7 @@ public final class MakhlukManager implements Runnable {
                 break;
             }
             try {
-                Thread.sleep(500);
+                Thread.sleep(numsleep2);
             } catch (InterruptedException ex) {
             }
         } while (World.getWorldInstance().isEnded() == 0);
