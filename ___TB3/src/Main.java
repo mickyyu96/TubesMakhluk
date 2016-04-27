@@ -23,7 +23,7 @@ import java.awt.Component;
  *  @version    1.0
  */
 public class Main {
-    JButton[] buttons = new JButton[4];
+    JButton[] buttons = new JButton[7];
     int showedFrame = 0;
     JTextField[] txtField = new JTextField[3];
     JFrame mainFrame = new JFrame("Main Menu");
@@ -129,7 +129,7 @@ public class Main {
         buttons[1].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent a) {
                 World.getWorldInstance().setSnakeWorld(1);
-                showFrame1();
+                showFrame2();
             }
         });
         mainPanel.add(testLabel);
@@ -272,40 +272,104 @@ public class Main {
     public final void showFrame2() {
         JFrame subFrame1 = new JFrame("Frame2");
         subFrame1.setVisible(true);
-        subFrame1.setSize(600, 400);
-        subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        //subFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        subFrame1.setLocation(410,250);
         JPanel subPanel1 = new JPanel();
-        subPanel1.setBackground(Color.BLUE);
-
-        JTextField subTextField1 = new JTextField(20);
-        subTextField1.setLocation(100, 100);
-
-        JTextField subTextField2 = new JTextField(20);
-        subTextField1.setLocation(100, 200);
-        JButton subButton1 = new JButton("Run");
-        subButton1.setSize(150,50);
-        subButton1.setLocation(100,300);
-        subButton1.addActionListener(new ActionListener() {
+        
+        ImageIcon buttonIcon1 = new ImageIcon(((new ImageIcon
+                ("easybutton.png")).getImage()).getScaledInstance(171, 50,
+                java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon1Clicked = new ImageIcon(((new ImageIcon
+                ("easybuttonclicked.png")).getImage()).getScaledInstance(171, 50,
+                java.awt.Image.SCALE_SMOOTH));
+        buttons[4] = new JButton(buttonIcon1);
+        buttons[4].setBorder(BorderFactory.createEmptyBorder());
+        buttons[4].setContentAreaFilled(false);
+        buttons[4].setSize(171, 50);
+        buttons[4].setLocation(300,300);
+        buttons[4].addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            buttons[4].setIcon(buttonIcon1Clicked);
+        }
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            buttons[4].setIcon(buttonIcon1);
+        }
+        });
+        buttons[4].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String nBrsString = subTextField1.getText();
-                String nKolString = subTextField2.getText();
-
-                int nBrs = Integer.parseInt(nBrsString);
-                int nKol = Integer.parseInt(nKolString);
-
-                try {
-                    playWorld(nBrs, nKol, "");
+            try {
+                    playWorld(40, 40, "");
                 } catch (InterruptedException ex) {
                 }
+            subFrame1.setVisible(false); //you can't see me!
+            subFrame1.dispose();
             }
-
         });
-
-        subPanel1.add(subButton1);
-        subPanel1.add(subTextField1);
-        subPanel1.add(subTextField2);
+        
+        ImageIcon buttonIcon2 = new ImageIcon(((new ImageIcon
+                ("mediumbutton.png")).getImage()).getScaledInstance(171, 50,
+                java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon2Clicked = new ImageIcon(((new ImageIcon
+                ("mediumbuttonclicked.png")).getImage()).getScaledInstance(171, 50,
+                java.awt.Image.SCALE_SMOOTH));
+        buttons[5] = new JButton(buttonIcon2);
+        buttons[5].setBorder(BorderFactory.createEmptyBorder());
+        buttons[5].setContentAreaFilled(false);
+        buttons[5].setSize(171, 50);
+        buttons[5].setLocation(300,300);
+        buttons[5].addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            buttons[5].setIcon(buttonIcon2Clicked);
+        }
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            buttons[5].setIcon(buttonIcon2);
+        }
+        });
+        buttons[5].addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            try {
+                    playWorld(25, 25, "");
+                } catch (InterruptedException ex) {
+                }
+            subFrame1.setVisible(false); //you can't see me!
+            subFrame1.dispose();
+            }
+        });
+        
+        ImageIcon buttonIcon3 = new ImageIcon(((new ImageIcon
+                ("hardbutton.png")).getImage()).getScaledInstance(171, 50,
+                java.awt.Image.SCALE_SMOOTH));
+        ImageIcon buttonIcon3Clicked = new ImageIcon(((new ImageIcon
+                ("hardbuttonclicked.png")).getImage()).getScaledInstance(171, 50,
+                java.awt.Image.SCALE_SMOOTH));
+        buttons[6] = new JButton(buttonIcon3);
+        buttons[6].setBorder(BorderFactory.createEmptyBorder());
+        buttons[6].setContentAreaFilled(false);
+        buttons[6].setSize(171, 50);
+        buttons[6].setLocation(300,300);
+        buttons[6].addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            buttons[6].setIcon(buttonIcon3Clicked);
+        }
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            buttons[6].setIcon(buttonIcon3);
+        }
+        });
+        buttons[6].addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            try {
+                    playWorld(15, 15, "");
+                } catch (InterruptedException ex) {
+                }
+            subFrame1.setVisible(false); //you can't see me!
+            subFrame1.dispose();
+            }
+        });
+        subPanel1.add(buttons[4]);
+        subPanel1.add(buttons[5]);
+        subPanel1.add(buttons[6]);
         subFrame1.add(subPanel1, BorderLayout.CENTER);
+        subFrame1.pack();
     }
 
     public static void main(String[] args) {
