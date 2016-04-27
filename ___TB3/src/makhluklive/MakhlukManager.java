@@ -113,9 +113,9 @@ public final class MakhlukManager implements Runnable {
         World worldInstance = World.getWorldInstance();
         ListMakhluk lMakhluk = worldInstance.getObjects();
         for (int i = 0; i < lMakhluk.getSize(); i++) {
-            if (lMakhluk.getInfo(i).isAlive() == 1
-                    && lMakhluk.getInfo(i).getID() != 'G') {
-                if (lMakhluk.getInfo(i).isMakhlukInTheSamePoint() == 1) {
+            if ((lMakhluk.getInfo(i).isAlive() == 1
+                    && lMakhluk.getInfo(i).getID() != 'G') 
+                    && (lMakhluk.getInfo(i).isMakhlukInTheSamePoint() == 1)) {
                     Makhluk m1 = lMakhluk.getInfo(i);
                     Makhluk m2 =
                             lMakhluk.getInfo(i).makhlukInTheSamePoint();
@@ -125,14 +125,11 @@ public final class MakhlukManager implements Runnable {
                             m2.kill();
                         }
                     } else {
-                        if (m2.getID() != 'G') {
-                            if (((Hewan) m2).getPower()
-                                < ((Hewan) m1).getPower()) {
-                                m2.kill();
-                            }
+                        if ((m2.getID() != 'G') && (((Hewan) m2).getPower()
+                                < ((Hewan) m1).getPower())) {
+                            m2.kill();
                         }
                     }
-                }
             }
         }
         if (World.getWorldInstance().isSnakeWorld() == 1) {
