@@ -8,8 +8,6 @@
 </file>
 <file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/inputoutput/KeypressHandler.java">
 <error line="60" column="41" severity="error" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="99" column="37" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="110" column="62" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/inputoutput/package-info.java">
 </file>
@@ -122,7 +120,6 @@
 <error line="25" column="21" severity="error" message="Variable &apos;pos&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 </file>
 <file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/MakhlukSpawner.java">
-<error line="22" column="67" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/Users/wahyudinakbar/Documents/workspace/tubesMakhlukOOP2/src/main/java/tubesmakhluk/oop/world/package-info.java">
 </file>

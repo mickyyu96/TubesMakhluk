@@ -19,7 +19,8 @@ public class MakhlukSpawner implements Runnable {
         int countSheep = worldObjects.countMakhluk('S');
         int countTurtle = worldObjects.countMakhluk('T');
         int spawnSelection;
-        spawnSelection = RandomGenerator.getInstance().getNextInt(3);
+        final int randomspawner = 3;
+        spawnSelection = RandomGenerator.getInstance().getNextInt(randomspawner);
         switch (spawnSelection) {
             case 0:
                 if (countRabbit < 2) {

@@ -59,6 +59,7 @@ public class KeypressHandler implements KeyListener {
      */
     public final void doAction() throws Exception {
         char c = getLastKeypress();
+        final int arahkepala = 3;
         if (World.getWorldInstance().isSnakeWorld() == 0) {
             switch (c) {
                 case 'q':
@@ -96,7 +97,7 @@ public class KeypressHandler implements KeyListener {
                     }
                     break;
                 case 'w':
-                    if (arahUlar != 3) {
+                    if (arahUlar != arahkepala) {
                         World.getWorldInstance().setArahUlar(1);
                     }
                     break;
@@ -107,7 +108,7 @@ public class KeypressHandler implements KeyListener {
                     break;
                 case 's':
                     if (arahUlar != 1) {
-                        World.getWorldInstance().setArahUlar(3);
+                        World.getWorldInstance().setArahUlar(arahkepala);
                     }
                     break;
                 default :
