@@ -16,7 +16,7 @@ public class ExceptionObjectTest {
         public void test_DisplayErrorMsg() {
             System.out.println("Tes apakah Pesan Error benar atau tidak");
             ExceptionObject E1 = new ExceptionObject(0);
-            assertEquals(">> ERROR! Dimensi ukuran dunia harus > 6!",E1.getMessage());
+            assertEquals(">> ERROR! Dimensi ukuran dunia harus > 6 dan < 20!",E1.getMessage());
             ExceptionObject E2 = new ExceptionObject(1);
             assertEquals(">> ERROR! Ada ID yang tidak dikenali!",E2.getMessage());
             ExceptionObject E3 = new ExceptionObject(2);

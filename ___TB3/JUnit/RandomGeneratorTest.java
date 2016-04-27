@@ -1,8 +1,8 @@
 package randomgenerator;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
+import point.*;
 /**
  * Created by Elvina R. K. Situmorang on 4/6/2016.
  */
@@ -41,4 +41,5 @@ public class RandomGeneratorTest {
         Point P3 = RandomGenerator.getInstance().getNextPointPB(5,5);
         assertTrue("Angka tidak ter-Random", (P1.getX()!=P2.getX() || P1.getX()!= P3.getX() || P2.getX()!=P3.getX() ||
                 P1.getY()!=P2.getY() || P2.getY()!= P3.getY() || P3.getY()!= P1.getY()));
+    }
 }

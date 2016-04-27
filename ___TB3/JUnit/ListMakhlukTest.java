@@ -1,6 +1,5 @@
 package world;
 
-import makhluk.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import randomgenerator.*;
@@ -29,5 +28,17 @@ public class ListMakhlukTest {
         _LMakhluk.getInfo(1).kill();
         _LMakhluk.getInfo(2).kill();
         assertTrue("semua makhluk masih hidup", _LMakhluk.isAllMakhlukDead());
+    }
+
+    @Test
+    public void CountTes() {
+        ListMakhluk list = new ListMakhluk();
+        list.add(new Snake(RandomGenerator.getInstance().getNextPoint(5, 5)));
+        list.add(new Snake(RandomGenerator.getInstance().getNextPoint(5, 5)));
+        list.add(new Snake(RandomGenerator.getInstance().getNextPoint(5, 5)));
+        list.add(new Snake(RandomGenerator.getInstance().getNextPoint(5, 5)));
+        list.add(new Snake(RandomGenerator.getInstance().getNextPoint(5, 5)));
+
+        assertTrue("Jumlah perhitungan salah",list.countMakhluk('U')==5);
     }
 }

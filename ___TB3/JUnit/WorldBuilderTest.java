@@ -1,8 +1,5 @@
 package world;
 
-import exception.*;
-import makhluk.*;
-import randomgenerator.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

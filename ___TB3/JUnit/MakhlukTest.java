@@ -1,4 +1,4 @@
-package makhluk;
+package world;
 
 import org.junit.Test;
 import point.*;
