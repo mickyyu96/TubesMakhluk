@@ -53,7 +53,7 @@ public class Screen extends IOManager implements Runnable {
         JPanel worldPanel = new JPanel();
         worldPanel.setBackground(Color.YELLOW);
         worldLabel.setFont(new Font("Consolas", Font.PLAIN, sizefont));
-        worldView.setSize(600, 700);
+        worldView.setSize(400, 500);
         worldView.addKeyListener(new KeypressHandler());
         worldView.setVisible(true);
         worldPanel.add(worldLabel);

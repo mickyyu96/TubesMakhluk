@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Component;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -158,7 +160,9 @@ public class Main {
      */
     public final void playWorld(int nBrs, int nKol, String input) throws 
             InterruptedException {
-
+        int tmpSnakeWorld = World.getWorldInstance().isSnakeWorld();
+        World.createNewWorld();
+        World.getWorldInstance().setSnakeWorld(tmpSnakeWorld);
         World.getWorldInstance().setNBrs(nBrs + 2);
         World.getWorldInstance().setNKol(nKol + 2);
         if (World.getWorldInstance().isSnakeWorld() == 0) {
@@ -232,19 +236,22 @@ public class Main {
                     nBrs = Integer.parseInt(nBrsString);
                     nKol = Integer.parseInt(nKolString);
 
-                    if (nBrs < 7 || nKol < 7) {
+                    if ((nBrs < 7 || nKol < 7) || (nBrs > 20 || nKol > 20)) {
                         throw new ExceptionObject(0);
                     }
+                    if (!isValidID(input)) {
+                        throw new ExceptionObject(1);
+                    }
+                    playWorld(nBrs, nKol, input);
                 } catch (ExceptionObject ep) {
                     ep.displayErrorMessage();
                     txtField[0].setText("");
                     txtField[1].setText("");
+                    txtField[2].setText("");
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 
-                try {
-                    playWorld(nBrs, nKol, input);
-                } catch (InterruptedException ex) {
-                }
             }
         });
         
@@ -318,7 +325,7 @@ public class Main {
         buttons[4].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             try {
-                    playWorld(30, 30, "");
+                    playWorld(20, 20, "");
                 } catch (InterruptedException ex) {
                 }
             subFrame2.setVisible(false); //you can't see me!
@@ -348,7 +355,7 @@ public class Main {
         buttons[5].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             try {
-                    playWorld(25, 25, "");
+                    playWorld(15, 15, "");
                 } catch (InterruptedException ex) {
                 }
             subFrame2.setVisible(false); //you can't see me!
@@ -378,10 +385,10 @@ public class Main {
         buttons[6].addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             try {
-                    playWorld(15, 15, "");
+                    playWorld(10, 10, "");
                 } catch (InterruptedException ex) {
                 }
-            subFrame2.setVisible(false); //you can't see me!
+            subFrame2.setVisible(false);
             subFrame2.dispose();
             }
         });

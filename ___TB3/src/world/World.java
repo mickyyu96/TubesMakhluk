@@ -146,4 +146,8 @@ public final class World {
     public void setArahUlar(final int i) {
         arahUlar = i;
     }
+    
+    public static void createNewWorld() {
+        worldInstance = new World(DEFAULTNBRS, DEFAULTNKOL);
+    }
 }

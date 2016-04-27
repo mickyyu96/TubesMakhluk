@@ -14,7 +14,7 @@ public class ExceptionObject extends Exception {
     /** Array of string berisi messages.
      */
     private final String[] messages = new String[] {
-        ">> ERROR! Dimensi ukuran dunia harus > 6!",
+        ">> ERROR! Dimensi ukuran dunia harus > 6 dan < 20!",
         ">> ERROR! Ada ID yang tidak dikenali!",
         ">> ERROR! Pause World dulu sebelum melakukan Single-step Execution!",
         ">> ERROR! Keypress tidak dikenali!",
