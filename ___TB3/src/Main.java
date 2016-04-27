@@ -394,6 +394,6 @@ public class Main {
       * @param args
       */
     public static void main(String[] args) {
-        Main M = new Main();
+        new Main();
     }
 }

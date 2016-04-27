@@ -141,7 +141,6 @@ public final class MakhlukManager implements Runnable {
                 World.getWorldInstance().endWorld();
                 System.out.println("Game Over!");
             } else if (snakeHead.isMakhlukInTheSamePoint() == 1) {
-                Makhluk m1 = snakeHead;
                 Makhluk m2 = snakeHead.makhlukInTheSamePoint();
                 if (m2.getID() == 'W' || m2.getID() == 'P') {
                     World.getWorldInstance().endWorld();
