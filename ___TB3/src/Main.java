@@ -137,6 +137,7 @@ public class Main {
         });
         buttons[1].addActionListener(new ActionListener() {
             public void actionPerformed(final ActionEvent a) {
+                World.createNewWorld();
                 World.getWorldInstance().setSnakeWorld(1);
                 showFrame2();
             }
@@ -151,17 +152,10 @@ public class Main {
      *  @param nBrs int jumlah baris
      *  @param nKol int jumlah kolom
      *  @param input string masukan makhluk
-<<<<<<< Updated upstream
      *  @throws InterruptedException jika thread gagal dibangkitkan
-=======
-     *  @throws InterruptedException
->>>>>>> Stashed changes
      */
     public final void playWorld(final int nBrs, final int nKol, final
             String input) throws InterruptedException {
-        int tmpSnakeWorld = World.getWorldInstance().isSnakeWorld();
-        World.createNewWorld();
-        World.getWorldInstance().setSnakeWorld(tmpSnakeWorld);
         World.getWorldInstance().setNBrs(nBrs + 2);
         World.getWorldInstance().setNKol(nKol + 2);
         if (World.getWorldInstance().isSnakeWorld() == 0) {
@@ -238,6 +232,7 @@ public class Main {
                     if (!isValidID(input)) {
                         throw new ExceptionObject(1);
                     }
+                    World.createNewWorld();
                     playWorld(nBrs, nKol, input);
                 } catch (ExceptionObject ep) {
                     ep.displayErrorMessage();
