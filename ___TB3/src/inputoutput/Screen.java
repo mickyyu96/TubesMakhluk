@@ -45,7 +45,7 @@ public class Screen extends IOManager implements Runnable {
     /** Menjalankan dan memulai dunia.
      */
     public final void run() {
-        final int num = 500;
+        final int num = 100;
         final int sizefont = 15;
         JFrame worldView = new JFrame("Animal's Village");
         worldView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
