@@ -2,7 +2,7 @@ package world;
 
 import point.Point;
 
-/** {@inheritdoc} Kelas PolarBear adalah kelas turunan dari Hewan
+/** {@inheritDoc} Kelas PolarBear adalah kelas turunan dari Hewan
  *  yang merepresentasikan seekor polar bear.
  *  @author Atika Azzahra Akbar / 13514077
  *  @version 1.0

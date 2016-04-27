@@ -55,7 +55,7 @@ public class KeypressHandler implements KeyListener {
     }
     /** Melakukan aksi-aksi yang sesuai dengan karakter lastKeypress.
      *  yang tersimpan dalam instance KeypressHandler
-     *  @throw Exception
+     *  @throws Exception jika kesalahan masukan pengguna
      */
     public final void doAction() throws Exception {
         char c = getLastKeypress();

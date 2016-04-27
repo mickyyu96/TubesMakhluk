@@ -36,7 +36,7 @@ public final class WorldBuilder {
     }
     /** Melakukan assignment string yang tersimpan dalam instance WorldBuilder
      * dengan string baru yang di-passing melalui parameter.
-     * @param str const string& String baru yang akan di-assign
+     * @param str String String baru yang akan di-assign
      */
     public void setStrMakhluk(final String str) {
         strMakhluk = str;

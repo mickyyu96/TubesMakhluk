@@ -2,7 +2,7 @@ package world;
 
 import point.Point;
 
-/** {@inheritdoc} Kelas Turtle adalah kelas turunan dari Hewan
+/** {@inheritDoc} Kelas Turtle adalah kelas turunan dari Hewan
  *  yang merepresentasikan seekor turtle.
  *  @author Elvina R. K. Situmorang / 13514045
  *  @version 1.0

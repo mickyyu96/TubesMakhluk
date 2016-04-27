@@ -37,7 +37,6 @@ public class Main {
      */
     int showedFrame = 0;
     /** Menciptakan objek Main.
-     *  @param p Point Posisi objek Rabbit
      */
     public Main() {
         showMainFrame();
@@ -156,7 +155,7 @@ public class Main {
      *  @param nBrs int jumlah baris
      *  @param nKol int jumlah kolom
      *  @param input string masukan makhluk
-     *  @throws InterruptedException 
+     *  @throws InterruptedException jika thread gagal dibangkitkan
      */
     public final void playWorld(int nBrs, int nKol, String input) throws 
             InterruptedException {
@@ -398,7 +397,7 @@ public class Main {
         subFrame2.add(subPanel2, BorderLayout.CENTER);
     }
     /** Main program animal village.
-      * @param args
+      * @param args String[] argumen yang dimasukkan
       */
     public static void main(String[] args) {
         new Main();

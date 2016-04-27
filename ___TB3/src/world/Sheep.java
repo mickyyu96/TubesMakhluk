@@ -2,7 +2,7 @@ package world;
 
 import point.Point;
 
-/** {@inheritdoc} Kelas Sheep adalah kelas turunan dari Hewan
+/** {@inheritDoc} Kelas Sheep adalah kelas turunan dari Hewan
  *  yang merepresentasikan seekor domba.
  *  @author Robert Sebastian Herlim  / 13514061
  *  @version 1.0

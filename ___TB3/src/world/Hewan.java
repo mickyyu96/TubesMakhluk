@@ -1,6 +1,6 @@
 package world;
 
-/** {@inheritdoc} Kelas Hewan adalah kelas yang merukapan turunan dari Makhluk
+/** {@inheritDoc} Kelas Hewan adalah kelas yang merukapan turunan dari Makhluk
  *  yang merepresentasikan Hewan yang ada pada penciptaan World.
  *  @author   Elvina R. K. Situmorang / 13514045
  *  @version  1.0
