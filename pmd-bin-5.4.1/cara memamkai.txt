@@ -1,0 +1,1 @@
+pmd.bat -d "C:\Users\MICKY YU\Desktop\TubesMakhluk\___TB3\src\point" -f text -R "D:\pmd-bin-5.4.1\bin\ruleset.xml" > tes.txt

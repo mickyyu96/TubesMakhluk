@@ -1,0 +1,29 @@
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Amfibia.java:30:	Avoid unused private fields such as 'VAL_RIGHT'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Amfibia.java:40:	Avoid unused private fields such as 'VAL_DOWN'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Amfibia.java:50:	Avoid unused private fields such as 'VAL_LEFT'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Amfibia.java:60:	Avoid unused private fields such as 'VAL_UP'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Board.java:25:	Avoid unused private fields such as 'nEmptyLine'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\KeyPress.java:48:	These nested if statements could be combined
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\LabelChanger.java:30:	Avoid empty while statements
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\ListMakhluk.java:24:	Use ArrayList instead of Vector
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\World.java:3:	Avoid unused imports such as 'java.io.FileWriter'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\World.java:80:	Avoid unused local variables such as 'idBelut'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:16:	Unnecessary use of fully qualified name 'javax.swing.JFrame' due to existing import 'javax.swing.JFrame'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:46:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:47:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:49:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:50:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:51:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:134:	Avoid unused method parameters such as 'evt'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:153:	Avoid unused local variables such as 'j'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:172:	Avoid unused method parameters such as 'evt'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:243:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:246:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:249:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:261:	Avoid unused private fields such as 'SCREEN_SIZE'.
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:273:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:274:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:275:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:276:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java:277:	Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\unitAmfibia.java:17:	Avoid unused local variables such as 'rand'.

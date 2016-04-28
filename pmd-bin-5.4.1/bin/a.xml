@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.4.1" timestamp="2016-04-27T22:46:27.012">
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Amfibia.java">
+<violation beginline="30" endline="30" begincolumn="28" endcolumn="36" rule="UnusedPrivateField" ruleset="Unused Code" package="zootopia" class="Amfibia" variable="VAL_RIGHT" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'VAL_RIGHT'.
+</violation>
+<violation beginline="40" endline="40" begincolumn="28" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code" package="zootopia" class="Amfibia" variable="VAL_DOWN" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'VAL_DOWN'.
+</violation>
+<violation beginline="50" endline="50" begincolumn="28" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code" package="zootopia" class="Amfibia" variable="VAL_LEFT" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'VAL_LEFT'.
+</violation>
+<violation beginline="60" endline="60" begincolumn="28" endcolumn="33" rule="UnusedPrivateField" ruleset="Unused Code" package="zootopia" class="Amfibia" variable="VAL_UP" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'VAL_UP'.
+</violation>
+</file>
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Board.java">
+<violation beginline="25" endline="25" begincolumn="21" endcolumn="30" rule="UnusedPrivateField" ruleset="Unused Code" package="zootopia" class="Board" variable="nEmptyLine" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'nEmptyLine'.
+</violation>
+</file>
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\KeyPress.java">
+<violation beginline="48" endline="51" begincolumn="15" endcolumn="15" rule="CollapsibleIfStatements" ruleset="Basic" package="zootopia" class="KeyPress" method="keyPressed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\LabelChanger.java">
+<violation beginline="30" endline="32" begincolumn="67" endcolumn="13" rule="EmptyWhileStmt" ruleset="Empty Code" package="zootopia" class="LabelChanger" method="run" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/empty.html#EmptyWhileStmt" priority="3">
+Avoid empty while statements
+</violation>
+</file>
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\ListMakhluk.java">
+<violation beginline="24" endline="24" begincolumn="13" endcolumn="20" rule="UseArrayListInsteadOfVector" ruleset="Optimization" package="zootopia" class="ListMakhluk" method="ListMakhluk" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+</file>
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\World.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="26" rule="UnusedImports" ruleset="Import Statements" package="zootopia" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.io.FileWriter'
+</violation>
+<violation beginline="80" endline="80" begincolumn="15" endcolumn="21" rule="UnusedLocalVariable" ruleset="Unused Code" package="zootopia" class="World" method="createMakhluk" variable="idBelut" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'idBelut'.
+</violation>
+</file>
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\Zootopia.java">
+<violation beginline="16" endline="16" begincolumn="31" endcolumn="48" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JFrame' due to existing import 'javax.swing.JFrame'
+</violation>
+<violation beginline="46" endline="46" begincolumn="23" endcolumn="40" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="initComponents" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="47" endline="47" begincolumn="23" endcolumn="40" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="initComponents" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="49" endline="49" begincolumn="23" endcolumn="40" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="initComponents" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="50" endline="50" begincolumn="23" endcolumn="40" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="initComponents" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="51" endline="51" begincolumn="23" endcolumn="40" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="initComponents" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="134" endline="134" begincolumn="72" endcolumn="74" rule="UnusedFormalParameter" ruleset="Unused Code" package="zootopia" class="Zootopia" method="StartButtonActionPerformed" variable="evt" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused method parameters such as 'evt'.
+</violation>
+<violation beginline="153" endline="153" begincolumn="15" endcolumn="15" rule="UnusedLocalVariable" ruleset="Unused Code" package="zootopia" class="Zootopia" method="StartButtonActionPerformed" variable="j" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'j'.
+</violation>
+<violation beginline="172" endline="172" begincolumn="71" endcolumn="73" rule="UnusedFormalParameter" ruleset="Unused Code" package="zootopia" class="Zootopia" method="ExitButtonActionPerformed" variable="evt" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused method parameters such as 'evt'.
+</violation>
+<violation beginline="243" endline="243" begincolumn="12" endcolumn="29" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="getLabel3" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="246" endline="246" begincolumn="12" endcolumn="29" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="getLabel4" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="249" endline="249" begincolumn="12" endcolumn="29" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" method="getLabel5" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="261" endline="261" begincolumn="30" endcolumn="40" rule="UnusedPrivateField" ruleset="Unused Code" package="zootopia" class="Zootopia" variable="SCREEN_SIZE" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'SCREEN_SIZE'.
+</violation>
+<violation beginline="273" endline="273" begincolumn="13" endcolumn="30" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="274" endline="274" begincolumn="13" endcolumn="30" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="275" endline="275" begincolumn="13" endcolumn="30" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="276" endline="276" begincolumn="13" endcolumn="30" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+<violation beginline="277" endline="277" begincolumn="13" endcolumn="30" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="zootopia" class="Zootopia" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'javax.swing.JLabel' due to existing import 'javax.swing.JLabel'
+</violation>
+</file>
+<file name="D:\Teknik Informatika\Tugas Semester 4\OOP\Tubes 3\OOP-Makhluk\checkpoint2\Zootopia\src\zootopia\unitAmfibia.java">
+<violation beginline="17" endline="17" begincolumn="16" endcolumn="19" rule="UnusedLocalVariable" ruleset="Unused Code" package="zootopia" class="unitAmfibia" method="main" variable="rand" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'rand'.
+</violation>
+</file>
+</pmd>
